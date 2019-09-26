@@ -1,0 +1,57 @@
+.about-container {
+  display: flex;
+  align-items: center;
+  * {
+    flex: 1 0 50%;
+  }
+  p {
+    margin: 0;
+  }
+  img {
+    margin: auto;
+  }
+}
+.resume {
+  .resume__context {
+    display: flex;
+    height: 4rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    .resume__date {
+      text-align: right;
+    }
+    & > * {
+      flex: 1 0 50%;
+      align-self: flex-end;
+    }
+    h4 {
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media all and (max-width: $mobile-breakpoint) {
+  .about-container {
+    flex-direction: column;
+  }
+  .about__photo {
+    display: none;
+  }
+  .resume {
+    .resume__context {
+      flex-direction: column;
+      height: auto;
+      justify-content: auto;
+      & > * {
+        width: 100%;
+      }
+      .resume__date {
+        // move the date underneath the title and company
+        text-align: left;
+        order: 3;
+      }
+    }
+  }
+}

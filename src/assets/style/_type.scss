@@ -1,0 +1,41 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Larsseit;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 3.4rem;
+  letter-spacing: -3px;
+}
+
+h2 {
+  font-size: 32pt;
+  line-height: 36pt;
+  font-weight: 500;
+  margin-top: 4rem;
+}
+
+h3 {
+  font-size: 24pt;
+  line-height: 28pt;
+  font-weight: 400;
+}
+
+p,
+blockquote {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.content {
+  p,
+  blockquote {
+    color: $color-grey-400;
+    font-family: 'Freight', 'Tiempos Text';
+  }
+}

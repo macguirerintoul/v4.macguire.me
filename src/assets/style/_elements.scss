@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 10rem;
+  background-color: rgb(252, 253, 254);
+  font-family: $font-stack;
+}
+
+footer {
+  background-color: $color-dark;
+  color: $color-light;
+  margin-top: 4rem;
+  padding: 2rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+// change <li> bullets to en dashes
+ul > li:before {
+  content: '–';
+  position: absolute;
+  margin-left: -1.1em;
+}

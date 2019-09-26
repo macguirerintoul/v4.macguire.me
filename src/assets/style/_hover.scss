@@ -1,0 +1,20 @@
+/* Courtesy of Hover: https://github.com/IanLunn/Hover */
+
+/* Float */
+p {
+  .hvr-float {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    border-bottom: 2px solid blue;
+    line-height: 0.8;
+    transition-duration: 100ms;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+  }
+  .hvr-float:hover,
+  .hvr-float:focus,
+  .hvr-float:active {
+    transform: translateY(-0.05em);
+  }
+}

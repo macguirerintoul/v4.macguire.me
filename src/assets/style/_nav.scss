@@ -1,0 +1,80 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  min-height: 3.25rem;
+  padding: 0.5rem 2rem 0;
+  background-color: $header-background;
+  margin: auto;
+  max-width: $max-container-width;
+}
+
+.navbar,
+.navbar-end,
+.navbar-menu,
+.navbar-start {
+  align-items: stretch;
+  display: flex;
+}
+
+.navbar-brand {
+  align-items: stretch;
+  display: flex;
+  flex-shrink: 0;
+  min-height: 3.25rem;
+  a {
+    text-decoration: none;
+  }
+  #logo-icon {
+    margin-right: 0.5em;
+  }
+  #logo-text {
+    color: #000;
+
+    font-size: 2em;
+    font-weight: 700;
+  }
+}
+
+.navbar-menu {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.navbar-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  line-height: 1.5;
+  position: relative;
+  color: #000;
+  text-decoration: none;
+}
+.navbar-end {
+  justify-content: flex-end;
+  margin-left: auto;
+  .navbar-item {
+    padding: 0.5em;
+  }
+  .navbar-item:last-of-type {
+    padding-right: 0;
+  }
+}
+
+.mobile-menu {
+  cursor: pointer;
+  display: none;
+  // height: 3.25rem;
+  position: relative;
+  // width: 3.25rem;
+  margin-left: auto;
+  top: 0.5em;
+  height: fit-content;
+  padding: 0.5em;
+  border: 1px solid black;
+  font-weight: bold;
+}

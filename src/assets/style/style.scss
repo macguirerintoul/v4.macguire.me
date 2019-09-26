@@ -1,0 +1,326 @@
+// Other
+@import './_variables.scss';
+@import './_normalize.scss';
+@import './_nav.scss';
+@import './_hover.scss';
+@import './_animate.scss';
+@import './_type.scss';
+@import './_elements.scss';
+
+// Pages
+@import './_about.scss';
+
+// Responsive styles are imported at the bottom
+
+.button--primary {
+  color: $color-light;
+  padding: 0.5rem;
+  border-radius: $border-radius;
+  background-color: $color-blue;
+  background-image: $color-blue-gradient;
+}
+
+.footer-content {
+  max-width: $max-container-width;
+  margin: auto;
+}
+
+th {
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  // Insert an SVG icon after external links
+  // &[target='_blank']:after {
+  //   display: inline-block;
+  //   margin-left: 0.25rem;
+  //   bottom: 0.5rem;
+  //   content: ' ';
+  //   // background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288.824 288.824"><path d="M3.501 285.323c4.668 4.668 12.235 4.668 16.891 0L264.763 40.951v91.382c0 6.641 5.39 12.03 12.03 12.03 6.641 0 12.03-5.39 12.03-12.03V12.03c0-3.188-1.239-6.268-3.501-8.529S279.981 0 276.793 0H156.49c-6.641 0-12.03 5.39-12.03 12.03s5.39 12.03 12.03 12.03h91.382L3.501 268.432c-4.668 4.668-4.668 12.235 0 16.891z"/></svg>');
+  //   background-size: cover;
+  //   position: relative;
+  //   width: 12pt;
+  //   height: 12pt;
+  // }
+}
+
+blockquote {
+  white-space: pre-wrap;
+  border-left: 2px solid blue;
+  padding-left: 2rem;
+}
+
+cite {
+  display: block;
+  margin-top: 1rem;
+  text-align: right;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+img,
+video {
+  box-shadow: $shadow;
+  border-radius: $border-radius;
+}
+
+.container {
+  max-width: $max-container-width;
+  padding: 0 2rem;
+  margin: auto;
+}
+
+.video-embed {
+  position: relative;
+  padding-bottom: 38.25%;
+  height: 0;
+}
+
+.content {
+  p,
+  blockquote,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .resume__context,
+  ul {
+    max-width: 50rem;
+  }
+  p,
+  blockquote,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .video-embed,
+  .showcase,
+  img,
+  .project-context,
+  .resume__context,
+  ul {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .showcase {
+    max-width: 60rem;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.hero {
+  p {
+    font-weight: 300;
+  }
+
+  max-width: $content-width;
+  padding: 4rem 0;
+}
+
+small {
+  font-size: 1rem;
+}
+
+.project-overview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 6rem;
+  grid-auto-rows: min-content;
+  margin-bottom: 5rem;
+  .project-overview__title {
+    margin: 0 0 1rem 0;
+  }
+  .project-overview__summary {
+    grid-column: 1 / 2;
+    grid-row: 2;
+    p {
+      margin: 0 0 1rem 0;
+      max-width: 40rem;
+    }
+  }
+  .project-overview__context {
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      margin: 0 0 0.6rem 0;
+    }
+    ul {
+      margin: 0;
+    }
+  }
+  .project-overview__image {
+    grid-column: 2;
+    grid-row: 2 / 3;
+    align-self: center;
+  }
+}
+
+.project-context {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  div {
+    flex: 1 0 auto;
+  }
+}
+
+.project-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .project-block,
+  .project-block--content {
+    // border-radius: 0.75rem;
+  }
+  .project-block__tag:not(:last-child)::after {
+    content: ', ';
+  }
+  .project-block {
+    position: relative;
+    line-height: normal;
+    width: 48%;
+    height: 400px;
+    margin-bottom: 3rem;
+    border-radius: $border-radius;
+    transform-style: preserve-3d;
+    transition: transform 100ms ease;
+    color: #fff;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 95%;
+      height: 100%;
+      top: 2%;
+      left: calc(5% / 2);
+      transform: translateZ(-1px);
+      border-radius: 1rem;
+      filter: blur(10px);
+    }
+    .project-block--content {
+      position: absolute;
+      border-radius: $border-radius;
+      top: 0;
+      height: 100%;
+      padding: 3rem 3rem;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      transition: opacity 200ms ease;
+
+      h3 {
+        margin: 1rem 0;
+      }
+      p {
+        width: 80%;
+        margin: 0;
+        top: 1rem;
+        font-size: 14pt;
+        line-height: 16pt;
+        margin-bottom: 1rem;
+      }
+      small {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+  .project-block:hover,
+  .project-block:focus {
+    transform: translateY(-0.2rem);
+    img {
+      filter: blur(1px);
+      transform: scale(1.005);
+    }
+    .project-block--content {
+      opacity: 1;
+    }
+  }
+}
+
+.featured-block-container {
+  display: flex;
+  flex: 1 0 45%;
+  justify-content: space-between;
+}
+
+.featured-block {
+  a {
+    color: $color-light;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 20rem;
+  .featured-block--name {
+    margin-bottom: 0.25rem;
+  }
+  .featured-block--item-title {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .featured-block--name,
+  .featured-block--item-title,
+  .featured-block--see-all,
+  .featured-block--context {
+    flex: 1 0 40%;
+  }
+  .featured-block--see-all {
+    text-transform: uppercase;
+  }
+  .featured-block--see-all,
+  .featured-block--context {
+    text-align: right;
+  }
+  .featured-block--text {
+    font-size: $font-size-3;
+    line-height: 1.25rem;
+  }
+}
+
+.showcase {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 4rem 0;
+  div {
+    max-width: 48%;
+  }
+  &.vertical div {
+    max-width: 100%;
+  }
+  video,
+  img {
+    max-height: 80vh;
+    max-width: 100%;
+  }
+  &.media-left {
+    flex-direction: row;
+  }
+  &.media-right {
+    flex-direction: row-reverse;
+  }
+}
+
+// CSS debugging
+// * {
+//   outline: 1px red solid !important;
+//   visibility: visible !important;
+// }
+
+@import './_responsive.scss';
