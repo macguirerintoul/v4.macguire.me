@@ -9,25 +9,33 @@ module.exports = {
   siteDescription: 'Product design + web development consultant',
   port: 3000,
   templates: {
-    Project: '/work/:title',
     Article: '/article/:title',
   },
   plugins: [
     {
-      // Add Projects collection
-      use: '@gridsome/source-filesystem',
+      use: '@gridsome/vue-remark',
       options: {
-        typeName: 'Project',
-        path: 'content/projects/*.md',
-        refs: {
-          // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
-          tags: {
-            typeName: 'Tag',
-            create: true
-          }
-        }
+        typeName: 'Project', // Required
+        baseDir: './content/projects', // Where .md files are located
+        route: '/work/:title',
+        template: './src/templates/Project.vue' // Optional
       }
     },
+    // {
+    //   // Add Projects collection
+    //   use: '@gridsome/source-filesystem',
+    //   options: {
+    //     typeName: 'Project',
+    //     path: 'content/projects/*.md',
+    //     refs: {
+    //       // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
+    //       tags: {
+    //         typeName: 'Tag',
+    //         create: true
+    //       }
+    //     }
+    //   }
+    // },
     {
       // Add Articles collection
       use: '@gridsome/source-filesystem',

@@ -12,7 +12,7 @@ tools: ['Sketch', 'Keynote', 'G Suite']
 summary: "Despite the importance of credit in personal finance, an estimated 56% of Canadians have never checked their credit score and 31% don't know how to improve their score (BMO, 2016). We saw this as an opportunity to support people in learning about credit through a mobile app offered by Vancity, a local credit union. When the project was complete, Vancity directors invited us to present to their Digital Services team at their head office in Vancouver."
 ---
 
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/305425536?byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/305425536?byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
 
 ## My Contribution
 As the project manager, I ensured that the project's individual parts were being completed and were cohesive, and decided when to stop iterating and start polishing. As the content strategist, I wrote copy that was consistent with our three design principles: personal, clear, and hopeful. I also ensured that the credit-related content in MyCredit was beneficial and easy to understand, which I validated by conducting interviews and think-aloud testing with 9 participants.
@@ -21,8 +21,6 @@ As the project manager, I ensured that the project's individual parts were being
 Despite the importance of credit scores in personal finance, an estimated 56% of Canadians have never checked their credit score and 31% don't know how to improve their score.
 
 > With 250,000 of them – close to half of our members – interacting with us almost entirely online or via our mobile app, we’re under pressure to deliver even more mobile and digital functionality.
-
-<cite><a target="_blank_" href="https://www.vancity.com/SharedContent/documents/AnnualReportArchives/Vancity_AR2017.pdf">Vancity 2017 Annual Report</a></cite>
 
 Vancity's current website offers some credit help, but it lies 4 levels deep in navigation. Furthermore, their existing banking app has yet to provide resources for credit management.
 

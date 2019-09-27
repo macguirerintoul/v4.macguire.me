@@ -39,9 +39,7 @@ query AllProjects {
         title
         shortDescription
         featured
-        tags {
-          title
-        }
+        tags
         imagePath
         path
       }
