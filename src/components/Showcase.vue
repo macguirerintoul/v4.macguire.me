@@ -1,49 +1,34 @@
 <template>
   <div :class="['showcase', orientation]">
     <div v-if="type === 'image'">
-      <CloudinaryImage :cloudinary-i-d="cloudinaryID" />
+      <img :src="src" :alt="alt" />
     </div>
     <div v-if="type === 'video'">
-      <CldVideo
-        muted
-        loop="true"
-        autoplay="autoplay"
-        lazy
-        :public-id="cloudinaryID"
-      >
-        <CldTransformation quality="auto:eco" fetch-format="auto" />
-      </CldVideo>
+      <video :src="src" muted loop="true" autoplay="autoplay" />
     </div>
-    <div>
-      <block-content :blocks="content" />
-    </div>
+    <div v-text="content"></div>
   </div>
 </template>
 
 <script>
-import { CldVideo, CldTransformation } from 'cloudinary-vue'
-import CloudinaryImage from '~/components/CloudinaryImage'
-
 export default {
   props: {
     content: {
-      type: Array,
-      default: () => {
-        return []
-      },
+      type: String,
+      default: ""
     },
     orientation: {
       type: String,
-      default: '',
+      default: ""
     },
-    cloudinaryID: {
+    src: {
       type: String,
-      default: '',
+      default: ""
     },
     type: {
       type: String,
-      default: '',
-    },
-  },
-}
+      default: ""
+    }
+  }
+};
 </script>

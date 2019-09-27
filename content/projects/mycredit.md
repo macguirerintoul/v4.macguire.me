@@ -4,13 +4,15 @@ for: IAT 438
 shortDescription: "A mobile app for Vancity members to understand and build credit, in order to better support their financial well-being"
 featured: true
 imagePath: ~/assets/images/mycredit/mycredit.jpg
-date: 2019-01-07
+date: 2019-02-01
 published: true
 tags: ['Product Design', 'Web Development']
 roles: ['Content Strategy', 'Project Management', 'Interface Design', 'User Research']
 tools: ['Sketch', 'Keynote', 'G Suite']
 summary: "Despite the importance of credit in personal finance, an estimated 56% of Canadians have never checked their credit score and 31% don't know how to improve their score (BMO, 2016). We saw this as an opportunity to support people in learning about credit through a mobile app offered by Vancity, a local credit union. When the project was complete, Vancity directors invited us to present to their Digital Services team at their head office in Vancouver."
 ---
+
+import Showcase from '~/components/Showcase.vue'
 
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/305425536?byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
 
@@ -26,6 +28,16 @@ Vancity's current website offers some credit help, but it lies 4 levels deep in 
 
 ## Solution
 MyCredit is a companion app for Vancity members to manage their credit and set goals that encourage credit building, to better support their financial well-being.
+
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/305425815?byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+
+<Showcase
+  src="https://macguire.me/static/onboarding-baad56677e17a1b50df9bf94b756ba9d.mp4"
+  type="video"
+  orientation="media-left"
+  content="Since credit is unfamiliar for so many people, the onboarding helps members learn a bit about credit while setting up the app."
+  />
+
 
 ## Process
 After discovering the study by BMO, we decided that as a values-based non-profit organization, Vancity would be a great client to design for. We audited Vancity's existing products and services, and identified frictions.

@@ -1,17 +1,14 @@
 <template>
-  <g-link
-    :class="['project-block', project.title]"
-    :to="project.path"
-  >
+  <g-link :class="['project-block', project.title]" :to="project.path">
     <div class="project-block--content">
       <small>{{ project.for }}</small>
       <h3 class="project-block--title">{{ project.title }}</h3>
       <p>{{ project.shortDescription }}</p>
       <small
         v-for="tag in project.tags"
-        :key="tag.title"
+        :key="tag"
         class="project-block__tag"
-        >{{ tag.title }}</small
+        >{{ tag }}</small
       >
     </div>
   </g-link>
@@ -23,9 +20,9 @@ export default {
     project: {
       type: Object,
       default: () => {
-        return {}
-      },
-    },
-  },
-}
+        return {};
+      }
+    }
+  }
+};
 </script>

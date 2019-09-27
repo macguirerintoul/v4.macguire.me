@@ -35,9 +35,9 @@ export default {
     project: {
       type: Object,
       default() {
-        return {}
-      },
-    },
-  },
-}
+        return {};
+      }
+    }
+  }
+};
 </script>

@@ -11,7 +11,8 @@ query Project($id: ID!) {
     title
     roles
     tools
-    description
+    for
+    summary
     content
     imagePath
   }
