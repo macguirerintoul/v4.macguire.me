@@ -67,7 +67,7 @@ MyCredit is a companion app for Vancity members to manage their credit and set g
   path="MyCredit/videos/goals"
   type="video"
   source="cloudinary"
-  orientation="media-left"
+  orientation="media-right"
   content="The Goals tab allows members to track their progress, see the steps they need to take to improve their score, and set new goals."
 />
 

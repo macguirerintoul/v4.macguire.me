@@ -101,7 +101,7 @@ small {
   grid-auto-rows: min-content;
   margin-bottom: 5rem;
   .project-overview__title {
-    margin: 0 0 1rem 0;
+    margin: 0 0 2rem 0;
   }
   .project-overview__summary {
     grid-column: 1 / 2;
@@ -256,7 +256,9 @@ small {
   justify-content: space-between;
   flex-direction: column;
   margin: 4rem 0;
-  div {
+  & > div,
+  & > p {
+    // Select divs and paragraphs that are direct children of a Showcase (i.e. the media and content)
     max-width: 48%;
   }
   &.vertical div {

@@ -2,7 +2,7 @@
   <section class="project-overview">
     <h1 class="project-overview__title">{{ project.title }}</h1>
     <div class="project-overview__summary">
-      <div v-html="project.summary" />
+      <p v-html="project.summary" />
       <div class="project-overview__context">
         <div>
           <h3>For</h3>
