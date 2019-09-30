@@ -15,6 +15,7 @@ summary: "Despite the importance of credit in personal finance, an estimated 56%
 import Showcase from '~/components/Showcase'
 import MagicLink from '~/components/MagicLink'
 import MagicVideo from '~/components/MagicVideo'
+import MagicImage from '~/components/MagicImage'
 import Blockquote from '~/components/Blockquote'
 
 <MagicVideo type="vimeo" path="305425536" />
@@ -46,42 +47,170 @@ MyCredit is a companion app for Vancity members to manage their credit and set g
   content="Since credit is unfamiliar for so many people, the onboarding helps members learn a bit about credit while setting up the app."
 />
 
+<Showcase
+  path="MyCredit/videos/score_details"
+  type="video"
+  source="cloudinary"
+  orientation="media-right"
+  content="The Score Details screen provides members with an overview of their score, as well as a breakdown of what is influencing their score."
+/>
+
+<Showcase
+  path="MyCredit/videos/learn"
+  type="video"
+  source="cloudinary"
+  orientation="media-left"
+  content="The Learn tab provides resources for members to better understand the five factors that influence their score, and how their financial activity is influencing their score."
+/>
+
+<Showcase
+  path="MyCredit/videos/goals"
+  type="video"
+  source="cloudinary"
+  orientation="media-left"
+  content="The Goals tab allows members to track their progress, see the steps they need to take to improve their score, and set new goals."
+/>
 
 ## Process
 After discovering the study by BMO, we decided that as a values-based non-profit organization, Vancity would be a great client to design for. We audited Vancity's existing products and services, and identified frictions.
 
 From secondary research, we drew two main insights: that people are reluctant to check their score, and that many don't feel the need to until a lender requires it.
 
+<MagicImage path="MyCredit/images/insights" alt="Insights with more detailed explanations." />
+
 With what we knew, we framed the problem as follows:
 > How might we provide guidance that is not overwhelming, encourages members, and provides them with tools to reach their goals?
 
 After looking at the member segments of Vancity, we chose to focus our project toward the 'disappointed applicant', because compared to the other segments, there was more opportunity to improve their experience.
 
+<MagicImage path="MyCredit/images/member_segment" alt="The member segment we chose to design for: the disappointed applicant." />
+
 The target audience for MyCredit is Vancity members ages 25 - 45, as this is a period where many people are purchasing cars, paying off student loans, or might be thinking about a mortgage.
+
+<MagicImage path="MyCredit/images/target_audience" alt="The target audience for MyCredit was Vancity members ages 25 – 45." />
 
 From our research, we developed a persona to guide us in our process.
 
+<MagicImage path="MyCredit/images/persona" alt="A description of the persona we developed to guide us in our process." />
+
 We then mapped out the customer journey to identify where we could improve the experience.
+
+<MagicImage path="MyCredit/images/customer_journey" alt="A diagram of the customer journey." />
 
 We developed three design principles to reference throughout the project and keep us focused on what was most important.
 
+<MagicImage path="MyCredit/images/principles" alt="The three design principles we developed: personal, clear, and hopeful." />
+
 Of course, the project wouldn't be complete without user testing, so throughout the 3 weeks of developing the project, we iterated and validated.
 
+<MagicImage path="MyCredit/images/iterations" alt="Screenshots of three weeks of iterations." />
+
 A teammate and I conducted user research with nine participants over the course of the project, seeking to validate three assumptions. While the project was generally well-received, it was noted that the onboarding needed to be improved.
+
+<MagicImage path="MyCredit/images/validation" alt="Description of the results of user testing." />
 
 We then got to work making iterations and finalizing MyCredit.
 
 ## Product
 
+<Showcase
+  path="MyCredit/videos/other_accounts"
+  type="video"
+  source="cloudinary"
+  orientation="media-left"
+  content="Members can link credit accounts from other financial institutions via MX Technologies to receive payment reminders, view balances, and see how the account influences their score."
+/>
+
+<Showcase
+  path="MyCredit/videos/notify_utilization"
+  type="video"
+  source="cloudinary"
+  orientation="media-right"
+  content="Everyone manages their finances differently, so MyCredit recommends actions specific to each member’s habits rather than providing generic information."
+/>
+
+<Showcase
+  path="MyCredit/images/tips"
+  type="image"
+  source="cloudinary"
+  orientation="media-left"
+  content="Curated information helps members reach goals by providing clear, actionable steps to take."
+/>
+
+<Showcase
+  path="MyCredit/videos/celebration"
+  type="video"
+  source="cloudinary"
+  orientation="media-right"
+  content="Celebrating accomplishments and recognizing members for their efforts encourages them along their credit building journey."
+/>
+
 In the case that a member's score is declining, after user testing, we decided to always project their score as if they were taking on the good habits presented in MyCredit. Research participants felt that there was enough information in the rest of the app to understand that their score was low, and that they didn't want the visual reminder that it was declining.
 
+<Showcase
+  path="MyCredit/images/declining_score"
+  type="image"
+  source="cloudinary"
+  orientation="vertical"
+  alt="A screenshot showing future growth that could be achieved, which encourages members to improve their score."
+/>
+
 In the case that a member has no credit, MyCredit offers an explanation of why it's important and recommends ways to start.
+
+<Showcase
+  path="MyCredit/images/no_credit"
+  type="image"
+  source="cloudinary"
+  orientation="vertical"
+  alt="Screenshots showing states when a user has no credit score."
+/>
 
 ## Details
 The following explains the details of our design decisions and highlights where decisions were made in MyCredit.
 
-### Wrap-Up
-Key Performance Indicators
+<Showcase
+  path="MyCredit/images/copywriting"
+  type="image"
+  source="cloudinary"
+  orientation="vertical"
+  alt="Example of copywriting in the app."
+/>
+
+<Showcase
+  path="MyCredit/images/colour"
+  type="image"
+  source="cloudinary"
+  orientation="vertical"
+  alt="Examples of using colour in the app."
+/>
+
+<Showcase
+  path="MyCredit/images/type"
+  type="image"
+  source="cloudinary"
+  orientation="vertical"
+  alt="Examples of using typography in the app."
+/>
+
+<Showcase
+  path="MyCredit/images/app_architecture"
+  type="image"
+  source="cloudinary"
+  orientation="vertical"
+  alt="Diagram of the app architecture."
+/>
+
+## Wrap-Up
+
+### Key Performance Indicators
+
+<Showcase
+  path="MyCredit/images/measuring_success"
+  type="image"
+  source="cloudinary"
+  orientation="vertical"
+  alt="A list of metrics used to evaluate the success of MyCredit."
+/>
 
 ### Dependencies
 #### Borrowell
@@ -94,3 +223,27 @@ As a service provider to Vancity and other credit unions, Central 1 will need to
 Vancity or their digital partners will require additional managers, designers, and developers to maintain a second mobile app.
 
 ## Appendix
+
+<Showcase
+  path="MyCredit/images/why_vancity"
+  type="image"
+  source="cloudinary"
+  orientation="vertical"
+  alt="Explanation for why we chose to design for Vancity."
+/>
+
+<Showcase
+  path="MyCredit/images/why_separate"
+  type="image"
+  source="cloudinary"
+  orientation="vertical"
+  alt="Explanation for why we chose to design an app separate from Vancity's existing banking app."
+/>
+
+<Showcase
+  path="MyCredit/images/why_download"
+  type="image"
+  source="cloudinary"
+  orientation="vertical"
+  alt="Explanation of how we would encourage people to download MyCredit."
+/>
