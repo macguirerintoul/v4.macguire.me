@@ -24,13 +24,21 @@
     </div>
 
     <div class="project-overview__image">
-      <g-image :src="project.imagePath" />
+      <MagicImage
+        :path="project.imagePath"
+        :alt="'Screenshot of ' + project.title"
+      />
     </div>
   </section>
 </template>
 
 <script>
+import MagicImage from "./MagicImage";
+
 export default {
+  components: {
+    MagicImage
+  },
   props: {
     project: {
       type: Object,

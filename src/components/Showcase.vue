@@ -1,17 +1,24 @@
 <template>
   <div :class="['showcase', orientation]">
     <div v-if="type === 'image'">
-      <img :src="src" :alt="alt" />
+      <MagicImage :path="path" :alt="alt" />
     </div>
     <div v-if="type === 'video'">
-      <video :src="src" muted loop="true" autoplay="autoplay" />
+      <MagicVideo :source="source" :path="path" />
     </div>
     <div v-text="content"></div>
   </div>
 </template>
 
 <script>
+import MagicImage from "./MagicImage";
+import MagicVideo from "./MagicVideo";
+
 export default {
+  components: {
+    MagicImage,
+    MagicVideo
+  },
   props: {
     content: {
       type: String,
@@ -21,11 +28,19 @@ export default {
       type: String,
       default: ""
     },
-    src: {
+    path: {
+      type: String,
+      default: ""
+    },
+    source: {
       type: String,
       default: ""
     },
     type: {
+      type: String,
+      default: ""
+    },
+    alt: {
       type: String,
       default: ""
     }

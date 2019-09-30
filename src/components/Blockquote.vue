@@ -12,16 +12,16 @@ export default {
   props: {
     quote: {
       type: String,
-      default: '',
+      default: ""
     },
     source: {
       type: String,
-      default: '',
+      default: ""
     },
     url: {
       type: String,
-      default: '',
-    },
-  },
-}
+      default: ""
+    }
+  }
+};
 </script>
