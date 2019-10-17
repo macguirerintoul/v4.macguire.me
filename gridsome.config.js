@@ -4,6 +4,10 @@
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+chainWebpack (config) {
+    config.mode('development')
+  }
+
 module.exports = {
   siteName: 'Macguire Rintoul',
   siteDescription: 'Product design + web development consultant',
