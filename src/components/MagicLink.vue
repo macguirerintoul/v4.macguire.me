@@ -1,7 +1,7 @@
 <!-- Automatically use either <nuxt-link> or <a> depending on whether URL is internal or external -->
 <template>
   <span>
-    <a v-if="external" :href="url" target="_blank" noreferrer><slot /></a>
+    <a v-show="external" :href="url" target="_blank" noreferrer><slot /></a>
     <g-link v-else :to="url"><slot /></g-link>
   </span>
 </template>

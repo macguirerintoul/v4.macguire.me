@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="source == 'vimeo'" class="video-embed">
+    <div v-show="source == 'vimeo'" class="video-embed">
       <iframe
         :src="'https://player.vimeo.com/video/' + path + '?byline=0&portrait=0'"
         frameborder="0"
@@ -8,7 +8,7 @@
         allowfullscreen
       ></iframe>
     </div>
-    <div v-if="source == 'cloudinary'">
+    <div v-show="source == 'cloudinary'">
       <CldVideo muted loop="true" autoplay="autoplay" lazy :public-id="path">
         <CldTransformation quality="auto:eco" fetch-format="auto" />
       </CldVideo>
