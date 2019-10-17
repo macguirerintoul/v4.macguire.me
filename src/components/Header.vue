@@ -32,19 +32,32 @@
           <g-link to="/articles" class="navbar-item hvr-underline-reveal">
             Articles
           </g-link>
-          <g-link to="/contact" class="navbar-item">
-            <button class="button--primary">Contact</button>
-          </g-link>
+          <button class="button--primary" @click="showModal">Contact</button>
         </div>
       </div>
     </nav>
+    <Modal
+      v-show="isModalVisible"
+      @close="closeModal"
+    >
+      <template v-slot:header>Contact</template>
+      <template v-slot:body>
+        <ContactForm />
+      </template>
+    </Modal>
   </header>
 </template>
 
 <script>
+
+import Modal from './Modal.vue';
+import ContactForm from './ContactForm.vue';
 export default {
+  components: {
+     Modal, ContactForm
+   },
   data() {
-    return { showMobileMenu: false }
+    return { showMobileMenu: false, isModalVisible: false,}
   },
   methods: {
     toggleMobileMenu() {
@@ -53,6 +66,13 @@ export default {
     closeMobileMenu() {
       this.showMobileMenu = false
     },
+    showModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    }
+
   },
 }
 </script>
