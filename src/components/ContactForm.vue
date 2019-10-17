@@ -3,13 +3,12 @@
     method="POST"
     name="contact"
     data-netlify="true"
-    action="/success/"
     @submit.prevent="handleSubmit"
   >
     <input
       type="hidden"
       name="form-name"
-      :value="name"
+      value="contact"
     >
     <p>The contents of this form will be sent directly to my inbox, and I will be in touch with you shortly.</p>
 
