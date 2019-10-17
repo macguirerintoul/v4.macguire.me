@@ -22,6 +22,8 @@
 
 <script>
 import moment from 'moment'
+import { fetch } from 'gridsome'
+
 import MagicLink from '~/components/MagicLink.vue'
 import picks from '../../content/picks.yaml'
 
