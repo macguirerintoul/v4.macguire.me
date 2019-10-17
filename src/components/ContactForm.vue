@@ -1,5 +1,6 @@
 <template>
   <form method="POST" name="contact" data-netlify="true">
+    <input type="hidden" name="form-name" :value="name" />
       <p>The contents of this form will be sent directly to my inbox, and I will be in touch with you shortly.</p>
   <div>
     <label>Name <input type="text" name="name" v-bind="name" /></label>
