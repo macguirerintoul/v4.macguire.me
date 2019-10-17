@@ -46,7 +46,7 @@ export default {
       picks
     }
   },
-  created() {
+  mounted() {
     if (this.type === 'randomStar') {
       this.getRandomStar()
     } else if (this.type === 'lastCommit') {
