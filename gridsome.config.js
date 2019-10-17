@@ -4,25 +4,24 @@
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-chainWebpack (config) {
-    config.mode('development')
-  }
-
 module.exports = {
-  siteName: 'Macguire Rintoul',
-  siteDescription: 'Product design + web development consultant',
+  chainWebpack(config) {
+    config.mode("development");
+  },
+  siteName: "Macguire Rintoul",
+  siteDescription: "Product design + web development consultant",
   port: 3000,
   templates: {
-    Article: '/article/:title',
+    Article: "/article/:title"
   },
   plugins: [
     {
-      use: '@gridsome/vue-remark',
+      use: "@gridsome/vue-remark",
       options: {
-        typeName: 'Project', // Required
-        baseDir: './content/projects', // Where .md files are located
-        route: '/work/:title',
-        template: './src/templates/Project.vue' // Optional
+        typeName: "Project", // Required
+        baseDir: "./content/projects", // Where .md files are located
+        route: "/work/:title",
+        template: "./src/templates/Project.vue" // Optional
       }
     },
     // {
@@ -42,23 +41,21 @@ module.exports = {
     // },
     {
       // Add Articles collection
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        typeName: 'Article',
-        path: 'content/articles/*.md',
+        typeName: "Article",
+        path: "content/articles/*.md"
       }
-    },
+    }
   ],
 
   transformers: {
     //Add markdown support to all file-system sources
     remark: {
-      externalLinksTarget: '_blank',
-      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-      anchorClassName: 'icon icon-link',
-      plugins: [
-        '@gridsome/remark-prismjs'
-      ]
+      externalLinksTarget: "_blank",
+      externalLinksRel: ["nofollow", "noopener", "noreferrer"],
+      anchorClassName: "icon icon-link",
+      plugins: ["@gridsome/remark-prismjs"]
     }
   }
-}
+};
