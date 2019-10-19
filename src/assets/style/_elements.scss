@@ -71,3 +71,23 @@ video {
   box-shadow: $shadow;
   border-radius: $border-radius;
 }
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+input, textarea {
+  display: block;
+  width: 100%;
+  min-height: 2rem;
+  border: 1px solid grey;
+  &:focus {
+    border: 1px solid blue;
+  }
+}
+
+input {
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}

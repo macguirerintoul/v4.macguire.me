@@ -12,29 +12,24 @@
     >
     <p>The contents of this form will be sent directly to my inbox, and I will be in touch with you shortly.</p>
 
-    <div>
-      <label for="name">Name <input
-        v-model="formData.name"
-        type="text"
-        name="name"
-      >
-    </label>
-    </div>
-    <div>
-      <label for="email">
-        Email
-        <input
-        v-model="formData.email"
-        type="email"
-        name="email"
-      >
-    </label>
-    </div>
+    <label for="name">Name</label>
+    <input
+      v-model="formData.name"
+      type="text"
+      name="name"
+    >
+    <label for="email">Email</label>
+    <input
+      v-model="formData.email"
+      type="email"
+      name="email"
+    >
 
-    <label for="message">Message<textarea
+    <label for="message">Message</label>
+    <textarea
       v-model="formData.message"
       name="message"
-    /></label>
+    />
     <div>
       <button
         class="button--secondary"
