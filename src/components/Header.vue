@@ -47,39 +47,27 @@
           >
             Articles
           </g-link>
-          <button
-            class="button--primary"
-            @click="showModal"
+          <g-link
+            class="navbar-item"
+            to="/contact"
           >
-            Contact
-          </button>
+            <button
+              class="button--primary"
+              @click="showModal"
+            >
+              Contact
+            </button>
+          </g-link>
         </div>
       </div>
     </nav>
-    <Modal
-      v-show="isModalVisible"
-      @close="closeModal"
-    >
-      <template v-slot:header>
-        Contact
-      </template>
-      <template v-slot:body>
-        <ContactForm />
-      </template>
-    </Modal>
   </header>
 </template>
 
 <script>
-
-import Modal from './Modal.vue';
-import ContactForm from './ContactForm.vue';
 export default {
-  components: {
-     Modal, ContactForm
-   },
   data() {
-    return { showMobileMenu: false, isModalVisible: false,}
+    return { showMobileMenu: false }
   },
   methods: {
     toggleMobileMenu() {
@@ -88,12 +76,6 @@ export default {
     closeMobileMenu() {
       this.showMobileMenu = false
     },
-    showModal() {
-      this.isModalVisible = true;
-    },
-    closeModal() {
-      this.isModalVisible = false;
-    }
 
   },
 }

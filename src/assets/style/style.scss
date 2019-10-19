@@ -1,15 +1,20 @@
-// Other
+// Foundations
 @import './_variables.scss';
 @import './_normalize.scss';
-@import './_nav.scss';
-@import './_hover.scss';
-@import './_animate.scss';
 @import './_type.scss';
 @import './_elements.scss';
-@import './_modal.scss';
+
+// Hover/animation effects
+@import './_hover.scss';
+@import './_animate.scss';
+
+// Components
+@import './components/_header.scss';
+@import './components/_info-block.scss';
 
 // Pages
-@import './_about.scss';
+@import './pages/_about.scss';
+@import './pages/_contact.scss';
 
 // Responsive styles are imported at the bottom
 
@@ -34,6 +39,11 @@
   max-width: $max-container-width;
   padding: 0 2rem;
   margin: auto;
+}
+
+.contact-form {
+  margin: auto;
+  max-width: 40rem;
 }
 
 .video-embed {

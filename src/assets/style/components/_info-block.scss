@@ -1,0 +1,7 @@
+.info-block {
+  padding: 1rem;
+  &.info-block--error {
+    background-color: #fff1f0;
+    border: 1px solid #ffa39e;
+  }
+}
