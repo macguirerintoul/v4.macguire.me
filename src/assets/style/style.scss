@@ -1,39 +1,25 @@
+// Utilities
+@import './utilities/_normalize.scss';
+@import './utilities/_hover.scss';
+@import './utilities/_animate.scss';
+
 // Foundations
 @import './_variables.scss';
-@import './_normalize.scss';
-@import './_type.scss';
 @import './_elements.scss';
-
-// Hover/animation effects
-@import './_hover.scss';
-@import './_animate.scss';
+@import './_type.scss';
 
 // Components
 @import './components/_header.scss';
+@import './components/_footer.scss';
+@import './components/_featured-block.scss';
 @import './components/_info-block.scss';
 
 // Pages
 @import './pages/_about.scss';
 @import './pages/_contact.scss';
+@import './pages/_index.scss';
 
 // Responsive styles are imported at the bottom
-
-.button--primary {
-  color: $color-white;
-  background-color: $color-blue;
-  background-image: $color-blue-gradient;
-  border: 1px solid $color-blue;
-}
-
-.button--secondary {
-  color: $color-black;
-  background-color: white;
-}
-
-.footer-content {
-  max-width: $max-container-width;
-  margin: auto;
-}
 
 .container {
   max-width: $max-container-width;
@@ -41,16 +27,10 @@
   margin: auto;
 }
 
-.contact-form {
-  margin: auto;
-  max-width: 40rem;
-}
-
 .video-embed {
   position: relative;
   padding-bottom: 38.25%;
   height: 0;
-
 }
 
 .content {
@@ -96,18 +76,6 @@
 }
 
 
-.hero {
-  p {
-    font-weight: 300;
-  }
-
-  max-width: $content-width;
-  padding: 4rem 0;
-}
-
-small {
-  font-size: 1rem;
-}
 
 .project-overview {
   display: grid;
@@ -221,46 +189,6 @@ small {
     .project-block--content {
       opacity: 1;
     }
-  }
-}
-
-.featured-block-container {
-  display: flex;
-  flex: 1 0 45%;
-  justify-content: space-between;
-}
-
-.featured-block {
-  a {
-    color: $color-white;
-  }
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 20rem;
-  .featured-block--name {
-    margin-bottom: 0.25rem;
-  }
-  .featured-block--item-title {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-  .featured-block--name,
-  .featured-block--item-title,
-  .featured-block--see-all,
-  .featured-block--context {
-    flex: 1 0 40%;
-  }
-  .featured-block--see-all {
-    text-transform: uppercase;
-  }
-  .featured-block--see-all,
-  .featured-block--context {
-    text-align: right;
-  }
-  .featured-block--text {
-    @include type-level-3;
   }
 }
 

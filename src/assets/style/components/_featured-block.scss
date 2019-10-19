@@ -1,0 +1,40 @@
+
+.featured-block-container {
+  display: flex;
+  flex: 1 0 45%;
+  justify-content: space-between;
+}
+
+.featured-block {
+  a {
+    color: $color-white;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 20rem;
+  .featured-block--name {
+    margin-bottom: 0.25rem;
+  }
+  .featured-block--item-title {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .featured-block--name,
+  .featured-block--item-title,
+  .featured-block--see-all,
+  .featured-block--context {
+    flex: 1 0 40%;
+  }
+  .featured-block--see-all {
+    text-transform: uppercase;
+  }
+  .featured-block--see-all,
+  .featured-block--context {
+    text-align: right;
+  }
+  .featured-block--text {
+    @include type-level-content;
+  }
+}

@@ -16,13 +16,22 @@ button {
   border-radius: $border-radius;
   margin-left: 0.4rem;
   box-shadow: $shadow;
+
+  &.button--primary {
+    color: $color-white;
+    background-color: $color-blue;
+    background-image: $color-blue-gradient;
+    border: 1px solid $color-blue;
+  }
+
+  &.button--secondary {
+    color: $color-black;
+    background-color: white;
+  }
 }
 
-footer {
-  background-color: $color-black;
-  color: $color-white;
-  margin-top: 4rem;
-  padding: 2rem;
+small {
+  @include type-level-small;
 }
 
 ul {
@@ -35,7 +44,6 @@ ul > li:before {
   position: absolute;
   margin-left: -1.1em;
 }
-
 
 th {
   text-align: left;
