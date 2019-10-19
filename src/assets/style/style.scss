@@ -13,12 +13,23 @@
 
 // Responsive styles are imported at the bottom
 
+button {
+  padding: 0.5rem;
+  min-width: 5rem;
+  min-height: 2rem;
+  border-radius: $border-radius;
+}
 .button--primary {
   color: $color-light;
-  padding: 0.5rem;
-  border-radius: $border-radius;
   background-color: $color-blue;
   background-image: $color-blue-gradient;
+  border: 1px solid $color-blue;
+}
+
+.button--secondary {
+  color: $color-dark;
+
+  background-color: white;
 }
 
 .footer-content {

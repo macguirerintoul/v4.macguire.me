@@ -1,18 +1,27 @@
 <template>
   <div class="featured-block">
     <span class="featured-block--name">{{ blockName }}</span>
-    <MagicLink class="featured-block--see-all" :url="seeAll">
+    <MagicLink
+      class="featured-block--see-all"
+      :url="seeAll"
+    >
       <small>See all</small>
     </MagicLink>
 
-    <a :href="url" target="_blank" class="featured-block--item-title">
+    <a
+      :href="url"
+      target="_blank"
+      class="featured-block--item-title"
+    >
       {{ itemTitle }}
     </a>
     <small class="featured-block--context">
       {{ computeContext(contextOne) }}
     </small>
 
-    <p class="featured-block--text">{{ text }}</p>
+    <p class="featured-block--text">
+      {{ text }}
+    </p>
 
     <small class="featured-block--context">
       {{ computeContext(contextTwo) }}
@@ -22,7 +31,6 @@
 
 <script>
 import moment from 'moment'
-import { fetch } from 'gridsome'
 
 import MagicLink from '~/components/MagicLink.vue'
 import picks from '../../content/picks.yaml'
