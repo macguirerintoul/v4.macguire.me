@@ -10,7 +10,6 @@
       >
         <p class="info-block__title">
           An error occurred.
-        </p>
         </p><p class="info-block__description">
           Are you connected to the Internet?
         </p>
