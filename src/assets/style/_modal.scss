@@ -12,7 +12,7 @@
 }
 
 .modal {
-  max-width: 40rem;
+  width: 40rem;
   background: #FFFFFF;
   overflow-x: auto;
   display: flex;
@@ -33,4 +33,10 @@
   p {
     margin-top: 0;
   }
+}
+
+.modal__button-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
 }

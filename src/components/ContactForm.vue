@@ -1,56 +1,70 @@
 <template>
-  <form
-    method="POST"
-    name="contact"
-    data-netlify="true"
-    @submit.prevent="handleSubmit"
-  >
-    <input
-      type="hidden"
-      name="form-name"
-      value="contact"
+  <div>
+    <form
+      v-if="submitted === false"
+      method="POST"
+      name="contact"
+      data-netlify="true"
+      @submit.prevent="handleSubmit"
     >
-    <p>The contents of this form will be sent directly to my inbox, and I will be in touch with you shortly.</p>
-
-    <label for="name">Name</label>
-    <input
-      v-model="formData.name"
-      type="text"
-      name="name"
-    >
-    <label for="email">Email</label>
-    <input
-      v-model="formData.email"
-      type="email"
-      name="email"
-    >
-
-    <label for="message">Message</label>
-    <textarea
-      v-model="formData.message"
-      name="message"
-    />
-    <div>
-      <button
-        class="button--secondary"
-        @click="close"
+      <input
+        type="hidden"
+        name="form-name"
+        value="contact"
       >
-        Cancel
-      </button>
-      <button
-        type="submit"
-        class="button--primary"
+      <p>The contents of this form will be sent directly to my inbox, and I will be in touch with you shortly.</p>
+
+      <label for="name">Name</label>
+      <input
+        v-model="formData.name"
+        type="text"
+        name="name"
       >
-        Send
-      </button>
+      <label for="email">Email</label>
+      <input
+        v-model="formData.email"
+        type="email"
+        name="email"
+        required
+      >
+
+      <label for="message">Message</label>
+      <textarea
+        v-model="formData.message"
+        name="message"
+        required
+      />
+
+      <div class="modal__button-container">
+        <button
+          type="button"
+          class="button--secondary"
+          @click="close"
+        >
+          Cancel
+        </button>
+        <button
+          type="submit"
+          class="button--primary"
+        >
+          Send
+        </button>
+      </div>
+    </form>
+    <div v-if="submitted === 'error'">
+      <span>error</span>
     </div>
-  </form>
+    <div v-if="submitted === true">
+      <span>submitted!</span>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
   data() {
     return {
+      submitted: false,
       formData: {}
     }
   },
@@ -61,7 +75,7 @@ export default {
         .join('&')
     },
     handleSubmit(e) {
-      this.$emit('submit');
+      // Post the form data to '/' where Netlify forms will pick it up
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -70,12 +84,23 @@ export default {
           ...this.formData,
         }),
       })
-      .then(() => this.$router.push('/success'))
-      .catch(error => alert(error))
+      .then(data => {
+        console.log(data)
+        if (data.status == 200) {
+          this.submitted = true
+        } else {
+          this.submitted = 'error'
+        }
+      })
+      .catch(error => {
+        console.error(error)
+        this.submitted = 'error'
+        alert(error)
+      })
     },
-      close() {
-        this.$emit('close');
-      },
-    }
+    close() {
+      this.$parent.$emit('close');
+    },
   }
+}
 </script>

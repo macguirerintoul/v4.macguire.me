@@ -13,12 +13,6 @@
 
 // Responsive styles are imported at the bottom
 
-button {
-  padding: 0.5rem;
-  min-width: 5rem;
-  min-height: 2rem;
-  border-radius: $border-radius;
-}
 .button--primary {
   color: $color-light;
   background-color: $color-blue;
@@ -28,7 +22,6 @@ button {
 
 .button--secondary {
   color: $color-dark;
-
   background-color: white;
 }
 

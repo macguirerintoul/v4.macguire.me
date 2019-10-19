@@ -9,6 +9,15 @@ body {
   height: 100%;
 }
 
+button {
+  padding: 0.5rem;
+  min-width: 5rem;
+  min-height: 2rem;
+  border-radius: $border-radius;
+  margin-left: 0.4rem;
+  box-shadow: $shadow;
+}
+
 footer {
   background-color: $color-dark;
   color: $color-light;
