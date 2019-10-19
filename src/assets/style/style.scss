@@ -19,14 +19,14 @@
 // Responsive styles are imported at the bottom
 
 .button--primary {
-  color: $color-light;
+  color: $color-white;
   background-color: $color-blue;
   background-image: $color-blue-gradient;
   border: 1px solid $color-blue;
 }
 
 .button--secondary {
-  color: $color-dark;
+  color: $color-black;
   background-color: white;
 }
 
@@ -232,7 +232,7 @@ small {
 
 .featured-block {
   a {
-    color: $color-light;
+    color: $color-white;
   }
   display: flex;
   flex-wrap: wrap;
@@ -260,8 +260,7 @@ small {
     text-align: right;
   }
   .featured-block--text {
-    font-size: $font-size-3;
-    line-height: 1.25rem;
+    @include type-level-3;
   }
 }
 

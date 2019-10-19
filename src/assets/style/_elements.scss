@@ -19,8 +19,8 @@ button {
 }
 
 footer {
-  background-color: $color-dark;
-  color: $color-light;
+  background-color: $color-black;
+  color: $color-white;
   margin-top: 4rem;
   padding: 2rem;
 }
@@ -83,7 +83,7 @@ video {
 
 label {
   display: block;
-  font-weight: 500;
+  @include type-level-label;
   margin-bottom: 0.2rem;
 }
 input, textarea {

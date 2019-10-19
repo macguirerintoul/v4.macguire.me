@@ -1,19 +1,48 @@
+// Layout
 $header-width: 1200px; // Maximum width of the top nav bar
-$header-background: rgba(252, 253, 254, 0.9); // Colour of
 $max-container-width: 1920px; // Maximum width of content
 $content-width: 50rem;
+
+// Responsive
+$mobile-breakpoint: 850px;
+$responsive-padding: 1rem;
+
+// Visual design
 $border-radius: 0.5rem;
 $shadow: rgba(0, 0, 0, 0.08) 0px 4px 8px;
-$font-stack: Larsseit, -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
 
-$color-dark: #000;
-$color-light: #fff;
+// Colours
+$color-black: #000;
+$color-white: #fff;
+$color-white-transparent: rgba(252, 253, 254, 0.9);
+$color-grey: darkslategrey;
 $color-blue: rgb(6, 132, 248);
 $color-blue-gradient: linear-gradient(rgb(6, 132, 248), rgb(6, 122, 228));
-$color-grey-400: rgb(43, 43, 43);
 
+// Type
+$font-stack: Larsseit, -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
 
-$font-size-3: 1rem;
-
-$responsive-padding: 1rem;
-$mobile-breakpoint: 850px;
+@mixin type-level-1 {
+  font-size: 6rem;
+  line-height: 3.4rem;
+  letter-spacing: -3px;
+}
+@mixin type-level-2 {
+  font-size: 32pt;
+  line-height: 36pt;
+  font-weight: 500;
+  margin-top: 4rem;
+}
+@mixin type-level-3 {
+  font-size: 24pt;
+  line-height: 28pt;
+  font-weight: 400;
+}
+@mixin type-level-content {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+@mixin type-level-label {
+  font-size: 18pt;
+  font-weight: 500;
+}
