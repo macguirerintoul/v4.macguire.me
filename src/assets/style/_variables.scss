@@ -9,13 +9,16 @@ $responsive-padding: 1rem;
 
 // Visual design
 $border-radius: 0.5rem;
-$shadow: rgba(0, 0, 0, 0.08) 0px 4px 8px;
+$shadow: rgba(0, 0, 0, 0.08) 0 4px 8px;
+$shadow-dark: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 
 // Colours
 $color-black: #000;
 $color-white: #fff;
 $color-white-transparent: rgba(252, 253, 254, 0.9);
 $color-grey: darkslategrey;
+$color-dark: #121212;
+$color-dark-grey: rgb(30, 30, 30);
 $color-blue: rgb(6, 132, 248);
 $color-blue-gradient: linear-gradient(rgb(6, 132, 248), rgb(6, 122, 228));
 
@@ -27,25 +30,30 @@ $font-stack: Larsseit, -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
   line-height: 3.4rem;
   letter-spacing: -3px;
 }
+
 @mixin type-level-2 {
   font-size: 32pt;
   line-height: 36pt;
   font-weight: 500;
   margin-top: 4rem;
 }
+
 @mixin type-level-3 {
   font-size: 24pt;
   line-height: 28pt;
   font-weight: 400;
 }
+
 @mixin type-level-content {
   font-size: 1.4rem;
   line-height: 2rem;
 }
+
 @mixin type-level-label {
   font-size: 18pt;
   font-weight: 500;
 }
+
 @mixin type-level-small {
   font-size: 1rem;
   font-weight: 500;
