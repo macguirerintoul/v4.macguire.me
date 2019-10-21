@@ -62,7 +62,6 @@ export default {
   methods: {
     async getPick() {
       // Choose a Pick at random from the array
-      console.log(this.picks);
       const pick = this.picks[Math.floor(Math.random() * this.picks.length)];
       // Store the Pick in state
       this.blockName = "Picks";
@@ -70,7 +69,6 @@ export default {
       this.text = pick.description;
       this.url = pick.url;
       this.seeAll = "/picks";
-      this.contextOne = { type: "timestamp", value: pick._createdAt };
     },
     getLastCommit() {
       fetch("https://api.github.com/users/macguirerintoul/events")

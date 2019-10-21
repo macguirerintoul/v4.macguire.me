@@ -1,7 +1,39 @@
 - title: Times Newer Roman
   description: Like Times New Roman, but more
   url: https://timesnewerroman.com/
-  date: 11/27/2015
 - title: UI Movement
   description: Repository of interface and interaction designs
   url: https://uimovement.com/
+- title: Really Good Emails
+  description: Showcase of the hidden art of HTML email
+  url: https://reallygoodemails.com/
+- title: Inside Intercom
+  description: Blog full of wisdom from Intercom
+  url: https://www.intercom.com/blog/
+- title: Calling Bullshit
+  description: Resources for how to think critically about the data and models that constitute evidence in the social and natural sciences
+  url: https://callingbullshit.org
+- title: Atlassian Team Playbook
+  description: Tips from Atlassian on Product team operations
+  url: https://www.atlassian.com/team-playbook
+- title: Sanity
+  description: The fully customizable headless CMS
+  url: https://www.sanity.io/
+- title: Gitstalk
+  description: Public activity of any GitHub user, displayed nicely
+  url: https://gitstalk.netlify.com/mrintoul
+- title: Front End Happy Hour
+  description: One of my favourite web development podcasts
+  url: https://frontendhappyhour.com/
+- title: Syntax
+  description: The tastiest web development treats out there
+  url: https://syntax.fm/
+- title: wp-cli
+  description: CLI for managing WordPress instances
+  url: https://wp-cli.org/
+- title: Typewolf
+  description: Nice font pairings and inspiring type
+  url: https://www.typewolf.com/
+- title: Humane by Design
+  description: Guidance for designing ethical, humane digital products through patterns focused on user well-being
+  url: https://humanebydesign.com/
