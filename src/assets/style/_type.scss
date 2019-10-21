@@ -4,19 +4,24 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Larsseit;
+  font-family: Larsseit, sans-serif;
 }
+
 h1 {
   @include type-level-1;
 }
+
 h2 {
   @include type-level-2;
 }
+
 h3 {
   @include type-level-3;
 }
 
-p {
+p,
+blockquote,
+li {
   @include type-level-content;
 }
 
@@ -24,6 +29,6 @@ p {
   p,
   blockquote {
     color: $color-grey;
-    font-family: 'Freight', 'Tiempos Text';
+    font-family: 'Freight', 'Tiempos Text', sans-serif;
   }
 }
