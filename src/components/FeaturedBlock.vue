@@ -5,22 +5,24 @@
       <small>See all</small>
     </MagicLink>
 
-    <div class="featured-block__content">
-      <a :href="url" target="_blank" class="featured-block--item-title">
-        {{ itemTitle }}
-      </a>
-      <small class="featured-block--context">
-        {{ computeContext(contextOne) }}
-      </small>
+    <MagicLink class="hvr-float" :url="url">
+      <div class="featured-block__content">
+        <span class="featured-block--item-title">
+          {{ itemTitle }}
+        </span>
+        <small class="featured-block--context">
+          {{ computeContext(contextOne) }}
+        </small>
 
-      <p class="featured-block--text">
-        {{ text }}
-      </p>
+        <p class="featured-block--text">
+          {{ text }}
+        </p>
 
-      <small class="featured-block--context">
-        {{ computeContext(contextTwo) }}
-      </small>
-    </div>
+        <small class="featured-block--context">
+          {{ computeContext(contextTwo) }}
+        </small>
+      </div>
+    </MagicLink>
   </div>
 </template>
 
