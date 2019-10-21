@@ -7,10 +7,7 @@
       aria-label="main navigation"
     >
       <div class="navbar-brand">
-        <g-link
-          class="navbar-item"
-          to="/"
-        >
+        <g-link class="navbar-item" to="/">
           <span class="header-name">Macguire Rintoul</span>
         </g-link>
 
@@ -24,37 +21,19 @@
         </button>
       </div>
 
-      <div
-        class="navbar-menu"
-        @click="closeMobileMenu"
-      >
+      <div class="navbar-menu" @click="closeMobileMenu">
         <div class="navbar-end">
-          <g-link
-            to="/"
-            class="navbar-item hvr-underline-reveal"
-          >
+          <g-link to="/" class="navbar-item hvr-underline-reveal">
             Home
           </g-link>
-          <g-link
-            to="/about"
-            class="navbar-item hvr-underline-reveal"
-          >
+          <g-link to="/about" class="navbar-item hvr-underline-reveal">
             About
           </g-link>
-          <g-link
-            to="/articles"
-            class="navbar-item hvr-underline-reveal"
-          >
+          <g-link to="/articles" class="navbar-item hvr-underline-reveal">
             Articles
           </g-link>
-          <g-link
-            class="navbar-item"
-            to="/contact"
-          >
-            <button
-              class="button--primary"
-              @click="showModal"
-            >
+          <g-link class="navbar-item" to="/contact">
+            <button class="button--primary">
               Contact
             </button>
           </g-link>
@@ -67,16 +46,15 @@
 <script>
 export default {
   data() {
-    return { showMobileMenu: false }
+    return { showMobileMenu: false };
   },
   methods: {
     toggleMobileMenu() {
-      this.showMobileMenu = !this.showMobileMenu
+      this.showMobileMenu = !this.showMobileMenu;
     },
     closeMobileMenu() {
-      this.showMobileMenu = false
-    },
-
-  },
-}
+      this.showMobileMenu = false;
+    }
+  }
+};
 </script>
