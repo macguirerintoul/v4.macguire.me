@@ -37,3 +37,6 @@
 - title: Humane by Design
   description: Guidance for designing ethical, humane digital products through patterns focused on user well-being
   url: https://humanebydesign.com/
+- title: Stacksort
+  description: A sort that searches StackOverflow for sorting functions and runs them until it returns the correct answer
+  url: https://gkoberger.github.io/stacksort/
