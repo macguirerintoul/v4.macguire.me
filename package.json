@@ -16,7 +16,7 @@
     "zooming": "^2.1.1"
   },
   "devDependencies": {
-    "eslint": "^6.4.0",
+    "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-gridsome": "^1.3.0",
     "eslint-plugin-prettier": "^3.1.1",
