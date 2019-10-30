@@ -791,10 +791,10 @@
     unist-builder "^1.0.4"
     unist-util-visit "^1.4.0"
 
-"@gridsome/source-filesystem@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@gridsome/source-filesystem/-/source-filesystem-0.6.0.tgz#420199ee7a34101bfd8479ca2ac66435575c3b3c"
-  integrity sha512-W6Sf9VDXotbol2ojsbHtlILYw3lIGKqy52ojHwaq0FKZlgJV8U3UahRRiL8A68xQdy1uRUTFtWTSvF3oEwUuyA==
+"@gridsome/source-filesystem@^0.6.0", "@gridsome/source-filesystem@^0.6.2":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@gridsome/source-filesystem/-/source-filesystem-0.6.2.tgz#95f65e9fcf03624ba23f8f0bee0779fe8e8b9021"
+  integrity sha512-K1pyXwFYIlABaHq3wqOPyYt4ARzLZuUQ+UZKjDSBT9I0T0qpCbwir5kJMQkR7qY4ONflUrv8fgG6DNSrc1uzbA==
   dependencies:
     chokidar "^2.0.4"
     fs-extra "^7.0.0"
