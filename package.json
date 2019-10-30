@@ -10,7 +10,7 @@
     "@gridsome/plugin-google-analytics": "^0.1.0",
     "@gridsome/remark-prismjs": "^0.2.0",
     "@gridsome/source-filesystem": "^0.6.0",
-    "@gridsome/transformer-remark": "^0.3.0",
+    "@gridsome/transformer-remark": "^0.4.0",
     "@gridsome/vue-remark": "^0.1.4",
     "cloudinary-vue": "^1.0.0-beta2",
     "gridsome": "^0.7.8",
