@@ -3,13 +3,13 @@
     <h1>Articles</h1>
     <!-- List posts -->
     <div>
-      <li
-        v-for="edge in $page.articles.edges"
-        :key="edge.node.id"
-        :post="edge.node"
-      >
+      <g-link v-for="edge in $page.articles.edges"
+      :key="edge.node.id"
+      :post="edge.node" :to="edge.node.path">
+      <li>
         {{ edge.node.title }}
       </li>
+    </g-link>
     </div>
   </section>
 </template>
@@ -20,6 +20,7 @@ query AllArticles {
     edges {
       node {
         title
+        path
       }
     }
   }

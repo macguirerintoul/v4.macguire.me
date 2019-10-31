@@ -11,46 +11,29 @@ module.exports = {
   siteName: "Macguire Rintoul",
   siteDescription: "Product design + web development consultant",
   port: 3000,
-  templates: {
-    Article: "/article/:title"
-  },
   plugins: [
     {
       use: "@gridsome/vue-remark",
       options: {
         typeName: "Project", // Required
         baseDir: "./content/projects", // Where .md files are located
-        route: "/work/:title",
+        route: "/projects/:title",
         template: "./src/templates/Project.vue" // Optional
       }
     },
-    // {
-    //   // Add Projects collection
-    //   use: '@gridsome/source-filesystem',
-    //   options: {
-    //     typeName: 'Project',
-    //     path: 'content/projects/*.md',
-    //     refs: {
-    //       // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
-    //       tags: {
-    //         typeName: 'Tag',
-    //         create: true
-    //       }
-    //     }
-    //   }
-    // },
     {
       // Add Articles collection
-      use: "@gridsome/source-filesystem",
+      use: "@gridsome/vue-remark",
       options: {
-        typeName: "Article",
-        path: "content/articles/*.md"
+        typeName: "Article", // Required
+        baseDir: "./content/articles", // Where .md files are located
+        route: "/article/:title",
+        template: "./src/templates/Article.vue" // Optional
       }
     }
   ],
-
   transformers: {
-    //Add markdown support to all file-system sources
+    // Add markdown support to all file-system sources
     remark: {
       externalLinksTarget: "_blank",
       externalLinksRel: ["nofollow", "noopener", "noreferrer"],
