@@ -2,7 +2,8 @@
   <g-link :class="['project-block', project.title]" :to="project.path">
     <MagicImage :path="project.imagePath" :alt="project.title" />
     <div class="project-block__content">
-    <h3 class="project-block--title">{{ project.title }}</h3>
+    <h2 class="project-block--title">{{ project.title }}</h2>
+    <p class="project-block__description">{{ project.shortDescription }}</p>
     <small
       v-for="tag in project.tags"
       :key="tag"
