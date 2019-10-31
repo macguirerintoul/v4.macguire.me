@@ -1,7 +1,7 @@
 ---
 title: ROAR
 for: Vancouver Coastal Health
-shortDescription: "A mobile app for Vancity members to understand and build credit, in order to better support their financial well-being"
+shortDescription: "Centralizes registering new hires in training sessions"
 date: 2019-02-06
 published: true
 imagePath: ROAR/images/featured

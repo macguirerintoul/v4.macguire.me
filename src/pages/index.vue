@@ -7,10 +7,20 @@
       <h1>Featured Work</h1>
       <div class="project-flex-container">
         <ProjectBlock
-          v-for="edge in $page.projects.edges"
+          v-for="edge in $page.featuredProjects.edges"
           :key="edge.node.id"
           :project="edge.node"
         />
+      </div>
+      <h2>Other projects</h2>
+      <div class="other-projects__flex-container">
+        <ul>
+          <li
+          v-for="edge in $page.otherProjects.edges"
+          :key="edge.node.id">
+            {{edge.node.title}}: {{edge.node.shortDescription}}
+          </li>
+        </ul>
       </div>
     </section>
   </div>
@@ -18,17 +28,25 @@
 
 <page-query>
 query AllProjects {
-  projects: allProject {
+  featuredProjects: allProject(filter: { featured: { eq: true }}) {
     edges {
       node {
         id
         for
         title
         shortDescription
-        featured
         tags
         imagePath
         path
+      }
+    }
+  }
+  otherProjects: allProject(filter: { featured: { eq: false }}) {
+    edges {
+      node {
+        id
+        title
+        shortDescription
       }
     }
   }

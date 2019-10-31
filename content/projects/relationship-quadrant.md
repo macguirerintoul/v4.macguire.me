@@ -1,7 +1,7 @@
 ---
-title: Data Visualization
+title: Relationship/Quadrant
 for: Visier
-shortDescription: "Interactive data visualizations for Visier's analytics platform"
+shortDescription: "Visualizes datasets for multivariate analysis"
 featured: true
 imagePath: Data_Visualization/images/featured
 date: 2019-08-01

@@ -11,7 +11,7 @@
       <CldTransformation quality="auto" fetch-format="auto" />
     </CldImage>
     <div class="project-block__content">
-      <h2 class="project-block--title">{{ project.title }}</h2>
+      <h3 class="project-block--title">{{ project.title }}</h3>
       <p class="project-block__description">{{ project.shortDescription }}</p>
       <small
         v-for="tag in project.tags"

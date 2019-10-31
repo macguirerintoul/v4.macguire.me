@@ -1,7 +1,7 @@
 ---
 title: MyCredit
 for: IAT 438
-shortDescription: "A mobile app for Vancity members to understand and build credit, in order to better support their financial well-being"
+shortDescription: "Helps Vancity members understand and build credit, improving their financial well-being"
 featured: true
 imagePath: MyCredit/images/featured
 date: 2019-02-01
