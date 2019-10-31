@@ -9,7 +9,7 @@ featured: true
 tags: ['Product Design','Web Development']
 roles: ['Interaction Design','Interface Design', 'Project Management', 'Full-Stack Web Development']
 tools: ['Sketch', 'React', 'Laravel']
-description: "roaroaroraooaroraoaroraoraor"
+summary: "roaroaroraooaroraoaroraoraor"
 ---
 
 roarorino

@@ -1,24 +1,34 @@
 <template>
   <g-link :class="['project-block', project.title]" :to="project.path">
-    <MagicImage :path="project.imagePath" :alt="project.title" />
-    <div class="project-block__content">
-    <h2 class="project-block--title">{{ project.title }}</h2>
-    <p class="project-block__description">{{ project.shortDescription }}</p>
-    <small
-      v-for="tag in project.tags"
-      :key="tag"
-      class="project-block__tag"
-      >{{ tag }}</small
+    <CldImage
+      class="img-zooming"
+      dpr="auto"
+      height="400"
+      crop="scale"
+      :alt="project.title"
+      :public-id="project.imagePath"
     >
-  </div>
+      <CldTransformation quality="auto" fetch-format="auto" />
+    </CldImage>
+    <div class="project-block__content">
+      <h2 class="project-block--title">{{ project.title }}</h2>
+      <p class="project-block__description">{{ project.shortDescription }}</p>
+      <small
+        v-for="tag in project.tags"
+        :key="tag"
+        class="project-block__tag"
+        >{{ tag }}</small
+      >
+    </div>
   </g-link>
 </template>
 
 <script>
-import MagicImage from "./MagicImage";
+import { CldImage, CldTransformation } from "cloudinary-vue";
 export default {
   components: {
-    MagicImage
+    CldImage,
+    CldTransformation
   },
   props: {
     project: {
