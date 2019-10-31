@@ -27,7 +27,7 @@ $font-stack: Larsseit, -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
 
 @mixin type-level-1 {
   font-size: 6rem;
-  line-height: 3.4rem;
+  line-height: 6rem;
   letter-spacing: -3px;
 }
 
@@ -51,8 +51,8 @@ $font-stack: Larsseit, -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
 }
 
 @mixin type-level-content {
-  font-size: 1.4rem;
-  line-height: 2rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 @mixin type-level-label {

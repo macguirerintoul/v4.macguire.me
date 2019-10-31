@@ -1,8 +1,8 @@
 <template>
-  <div class="content">
+  <article>
     <h1>{{$page.article.title}}</h1>
     <VueRemarkContent />
-  </div>
+  </article>
 </template>
 
 <page-query>

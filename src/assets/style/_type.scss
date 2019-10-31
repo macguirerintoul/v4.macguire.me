@@ -25,10 +25,11 @@ li {
   @include type-level-content;
 }
 
-.content {
+.content,
+article {
   p,
   blockquote {
-    color: $color-grey;
-    font-family: 'Freight', 'Tiempos Text', sans-serif;
+    color: $color-dark;
+    font-family: Neue Montreal, 'Freight', 'Tiempos Text', sans-serif;
   }
 }

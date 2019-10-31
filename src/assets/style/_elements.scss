@@ -2,9 +2,15 @@
   box-sizing: border-box;
 }
 
+article {
+  p {
+    max-width: 60rem;
+  }
+}
+
 body {
   margin-top: 10rem;
-  background-color: rgb(252, 253, 254);
+  background-color: rgb(240, 250, 241);;
   font-family: $font-stack;
   height: 100%;
 }

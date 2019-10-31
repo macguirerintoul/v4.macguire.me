@@ -1,5 +1,5 @@
 ---
-title: Everything I Learned from my Internship at Visier
+title: Everything I learned from my internship at Visier
 date: 2019-12-19
 ---
 
