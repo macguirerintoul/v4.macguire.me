@@ -1,21 +1,5 @@
 <template>
   <div>
-    <!-- eslint-disable-next-line -->
-    <component
-      is="style"
-      v-for="edge in $page.projects.edges"
-      :key="'style-' + edge.node.id"
-    >
-      .project-block.{{ edge.node.title }} { background:
-      url(https://res.cloudinary.com/macguire/image/upload/c_scale,w_800,dpr_auto,f_auto,q_auto:eco/{{
-        edge.node.imagePath
-      }}.jpg) no-repeat center center/cover; } .project-block.{{
-        edge.node.title
-      }}:before { background:
-      url(https://res.cloudinary.com/macguire/image/upload/c_scale,w_800,dpr_auto,f_auto,q_auto:eco/{{
-        edge.node.imagePath
-      }}.jpg) no-repeat center center/cover; }
-    </component>
     <section class="hero">
       <p>Product design + web development consultant available for hire</p>
     </section>
