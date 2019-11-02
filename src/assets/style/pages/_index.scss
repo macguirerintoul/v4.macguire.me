@@ -43,10 +43,6 @@
       border-radius: 1rem;
     }
 
-    .project-block__tag:not(:last-child)::after {
-      content: ', ';
-    }
-
     .project-block__content {
       padding: 1rem;
 

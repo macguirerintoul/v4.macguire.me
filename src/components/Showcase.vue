@@ -1,12 +1,12 @@
 <template>
   <div :class="['showcase', orientation]">
     <MagicImage
-      v-show="type === 'image'"
+      v-if="type === 'image'"
       class="showcase--media"
       :path="path"
       :alt="alt"
     />
-    <MagicVideo v-show="type === 'video'" :source="source" :path="path" />
+    <MagicVideo v-if="type === 'video'" :source="source" :path="path" />
     <p v-text="content"></p>
   </div>
 </template>

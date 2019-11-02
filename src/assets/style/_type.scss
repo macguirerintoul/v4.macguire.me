@@ -1,7 +1,7 @@
 @mixin type-level-1 {
   font-size: 6rem;
   line-height: 6rem;
-  letter-spacing: -3px;
+  letter-spacing: -5px;
 }
 
 @mixin type-level-2 {
@@ -9,12 +9,14 @@
   line-height: 36pt;
   font-weight: 500;
   margin-top: 4rem;
+  letter-spacing: -1px;
 }
 
 @mixin type-level-3 {
   font-size: 24pt;
   line-height: 28pt;
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: -1px;
 }
 
 @mixin type-level-4 {
@@ -24,13 +26,8 @@
 }
 
 @mixin type-level-content {
-  font-size: 1.75rem;
-  line-height: 2.25rem;
-}
-
-@mixin type-level-label {
-  font-size: 18pt;
-  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 @mixin type-level-small {
@@ -44,7 +41,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Masqualero, Larsseit, sans-serif;
+  font-family: Larsseit, sans-serif;
 }
 
 h1 {
@@ -70,6 +67,12 @@ article {
   p,
   blockquote {
     color: $color-dark;
-    font-family: Neue Montreal, 'Freight', 'Tiempos Text', sans-serif;
+    font-family: Editorial New, Neue Montreal, 'Freight', 'Tiempos Text', sans-serif;
   }
+}
+
+button,
+.navbar-item {
+
+  font-family: Larsseit;
 }

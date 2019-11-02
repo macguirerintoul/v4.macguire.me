@@ -28,6 +28,9 @@
   margin: auto;
 }
 
+.commas:not(:last-child)::after {
+  content: ', ';
+}
 .video-embed {
   position: relative;
   padding-bottom: 38.25%;

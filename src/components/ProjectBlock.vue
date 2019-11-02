@@ -16,7 +16,7 @@
       <small
         v-for="tag in project.tags"
         :key="tag"
-        class="project-block__tag"
+        class="project-block__tag commas"
         >{{ tag }}</small
       >
     </div>

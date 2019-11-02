@@ -11,6 +11,7 @@ tags: ['Product Design']
 roles: ['Content Strategy', 'Project Management', 'Interface Design', 'User Research']
 tools: ['Sketch', 'Keynote', 'G Suite']
 summary: "Despite the importance of credit in personal finance, an estimated 56% of Canadians have never checked their credit score and 31% don't know how to improve their score (BMO, 2016). We saw this as an opportunity to support people in learning about credit through a mobile app offered by Vancity, a local credit union. The project was extremely well-received by industry designers and Vancity directors, who invited us to present to their Digital Services team at their head office in Vancouver."
+contribution: "As the project manager, I ensured that the project's individual parts were being completed and were cohesive, and decided when to stop iterating and start polishing. As the content strategist, I wrote copy that was consistent with our three design principles: personal, clear, and hopeful. I also ensured that the credit-related content in MyCredit was beneficial and easy to understand, which I validated by conducting interviews and think-aloud testing with 9 participants."
 ---
 
 import Showcase from '~/components/Showcase'
@@ -20,9 +21,6 @@ import MagicImage from '~/components/MagicImage'
 import Blockquote from '~/components/Blockquote'
 
 <MagicVideo type="vimeo" path="305425536" />
-
-## My Contribution
-As the project manager, I ensured that the project's individual parts were being completed and were cohesive, and decided when to stop iterating and start polishing. As the content strategist, I wrote copy that was consistent with our three design principles: personal, clear, and hopeful. I also ensured that the credit-related content in MyCredit was beneficial and easy to understand, which I validated by conducting interviews and think-aloud testing with 9 participants.
 
 ## Problem
 Despite the importance of credit scores in personal finance, an estimated 56% of Canadians have never checked their credit score and 31% don't know how to improve their score.

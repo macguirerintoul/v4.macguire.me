@@ -1,4 +1,5 @@
 <template>
+  <div>
   <section class="project-overview">
     <h1 class="project-overview__title">{{ project.title }}</h1>
     <p class="project-overview__summary" v-html="project.summary" />
@@ -9,7 +10,9 @@
         :alt="'Screenshot of ' + project.title"
       />
     </div>
-
+  </section>
+  <section>
+    <h2>Introduction</h2>
     <div class="project-overview__context">
       <div>
         <h4>For</h4>
@@ -21,19 +24,16 @@
       </div>
       <div>
         <h4>Roles</h4>
-        <ul>
-          <li v-for="role in project.roles" :key="role">{{ role }}</li>
-        </ul>
+        <span class="commas" v-for="role in project.roles" :key="role">{{ role }}</span>
       </div>
       <div>
         <h4>Tools</h4>
-        <ul>
-          <li v-for="tool in project.tools" :key="tool">{{ tool }}</li>
-        </ul>
+        <span class="commas" v-for="tool in project.tools" :key="tool">{{ tool }}</span>
       </div>
-
+      <p v-html="project.contribution"></p>
     </div>
   </section>
+    </div>
 </template>
 
 <script>

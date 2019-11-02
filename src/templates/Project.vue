@@ -15,6 +15,7 @@ query Project($id: ID!) {
     url
     year
     summary
+    contribution
     content
     imagePath
   }
