@@ -5,6 +5,7 @@ shortDescription: "Keeps track of upcoming due dates and events"
 featured: true
 imagePath: Forecast/images/featured
 date: 2019-12-01
+year: 2019
 published: true
 url: https://forecast.macguire.me
 tags: ['Product Design', 'Web Development']

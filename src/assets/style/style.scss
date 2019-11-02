@@ -18,6 +18,7 @@
 @import './pages/_about.scss';
 @import './pages/_contact.scss';
 @import './pages/_index.scss';
+@import './pages/_project.scss';
 
 // Responsive styles are imported at the bottom
 
@@ -79,57 +80,6 @@
 }
 
 
-
-.project-overview {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 6rem;
-  grid-auto-rows: min-content;
-  margin-bottom: 5rem;
-
-  .project-overview__title {
-    margin: 0 0 1rem 0;
-  }
-
-  .project-overview__summary {
-    grid-column: 1 / 2;
-    grid-row: 2;
-
-    p {
-      margin: 0 0 3rem 0;
-      max-width: 40rem;
-    }
-  }
-
-  .project-overview__context {
-    display: flex;
-    justify-content: space-between;
-
-    h3 {
-      margin: 0 0 0.6rem 0;
-    }
-
-    ul {
-      margin: 0;
-    }
-  }
-
-  .project-overview__image {
-    grid-column: 2;
-    grid-row: 2 / 3;
-    align-self: center;
-  }
-}
-
-.project-context {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-
-  div {
-    flex: 1 0 auto;
-  }
-}
 
 .showcase {
   display: flex;

@@ -13,6 +13,7 @@ query Project($id: ID!) {
     tools
     for
     url
+    year
     summary
     content
     imagePath

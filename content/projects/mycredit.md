@@ -3,8 +3,9 @@ title: MyCredit
 for: IAT 438
 shortDescription: "Helps Vancity members understand and build credit, improving their financial well-being"
 featured: true
+order: 1
 imagePath: MyCredit/images/featured
-date: 2019-02-01
+year: 2018
 published: true
 tags: ['Product Design', 'Web Development']
 roles: ['Content Strategy', 'Project Management', 'Interface Design', 'User Research']
