@@ -29,6 +29,9 @@
         :alt="'Screenshot of ' + project.title"
       />
     </div>
+    <MagicLink class="project-overview__url" :url="project.url">
+      <small>{{ project.url }}</small>
+    </MagicLink>
   </section>
 </template>
 

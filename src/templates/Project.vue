@@ -12,6 +12,7 @@ query Project($id: ID!) {
     roles
     tools
     for
+    url
     summary
     content
     imagePath

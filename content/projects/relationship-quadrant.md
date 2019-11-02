@@ -1,5 +1,5 @@
 ---
-title: Relationship/Quadrant
+title: Data Visualization
 for: Visier
 shortDescription: "Visualizes datasets for multivariate analysis"
 featured: true
