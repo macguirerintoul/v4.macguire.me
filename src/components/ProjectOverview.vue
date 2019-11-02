@@ -12,21 +12,21 @@
 
     <div class="project-overview__context">
       <div>
-        <h3>For</h3>
+        <h4>For</h4>
         <span>{{ project.for }}</span>
       </div>
       <div>
-        <h3>Year</h3>
+        <h4>Year</h4>
         <span>{{ project.year }}</span>
       </div>
       <div>
-        <h3>Roles</h3>
+        <h4>Roles</h4>
         <ul>
           <li v-for="role in project.roles" :key="role">{{ role }}</li>
         </ul>
       </div>
       <div>
-        <h3>Tools</h3>
+        <h4>Tools</h4>
         <ul>
           <li v-for="tool in project.tools" :key="tool">{{ tool }}</li>
         </ul>

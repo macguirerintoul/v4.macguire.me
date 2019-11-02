@@ -4,7 +4,7 @@ for: Visier
 shortDescription: "Visualizes datasets for multivariate analysis"
 featured: true
 imagePath: Data_Visualization/images/featured
-date: 2019-08-01
+year: 2019
 published: false
 tags: ['Product Design']
 roles: ['Interaction Design', 'Project Management', 'Interface Design']

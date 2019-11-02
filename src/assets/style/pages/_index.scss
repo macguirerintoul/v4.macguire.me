@@ -4,7 +4,7 @@
   }
 
   max-width: $content-width;
-  padding: 4rem 0;
+  padding: 2em 0;
 }
 
 .project-flex-container {
@@ -13,6 +13,9 @@
   justify-content: space-between;
 
   .project-block {
+    img {
+      border: none;
+    }
     .project-block--title {
       margin: 0;
     }

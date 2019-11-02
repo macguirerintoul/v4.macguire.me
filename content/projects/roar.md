@@ -2,10 +2,9 @@
 title: ROAR
 for: Vancouver Coastal Health
 shortDescription: "Centralizes registering new hires in training sessions"
-date: 2019-02-06
 year: 2019
-order: 2
 published: true
+order: 2
 imagePath: ROAR/images/featured
 featured: true
 tags: ['Product Design','Web Development']
