@@ -28,7 +28,10 @@
 
 <page-query>
 query AllProjects {
-  featuredProjects: allProject(filter: { featured: { eq: true }}) {
+  featuredProjects: allProject(sortBy: "order", order: ASC, filter: {
+    featured: { eq: true },
+    published: { eq: true }
+  }) {
     edges {
       node {
         id
@@ -41,7 +44,10 @@ query AllProjects {
       }
     }
   }
-  otherProjects: allProject(filter: { featured: { eq: false }}) {
+  otherProjects: allProject(filter: {
+    featured: { eq: false },
+    published: { eq: true }
+  }) {
     edges {
       node {
         id

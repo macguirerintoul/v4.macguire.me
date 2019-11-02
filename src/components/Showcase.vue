@@ -12,39 +12,39 @@
 </template>
 
 <script>
-import MagicImage from "./MagicImage";
-import MagicVideo from "./MagicVideo";
+import MagicImage from './MagicImage'
+import MagicVideo from './MagicVideo'
 
 export default {
   components: {
     MagicImage,
-    MagicVideo
+    MagicVideo,
   },
   props: {
     content: {
       type: String,
-      default: ""
+      default: '',
     },
     orientation: {
       type: String,
-      default: ""
+      default: 'vertical',
     },
     path: {
       type: String,
-      default: ""
+      default: '',
     },
     source: {
       type: String,
-      default: ""
+      default: '',
     },
     type: {
       type: String,
-      default: ""
+      default: '',
     },
     alt: {
       type: String,
-      default: ""
-    }
-  }
-};
+      default: '',
+    },
+  },
+}
 </script>

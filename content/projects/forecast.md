@@ -6,7 +6,7 @@ featured: true
 imagePath: Forecast/images/featured
 date: 2019-12-01
 year: 2019
-published: true
+published: false
 url: https://forecast.macguire.me
 tags: ['Product Design', 'Web Development']
 roles: ['Interaction Design', 'Visual Design', 'Web Development']

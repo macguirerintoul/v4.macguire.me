@@ -7,7 +7,7 @@ order: 1
 imagePath: MyCredit/images/featured
 year: 2018
 published: true
-tags: ['Product Design', 'Web Development']
+tags: ['Product Design']
 roles: ['Content Strategy', 'Project Management', 'Interface Design', 'User Research']
 tools: ['Sketch', 'Keynote', 'G Suite']
 summary: "Despite the importance of credit in personal finance, an estimated 56% of Canadians have never checked their credit score and 31% don't know how to improve their score (BMO, 2016). We saw this as an opportunity to support people in learning about credit through a mobile app offered by Vancity, a local credit union. When the project was complete, Vancity directors invited us to present to their Digital Services team at their head office in Vancouver."

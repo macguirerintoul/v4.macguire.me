@@ -17,8 +17,7 @@
 </template>
 
 <script>
-import CldVideo from 'cloudinary-vue'
-import CldTransformation from 'cloudinary-vue'
+import { CldVideo, CldTransformation } from 'cloudinary-vue'
 
 export default {
   components: {
