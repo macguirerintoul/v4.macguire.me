@@ -2,6 +2,7 @@
   <section class="project-overview">
     <h1 class="project-overview__title">{{ project.title }}</h1>
     <div class="project-overview__summary">
+      <!-- eslint-disable-next-line -->
       <p v-html="project.summary" />
       <div class="project-overview__context">
         <div>
@@ -36,19 +37,21 @@
 </template>
 
 <script>
-import MagicImage from "./MagicImage";
+import MagicImage from './MagicImage'
+import MagicLink from './MagicLink'
 
 export default {
   components: {
-    MagicImage
+    MagicImage,
+    MagicLink,
   },
   props: {
     project: {
       type: Object,
       default() {
-        return {};
-      }
-    }
-  }
-};
+        return {}
+      },
+    },
+  },
+}
 </script>

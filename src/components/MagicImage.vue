@@ -1,5 +1,5 @@
 <template>
-  <CldImage
+  <cld-image
     class="img-zooming"
     lazy
     dpr="auto"
@@ -8,26 +8,27 @@
     :alt="alt"
     :public-id="path"
   >
-    <CldTransformation quality="auto" fetch-format="auto" />
-  </CldImage>
+    <cld-transformation quality="auto" fetch-format="auto" />
+  </cld-image>
 </template>
 
 <script>
-import { CldImage, CldTransformation } from "cloudinary-vue";
+import { CldTransformation, CldImage } from 'cloudinary-vue'
 
 export default {
   components: {
-    CldImage
+    CldImage,
+    CldTransformation,
   },
   props: {
     path: {
       type: String,
-      default: ""
+      default: '',
     },
     alt: {
       type: String,
-      default: ""
-    }
-  }
-};
+      default: '',
+    },
+  },
+}
 </script>

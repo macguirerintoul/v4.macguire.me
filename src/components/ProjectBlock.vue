@@ -24,19 +24,20 @@
 </template>
 
 <script>
-import { CldImage, CldTransformation } from "cloudinary-vue";
+import { CldImage, CldTransformation } from 'cloudinary-vue'
+
 export default {
   components: {
     CldImage,
-    CldTransformation
+    CldTransformation,
   },
   props: {
     project: {
       type: Object,
       default: () => {
-        return {};
-      }
-    }
-  }
-};
+        return {}
+      },
+    },
+  },
+}
 </script>

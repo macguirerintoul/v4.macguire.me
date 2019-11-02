@@ -17,22 +17,23 @@
 </template>
 
 <script>
-import { CldVideo, CldTransformation } from "cloudinary-vue";
+import CldVideo from 'cloudinary-vue'
+import CldTransformation from 'cloudinary-vue'
 
 export default {
   components: {
     CldVideo,
-    CldTransformation
+    CldTransformation,
   },
   props: {
     path: {
       type: String,
-      default: ""
+      default: '',
     },
     source: {
       type: String,
-      default: ""
-    }
-  }
-};
+      default: '',
+    },
+  },
+}
 </script>
