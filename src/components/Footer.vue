@@ -1,16 +1,32 @@
 <template>
   <footer>
     <div class="footer-content">
-      <section>
+      <section class="footer__left">
+        <div>
         <h2>Macguire Rintoul</h2>
         <p>Product design + web development consultant</p>
+
+      </div>
+      <div class="footer__links">
+        <MagicLink url="/contact">Contact</MagicLink>
+        <MagicLink url="https://github.com/macguirerintoul/">GitHub</MagicLink>
+        <MagicLink url="https://www.linkedin.com/in/macguirerintoul/"
+          >LinkedIn</MagicLink
+        >
+        <MagicLink url="https://www.twitter.com/macguirerintoul/"
+          >Twitter</MagicLink
+        >
+        <MagicLink url="https://www.instagram.com/macguirerintoul/"
+          >Instagram</MagicLink>
+    </div>
+      <div>
         <h3>Care for a quarterly email?</h3>
         <div
           v-if="subscriptionStatus != ''"
           :class="['info-block', infoBlockStatus]"
           v-text="subscriptionMessage"
         />
-        <label class="footer-subscribe-label" for="subscribe-input">
+        <label class="footer-subscribe-label" for="subscribe-input" hidden>
           Email
         </label>
         <form class="footer-form" @submit.prevent="addSubsriber">
@@ -26,6 +42,8 @@
             Subscribe
           </button>
         </form>
+      </div>
+
       </section>
       <section class="featured-block-container">
         <FeaturedBlock type="randomStar" />
@@ -37,52 +55,54 @@
 </template>
 
 <script>
-import FeaturedBlock from "~/components/FeaturedBlock";
+import FeaturedBlock from '~/components/FeaturedBlock'
+import MagicLink from '~/components/MagicLink'
 
 export default {
   components: {
-    FeaturedBlock
+    FeaturedBlock,
+    MagicLink,
   },
   data() {
     return {
-      email: "",
-      subscriptionStatus: ""
-    };
+      email: '',
+      subscriptionStatus: '',
+    }
   },
   computed: {
     infoBlockStatus: function() {
-      return "info-block--" + this.subscriptionStatus;
-    }
+      return 'info-block--' + this.subscriptionStatus
+    },
   },
   methods: {
     updateSubscriptionStatus(data) {
       if (!data.error) {
-        this.subscriptionStatus = "success";
-        this.subscriptionMessage = "Successfully subscribed.";
+        this.subscriptionStatus = 'success'
+        this.subscriptionMessage = 'Successfully subscribed.'
       } else {
-        this.subscriptionStatus = "error";
-        this.subscriptionMessage = data.error;
+        this.subscriptionStatus = 'error'
+        this.subscriptionMessage = data.error
       }
     },
     addSubsriber() {
-      console.log("Attempting to add subscriber...");
+      console.log('Attempting to add subscriber...')
       try {
-        fetch("https://api.macguire.me/api/add-subscriber", {
-          method: "post",
-          body: JSON.stringify({ email: this.email })
+        fetch('https://api.macguire.me/api/add-subscriber', {
+          method: 'post',
+          body: JSON.stringify({ email: this.email }),
         })
           .then(response => {
-            return response.json();
+            return response.json()
           })
           .then(data => {
-            console.log("Subscription attempt finished", data);
-            this.updateSubscriptionStatus(data);
-          });
+            console.log('Subscription attempt finished', data)
+            this.updateSubscriptionStatus(data)
+          })
       } catch (error) {
-        console.error(error);
-        this.subscriptionStatus == error;
+        console.error(error)
+        this.subscriptionStatus == error
       }
-    }
-  }
-};
+    },
+  },
+}
 </script>

@@ -40,10 +40,13 @@
     box-shadow: $shadow-dark;
   }
 
-  .featured-block--name,
+  .featured-block--name {
+    flex: 1 1 50%;
+  }
   .featured-block--item-title {
     // TODO: change -- to __
-    flex: 1 1 50%;
+    font-family: Larsseit;
+    flex: 1 1 75%;
   }
 
   .featured-block--see-all {
@@ -62,7 +65,6 @@
 
   .featured-block--text {
     @include type-level-content;
-
     margin-bottom: 0;
   }
 }

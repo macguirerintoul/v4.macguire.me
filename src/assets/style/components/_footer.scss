@@ -15,6 +15,11 @@ footer {
   }
 }
 
+.footer__left {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -24,6 +29,13 @@ footer {
   section {
     flex: 1 0 50%;
     max-width: 48%;
+  }
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  a {
+    color: #FFF;
   }
 }
 

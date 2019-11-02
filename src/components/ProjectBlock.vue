@@ -1,24 +1,19 @@
 <template>
   <g-link :class="['project-block', project.title]" :to="project.path">
-    <CldImage
-      class="img-zooming"
-      dpr="auto"
-      height="400"
-      crop="scale"
-      :alt="project.title"
-      :public-id="project.imagePath"
-    >
-      <CldTransformation quality="auto" fetch-format="auto" />
-    </CldImage>
+    <div :style="'height: 300px;background: url(https://res.cloudinary.com/macguire/image/upload/c_scale,h_600,dpr_auto,f_auto,q_auto:eco/' +  project.imagePath + '.jpg) no-repeat center center/cover; }'">
+    </div>
     <div class="project-block__content">
       <h3 class="project-block--title">{{ project.title }}</h3>
+      <div class="project-block__tags">
+        <small
+          v-for="tag in project.tags"
+          :key="tag"
+          class="commas"
+          >{{ tag }}</small>
+      </div>
       <p class="project-block__description">{{ project.shortDescription }}</p>
-      <small
-        v-for="tag in project.tags"
-        :key="tag"
-        class="project-block__tag commas"
-        >{{ tag }}</small
-      >
+
+    </div>
     </div>
   </g-link>
 </template>
