@@ -109,10 +109,16 @@
 
   &.media-left {
     flex-direction: row;
+    p {
+      margin-right: 0;
+    }
   }
 
   &.media-right {
     flex-direction: row-reverse;
+    p {
+      margin-left: 0;
+    }
   }
 }
 
