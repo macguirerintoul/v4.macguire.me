@@ -34,6 +34,7 @@ footer {
 .footer__links {
   display: flex;
   flex-direction: column;
+  line-height: 1.5em;
   a {
     color: #FFF;
   }
@@ -41,9 +42,5 @@ footer {
 
 .footer-form {
   display: flex;
-  align-items: baseline;
-
-  button {
-    flex: 1 0 auto;
-  }
+  flex-direction: column;
 }
