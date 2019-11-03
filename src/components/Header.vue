@@ -24,13 +24,10 @@
       <div class="navbar-menu" @click="closeMobileMenu">
         <div class="navbar-end">
           <g-link to="/" class="navbar-item hvr-underline-reveal">
-            Home
+            Work
           </g-link>
           <g-link to="/about" class="navbar-item hvr-underline-reveal">
             About
-          </g-link>
-          <g-link to="/articles" class="navbar-item hvr-underline-reveal">
-            Articles
           </g-link>
           <g-link class="navbar-item" to="/contact">
             <button class="button--primary">

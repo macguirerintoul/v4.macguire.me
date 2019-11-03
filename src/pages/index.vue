@@ -12,15 +12,17 @@
           :project="edge.node"
         />
       </div>
+
       <h2>Other projects</h2>
       <div class="other-projects__flex-container">
-        <ul>
-          <li
+        <g-link
+          class="table-row"
           v-for="edge in $page.otherProjects.edges"
-          :key="edge.node.id">
-            {{edge.node.title}}: {{edge.node.shortDescription}}
-          </li>
-        </ul>
+          :to="edge.node.path"
+          :key="edge.node.id"
+        >
+          <p>{{edge.node.title}} — {{edge.node.shortDescription}}</p>
+        </g-link>
       </div>
     </section>
   </div>
@@ -52,6 +54,7 @@ query AllProjects {
       node {
         id
         title
+        path
         shortDescription
       }
     }

@@ -5,8 +5,10 @@ date: 2019-12-19
 
 “A table, looking like what anyone might draw — four legs, one at each corner, straight and square and nothing unexpected”
 
+## Question
 There’s a perverse expectation hidden within this caption: apparently a table can’t be too simple, normal or trivial to be worthwhile. In fact, the opinion that something could have been done by anyone has a decise negative undertone. Even among designers.
 
+### Header 3
 “My kid could do that”, sure, but he actually didn’t. Instead, what he did was creating a visually polluted environment by either doing or requesting objects that had to “stand out” and forcefully “grab” the attention of the viewer.
 
 This is a statement in defence of what’s not special.

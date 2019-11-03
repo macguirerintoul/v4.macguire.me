@@ -23,12 +23,10 @@ module.exports = {
     },
     {
       // Add Articles collection
-      use: '@gridsome/vue-remark',
+      use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Article', // Required
-        baseDir: './content/articles', // Where .md files are located
-        route: '/article/:title',
-        template: './src/templates/Article.vue', // Optional
+        path: './content/articles', // Where .md files are located
       },
     },
   ],

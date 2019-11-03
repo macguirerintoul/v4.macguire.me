@@ -31,10 +31,19 @@
 .commas:not(:last-child)::after {
   content: ', ';
 }
+
+.table-row {
+  border-bottom: 2px solid $color-grey;
+}
+
 .video-embed {
   position: relative;
   padding-bottom: 38.25%;
   height: 0;
+}
+
+.showcase {
+  max-width: 60rem;
 }
 
 .content {
@@ -68,10 +77,6 @@
     margin-right: auto;
   }
 
-  .showcase {
-    max-width: 60rem;
-  }
-
   iframe {
     position: absolute;
     top: 0;
@@ -81,8 +86,6 @@
     max-width: 100%;
   }
 }
-
-
 
 .showcase {
   display: flex;
@@ -109,6 +112,7 @@
 
   &.media-left {
     flex-direction: row;
+
     p {
       margin-right: 0;
     }
@@ -116,6 +120,7 @@
 
   &.media-right {
     flex-direction: row-reverse;
+
     p {
       margin-left: 0;
     }

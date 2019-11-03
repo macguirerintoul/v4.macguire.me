@@ -16,12 +16,15 @@
     img {
       border: none;
     }
+
     .project-block--title {
       margin: 0;
     }
+
     .project-block__description {
       margin: 1rem 0;
     }
+
     border: 2px solid black;
     position: relative;
     line-height: normal;
@@ -30,7 +33,7 @@
     transform-style: preserve-3d;
     transition: transform 100ms ease;
     color: #000;
-    background-color: #FFF;
+    background-color: #fff;
 
     &::before {
       content: '';
