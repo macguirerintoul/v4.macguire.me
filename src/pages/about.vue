@@ -15,10 +15,9 @@
       </div>
     </div>
     <div class="content resume">
-      <h2>Resume</h2>
-      <h3>Experience</h3>
+      <h2>Experience</h2>
       <div class="resume__context">
-        <h4>User Experience Design Intern</h4>
+        <h3>User Experience Design Intern</h3>
         <span class="resume__date">May 2019 – December 2019</span>
         <span class="resume__company">Visier</span>
       </div>
@@ -43,7 +42,7 @@
         </ul>
       </div>
       <div class="resume__context">
-        <h4>Systems Analyst</h4>
+        <h3>Systems Analyst</h3>
         <span class="resume__date">January 2019 – present</span>
         <span class="resume__company">Simon Fraser University</span>
       </div>
@@ -58,7 +57,7 @@
         </ul>
       </div>
       <div class="resume__context">
-        <h4>Systems Analyst</h4>
+        <h3>Systems Analyst</h3>
         <span class="resume__date">September 2017 – March 2019</span>
         <span class="resume__company">Vancouver Coastal Health</span>
       </div>
