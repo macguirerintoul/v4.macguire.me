@@ -1,7 +1,6 @@
 // Utilities
 @import './utilities/_normalize.scss';
 @import './utilities/_hover.scss';
-@import './utilities/_animate.scss';
 
 // Foundations
 @import './_variables.scss';
@@ -33,7 +32,9 @@
 }
 
 .table-row {
-  border-bottom: 2px solid $color-grey;
+  display: block;
+  border: 2px solid transparent;
+  border-bottom-color: $color-grey;
 }
 
 .video-embed {

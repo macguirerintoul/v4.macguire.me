@@ -3,7 +3,7 @@
     <section class="hero">
       <p>Product design + web development consultant available for hire</p>
     </section>
-    <section class="work animate-fade-in-up">
+    <section class="work">
       <h1>Featured Work</h1>
       <div class="project-flex-container">
         <ProjectBlock
@@ -12,7 +12,7 @@
           :project="edge.node"
         />
       </div>
-
+      <!--
       <h2>Other projects</h2>
       <div class="other-projects__flex-container">
         <g-link
@@ -24,6 +24,7 @@
           <p>{{edge.node.title}} — {{edge.node.shortDescription}}</p>
         </g-link>
       </div>
+       -->
     </section>
   </div>
 </template>

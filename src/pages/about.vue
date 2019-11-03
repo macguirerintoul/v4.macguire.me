@@ -78,3 +78,10 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  metaInfo: {
+    title: 'About',
+  },
+}
+</script>

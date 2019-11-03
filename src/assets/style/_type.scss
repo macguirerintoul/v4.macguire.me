@@ -1,10 +1,18 @@
+@mixin Larsseit {
+  font-family: Larsseit, $font-stack, sans-serif;
+}
+
 @mixin type-level-1 {
+  @include Larsseit;
+
   font-size: 6rem;
   line-height: 6rem;
   letter-spacing: -5px;
 }
 
 @mixin type-level-2 {
+  @include Larsseit;
+
   font-size: 32pt;
   line-height: 36pt;
   font-weight: 500;
@@ -13,6 +21,8 @@
 }
 
 @mixin type-level-3 {
+  @include Larsseit;
+
   font-size: 24pt;
   line-height: 28pt;
   font-weight: 500;
@@ -20,6 +30,8 @@
 }
 
 @mixin type-level-4 {
+  @include Larsseit;
+
   font-size: 20pt;
   line-height: 24pt;
   font-weight: 400;
@@ -31,6 +43,8 @@
 }
 
 @mixin type-level-small {
+  @include Larsseit;
+
   font-size: 1rem;
   font-weight: 500;
 }
@@ -40,8 +54,11 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: Larsseit, sans-serif;
+h6,
+button,
+.navbar-item,
+label {
+  @include Larsseit;
 }
 
 h1 {
@@ -69,10 +86,4 @@ article {
     color: $color-dark;
     font-family: Editorial New, Neue Montreal, 'Freight', 'Tiempos Text', sans-serif;
   }
-}
-
-button,
-.navbar-item {
-
-  font-family: Larsseit;
 }
