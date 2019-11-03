@@ -11,16 +11,13 @@ tags: ['Product Design','Web Development']
 roles: ['Interaction Design','Interface Design', 'Project Management', 'Full-Stack Web Development']
 tools: ['Sketch', 'React', 'Laravel']
 summary: "Vancouver Coastal Health trains around 1000 new staff per year, but the training registration process was severely inefficient. To modernize the workflow, I worked alongside the Clinical Education and Recruitment Services teams to design and develop a web app to automate each employee’s schedule and manage education sessions. The new process saves over 750 hours of labour each year."
+contribution: "As the sole member of my team working on the project, I was responsible for user experience design, interface design, project management, and full-stack development. I regularly met with users and stakeholders to ensure the project was usable and fulfilled requirements, and balanced business needs and user experience."
 ---
 
 import Showcase from '~/components/Showcase'
 
-## My Contribution
-
-As the sole member of my team working on the project, I was responsible for user experience design, interface design, project management, and full-stack development. I regularly met with users and stakeholders to ensure the project was usable and fulfilled requirements, and balanced business needs and user experience.
-
 ## Problem
-Vancouver Coastal Health is responsible for the training of over 15 thousand healthcare staff and volunteers. The process of registering a newly-hired employee into their mandatory training sessions involved numerous emails, PDF forms, manual data entry into multiple spreadsheets, and hand-editing a Word template to create each employee’s training schedule.
+Vancouver Coastal Health is responsible for the training of over 15 thousand healthcare staff and volunteers. The process of registering a newly-hired employees into their mandatory training sessions involved numerous emails, PDF forms, manual data entry into multiple spreadsheets, and hand-editing a Word template to create each employee’s training schedule.
 
 ## Solution
 In order to modernize the workflow, I worked alongside the Clinical Education and Recruitment Services teams to design and develop a web app to generate each employee’s schedule and manage education sessions.
