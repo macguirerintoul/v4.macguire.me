@@ -1,27 +1,30 @@
-@mixin Larsseit {
-  font-family: Larsseit, $font-stack, sans-serif;
+// import Neue Haas for testing
+@import url("https://use.typekit.net/wzc8kad.css");
+
+@mixin NeueHaas {
+  font-family: neue-haas-grotesk-display, $font-stack, sans-serif;
 }
 
 @mixin type-level-1 {
-  @include Larsseit;
+  @include NeueHaas;
 
   font-size: 6rem;
   line-height: 6rem;
-  letter-spacing: -5px;
+  font-weight: 300;
+  letter-spacing: -4px;
 }
 
 @mixin type-level-2 {
-  @include Larsseit;
+  @include NeueHaas;
 
   font-size: 32pt;
   line-height: 36pt;
-  font-weight: 500;
-  margin-top: 4rem;
+  font-weight: 600;
   letter-spacing: -1px;
 }
 
 @mixin type-level-3 {
-  @include Larsseit;
+  @include NeueHaas;
 
   font-size: 24pt;
   line-height: 28pt;
@@ -30,7 +33,7 @@
 }
 
 @mixin type-level-4 {
-  @include Larsseit;
+  @include NeueHaas;
 
   font-size: 20pt;
   line-height: 24pt;
@@ -43,7 +46,7 @@
 }
 
 @mixin type-level-small {
-  @include Larsseit;
+  @include NeueHaas;
 
   font-size: 1rem;
   font-weight: 500;
@@ -57,8 +60,9 @@ h5,
 h6,
 button,
 .navbar-item,
-label {
-  @include Larsseit;
+label,
+.featured-block__item-title {
+  font-family: neue-haas-grotesk-display, sans-serif;
 }
 
 h1 {
@@ -84,6 +88,6 @@ article {
   p,
   blockquote {
     color: $color-dark;
-    font-family: Editorial New, Neue Montreal, 'Freight', 'Tiempos Text', sans-serif;
+    font-family: 'Editorial New', 'Freight', 'Tiempos Text', serif;
   }
 }

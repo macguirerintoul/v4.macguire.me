@@ -6,7 +6,7 @@
     </MagicLink>
 
     <MagicLink class="hvr-float featured-block__content" :url="url">
-      <span class="featured-block--item-title">
+      <span class="featured-block__item-title">
         {{ itemTitle }}
       </span>
 

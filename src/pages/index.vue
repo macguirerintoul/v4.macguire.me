@@ -1,7 +1,29 @@
 <template>
   <div>
     <section class="hero">
-      <p>Product design + web development consultant available for hire</p>
+      <p>
+        I'm Macguire, an experience designer & developer from Vancouver, BC.
+        Currently, I'm working at
+        <MagicLink url="https://www.visier.com/">Visier</MagicLink> as a User
+        Experience Designer for their analytics platform. Previously, I've
+        worked at
+        <MagicLink url="https://vch.ca/">Vancouver Coastal Health</MagicLink>
+        and Simon Fraser University's Connections Lab.
+      </p>
+      <a
+        href="https://twitter.com/MacguireRintoul?ref_src=twsrc%5Etfw"
+        class="twitter-follow-button"
+        data-show-count="false"
+        data-size="large"
+        >Follow @MacguireRintoul</a
+      >
+      <a
+        class="github-button"
+        href="https://github.com/MacguireRintoul"
+        data-size="large"
+        aria-label="Follow @MacguireRintoul on GitHub"
+        >Follow @MacguireRintoul</a
+      >
     </section>
     <section class="work">
       <h1>Featured Work</h1>
@@ -64,14 +86,30 @@ query AllProjects {
 </page-query>
 
 <script>
-import ProjectBlock from "~/components/ProjectBlock.vue";
+import ProjectBlock from '~/components/ProjectBlock.vue'
+import MagicLink from '~/components/MagicLink.vue'
 
 export default {
   components: {
-    ProjectBlock
+    ProjectBlock,
+    MagicLink,
   },
-  metaInfo: {
-    title: "Work"
-  }
-};
+  metaInfo() {
+    return {
+      title: 'Work',
+      script: [
+        {
+          src: 'https://platform.twitter.com/widgets.js',
+          async: 'async',
+          defer: 'defer',
+        },
+        {
+          src: 'https://buttons.github.io/buttons.js',
+          async: 'async',
+          defer: 'defer',
+        },
+      ],
+    }
+  },
+}
 </script>

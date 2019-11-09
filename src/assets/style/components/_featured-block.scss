@@ -25,8 +25,8 @@
     margin-bottom: 0.25rem;
   }
 
-  .featured-block--item-title {
-    // TODO: change -- to __
+  .featured-block__item-title {
+    flex: 1 1 75%;
     font-size: 1rem;
     font-weight: 600;
     min-width: 0;
@@ -42,11 +42,6 @@
 
   .featured-block--name {
     flex: 1 1 50%;
-  }
-  .featured-block--item-title {
-    // TODO: change -- to __
-    font-family: Larsseit;
-    flex: 1 1 75%;
   }
 
   .featured-block--see-all {
@@ -65,6 +60,7 @@
 
   .featured-block--text {
     @include type-level-content;
+
     margin-bottom: 0;
   }
 }
