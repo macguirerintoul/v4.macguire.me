@@ -2,10 +2,16 @@
   body {
     margin-top: 4rem;
   }
+
+  button {
+    min-width: 0;
+  }
+
   footer {
     padding-left: $responsive-padding;
     padding-right: $responsive-padding;
   }
+
   .navbar {
     background: white;
     border-top: 1px solid black;
@@ -13,13 +19,16 @@
     bottom: 0;
     padding-left: $responsive-padding;
     padding-right: $responsive-padding;
+
     .navbar-brand {
       width: 100%;
     }
+
     .navbar-end {
       display: block;
     }
   }
+
   .navbar.is-active {
     .navbar-end,
     .navbar-menu,
@@ -29,32 +38,42 @@
       display: -webkit-box;
       display: block;
     }
+
     display: block;
   }
+
   .navbar-menu {
     display: none;
   }
+
   .mobile-menu {
     display: inherit;
   }
+
   h1 {
     font-size: 3.5em;
   }
+
   p {
     font-size: 1.5em;
   }
+
   .container {
     padding-left: $responsive-padding;
     padding-right: $responsive-padding;
   }
+
   #index-showcase {
     flex-direction: column;
+
     & > div {
       width: 100%;
     }
+
     & > div:first-of-type {
       padding-top: 0;
     }
+
     #demo {
       display: none;
     }
@@ -66,8 +85,10 @@
 
   .project-flex-container {
     flex-direction: column;
+
     .project-block {
       width: 100%;
+
       .project-block--content {
         padding: 1rem;
       }
