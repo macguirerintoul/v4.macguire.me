@@ -1,6 +1,6 @@
 <template>
   <cld-image
-    class="img-zooming"
+    class="magic-image img-zooming"
     lazy
     dpr="auto"
     width="auto"

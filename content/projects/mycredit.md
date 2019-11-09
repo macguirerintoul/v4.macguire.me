@@ -146,56 +146,44 @@ We then got to work making iterations and finalizing MyCredit.
 
 In the case that a member's score is declining, after user testing, we decided to always project their score as if they were taking on the good habits presented in MyCredit. Research participants felt that there was enough information in the rest of the app to understand that their score was low, and that they didn't want the visual reminder that it was declining.
 
-<Showcase
+<MagicImage
   path="MyCredit/images/declining_score"
-  type="image"
   source="cloudinary"
-  orientation="vertical"
   alt="A screenshot showing future growth that could be achieved, which encourages members to improve their score."
 />
 
 In the case that a member has no credit, MyCredit offers an explanation of why it's important and recommends ways to start.
 
-<Showcase
+<MagicImage
   path="MyCredit/images/no_credit"
-  type="image"
   source="cloudinary"
-  orientation="vertical"
   alt="Screenshots showing states when a user has no credit score."
 />
 
 ## Details
 The following explains the details of our design decisions and highlights where decisions were made in MyCredit.
 
-<Showcase
+<MagicImage
   path="MyCredit/images/copywriting"
-  type="image"
   source="cloudinary"
-  orientation="vertical"
   alt="Example of copywriting in the app."
 />
 
-<Showcase
+<MagicImage
   path="MyCredit/images/colour"
-  type="image"
   source="cloudinary"
-  orientation="vertical"
   alt="Examples of using colour in the app."
 />
 
-<Showcase
+<MagicImage
   path="MyCredit/images/type"
-  type="image"
   source="cloudinary"
-  orientation="vertical"
   alt="Examples of using typography in the app."
 />
 
-<Showcase
+<MagicImage
   path="MyCredit/images/app_architecture"
-  type="image"
   source="cloudinary"
-  orientation="vertical"
   alt="Diagram of the app architecture."
 />
 
@@ -203,9 +191,8 @@ The following explains the details of our design decisions and highlights where 
 
 ### Key Performance Indicators
 
-<Showcase
+<MagicImage
   path="MyCredit/images/measuring_success"
-  type="image"
   source="cloudinary"
   orientation="vertical"
   alt="A list of metrics used to evaluate the success of MyCredit."
@@ -223,26 +210,20 @@ Vancity or their digital partners will require additional managers, designers, a
 
 ## Appendix
 
-<Showcase
+<MagicImage
   path="MyCredit/images/why_vancity"
-  type="image"
   source="cloudinary"
-  orientation="vertical"
   alt="Explanation for why we chose to design for Vancity."
 />
 
-<Showcase
+<MagicImage
   path="MyCredit/images/why_separate"
-  type="image"
   source="cloudinary"
-  orientation="vertical"
   alt="Explanation for why we chose to design an app separate from Vancity's existing banking app."
 />
 
-<Showcase
+<MagicImage
   path="MyCredit/images/why_download"
-  type="image"
   source="cloudinary"
-  orientation="vertical"
   alt="Explanation of how we would encourage people to download MyCredit."
 />

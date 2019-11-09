@@ -27,6 +27,7 @@
   margin: auto;
 }
 
+// Inserts a comma after each item in a list, except for the last item.
 .commas:not(:last-child)::after {
   content: ', ';
 }
@@ -43,7 +44,9 @@
   height: 0;
 }
 
-.showcase {
+// Defines max-width for showcases and magic images.
+.showcase,
+.magic-image {
   max-width: 60rem;
 }
 
@@ -76,6 +79,10 @@
   ul {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .magic-image {
+    margin: 4rem auto;
   }
 
   iframe {
