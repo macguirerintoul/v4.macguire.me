@@ -31,12 +31,14 @@ footer {
     max-width: 48%;
   }
 }
+
 .footer__links {
   display: flex;
   flex-direction: column;
   line-height: 1.5em;
+
   a {
-    color: #FFF;
+    color: #fff;
   }
 }
 

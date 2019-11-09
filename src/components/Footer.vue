@@ -4,7 +4,7 @@
       <section class="footer__left">
         <div>
         <h2>Macguire Rintoul</h2>
-        <p>Product design + web development consultant</p>
+        <p>Experience designer & developer</p>
 
       </div>
       <div class="footer__links">

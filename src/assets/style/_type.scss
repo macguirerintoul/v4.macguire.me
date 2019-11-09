@@ -2,7 +2,7 @@
 @import url("https://use.typekit.net/wzc8kad.css");
 
 @mixin NeueHaas {
-  font-family: neue-haas-grotesk-display, $font-stack, sans-serif;
+  font-family: $font-headings, neue-haas-grotesk-display, $font-stack, sans-serif;
 }
 
 @mixin type-level-1 {
@@ -63,6 +63,11 @@ button,
 label,
 .featured-block__item-title {
   font-family: neue-haas-grotesk-display, sans-serif;
+}
+
+nav,
+button {
+  font-weight: 500;
 }
 
 h1 {

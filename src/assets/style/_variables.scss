@@ -21,8 +21,10 @@ $color-white-transparent: rgba(252, 253, 254, 0.9);
 $color-grey: darkslategrey;
 $color-dark: #121212;
 $color-dark-grey: rgb(30, 30, 30);
-$color-blue: rgb(6, 132, 248);
+$color-blue: #33f;
 $color-blue-gradient: linear-gradient(rgb(6, 132, 248), rgb(6, 122, 228));
 
 // Type
-$font-stack: Editorial New, Larsseit, -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+$font-headings: neue-haas-grotesk-display;
+$font-content: Editorial New;
+$font-stack: $font-content, -apple-system, system-ui, BlinkMacSystemFont, sans-serif;

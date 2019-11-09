@@ -4,13 +4,13 @@
     <div class="about-container">
       <p>
         I'm Macguire — an experience designer, web developer, hackathon
-        participant, and music producer currently designing for Visier's
-        analytics platform.
+        participant, and music producer.
       </p>
       <div class="about__photo">
-        <img
-          src="https://pbs.twimg.com/profile_images/1169836865379172352/RPj3FlZE.jpg"
+        <g-image
+          src="~/assets/images/pemb.jpg"
           alt="A photo of me."
+          height="600"
         />
       </div>
     </div>
@@ -24,19 +24,19 @@
       <div class="resume__responsibilities">
         <ul>
           <li>
-            creating and improving data visualizations allowing Visier's 50,000
+            create and improve data visualizations allowing Visier's 50,000
             users to analyze over 6 million employee records
           </li>
           <li>
-            improving usability by designing interfaces and interactions that
+            improve usability by designing interfaces and interactions that
             follow conventions and best practices
           </li>
           <li>
-            collaborating with product and solution managers to understand use
+            collaborate with product and solution managers to understand use
             cases and user needs
           </li>
           <li>
-            communicating design decisions and problem-solving with developers
+            communicate design decisions and solve problems with developers
             to ship features and improvements
           </li>
         </ul>
@@ -64,14 +64,14 @@
       <div class="resume__responsibilities">
         <ul>
           <li>
-            designing & developing web apps to support process improvement
+            designed & developed web apps to support process improvement
           </li>
-          <li>providing technical recommendations for digital projects</li>
+          <li>providedtechnical recommendations for digital projects</li>
           <li>
-            designing & developing several websites to support staff education
+            designed & developed several websites to support staff education
           </li>
           <li>
-            prototyping VR projects for Cardboard and Oculus Go
+            prototyped VR projects for Cardboard and Oculus Go
           </li>
         </ul>
       </div>

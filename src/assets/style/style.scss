@@ -32,6 +32,12 @@
   content: ', ';
 }
 
+.social-buttons {
+  & > * {
+    margin-right: 1rem;
+  }
+}
+
 .table-row {
   display: block;
   border: 2px solid transparent;
@@ -108,8 +114,14 @@
     max-width: 48%;
   }
 
-  &.vertical div {
-    max-width: 100%;
+  &.vertical {
+    p {
+      max-width: 50rem;
+    }
+
+    div {
+      max-width: 100%;
+    }
   }
 
   video,

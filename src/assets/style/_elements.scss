@@ -19,14 +19,12 @@ button {
   padding: 0.5rem;
   min-width: 5rem;
   min-height: 2rem;
-  border-radius: $border-radius;
   box-shadow: $shadow;
+  border: 1px solid black;
 
   &.button--primary {
     color: $color-white;
     background-color: $color-blue;
-    background-image: $color-blue-gradient;
-    border: 1px solid $color-blue;
   }
 
   &.button--secondary {

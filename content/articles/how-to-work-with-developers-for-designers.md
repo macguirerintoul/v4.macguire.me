@@ -1,5 +1,5 @@
 ---
-title: Everything I learned from my internship at Visier
+title: How to work with developers (for designers)
 date: 2019-12-19
 ---
 

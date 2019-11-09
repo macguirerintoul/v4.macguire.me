@@ -4,26 +4,27 @@
       <p>
         I'm Macguire, an experience designer & developer from Vancouver, BC.
         Currently, I'm working at
-        <MagicLink url="https://www.visier.com/">Visier</MagicLink> as a User
-        Experience Designer for their analytics platform. Previously, I've
+        <MagicLink url="http://www.visier.com/">Visier</MagicLink> as a User
+        Experience Design Intern for their analytics platform. Previously, I've
         worked at
-        <MagicLink url="https://vch.ca/">Vancouver Coastal Health</MagicLink>
-        and Simon Fraser University's Connections Lab.
+        <MagicLink url="http://vch.ca/">Vancouver Coastal Health</MagicLink>
+        and the <MagicLink url="http://clab.iat.sfu.ca/">Connections Lab</MagicLink>.
       </p>
-      <a
-        href="https://twitter.com/MacguireRintoul?ref_src=twsrc%5Etfw"
-        class="twitter-follow-button"
-        data-show-count="false"
-        data-size="large"
-        >Follow @MacguireRintoul</a
-      >
-      <a
-        class="github-button"
-        href="https://github.com/MacguireRintoul"
-        data-size="large"
-        aria-label="Follow @MacguireRintoul on GitHub"
-        >Follow @MacguireRintoul</a
-      >
+      <div class="social-buttons">
+        <a
+          href="https://twitter.com/MacguireRintoul?ref_src=twsrc%5Etfw"
+          class="twitter-follow-button"
+          data-show-count="false"
+          data-size="large"
+          >Follow @MacguireRintoul</a>
+        <a
+          class="github-button"
+          href="https://github.com/MacguireRintoul"
+          data-size="large"
+          aria-label="Follow @MacguireRintoul on GitHub"
+          >Follow @MacguireRintoul</a
+        >
+    </div>
     </section>
     <section class="work">
       <h1>Featured Work</h1>

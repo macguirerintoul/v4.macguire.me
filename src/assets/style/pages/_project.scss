@@ -15,7 +15,11 @@
     grid-column: 2;
     grid-row: 1 / 3;
     align-self: center;
-    img { max-width: 100%; }
+
+    img {
+      max-width: 100%;
+      margin: 0;
+    }
   }
 
   .project-overview__summary {

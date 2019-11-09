@@ -16,6 +16,10 @@
 }
 
 .resume {
+  .resume__responsibilities {
+    margin-bottom: 4rem;
+  }
+
   .resume__context {
     @include type-level-4;
 
@@ -34,9 +38,8 @@
       align-self: flex-end;
     }
 
-    h4 {
-      margin-left: 0;
-      margin-bottom: 0;
+    h3 {
+      margin: 0;
     }
   }
 }
