@@ -9,8 +9,16 @@ module.exports = {
     config.mode('development')
   },
   siteName: 'Macguire Rintoul',
-  siteDescription: 'Product design + web development consultant',
+  siteDescription: 'Experience designer & developer from Vancouver, BC',
   port: 3000,
+  permalinks: {
+    slugify: {
+      use: '@sindresorhus/slugify',
+      options: {
+        decamelize: false, // Prevents 'MyCredit' from becoming 'my-credit'
+      },
+    },
+  },
   plugins: [
     {
       use: '@gridsome/vue-remark',
@@ -30,13 +38,14 @@ module.exports = {
       },
     },
   ],
+  templates: {
+    Article: '/articles/:title', // Route for the browser
+  },
   transformers: {
-    // Add markdown support to all file-system sources
     remark: {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
-      plugins: ['@gridsome/remark-prismjs'],
     },
   },
 }

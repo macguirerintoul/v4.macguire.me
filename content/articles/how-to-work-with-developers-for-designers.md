@@ -1,6 +1,6 @@
 ---
 title: How to work with developers (for designers)
-date: 2019-12-19
+date: 2019-08-19
 ---
 
 “A table, looking like what anyone might draw — four legs, one at each corner, straight and square and nothing unexpected”
