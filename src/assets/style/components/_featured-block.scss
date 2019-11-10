@@ -1,7 +1,16 @@
 .featured-block-container {
   display: flex;
   flex-direction: column;
+
+  // Select the last div inside the featured-block-container (essentially, the last featured-block)
+  & > div:last-of-type {
+    // Inside the last featured-block, remove the margin from the content div
+    .featured-block__content {
+      margin-bottom: 0;
+    }
+  }
 }
+
 
 .featured-block,
 .featured-block__content {
@@ -21,6 +30,7 @@
     // TODO: change -- to __
     @include type-level-3;
 
+    flex: 1 1 50%;
     margin-left: 1rem;
     margin-bottom: 0.25rem;
   }
@@ -38,10 +48,6 @@
     margin-bottom: 2rem;
     padding: 1rem;
     box-shadow: $shadow-dark;
-  }
-
-  .featured-block--name {
-    flex: 1 1 50%;
   }
 
   .featured-block--see-all {

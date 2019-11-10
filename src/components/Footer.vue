@@ -43,8 +43,9 @@
           </button>
         </form>
       </div>
-
+      <g-image src="~/assets/images/smiley.png" width="50"/>
       </section>
+
       <section class="featured-block-container">
         <FeaturedBlock type="randomStar" />
         <FeaturedBlock type="lastCommit" />

@@ -4,6 +4,10 @@ footer {
   background-color: $color-dark;
   color: $color-white;
 
+  img {
+    border: none;
+  }
+
   h1,
   h2,
   h3 {
@@ -18,6 +22,7 @@ footer {
 .footer__left {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .footer-content {
@@ -35,6 +40,7 @@ footer {
 .footer__links {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   line-height: 1.5em;
 
   a {

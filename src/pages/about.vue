@@ -8,9 +8,9 @@
       </p>
       <div class="about__photo">
         <g-image
-          src="~/assets/images/pemb.jpg"
+          src="~/assets/images/portrait.jpg"
           alt="A photo of me."
-          height="600"
+          height="500"
         />
       </div>
     </div>
@@ -44,7 +44,7 @@
       <div class="resume__context">
         <h3>Systems Analyst</h3>
         <span class="resume__date">January 2019 – present</span>
-        <span class="resume__company">Simon Fraser University</span>
+        <span class="resume__company">Connections Lab</span>
       </div>
       <div class="resume__responsibilities">
         <ul>
@@ -52,7 +52,7 @@
             maintain the lab's RHEL server and software (Apache, phpMyAdmin,
             MySQL)
           </li>
-          <li>maintain various WordPress and PMWiki instances</li>
+          <li>maintain several WordPress and PMWiki instances</li>
           <li>modify plugins and themes to fit various requirements</li>
         </ul>
       </div>
@@ -66,7 +66,7 @@
           <li>
             designed & developed web apps to support process improvement
           </li>
-          <li>providedtechnical recommendations for digital projects</li>
+          <li>provided technical recommendations for digital projects</li>
           <li>
             designed & developed several websites to support staff education
           </li>
