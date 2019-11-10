@@ -23,7 +23,10 @@
 
       <div class="navbar-menu" @click="closeMobileMenu">
         <div class="navbar-end">
-          <g-link to="/" class="navbar-item hvr-underline-reveal">
+          <g-link
+            to="/"
+            class="navbar-item hvr-underline-reveal"
+          >
             Work
           </g-link>
           <g-link to="/about" class="navbar-item hvr-underline-reveal">
@@ -43,15 +46,15 @@
 <script>
 export default {
   data() {
-    return { showMobileMenu: false };
+    return { showMobileMenu: false }
   },
   methods: {
     toggleMobileMenu() {
-      this.showMobileMenu = !this.showMobileMenu;
+      this.showMobileMenu = !this.showMobileMenu
     },
     closeMobileMenu() {
-      this.showMobileMenu = false;
-    }
-  }
-};
+      this.showMobileMenu = false
+    },
+  },
+}
 </script>

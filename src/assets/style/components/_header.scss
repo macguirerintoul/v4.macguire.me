@@ -45,6 +45,10 @@
 .navbar-menu {
   flex-grow: 1;
   flex-shrink: 0;
+
+  .navbar-item.active--exact {
+    border-bottom: 1px solid $color-blue;
+  }
 }
 
 .navbar-item {
@@ -53,7 +57,7 @@
   align-items: center;
   flex-grow: 0;
   flex-shrink: 0;
-  line-height: 1.5;
+  line-height: 1.5rem;
   position: relative;
   color: #000;
   text-decoration: none;
@@ -64,7 +68,7 @@
   margin-left: auto;
 
   .navbar-item {
-    padding: 0.5em;
+    margin: 0.5em;
   }
 
   .navbar-item:last-of-type {
