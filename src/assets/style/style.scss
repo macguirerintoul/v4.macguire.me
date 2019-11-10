@@ -108,6 +108,10 @@
   flex-direction: column;
   margin: 4rem 0;
 
+  .magic-image {
+    margin: auto;
+  }
+
   & > div,
   & > p {
     // Select divs and paragraphs that are direct children of a Showcase (i.e. the media and content)

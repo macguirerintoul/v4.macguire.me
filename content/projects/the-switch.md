@@ -10,7 +10,8 @@ published: true
 tags: ['Product Design']
 roles: ['Content Strategy', 'Project Management', 'Interface Design', 'User Research']
 tools: ['Sketch', 'Keynote', 'G Suite']
-summary: "Despite having physical, environmental, and financial benefits, lack of exposure in mainstream media and markets has prevented the widespread use of menstrual cups. The Switch is a digital experience designed for Lena's website that aims to help guide potential customers through making the switch from traditional menstrual products to the Lena cup."
+summary: "Despite having physical, environmental, and financial benefits, lack of exposure in mainstream media and markets has prevented the widespread use of menstrual cups. The Switch is a digital experience designed for <a href='https://lenacup.com/' target='_blank'>Lena's website</a> that aims to help guide potential customers through making 'the switch' from traditional menstrual products to the Lena cup."
+contribution: "As the project manager, I ensured the various parts of the project were being completed according to our project timeline, and made sure they were cohesive. As the content strategist, I wrote copy based on our project's strategy and validated its effectiveness with the target audience. I also developed and promoted a qualitative and quantitative research survey that received over 450 responses, which heavily informed the project's direction."
 ---
 
 import Showcase from '~/components/Showcase'
@@ -23,9 +24,6 @@ import MagicVideo from '~/components/MagicVideo'
   source="cloudinary"
   content="The Switch is comprised of five steps which answer major questions about menstrual cups, to reduce frictions within the customer journey. Content above the fold is concise to ease visitors in, with further details provided below."
 />
-
-## My Contribution
-As the project manager, I ensured the various parts of the project were being completed according to our project timeline, and made sure they were cohesive. As the content strategist, I wrote and validated copy in the voice of a 'supportive older sister'. I also developed and promoted a qualitative and quantitative research survey that received over 450 responses, which heavily informed the project's direction.
 
 ## Problem
 Despite having physical, environmental, and financial benefits, lack of exposure in mainstream media and markets has prevented widespread use of menstrual cups. The majority of menstruators already use tampons, pads, and/or liners, and are not convinced to undertake the physical and emotional risk of switching menstrual hygiene products. While the Lena Cup is recognized as the #1 cup for beginners, Lena's existing site does not effectively communicate the product's value and benefits to potential customers.

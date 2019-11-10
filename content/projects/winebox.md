@@ -4,20 +4,18 @@ for: IAT 334
 shortDescription: "Assists in keeping track of a personal wine collection"
 featured: true
 imagePath: Winebox/images/featured
-date: 2017-12-01
+year: 2017
 published: true
 order: 4
 tags: ['Product Design']
 roles: ['Interaction Design', 'Interface Design', 'Prototyping', 'User Research']
 tools: ['Sketch', 'Principle']
-summary: "winebox"
+summary: "One of the most common problems casual wine collectors face is keeping track of their favourite wines and wineries. Since many collectors are only moderately interested, many aren't invested enough to spend time on organization, but later forget the details of wines they enjoyed. After observing these problems across several adult couples, we decided to design a digital solution during an interface design course at SFU."
+contribution: "As one of the interface designers, I was responsible for designing the collection tab of Winebox, as well as features in other tabs. As the primary researcher, I developed a survey of 18 respondents, and conducted interviews and think-aloud user tests with various wine collectors to inform and validate the project. At the end of the course, I revised the visual design of the interface."
 ---
 
 import Showcase from '~/components/Showcase'
 import Blockquote from '~/components/Blockquote'
-
-## My Contribution
-As one of the interface designers, I was responsible for designing the collection tab of Winebox, as well as features in other tabs. As the primary researcher, I developed a survey of 18 respondents, and conducted interviews and think-aloud user tests with various wine collectors to inform and validate the project. At the end of the course, I revised the visual design of the interface.
 
 ## Problem
 The initial ideas for the product began from the observation that casual wine collectors were often forgetting the details of their wines. We investigated the various stages of wine enthusiasm through interviews and a survey, and found that current options for keeping track of a wine collection aren't quite ideal.
