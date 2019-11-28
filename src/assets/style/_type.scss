@@ -1,6 +1,9 @@
 // import Neue Haas for testing
 @import url("https://use.typekit.net/wzc8kad.css");
 
+// import Editorial New
+@import url("../type/en.css");
+
 @mixin NeueHaas {
   font-family: $font-headings, neue-haas-grotesk-display, $font-stack, sans-serif;
 }
@@ -88,8 +91,8 @@ li {
   @include type-level-content;
 }
 
-.content,
-article {
+article,
+.content {
   p,
   blockquote {
     color: $color-dark;
