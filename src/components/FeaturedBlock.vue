@@ -83,20 +83,17 @@ export default {
           this.blockName = 'Last commit'
           this.contextOne = {
             type: 'hash',
-            url: `https://github.com/${latestPush.repo.name}/commit/${
-              latestCommit.sha
-            }`,
+            url: `https://github.com/${latestPush.repo.name}/commit/${latestCommit.sha}`,
             value: latestCommit.sha.substr(0, 6),
           }
           this.seeAll = 'https://gitstalk.netlify.com/macguirerintoul'
           this.contextTwo = { type: 'timestamp', value: latestPush.created_at }
           // Prevents long commit messages from breaking the block
-          this.text = truncateOnWord(latestCommit.message, 100)
+          let cm = latestCommit.message
+          this.text = cm.length > 100 ? truncateOnWord(cm, 100) : cm
           this.itemTitle = latestPush.repo.name
           this.url = `https://github.com/${latestPush.repo.name}`
-          this.commitURL = `https://github.com/${latestPush.repo.name}/${
-            latestCommit.sha
-          }`
+          this.commitURL = `https://github.com/${latestPush.repo.name}/${latestCommit.sha}`
         })
     },
     getRandomStar() {

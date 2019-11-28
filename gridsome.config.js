@@ -31,16 +31,15 @@ module.exports = {
     },
     {
       // Add Articles collection
-      use: '@gridsome/source-filesystem',
+      use: '@gridsome/vue-remark',
       options: {
         typeName: 'Article', // Required
-        path: './content/articles', // Where .md files are located
+        baseDir: './content/articles', // Where .md files are located
+        route: '/articles/:title',
+        template: './src/templates/Article.vue', // Optional
       },
     },
   ],
-  templates: {
-    Article: '/articles/:title', // Route for the browser
-  },
   transformers: {
     remark: {
       externalLinksTarget: '_blank',

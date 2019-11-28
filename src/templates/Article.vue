@@ -1,7 +1,6 @@
 <template>
   <article>
     <h1>{{ $page.article.title }}</h1>
-    <span>{{ $page.article.timeToRead }} minute read</span>
     <span>Updated {{ updated }}</span>
     <div class="post__content" v-html="$page.article.content" />
   </article>
@@ -23,7 +22,6 @@ export default {
 query Article($id: ID!) {
   article: article(id: $id) {
     title
-    timeToRead
     content
     date
   }
