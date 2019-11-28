@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
-    "@gridsome/vue-remark": "^0.1.4",
+    "@gridsome/vue-remark": "^0.1.9",
     "cloudinary-vue": "1.0.0-beta2",
     "gridsome": "^0.7.11",
     "@gridsome/transformer-remark": "^0.3.0",
