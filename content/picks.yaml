@@ -43,3 +43,6 @@
 - title: Stacksort
   description: Sort an array by searching StackOverflow for sorting functions and running them until one returns the correct answer
   url: https://gkoberger.github.io/stacksort/
+- title: Laws of UX
+  description: A collection of principles designers can consider when creating user interfaces
+  url: https://lawsofux.com/
