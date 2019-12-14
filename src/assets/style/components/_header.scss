@@ -3,19 +3,21 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 30;
-  min-height: 3.25rem;
-  padding: 0.5rem 2rem 0;
-  background-color: $header-background;
+  min-height: 4.2em;
   margin: auto;
   max-width: $max-container-width;
+  background-color: $color-white-transparent;
+  padding: 0.5rem 2rem 0;
+  z-index: 20;
+  backdrop-filter: blur(4px);
+  border-bottom: $black-border;
 }
 
 .navbar,
 .navbar-end,
 .navbar-menu,
 .navbar-start {
-  align-items: stretch;
+  align-items: baseline;
   display: flex;
 }
 
@@ -24,15 +26,17 @@
   display: flex;
   flex-shrink: 0;
   min-height: 3.25rem;
+
   a {
     text-decoration: none;
   }
+
   #logo-icon {
     margin-right: 0.5em;
   }
+
   #logo-text {
     color: #000;
-
     font-size: 2em;
     font-weight: 700;
   }
@@ -41,6 +45,10 @@
 .navbar-menu {
   flex-grow: 1;
   flex-shrink: 0;
+
+  .navbar-item.active--exact {
+    border-bottom: 1px solid $color-blue;
+  }
 }
 
 .navbar-item {
@@ -49,17 +57,20 @@
   align-items: center;
   flex-grow: 0;
   flex-shrink: 0;
-  line-height: 1.5;
+  line-height: 1.5rem;
   position: relative;
   color: #000;
   text-decoration: none;
 }
+
 .navbar-end {
   justify-content: flex-end;
   margin-left: auto;
+
   .navbar-item {
-    padding: 0.5em;
+    margin: 0.5em;
   }
+
   .navbar-item:last-of-type {
     padding-right: 0;
   }

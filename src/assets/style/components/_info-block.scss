@@ -1,0 +1,19 @@
+.info-block {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  &.info-block--error {
+    background-color: #fff1f0;
+    border: 1px solid #ffa39e;
+  }
+}
+
+footer {
+  .info-block {
+    &.info-block--error {
+      background-color: $color-dark;
+      border: 1px solid #ffa39e;
+    }
+  }
+}

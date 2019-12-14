@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <ProjectOverview :project="$page.project" />
-    <div v-html="$page.project.content" />
+    <VueRemarkContent />
   </div>
 </template>
 
@@ -11,7 +11,11 @@ query Project($id: ID!) {
     title
     roles
     tools
-    description
+    for
+    url
+    year
+    summary
+    contribution
     content
     imagePath
   }
@@ -19,16 +23,17 @@ query Project($id: ID!) {
 </page-query>
 
 <script>
-import ProjectOverview from '~/components/ProjectOverview'
+import ProjectOverview from "~/components/ProjectOverview";
 
 export default {
   components: {
     ProjectOverview
   },
-  metaInfo () {
-      return {
-        title: this.$page.project.title,
-      }
-    }
-}
+  metaInfo() {
+    return {
+      title: this.$page.project.title,
+      script: [{ src: "https://player.vimeo.com/api/player.js" }]
+    };
+  }
+};
 </script>

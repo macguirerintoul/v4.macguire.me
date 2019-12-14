@@ -1,18 +1,31 @@
-$header-width: 1200px;
-$header-background: rgba(252, 253, 254, 0.9);
-$max-container-width: 1920px;
+// Layout
+$header-width: 1200px; // Maximum width of the top nav bar
+$max-container-width: 1920px; // Maximum width of content
 $content-width: 50rem;
-$border-radius: 0.5rem;
-$shadow: rgba(0, 0, 0, 0.08) 0px 4px 8px;
-$font-stack: Larsseit, -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
 
-$color-dark: #000;
-$color-light: #fff;
-$color-blue: rgb(6, 132, 248);
+// Responsive
+$mobile-breakpoint: 850px;
+$responsive-padding: 1rem;
+
+// Visual design
+$border-radius: 0.5rem;
+$shadow: rgba(0, 0, 0, 0.08) 0 4px 8px;
+$shadow-dark: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+$black-border: 2px solid black;
+
+// Colours
+$color-body-grey: rgb(250, 250, 250);
+
+$color-black: #000;
+$color-white: #fff;
+$color-white-transparent: rgba(252, 253, 254, 0.9);
+$color-grey: darkslategrey;
+$color-dark: #121212;
+$color-dark-grey: rgb(30, 30, 30);
+$color-blue: #33f;
 $color-blue-gradient: linear-gradient(rgb(6, 132, 248), rgb(6, 122, 228));
 
-$color-grey-400: rgb(43, 43, 43);
-$font-size-3: 1rem;
-
-$responsive-padding: 1rem;
-$mobile-breakpoint: 850px;
+// Type
+$font-headings: neue-haas-grotesk-display;
+$font-content: 'Sainte Colombe';
+$font-stack: $font-content, -apple-system, system-ui, BlinkMacSystemFont, sans-serif;

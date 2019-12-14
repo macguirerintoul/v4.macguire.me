@@ -5,23 +5,30 @@
       <small>See all</small>
     </MagicLink>
 
-    <a :href="url" target="_blank" class="featured-block--item-title">
-      {{ itemTitle }}
-    </a>
-    <small class="featured-block--context">
-      {{ computeContext(contextOne) }}
-    </small>
+    <MagicLink class="hvr-float featured-block__content" :url="url">
+      <span class="featured-block__item-title">
+        {{ itemTitle }}
+      </span>
 
-    <p class="featured-block--text">{{ text }}</p>
+      <small class="featured-block--context">
+        {{ computeContext(contextOne) }}
+      </small>
 
-    <small class="featured-block--context">
-      {{ computeContext(contextTwo) }}
-    </small>
+      <p class="featured-block--text">
+        {{ text }}
+      </p>
+
+      <small class="featured-block--context">
+        {{ computeContext(contextTwo) }}
+      </small>
+    </MagicLink>
   </div>
 </template>
 
 <script>
 import moment from 'moment'
+import { truncateOnWord } from '~/utilities.js'
+
 import MagicLink from '~/components/MagicLink.vue'
 import picks from '../../content/picks.yaml'
 
@@ -41,10 +48,10 @@ export default {
       seeAll: '',
       contextOne: {},
       contextTwo: {},
-      picks
+      picks,
     }
   },
-  created() {
+  mounted() {
     if (this.type === 'randomStar') {
       this.getRandomStar()
     } else if (this.type === 'lastCommit') {
@@ -56,7 +63,6 @@ export default {
   methods: {
     async getPick() {
       // Choose a Pick at random from the array
-      console.log(this.picks)
       const pick = this.picks[Math.floor(Math.random() * this.picks.length)]
       // Store the Pick in state
       this.blockName = 'Picks'
@@ -64,7 +70,6 @@ export default {
       this.text = pick.description
       this.url = pick.url
       this.seeAll = '/picks'
-      this.contextOne = { type: 'timestamp', value: pick._createdAt }
     },
     getLastCommit() {
       fetch('https://api.github.com/users/macguirerintoul/events')
@@ -83,7 +88,9 @@ export default {
           }
           this.seeAll = 'https://gitstalk.netlify.com/macguirerintoul'
           this.contextTwo = { type: 'timestamp', value: latestPush.created_at }
-          this.text = latestCommit.message
+          // Prevents long commit messages from breaking the block
+          let cm = latestCommit.message
+          this.text = cm.length > 100 ? truncateOnWord(cm, 100) : cm
           this.itemTitle = latestPush.repo.name
           this.url = `https://github.com/${latestPush.repo.name}`
           this.commitURL = `https://github.com/${latestPush.repo.name}/${latestCommit.sha}`

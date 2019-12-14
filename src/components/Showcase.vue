@@ -1,46 +1,47 @@
 <template>
   <div :class="['showcase', orientation]">
-    <div v-if="type === 'image'">
-      <CloudinaryImage :cloudinary-i-d="cloudinaryID" />
-    </div>
-    <div v-if="type === 'video'">
-      <CldVideo
-        muted
-        loop="true"
-        autoplay="autoplay"
-        lazy
-        :public-id="cloudinaryID"
-      >
-        <CldTransformation quality="auto:eco" fetch-format="auto" />
-      </CldVideo>
-    </div>
-    <div>
-      <block-content :blocks="content" />
-    </div>
+    <MagicImage
+      v-if="type === 'image'"
+      class="showcase--media"
+      :path="path"
+      :alt="alt"
+    />
+    <MagicVideo v-if="type === 'video'" :source="source" :path="path" />
+    <p v-text="content"></p>
   </div>
 </template>
 
 <script>
-import { CldVideo, CldTransformation } from 'cloudinary-vue'
-import CloudinaryImage from '~/components/CloudinaryImage'
+import MagicImage from './MagicImage'
+import MagicVideo from './MagicVideo'
 
 export default {
+  components: {
+    MagicImage,
+    MagicVideo,
+  },
   props: {
     content: {
-      type: Array,
-      default: () => {
-        return []
-      },
-    },
-    orientation: {
       type: String,
       default: '',
     },
-    cloudinaryID: {
+    orientation: {
+      type: String,
+      default: 'vertical',
+    },
+    path: {
+      type: String,
+      default: '',
+    },
+    source: {
       type: String,
       default: '',
     },
     type: {
+      type: String,
+      default: '',
+    },
+    alt: {
       type: String,
       default: '',
     },
