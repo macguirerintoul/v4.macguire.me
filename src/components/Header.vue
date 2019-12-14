@@ -29,6 +29,12 @@
           >
             Work
           </g-link>
+          <g-link
+            to="/articles"
+            class="navbar-item hvr-underline-reveal"
+          >
+            Articles
+          </g-link>
           <g-link to="/about" class="navbar-item hvr-underline-reveal">
             About
           </g-link>

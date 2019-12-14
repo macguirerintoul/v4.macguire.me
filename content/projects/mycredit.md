@@ -1,7 +1,7 @@
 ---
 title: MyCredit
 for: "IAT 438: Interactive Objects & Environments"
-shortDescription: "Helps Vancity members understand and build credit, improving their financial well-being"
+shortDescription: "Helps Vancity members understand and build credit to improve their financial well-being"
 featured: true
 order: 1
 imagePath: MyCredit/images/featured

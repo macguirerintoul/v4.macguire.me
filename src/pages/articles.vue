@@ -2,17 +2,30 @@
   <section>
     <h1>Articles</h1>
     <!-- List posts -->
-    <div>
-      <g-link v-for="edge in $page.articles.edges"
-      :key="edge.node.id"
-      :post="edge.node" :to="edge.node.path">
-      <li>
-        {{ edge.node.title }}
-      </li>
-    </g-link>
-    </div>
+    <table>
+      <tr v-for="edge in $page.articles.edges" :key="edge.node.id">
+        <td>
+          <g-link :to="edge.node.path">
+            {{ edge.node.title }}
+          </g-link>
+        </td>
+        <td>{{ updated(edge.node.date) }}</td>
+      </tr>
+    </table>
   </section>
 </template>
+
+<script>
+import moment from 'moment'
+
+export default {
+  methods: {
+    updated: function(string) {
+      return moment(string).fromNow()
+    },
+  },
+}
+</script>
 
 <page-query>
 query AllArticles {
@@ -21,6 +34,7 @@ query AllArticles {
       node {
         title
         path
+        date
       }
     }
   }

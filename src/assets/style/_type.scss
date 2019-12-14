@@ -1,11 +1,11 @@
 // import Neue Haas for testing
 @import url("https://use.typekit.net/wzc8kad.css");
 
-// import Editorial New
-@import url("../type/en.css");
+// import SC
+@import url("../type/sc.css");
 
 @mixin NeueHaas {
-  font-family: $font-headings, neue-haas-grotesk-display, $font-stack, sans-serif;
+  font-family: $font-headings, $font-stack;
 }
 
 @mixin type-level-1 {
@@ -44,8 +44,8 @@
 }
 
 @mixin type-level-content {
-  font-size: 1.5em;
-  line-height: 1.5em;
+  font-size: 1.5rem;
+  line-height: 2rem;
   letter-spacing: -1.1px;
 }
 
@@ -63,10 +63,10 @@ h4,
 h5,
 h6,
 button,
-.navbar-item,
+.navbar-menu,
 label,
 .featured-block__item-title {
-  font-family: neue-haas-grotesk-display, sans-serif;
+  font-family: $font-headings;
 }
 
 nav,
@@ -80,6 +80,8 @@ h1 {
 
 h2 {
   @include type-level-2;
+
+  margin-bottom: 1rem;
 }
 
 h3 {
@@ -88,7 +90,8 @@ h3 {
 
 p,
 blockquote,
-li {
+li,
+table {
   @include type-level-content;
 }
 

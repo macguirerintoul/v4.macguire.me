@@ -2,7 +2,7 @@
   <article>
     <h1>{{ $page.article.title }}</h1>
     <span>Updated {{ updated }}</span>
-    <div class="post__content" v-html="$page.article.content" />
+    <VueRemarkContent />
   </article>
 </template>
 
