@@ -19,6 +19,9 @@
 import moment from 'moment'
 
 export default {
+  metaInfo: {
+    title: 'Articles',
+  },
   methods: {
     updated: function(string) {
       return moment(string).fromNow()

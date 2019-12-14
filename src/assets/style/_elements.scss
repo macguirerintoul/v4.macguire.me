@@ -2,11 +2,11 @@
   box-sizing: border-box;
 }
 
-p {
-  margin-top: 0;
-}
-
 article {
+  h1 {
+    margin: auto;
+  }
+
   p {
     max-width: 60rem;
   }

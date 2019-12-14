@@ -3,7 +3,7 @@ title: How to work with developers (for designers)
 date: 2019-12-12
 ---
 
-The following advice might seem elementary, but even the simplest things get missed when we’re working at speed. We all want our work to go smoothly, and nothing disrupts that like realizing something has gone wrong simply because we weren’t talking to each other enough. The following are some tips I’ve picked up while working at Visier, an analytics platform used by organizations like Adobe, Genentech, PayPal, and locals like EA and Coast Capital.
+The following advice might seem elementary, but even the simplest things get missed when we’re working at speed. We all want our work to go smoothly, and nothing disrupts that like realizing something has gone wrong simply because we weren’t talking to each other enough. The following are some tips I’ve picked up while working at [Visier](https://www.visier.com/), an analytics platform used by organizations like Adobe, Genentech, PayPal, and locals like EA and Coast Capital.
 
 ## Communicate early and often
 Communication is like design — most of the time, people won’t notice it unless it’s bad. The most important part of our job as digital designers is to communicate the design work to developers. If we fail to do this, our work is fruitless. It won’t be translated into a valuable feature or product for people, and thus, won’t really help anybody.
@@ -19,7 +19,11 @@ Even if check-ins happen regularly, it’s still easy for two people to look at 
 
 The developers I’ve worked with like these kinds of tools, as they surface important details about the design without having to ask the designer. They also tend to be easier to reference and more accurate than PDFs, which can distort images and colours. We use Zeplin for visual design specs, but rarely upload entire screens or workflows. Instead, we take small components and create specs for those. Even using this method, an overwhelming amount of information is generated from the design — my colleague calls this ‘noise’. There are plenty of numbers that come out of Zeplin that just aren’t useful, and are sometimes incorrect relative to the intended design.
 
+<g-image src="~/assets/images/how-to-work-with-designers-for-developers/zeplin-1.png" width="600" alt="A screenshot of design tool Zeplin." />
+
 Zeplin, while powerful, creates several numbers that aren’t particularly relevant. For a while, I thought the ‘16px’ label was for the vertical line, rather than the horizontal one. Visier also uses a 4-point grid, so the 11px label is not what we intended to appear. If the developer reviewing this spec didn’t know about our grid system, they might take this for fact and make damn sure that gap is 11px tall.
+
+<g-image src="~/assets/images/how-to-work-with-designers-for-developers/zeplin-2.png" width="500" alt="A screenshot of design tool Zeplin." />
 
 To address these issues, we carefully consider what needs to be put on Zeplin in the first place. We also use 4-point spacer tokens when creating visual specs to make sure the numbers Zeplin creates will be as accurate as possible.
 

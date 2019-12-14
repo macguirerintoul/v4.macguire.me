@@ -76,6 +76,8 @@ button {
 
 h1 {
   @include type-level-1;
+
+  margin-bottom: 1rem;
 }
 
 h2 {

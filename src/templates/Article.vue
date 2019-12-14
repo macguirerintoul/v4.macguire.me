@@ -1,8 +1,10 @@
 <template>
   <article>
-    <h1>{{ $page.article.title }}</h1>
-    <span>Updated {{ updated }}</span>
-    <VueRemarkContent />
+    <div class="content">
+      <h1>{{ $page.article.title }}</h1>
+      <p>by Macguire Rintoul — updated {{ updated }}</p>
+      <VueRemarkContent />
+    </div>
   </article>
 </template>
 
