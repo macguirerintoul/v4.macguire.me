@@ -14,6 +14,7 @@
   <section>
     <h2>Introduction</h2>
     <div class="project-overview__context">
+      <p v-html="project.contribution"></p>
       <div>
         <h4>For</h4>
         <span>{{ project.for }}</span>
@@ -30,7 +31,7 @@
         <h4>Tools</h4>
         <span class="commas" v-for="tool in project.tools" :key="tool">{{ tool }}</span>
       </div>
-      <p v-html="project.contribution"></p>
+
     </div>
   </section>
     </div>

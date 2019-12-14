@@ -6,7 +6,6 @@
   grid-auto-rows: min-content;
   margin-bottom: 5rem;
 
-
   .project-overview__title {
     margin: 0 0 1rem 0;
   }
@@ -33,11 +32,11 @@
 .project-overview__context {
   max-width: $content-width;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 1fr;
   grid-column-gap: 2em;
 
   div {
-    grid-column: 1 / 2;
+    grid-column: 2;
   }
 
   h4 {
@@ -51,7 +50,7 @@
   p {
     margin: 0;
     grid-row: 1 / 5;
-    grid-column: 2;
+    grid-column: 1;
   }
 
   margin: 3em auto 0 auto;

@@ -1,6 +1,6 @@
 ---
 title: MyCredit
-for: IAT 438
+for: "IAT 438: Interactive Objects & Environments"
 shortDescription: "Helps Vancity members understand and build credit, improving their financial well-being"
 featured: true
 order: 1

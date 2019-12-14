@@ -44,8 +44,9 @@
 }
 
 @mixin type-level-content {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  letter-spacing: -1.1px;
 }
 
 @mixin type-level-small {
@@ -96,6 +97,6 @@ article,
   p,
   blockquote {
     color: $color-dark;
-    font-family: 'Editorial New', 'Freight', 'Tiempos Text', serif;
+    line-height: 2.25rem;
   }
 }

@@ -3,14 +3,15 @@
   top: 0;
   left: 0;
   right: 0;
-  min-height: 4em;
+  min-height: 4.2em;
   margin: auto;
   max-width: $max-container-width;
   background-color: $color-white-transparent;
   padding: 0.5rem 2rem 0;
   z-index: 20;
   backdrop-filter: blur(4px);
-  box-shadow: rgba(0, 0, 0, 0.02) 0 2px 4px;
+  // box-shadow: rgba(0, 0, 0, 0.02) 0 2px 4px;
+  border-bottom: $black-border;
 }
 
 .navbar,

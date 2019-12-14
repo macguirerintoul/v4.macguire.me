@@ -20,7 +20,7 @@ button {
   min-width: 5rem;
   min-height: 2rem;
   box-shadow: $shadow;
-  border: 1px solid black;
+  border: none;
 
   &.button--primary {
     color: $color-white;
@@ -29,6 +29,7 @@ button {
 
   &.button--secondary {
     color: $color-black;
+    border: $black-border;
     background-color: white;
   }
 }
@@ -96,8 +97,8 @@ img {
 
 img,
 video {
-  border: 2px solid black;
-  box-shadow: $shadow;
+  border: $black-border;
+  // box-shadow: $shadow;
 }
 
 label {
