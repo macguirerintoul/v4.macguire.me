@@ -1,9 +1,10 @@
 .about-container {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2rem;
 
-  * {
-    flex: 1 0 50%;
+  & > * {
+    flex: 1 0 48%;
   }
 
   p {

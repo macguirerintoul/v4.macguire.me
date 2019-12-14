@@ -3,8 +3,8 @@
     <h1>About</h1>
     <div class="about-container">
       <p>
-        I'm Macguire — an experience designer, web developer, hackathon
-        participant, and music producer.
+        I'm Macguire — an experience designer, software developer, hackathon
+        participant, and music producer. I'm currently completing a Bachelor of Science in Interactive Arts & Technology at Simon Fraser University. When I'm not studying or learning a new web framework, you can catch me DJing, making my own beats, or hiking the Swiss Alps with my mom.
       </p>
       <div class="about__photo">
         <g-image
@@ -18,7 +18,7 @@
       <h2>Experience</h2>
       <div class="resume__context">
         <h3>User Experience Design Intern</h3>
-        <span class="resume__date">May 2019 – December 2019</span>
+        <span class="resume__date">May 2019 – present</span>
         <span class="resume__company">Visier</span>
       </div>
       <div class="resume__responsibilities">
