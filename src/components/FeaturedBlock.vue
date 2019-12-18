@@ -1,24 +1,25 @@
 <template>
   <div class="featured-block">
-    <span class="featured-block--name">{{ blockName }}</span>
-    <MagicLink class="featured-block--see-all" :url="seeAll">
-      <small>See all</small>
-    </MagicLink>
-
+    <div class="featured-block__header">
+      <span class="featured-block__name">{{ blockName }}</span>
+      <MagicLink class="featured-block__see-all" :url="seeAll">
+        <small>See all</small>
+      </MagicLink>
+    </div>
     <MagicLink class="hvr-float featured-block__content" :url="url">
       <span class="featured-block__item-title">
         {{ itemTitle }}
       </span>
 
-      <small class="featured-block--context">
+      <small class="featured-block__context">
         {{ computeContext(contextOne) }}
       </small>
 
-      <p class="featured-block--text">
+      <p class="featured-block__text">
         {{ text }}
       </p>
 
-      <small class="featured-block--context">
+      <small class="featured-block__context">
         {{ computeContext(contextTwo) }}
       </small>
     </MagicLink>

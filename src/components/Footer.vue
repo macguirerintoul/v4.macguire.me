@@ -43,7 +43,7 @@
           </button>
         </form>
       </div>
-      <g-image src="~/assets/images/smiley.png" width="50"/>
+      <g-image class="smiley" src="~/assets/images/smiley.png" width="50"/>
       </section>
 
       <section class="featured-block-container">

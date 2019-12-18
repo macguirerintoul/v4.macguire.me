@@ -1,6 +1,6 @@
 @media all and (max-width: $mobile-breakpoint) {
   body {
-    margin-top: 4rem;
+    margin-top: 0;
   }
 
   button {
@@ -10,6 +10,20 @@
   footer {
     padding-left: $responsive-padding;
     padding-right: $responsive-padding;
+
+    .smiley {
+      display: none;
+    }
+
+    .footer-content {
+      flex-direction: column;
+
+      section {
+        flex: 1 0 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
   }
 
   .navbar {
@@ -29,6 +43,10 @@
     }
   }
 
+  .navbar-menu {
+    display: none;
+  }
+
   .navbar.is-active {
     .navbar-end,
     .navbar-menu,
@@ -40,10 +58,6 @@
     }
 
     display: block;
-  }
-
-  .navbar-menu {
-    display: none;
   }
 
   .mobile-menu {
