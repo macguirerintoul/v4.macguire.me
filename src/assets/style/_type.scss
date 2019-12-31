@@ -52,6 +52,7 @@
 @mixin type-level-small {
   @include NeueHaas;
 
+  text-transform: uppercase;
   font-size: 1rem;
   font-weight: 500;
 }

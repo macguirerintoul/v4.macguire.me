@@ -22,7 +22,8 @@ footer {
 .footer__left {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // TODO uncomment when the email form gets added
+  // justify-content: space-between;
 }
 
 .footer-content {

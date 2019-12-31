@@ -10,20 +10,20 @@
     "@gridsome/plugin-google-analytics": "^0.1.0",
     "@gridsome/vue-remark": "^0.1.4",
     "cloudinary-vue": "1.0.0-beta2",
-    "gridsome": "^0.7.11",
+    "gridsome": "^0.7.12",
     "@gridsome/transformer-remark": "^0.3.0",
     "zooming": "^2.1.1"
   },
   "devDependencies": {
     "@gridsome/source-filesystem": "^0.6.0",
     "eslint-config-prettier": "^6.4.0",
-    "eslint": "^6.7.2",
+    "eslint": "^6.8.0",
     "eslint-plugin-gridsome": "^1.4.0",
-    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-vue": "^6.0.0",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
-    "stylelint": "^11.1.1",
+    "stylelint": "^12.0.1",
     "stylelint-config-standard": "^19.0.0"
   }
 }

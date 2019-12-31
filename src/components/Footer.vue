@@ -19,7 +19,7 @@
         <MagicLink url="https://www.instagram.com/macguirerintoul/"
           >Instagram</MagicLink>
     </div>
-      <div>
+      <!-- <div>
         <h3>Care for a quarterly email?</h3>
         <div
           v-if="subscriptionStatus != ''"
@@ -42,8 +42,7 @@
             Subscribe
           </button>
         </form>
-      </div>
-      <g-image src="~/assets/images/smiley.png" width="50"/>
+      </div> -->
       </section>
 
       <section class="featured-block-container">
