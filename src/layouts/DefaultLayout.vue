@@ -7,6 +7,11 @@
     </main>
 
     <Footer />
+    <!--
+    <div class="note">
+      <p>⚠️ Please note: this site is a work in progress. <a href="https://github.com/macguirerintoul/macguire.me" target="_blank">View on GitHub</a></p>
+    </div>
+    -->
   </div>
 </template>
 

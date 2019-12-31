@@ -22,6 +22,19 @@
 
 // Responsive styles are imported at the bottom
 
+// warning note on botom of pages
+.note {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+    background: #FFF;
+  border-top: $black-border;
+  text-align: center;
+  p {
+    font-size: 1rem;
+  }
+}
+
 .container {
   max-width: $max-container-width;
   padding: 0 2rem;

@@ -1,5 +1,6 @@
 <template>
   <header>
+
     <nav
       :class="{ 'is-active': showMobileMenu }"
       class="navbar"
