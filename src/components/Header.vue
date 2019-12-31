@@ -38,7 +38,7 @@
           <g-link to="/about" class="navbar-item hvr-underline-reveal">
             About
           </g-link>
-          <g-link class="navbar-item" to="/contact">
+          <g-link class="navbar-item contact-button" to="/contact">
             <button class="button--primary">
               Contact
             </button>

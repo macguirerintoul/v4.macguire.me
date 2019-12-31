@@ -10,21 +10,6 @@
         <MagicLink url="http://vch.ca/">Vancouver Coastal Health</MagicLink>
         and the <MagicLink url="http://clab.iat.sfu.ca/">Connections Lab</MagicLink>.
       </p>
-      <div class="social-buttons">
-        <a
-          href="https://twitter.com/MacguireRintoul?ref_src=twsrc%5Etfw"
-          class="twitter-follow-button"
-          data-show-count="false"
-          data-size="large"
-          >Follow @MacguireRintoul</a>
-        <a
-          class="github-button"
-          href="https://github.com/MacguireRintoul"
-          data-size="large"
-          aria-label="Follow @MacguireRintoul on GitHub"
-          >Follow @MacguireRintoul</a
-        >
-    </div>
     </section>
     <section class="work">
       <h1>Featured Work</h1>
@@ -47,7 +32,7 @@
           <p>{{edge.node.title}} — {{edge.node.shortDescription}}</p>
         </g-link>
       </div>
-       -->
+      -->
     </section>
   </div>
 </template>
@@ -98,18 +83,6 @@ export default {
   metaInfo() {
     return {
       title: 'Work',
-      script: [
-        {
-          src: 'https://platform.twitter.com/widgets.js',
-          async: 'async',
-          defer: 'defer',
-        },
-        {
-          src: 'https://buttons.github.io/buttons.js',
-          async: 'async',
-          defer: 'defer',
-        },
-      ],
     }
   },
 }
