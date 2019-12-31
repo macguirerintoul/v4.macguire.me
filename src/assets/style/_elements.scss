@@ -58,9 +58,8 @@ th {
 }
 
 a {
-  text-decoration: none;
   color: #000;
-  background-color: #ff0;
+  text-decoration: $link-underline;
   // Insert an SVG icon after external links
   // &[target='_blank']:after {
   //   display: inline-block;

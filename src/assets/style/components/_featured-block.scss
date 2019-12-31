@@ -33,6 +33,7 @@
       font-size: 1rem;
       font-weight: 600;
       min-width: 0;
+      text-decoration: $link-underline;
     }
 
     .featured-block,
@@ -42,6 +43,7 @@
       justify-content: space-between;
       align-items: baseline;
       width: 100%;
+      text-decoration: none;
     }
 
     // Select the last div inside the featured-block-container (essentially, the last featured-block)
@@ -59,9 +61,12 @@
 
   .featured-block__see-all,
   .featured-block__context {
+
     flex: 1 0 25%;
     text-align: right;
   }
+
+
 
   .featured-block__text {
     @include type-level-content;
