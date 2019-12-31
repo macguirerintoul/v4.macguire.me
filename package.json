@@ -9,7 +9,7 @@
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
     "@gridsome/vue-remark": "^0.1.4",
-    "cloudinary-vue": "1.0.0-beta2",
+    "cloudinary-vue": "1.0.0",
     "gridsome": "^0.7.12",
     "@gridsome/transformer-remark": "^0.3.0",
     "zooming": "^2.1.1"
