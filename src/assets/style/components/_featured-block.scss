@@ -2,6 +2,12 @@
   display: flex;
   flex-direction: column;
 
+  .featured-block__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
   .featured-block__content {
     background-color: $color-dark-grey;
     margin-bottom: 2rem;
