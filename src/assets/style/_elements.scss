@@ -14,9 +14,10 @@ article {
 
 body {
   margin-top: 10rem;
-  background-color: $color-body-grey;
+  background-color: $color-black;
   font-family: $font-stack;
   height: 100%;
+	color: $color-white;
 }
 
 button {
@@ -58,7 +59,7 @@ th {
 }
 
 a {
-  color: #000;
+  color: $color-white;
   text-decoration: $link-underline;
   // Insert an SVG icon after external links
   // &[target='_blank']:after {

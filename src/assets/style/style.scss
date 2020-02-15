@@ -22,19 +22,6 @@
 
 // Responsive styles are imported at the bottom
 
-// warning note on botom of pages
-.note {
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
-    background: #FFF;
-  border-top: $black-border;
-  text-align: center;
-  p {
-    font-size: 1rem;
-  }
-}
-
 .container {
   max-width: $max-container-width;
   padding: 0 2rem;
@@ -42,6 +29,7 @@
 }
 
 // Inserts a comma after each item in a list, except for the last item.
+// TODO should probably be doing this in js?
 .commas:not(:last-child)::after {
   content: ', ';
 }
