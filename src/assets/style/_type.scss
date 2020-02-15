@@ -1,16 +1,4 @@
-// import Neue Haas for testing
-@import url("https://use.typekit.net/wzc8kad.css");
-
-// import SC
-@import url("../type/sc.css");
-
-@mixin NeueHaas {
-  font-family: $font-headings, $font-stack;
-}
-
 @mixin type-level-1 {
-  @include NeueHaas;
-
   font-size: 6rem;
   line-height: 6rem;
   font-weight: 300;
@@ -18,8 +6,6 @@
 }
 
 @mixin type-level-2 {
-  @include NeueHaas;
-
   font-size: 32pt;
   line-height: 36pt;
   font-weight: 600;
@@ -27,8 +13,6 @@
 }
 
 @mixin type-level-3 {
-  @include NeueHaas;
-
   font-size: 24pt;
   line-height: 28pt;
   font-weight: 500;
@@ -36,8 +20,6 @@
 }
 
 @mixin type-level-4 {
-  @include NeueHaas;
-
   font-size: 20pt;
   line-height: 24pt;
   font-weight: 400;
@@ -50,24 +32,9 @@
 }
 
 @mixin type-level-small {
-  @include NeueHaas;
-
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 500;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-button,
-.navbar-menu,
-label,
-.featured-block__item-title {
-  font-family: $font-headings;
 }
 
 nav,
