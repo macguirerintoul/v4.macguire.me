@@ -6,10 +6,10 @@
   min-height: 4.2em;
   margin: auto;
   max-width: $max-container-width;
-  background-color: $color-white-transparent;
   padding: 0.5rem 2rem 0;
-  z-index: 20;
-  backdrop-filter: blur(4px);
+ 	color: $color-white; 
+	z-index: 20;
+ 	background: rgba(0,0,0, 0.1); 
   border-bottom: $black-border;
 }
 
@@ -59,7 +59,6 @@
   flex-shrink: 0;
   line-height: 1.5rem;
   position: relative;
-  color: #000;
   text-decoration: none;
 }
 
