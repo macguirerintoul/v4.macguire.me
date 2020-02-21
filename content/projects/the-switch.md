@@ -7,16 +7,18 @@ order: 3
 imagePath: The_Switch/images/featured
 year: 2018
 published: true
-tags: ['Product Design']
+tags: ['Design']
 roles: ['Content Strategy', 'Project Management', 'Interface Design', 'User Research']
 tools: ['Sketch', 'Keynote', 'G Suite']
 summary: "Despite having physical, environmental, and financial benefits, lack of exposure in mainstream media and markets has prevented the widespread use of menstrual cups. The Switch is a digital experience designed for <a href='https://lenacup.com/' target='_blank'>Lena's website</a> that aims to help guide potential customers through making 'the switch' from traditional menstrual products to the Lena cup."
-contribution: "As the project manager, I ensured the various parts of the project were being completed according to our project timeline, and made sure they were cohesive. As the content strategist, I wrote copy based on our project's strategy and validated its effectiveness with the target audience. I also developed and promoted a qualitative and quantitative research survey that received over 450 responses, which heavily informed the project's direction."
 ---
 
 import Showcase from '~/components/Showcase'
 import MagicImage from '~/components/MagicImage'
 import MagicVideo from '~/components/MagicVideo'
+
+## Contribution
+As the project manager, I ensured the various parts of the project were being completed according to our project timeline, and made sure they were cohesive. As the content strategist, I wrote copy based on our project's strategy and validated its effectiveness with the target audience. I also developed and promoted a qualitative and quantitative research survey that received over 450 responses, which heavily informed the project's direction.
 
 <Showcase
   path="The_Switch/videos/walkthrough"

@@ -28,12 +28,6 @@
   margin: auto;
 }
 
-// Inserts a comma after each item in a list, except for the last item.
-// TODO should probably be doing this in js?
-.commas:not(:last-child)::after {
-  content: ', ';
-}
-
 .social-buttons {
   & > * {
     margin-right: 1rem;
