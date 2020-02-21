@@ -11,7 +11,9 @@ query Project($id: ID!) {
     title
     roles
     tools
-    for
+		interested
+		tags
+		for
     url
     year
     summary

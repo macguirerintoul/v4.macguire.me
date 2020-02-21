@@ -10,7 +10,7 @@ module.exports = {
   },
   siteName: 'Macguire Rintoul',
   siteDescription: 'Experience designer & developer from Vancouver, BC',
-  port: 3000,
+  port: 8080,
   permalinks: {
     slugify: {
       use: '@sindresorhus/slugify',

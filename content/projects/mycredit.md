@@ -7,11 +7,11 @@ order: 1
 imagePath: MyCredit/images/featured
 year: 2018
 published: true
-tags: ['Product Design']
+tags: ['Design']
 roles: ['Content Strategy', 'Project Management', 'Interface Design', 'User Research']
 tools: ['Sketch', 'Keynote', 'G Suite']
 summary: "Despite the importance of credit in personal finance, an estimated 56% of Canadians have never checked their credit score and 31% don't know how to improve their score (<a href='https://newsroom.bmo.com/2015-02-27-Out-of-Sight-Out-of-Mind-Over-Half-of-Canadians-Have-Never-Checked-Their-Credit-Score'>BMO, 2016</a>). We saw this as an opportunity to support people in learning about credit through a mobile app offered by Vancity, a local credit union. The project was extremely well-received by industry designers and Vancity directors, who invited us to present to their Digital Services team at their head office in Vancouver."
-team: ['Elena Hsu', 'Kristina Kim', 'Lizzie Lo', 'Jordan Yep', 'Isabelle Soares']
+interested: "<a href='/contact'>Contact me</a>"
 ---
 
 import Showcase from '~/components/Showcase'
