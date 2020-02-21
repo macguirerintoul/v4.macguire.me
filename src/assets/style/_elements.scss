@@ -42,7 +42,9 @@ button {
 small {
   @include type-level-small;
 }
-
+span {
+	@include type-level-content;
+}
 ul {
   list-style-type: none;
 }
@@ -84,7 +86,7 @@ footer {
 
 blockquote {
   white-space: pre-wrap;
-  border-left: 2px solid black;
+  border-left: 2px solid $color-white;
   padding-left: 2rem;
 }
 

@@ -2,6 +2,9 @@
   <div>
   <section class="project-overview">
     <h1 class="project-overview__title">{{ project.title }}</h1>
+      <div class="project-overview__subtitle">
+        <span>{tag goes here} — {{ project.year }}</span>
+      </div>
     <p class="project-overview__summary" v-html="project.summary" />
 
     <div class="project-overview__image">
@@ -10,18 +13,10 @@
         :alt="'Screenshot of ' + project.title"
       />
     </div>
-  </section>
-  <section>
-    <h2>Introduction</h2>
-    <div class="project-overview__context">
-      <p v-html="project.contribution"></p>
+		<div class="project-overview__context">
       <div>
         <h4>For</h4>
         <span>{{ project.for }}</span>
-      </div>
-      <div>
-        <h4>Year</h4>
-        <span>{{ project.year }}</span>
       </div>
       <div>
         <h4>Roles</h4>
@@ -31,8 +26,11 @@
         <h4>Tools</h4>
         <span class="commas" v-for="tool in project.tools" :key="tool">{{ tool }}</span>
       </div>
-
-    </div>
+      <div>
+        <h4>Team</h4>
+        <span class="commas" v-for="team in project.team" :key="team">{{ team}}</span>
+      </div>
+		</div>
   </section>
     </div>
 </template>
