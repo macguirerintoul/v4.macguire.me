@@ -1,8 +1,8 @@
 .featured-block-container {
   display: flex;
-  flex-direction: column;
-
-  .featured-block__header {
+	flex-wrap: wrap;
+	justify-content: space-between;
+	.featured-block__header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -13,6 +13,8 @@
   }
 
   .featured-block {
+  flex: 0 0 30%;
+	min-width: 400px;
     a {
       color: $color-white;
     }
