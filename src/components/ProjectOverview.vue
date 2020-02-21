@@ -3,7 +3,7 @@
   <section class="project-overview">
     <h1 class="project-overview__title">{{ project.title }}</h1>
       <div class="project-overview__subtitle">
-				<span class="commas" v-for="tag in project.tags" :key="tag">{{tag}}</span><span>— {{ project.year }}</span>
+				<span>{{project.tags.join(', ')}} — {{ project.year }}</span>
       </div>
     <p class="project-overview__summary" v-html="project.summary" />
 
@@ -20,11 +20,11 @@
       </div>
       <div>
         <h4>Roles</h4>
-        <span class="commas" v-for="role in project.roles" :key="role">{{ role }}</span>
+        <span>{{ project.roles.join(', ') }}</span>
       </div>
       <div>
         <h4>Tools</h4>
-        <span class="commas" v-for="tool in project.tools" :key="tool">{{ tool }}</span>
+        <span>{{ project.tools.join(', ') }}</span>
       </div>
       <div>
         <h4>Interested?</h4>
