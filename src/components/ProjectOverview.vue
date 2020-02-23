@@ -13,7 +13,6 @@
         :alt="'Screenshot of ' + project.title"
       />
     </div>
-		<div class="project-overview__context">
       <div>
         <h4>For</h4>
         <span>{{ project.for }}</span>
@@ -30,7 +29,6 @@
         <h4>Interested?</h4>
         <span v-html="project.interested"></span>
       </div>
-		</div>
   </section>
     </div>
 </template>
