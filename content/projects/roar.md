@@ -10,6 +10,7 @@ featured: true
 tags: ['Design','Development']
 roles: ['Interaction Design','Interface Design', 'Project Management', 'Full-Stack Web Development']
 tools: ['Sketch', 'React', 'Laravel']
+interested: "<a href='/contact'>Contact me</a>"
 summary: "<a href='http://vch.ca' target='_blank'>Vancouver Coastal Health</a> trains around 1000 new staff per year, but was processing all new hires with manual document editing and data entry. To modernize the workflow, I worked alongside the Clinical Education and Recruitment Services teams to design and develop a web app to automate each employee’s schedule and manage education sessions. The new process saves over 750 hours of labour each year."
 ---
 

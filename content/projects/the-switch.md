@@ -10,6 +10,7 @@ published: true
 tags: ['Design']
 roles: ['Content Strategy', 'Project Management', 'Interface Design', 'User Research']
 tools: ['Sketch', 'Keynote', 'G Suite']
+interested: "<a href='/contact'>Contact me</a>"
 summary: "Despite having physical, environmental, and financial benefits, lack of exposure in mainstream media and markets has prevented the widespread use of menstrual cups. The Switch is a digital experience designed for <a href='https://lenacup.com/' target='_blank'>Lena's website</a> that aims to help guide potential customers through making 'the switch' from traditional menstrual products to the Lena cup."
 ---
 

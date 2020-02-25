@@ -10,6 +10,7 @@ order: 4
 tags: ['Design']
 roles: ['Interaction Design', 'Interface Design', 'Prototyping', 'User Research']
 tools: ['Sketch', 'Principle']
+interested: "<a href='/contact'>Contact me</a>"
 summary: "One of the most common problems casual wine collectors face is keeping track of their favourite wines and wineries. Since many collectors are only moderately interested, many aren't invested enough to spend time on organization, but later forget the details of wines they enjoyed. After observing these problems across several adult couples, we decided to design a digital solution during an interface design course at SFU."
 ---
 
