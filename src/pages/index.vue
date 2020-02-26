@@ -12,6 +12,7 @@
       </p>
     </section>
     <section class="work">
+						<h1>Work</h1>
       <div class="project-flex-container">
         <ProjectBlock
           v-for="edge in $page.featuredProjects.edges"

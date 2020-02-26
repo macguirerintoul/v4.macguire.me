@@ -11,15 +11,15 @@
 
 .project-flex-container {
   display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-between;
+
   a {
     text-decoration: none;
   }
 
   .project-block {
-
     img {
       border: none;
     }
@@ -51,11 +51,8 @@
     }
 
     .project-block__content {
-//      padding: 1rem;
-
-      small {
-        margin-bottom: 3rem;
-      }
+      //      padding: 1rem;
+      max-width: 40rem;
     }
   }
-	}
+}

@@ -63,7 +63,7 @@ Winebox allows people to more easily understand and manage their wine collection
   path="Winebox/videos/history"
   type="video"
   source="cloudinary"
-  orientation="media-right"
+  orientation="media-left"
   content="History items can be shared with friends to recommend a great bottle"
 />
 
