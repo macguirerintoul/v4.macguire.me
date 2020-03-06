@@ -20,8 +20,31 @@
   }
 
   .project-block {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+
+    .project-block__image {
+      display: none;
+      max-width: 100%;
+      grid-column: 4 / 5;
+      grid-row: 1/4;
+    }
+
+    &:hover {
+      .project-block__image {
+        display: block;
+      }
+    }
+
     img {
       border: none;
+    }
+
+    .project-block--title,
+    .project-block__tags,
+    .project-block__description {
+      grid-column: 1 / 5;
     }
 
     .project-block--title {
@@ -32,12 +55,8 @@
       margin: 1rem 0;
     }
 
-    border: 2px solid black;
     position: relative;
-    line-height: normal;
     margin-bottom: 3rem;
-    transform-style: preserve-3d;
-    transition: transform 100ms ease;
 
     &::before {
       content: '';
