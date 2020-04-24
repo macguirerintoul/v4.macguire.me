@@ -1,7 +1,7 @@
 ---
 title: ROAR
 for: Vancouver Coastal Health
-shortDescription: "ROAR is a web app that streamlines the process of registering new employees into training sessions."
+shortDescription: "ROAR is a web app that streamlines the process of registering newly-hired employees into training sessions."
 year: 2019
 published: true
 order: 2

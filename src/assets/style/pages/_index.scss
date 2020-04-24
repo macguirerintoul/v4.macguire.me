@@ -13,7 +13,7 @@
 .project-flex-container {
 	display: flex;
 	flex-direction: column;
-
+	margin-top: 2rem;
 	a {
 		text-decoration: none;
 	}
@@ -27,24 +27,7 @@
 
 		.project-block__description {
 			max-width: $content-width;
-			//     grid-row: 3;
-			margin: 1rem 0;
-		}
-
-		&::before {
-			content: "";
-			position: absolute;
-			width: 95%;
-			height: 100%;
-			top: 2%;
-			left: calc(5% / 2);
-			transform: translateZ(-1px);
-			border-radius: 1rem;
-		}
-
-		.project-block__content {
-			//      padding: 1rem;
-			max-width: 40rem;
+			margin: 0.2rem 0;
 		}
 	}
 }

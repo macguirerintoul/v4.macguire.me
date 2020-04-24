@@ -3,8 +3,7 @@
 		<h2 class="project-block--title">{{ project.title }}</h2>
 		<p class="project-block__description">{{ project.shortDescription }}</p>
 		<div class="project-block__context">
-			<small class="project-block__year">{{ project.year }} –</small>
-			<small class="project-block__tags">{{ project.tags.join(", ") }}</small>
+			<small>{{ project.year }} – {{ project.tags.join(", ") }}</small>
 		</div>
 	</g-link>
 </template>

@@ -1,15 +1,21 @@
 ---
 title: The Switch
 for: IAT 438
-shortDescription: "Introduces people to menstrual cups, addressing apprehensions and increasing customer confidence"
+shortDescription: "The Switch is a redesign of a menstrual cup webstore that addresses the apprehensions of potential customers."
 featured: true
 order: 3
 imagePath: The_Switch/images/featured
 year: 2018
 published: true
-tags: ['Design']
-roles: ['Content Strategy', 'Project Management', 'Interface Design', 'User Research']
-tools: ['Sketch', 'Keynote', 'G Suite']
+tags: ["Design"]
+roles:
+  [
+    "Content Strategy",
+    "Project Management",
+    "Interface Design",
+    "User Research",
+  ]
+tools: ["Sketch", "Keynote", "G Suite"]
 interested: "<a href='/contact'>Contact me</a>"
 summary: "Despite having physical, environmental, and financial benefits, lack of exposure in mainstream media and markets has prevented the widespread use of menstrual cups. The Switch is a digital experience designed for <a href='https://lenacup.com/' target='_blank'>Lena's website</a> that aims to help guide potential customers through making 'the switch' from traditional menstrual products to the Lena cup."
 ---
@@ -19,6 +25,7 @@ import MagicImage from '~/components/MagicImage'
 import MagicVideo from '~/components/MagicVideo'
 
 ## Contribution
+
 As the project manager, I ensured the various parts of the project were being completed according to our project timeline, and made sure they were cohesive. As the content strategist, I wrote copy based on our project's strategy and validated its effectiveness with the target audience. I also developed and promoted a qualitative and quantitative research survey that received over 450 responses, which heavily informed the project's direction.
 
 <Showcase
@@ -29,11 +36,13 @@ As the project manager, I ensured the various parts of the project were being co
 />
 
 ## Problem
+
 Despite having physical, environmental, and financial benefits, lack of exposure in mainstream media and markets has prevented widespread use of menstrual cups. The majority of menstruators already use tampons, pads, and/or liners, and are not convinced to undertake the physical and emotional risk of switching menstrual hygiene products. While the Lena Cup is recognized as the #1 cup for beginners, Lena's existing site does not effectively communicate the product's value and benefits to potential customers.
 
 <MagicVideo source="vimeo" path="301757528" />
 
 ## Solution
+
 The Switch by Lena directly addresses false assumptions, apprehensions, and concerns consumers may have about menstrual cups.
 
 <Showcase
@@ -62,6 +71,7 @@ Our survey of over 450 respondents suggested that most customers were convinced 
 <MagicVideo source="vimeo" path="301758677" />
 
 ## Process
+
 After identifying business problems within the menstrual cup market, we identified frictions with Lena's existing website. Information was scattered across multiple pages, and neglected to highlight the product’s extensive benefits. We then conducted a survey to understand peoples' perception of cups and the factors influencing this perception, in order to design a digital experience that encouraged visitors to try the product.
 
 <Showcase
@@ -106,6 +116,7 @@ The nature of the product lends itself to a rocky customer journey. Our research
 />
 
 ### Awareness
+
 For the awareness stage, we considered how customers might find out about The Switch.
 
 <Showcase
@@ -131,6 +142,7 @@ For the awareness stage, we considered how customers might find out about The Sw
 />
 
 ### Consideration
+
 Lena's current site has a stories section, but doesn't feature any content related to personal experiences with cups. We found this was a missed opportunity, seeing as based on the number of reviews and discussion online, cup users love to share their stories. Our research also suggested that if people could see how using a cup would impact their lifestyle, they would feel more comfortable with them.
 
 <Showcase
@@ -141,6 +153,7 @@ Lena's current site has a stories section, but doesn't feature any content relat
 />
 
 ### Ongoing use
+
 As advertised on their site, Lena is happy to have representatives answer any questions their customers have, or give advice to those just starting out. To make sure customers feel taken care of, Lena can reach out and ask how things are going. When customers write positive reviews, Lena could ask them to share their story on the Lena website and continue the cycle.
 
 <Showcase
