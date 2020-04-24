@@ -1,15 +1,21 @@
 ---
 title: MyCredit
 for: "IAT 438: Interactive Objects & Environments"
-shortDescription: "Helps Vancity members understand and build credit to improve their financial well-being"
+shortDescription: "MyCredit is a mobile app that helps people learn about credit. "
 featured: true
 order: 1
 imagePath: MyCredit/images/featured
 year: 2018
 published: true
-tags: ['Design']
-roles: ['Content Strategy', 'Project Management', 'Interface Design', 'User Research']
-tools: ['Sketch', 'Keynote', 'G Suite']
+tags: ["Design"]
+roles:
+  [
+    "Content Strategy",
+    "Project Management",
+    "Interface Design",
+    "User Research",
+  ]
+tools: ["Sketch", "Keynote", "G Suite"]
 summary: "Despite the importance of credit in personal finance, an estimated 56% of Canadians have never checked their credit score and 31% don't know how to improve their score (<a href='https://newsroom.bmo.com/2015-02-27-Out-of-Sight-Out-of-Mind-Over-Half-of-Canadians-Have-Never-Checked-Their-Credit-Score'>BMO, 2016</a>). We saw this as an opportunity to support people in learning about credit through a mobile app offered by Vancity, a local credit union. The project was extremely well-received by industry designers and Vancity directors, who invited us to present to their Digital Services team at their head office in Vancouver."
 interested: "<a href='/contact'>Contact me</a>"
 ---
@@ -20,12 +26,14 @@ import MagicVideo from '~/components/MagicVideo'
 import MagicImage from '~/components/MagicImage'
 import Blockquote from '~/components/Blockquote'
 
-## Contribution 
+## Contribution
+
 As the project manager, I ensured that the project's individual parts were being completed and were cohesive, and decided when to stop iterating and start polishing. As the content strategist, I wrote copy that was consistent with our three design principles: personal, clear, and hopeful. I also ensured that the credit-related content in MyCredit was beneficial and easy to understand, which I validated by conducting interviews and think-aloud testing with 9 participants.
 
 <MagicVideo type="vimeo" path="305425536" />
 
 ## Problem
+
 Despite the importance of credit scores in personal finance, an estimated 56% of Canadians have never checked their credit score and 31% don't know how to improve their score.
 
 <Blockquote
@@ -37,6 +45,7 @@ Despite the importance of credit scores in personal finance, an estimated 56% of
 Vancity's current website offers some credit help, but it lies 4 levels deep in navigation. Furthermore, their existing banking app has yet to provide resources for credit management.
 
 ## Solution
+
 MyCredit is a companion app for Vancity members to manage their credit and set goals that encourage credit building, to better support their financial well-being.
 
 <MagicVideo source="vimeo" path="305425815" />
@@ -74,6 +83,7 @@ MyCredit is a companion app for Vancity members to manage their credit and set g
 />
 
 ## Process
+
 After discovering the study by BMO, we decided that as a values-based non-profit organization, Vancity would be a great client to design for. We audited Vancity's existing products and services, and identified frictions.
 
 From secondary research, we drew two main insights: that people are reluctant to check their score, and that many don't feel the need to until a lender requires it.
@@ -81,6 +91,7 @@ From secondary research, we drew two main insights: that people are reluctant to
 <MagicImage path="MyCredit/images/insights" alt="Insights with more detailed explanations." />
 
 With what we knew, we framed the problem as follows:
+
 > How might we provide guidance that is not overwhelming, encourages members, and provides them with tools to reach their goals?
 
 After looking at the member segments of Vancity, we chose to focus our project toward the 'disappointed applicant', because compared to the other segments, there was more opportunity to improve their experience.
@@ -164,6 +175,7 @@ In the case that a member has no credit, MyCredit offers an explanation of why i
 />
 
 ## Details
+
 The following explains the details of our design decisions and highlights where decisions were made in MyCredit.
 
 <MagicImage
@@ -202,13 +214,21 @@ The following explains the details of our design decisions and highlights where 
 />
 
 ### Dependencies
+
 #### Borrowell
+
 A vendor that provides credit scores of individuals to financial institutions.
+
 #### MX Technologies
+
 A vendor that provides access to information about banking and credit acounts across all financial institutions.
+
 #### Central 1
+
 As a service provider to Vancity and other credit unions, Central 1 will need to collect and manage additional data from members.
+
 #### Additional Staff
+
 Vancity or their digital partners will require additional managers, designers, and developers to maintain a second mobile app.
 
 ## Appendix

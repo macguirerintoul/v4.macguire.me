@@ -33,10 +33,10 @@ module.exports = {
 			// Add Articles collection
 			use: "@gridsome/vue-remark",
 			options: {
-				typeName: "Article", // Required
-				baseDir: "./content/articles", // Where .md files are located
-				route: "/articles/:title",
-				template: "./src/templates/Article.vue" // Optional
+				typeName: "Post", // Required
+				baseDir: "./content/blog", // Where .md files are located
+				route: "/blog/:title",
+				template: "./src/templates/Post.vue" // Optional
 			}
 		}
 	],
