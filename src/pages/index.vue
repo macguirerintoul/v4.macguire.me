@@ -1,26 +1,27 @@
 <template>
-  <div>
-    <section class="hero">
-      <p>
-        I'm Macguire, an experience designer & developer from Vancouver, BC.
-        Currently, I'm working at
-        <MagicLink url="http://www.visier.com/">Visier</MagicLink> as a User
-        Experience Design Intern for their analytics platform. Previously, I've
-        worked at
-        <MagicLink url="http://vch.ca/">Vancouver Coastal Health</MagicLink>
-        and the <MagicLink url="http://clab.iat.sfu.ca/">Connections Lab</MagicLink>.
-      </p>
-    </section>
-    <section class="work">
-						<h1>Work</h1>
-      <div class="project-flex-container">
-        <ProjectBlock
-          v-for="edge in $page.featuredProjects.edges"
-          :key="edge.node.id"
-          :project="edge.node"
-        />
-      </div>
-      <!--
+	<div>
+		<section class="hero">
+			<p>
+				I'm Macguire, an experience designer & developer from Vancouver, BC.
+				Currently, I'm working at
+				<MagicLink url="http://www.visier.com/">Visier</MagicLink> as a User
+				Experience Design Intern for their analytics platform. Previously, I've
+				worked at
+				<MagicLink url="http://vch.ca/">Vancouver Coastal Health</MagicLink> and
+				the
+				<MagicLink url="http://clab.iat.sfu.ca/">Connections Lab</MagicLink>.
+			</p>
+		</section>
+		<section class="work">
+			<h1>Work</h1>
+			<div class="project-flex-container">
+				<ProjectBlock
+					v-for="edge in $page.featuredProjects.edges"
+					:key="edge.node.id"
+					:project="edge.node"
+				/>
+			</div>
+			<!--
       <h2>Other projects</h2>
       <div class="other-projects__flex-container">
         <g-link
@@ -32,9 +33,9 @@
           <p>{{edge.node.title}} — {{edge.node.shortDescription}}</p>
         </g-link>
       </div>
-      -->
-    </section>
-  </div>
+			-->
+		</section>
+	</div>
 </template>
 
 <page-query>
@@ -73,18 +74,18 @@ query AllProjects {
 </page-query>
 
 <script>
-import ProjectBlock from '~/components/ProjectBlock.vue'
-import MagicLink from '~/components/MagicLink.vue'
+import ProjectBlock from "~/components/ProjectBlock.vue";
+import MagicLink from "~/components/MagicLink.vue";
 
 export default {
-  components: {
-    ProjectBlock,
-    MagicLink,
-  },
-  metaInfo() {
-    return {
-      title: 'Work',
-    }
-  },
-}
+	components: {
+		ProjectBlock,
+		MagicLink
+	},
+	metaInfo() {
+		return {
+			title: "Work"
+		};
+	}
+};
 </script>

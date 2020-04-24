@@ -1,156 +1,156 @@
 // Utilities
-@import './utilities/_normalize.scss';
-@import './utilities/_hover.scss';
+@import "./utilities/_normalize.scss";
+@import "./utilities/_hover.scss";
 
 // Foundations
-@import './_variables.scss';
-@import './_type.scss';
-@import './_elements.scss';
+@import "./_variables.scss";
+@import "./_type.scss";
+@import "./_elements.scss";
 
 // Components
-@import './components/_header.scss';
-@import './components/_footer.scss';
-@import './components/_featured-block.scss';
-@import './components/_info-block.scss';
+@import "./components/_header.scss";
+@import "./components/_footer.scss";
+@import "./components/_featured-block.scss";
+@import "./components/_info-block.scss";
 
 // Pages
-@import './pages/_about.scss';
-@import './pages/_contact.scss';
-@import './pages/_index.scss';
-@import './pages/_project.scss';
-@import './pages/_articles.scss';
+@import "./pages/_about.scss";
+@import "./pages/_contact.scss";
+@import "./pages/_index.scss";
+@import "./pages/_project.scss";
+@import "./pages/_articles.scss";
 
 // Responsive styles are imported at the bottom
 
 .container {
-  max-width: $max-container-width;
-  padding: 0 2rem;
-  margin: auto;
+	max-width: $max-container-width;
+	padding: 0;
+	margin: auto;
 }
 
 .social-buttons {
-  & > * {
-    margin-right: 1rem;
-  }
+	& > * {
+		margin-right: 1rem;
+	}
 }
 
 .table-row {
-  display: block;
-  border: 2px solid transparent;
-  border-bottom-color: $color-grey;
+	display: block;
+	border: 2px solid transparent;
+	border-bottom-color: $color-grey;
 }
 
 .video-embed {
-  position: relative;
-  padding-bottom: 38.25%;
-  height: 0;
+	position: relative;
+	padding-bottom: 38.25%;
+	height: 0;
 }
 
 // Defines max-width for showcases and magic images.
 .showcase,
 .magic-image {
-  max-width: 60rem;
+	max-width: 60rem;
 }
 
 .content {
-  p,
-  blockquote,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  .resume__context,
-  ul {
-    max-width: 50rem;
-  }
+	p,
+	blockquote,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.resume__context,
+	ul {
+		max-width: 50rem;
+	}
 
-  p,
-  blockquote,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  .video-embed,
-  .showcase,
-  img,
-  .project-context,
-  .resume__context,
-  ul {
-    margin-left: auto;
-    margin-right: auto;
-  }
+	p,
+	blockquote,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.video-embed,
+	.showcase,
+	img,
+	.project-context,
+	.resume__context,
+	ul {
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-  .magic-image {
-    margin: 4rem auto;
-  }
+	.magic-image {
+		margin: 4rem auto;
+	}
 
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-  }
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		max-width: 100%;
+	}
 }
 
 .showcase {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  margin: 4rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	margin: 4rem 0;
 
-  .magic-image {
-    margin: auto;
-  }
+	.magic-image {
+		margin: auto;
+	}
 
-  & > div,
-  & > p {
-    // Select divs and paragraphs that are direct children of a Showcase (i.e. the media and content)
-    max-width: 48%;
-  }
+	& > div,
+	& > p {
+		// Select divs and paragraphs that are direct children of a Showcase (i.e. the media and content)
+		max-width: 48%;
+	}
 
-  &.vertical {
-    p {
-      max-width: 50rem;
-    }
+	&.vertical {
+		p {
+			max-width: 50rem;
+		}
 
-    div {
-      max-width: 100%;
-    }
-  }
+		div {
+			max-width: 100%;
+		}
+	}
 
-  video,
-  img {
-    max-height: 80vh;
-    max-width: 100%;
-  }
+	video,
+	img {
+		max-height: 80vh;
+		max-width: 100%;
+	}
 
-  &.media-left {
-    flex-direction: row;
+	&.media-left {
+		flex-direction: row;
 
-    p {
-      margin-right: 0;
-    }
-  }
+		p {
+			margin-right: 0;
+		}
+	}
 
-  &.media-right {
-    flex-direction: row-reverse;
+	&.media-right {
+		flex-direction: row-reverse;
 
-    p {
-      margin-left: 0;
-    }
-  }
+		p {
+			margin-left: 0;
+		}
+	}
 }
 
 // CSS debugging
-// * {
-//   outline: 1px red solid !important;
-//   visibility: visible !important;
-// }
+* {
+	outline: 1px red solid !important;
+	visibility: visible !important;
+}
 
-@import './_responsive.scss';
+@import "./_responsive.scss";
