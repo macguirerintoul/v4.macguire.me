@@ -1,7 +1,0 @@
-{
-	"parser": "babel-eslint",
-  "extends": [
-    "prettier/vue",
-    "plugin:prettier/recommended",
-  ],
-}

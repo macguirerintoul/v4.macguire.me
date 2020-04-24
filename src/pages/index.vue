@@ -50,6 +50,7 @@ query AllProjects {
         title
         shortDescription
         tags
+				year
         imagePath
         path
       }
