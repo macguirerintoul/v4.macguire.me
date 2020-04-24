@@ -13,11 +13,9 @@ footer {
 	h2 {
 		margin-top: 0;
 	}
-}
 
-.footer-content {
-	display: flex;
-	justify-content: space-between;
-	max-width: $max-container-width;
-	margin: auto;
+	.footer-content {
+		display: flex;
+		flex-direction: column;
+	}
 }

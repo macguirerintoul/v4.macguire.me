@@ -1,80 +1,69 @@
 .featured-block-container {
-  display: flex;
+	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	.featured-block__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+	}
 
-  .featured-block__content {
-    margin-bottom: 2rem;
-  }
+	.featured-block__content {
+		margin-bottom: 2rem;
+	}
 
-  .featured-block {
-  flex: 0 0 30%;
-	min-width: 400px;
-    a {
-      color: $color-white;
-    }
+	.featured-block {
+		flex: 0 0 30%;
+		min-width: 400px;
+		a {
+			color: $color-white;
+		}
 
-    .featured-block__name {
-      @include type-level-3;
+		.featured-block__name {
+			@include type-level-3;
 
-      flex: 1 1 50%;
-      margin-bottom: 0.25rem;
-    }
+			flex: 1 1 50%;
+			margin-bottom: 0.25rem;
+		}
 
-    .featured-block__item-title {
-      flex: 1 1 75%;
-      font-size: 1rem;
-      font-weight: 600;
-      min-width: 0;
-      text-decoration: $link-underline;
-    }
+		.featured-block__item-title {
+			flex: 1 1 75%;
+			font-size: 1rem;
+			font-weight: 600;
+			min-width: 0;
+			text-decoration: $link-underline;
+		}
 
-    .featured-block,
-    .featured-block__content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: baseline;
-      width: 100%;
-      text-decoration: none;
-    }
+		.featured-block,
+		.featured-block__content {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: baseline;
+			width: 100%;
+			text-decoration: none;
+		}
+	}
 
-    // Select the last div inside the featured-block-container (essentially, the last featured-block)
-    & > div:last-of-type {
-      // Inside the last featured-block, remove the margin from the content div
-      .featured-block__content {
-        margin-bottom: 0;
-      }
-    }
-  }
+	.featured-block__see-all {
+		@include type-level-small;
+	}
 
-  .featured-block__see-all {
-    @include type-level-small;
-  }
+	.featured-block__see-all,
+	.featured-block__context {
+		flex: 1 0 25%;
+		text-align: right;
+	}
 
-  .featured-block__see-all,
-  .featured-block__context {
+	.featured-block__text {
+		@include type-level-content;
 
-    flex: 1 0 25%;
-    text-align: right;
-  }
-
-
-
-  .featured-block__text {
-    @include type-level-content;
-
-    margin-bottom: 0;
-  }
+		margin-bottom: 0;
+	}
 }
 
 @media all and (max-width: $mobile-breakpoint) {
-  .featured-block-container .featured-block .featured-block--name {
-    margin-left: 0;
-  }
+	.featured-block-container .featured-block .featured-block--name {
+		margin-left: 0;
+	}
 }

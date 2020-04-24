@@ -1,11 +1,9 @@
 <template>
 	<footer>
 		<div class="footer-content container">
-			<section class="featured-block-container">
-				<FeaturedBlock type="randomStar" />
-				<FeaturedBlock type="lastCommit" />
-				<FeaturedBlock type="pick" />
-			</section>
+			<FeaturedBlock type="randomStar" />
+			<FeaturedBlock type="lastCommit" />
+			<FeaturedBlock type="pick" />
 		</div>
 	</footer>
 </template>
