@@ -11,7 +11,7 @@ $responsive-padding: 1rem;
 $border-radius: 0.5rem;
 $shadow: rgba(0, 0, 0, 0.08) 0 4px 8px;
 $shadow-dark: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-  0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+	0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 $black-border: 2px solid black;
 
 // Colours
@@ -27,6 +27,6 @@ $color-blue: #33f;
 $color-blue-gradient: linear-gradient(rgb(6, 132, 248), rgb(6, 122, 228));
 
 // Type
-$font-stack: 'Inter', -apple-system, system-ui, BlinkMacSystemFont,
-  sans-serif;
+$font-stack: "Inter", -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+$font-stack-mono: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
 $link-underline: underline 2px $color-blue;

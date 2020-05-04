@@ -1,131 +1,133 @@
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 article {
-  h1 {
-    margin: auto;
-  }
+	h1 {
+		margin: auto;
+	}
 
-  p {
-    max-width: 60rem;
-  }
+	p {
+		max-width: 60rem;
+	}
 }
 
 body {
-  margin-top: 10rem;
-  background-color: $color-black;
-  font-family: $font-stack;
-  height: 100%;
+	margin-top: 10rem;
+	background-color: $color-black;
+	font-family: $font-stack;
+	height: 100%;
 	color: $color-white;
 }
 
 button {
-  padding: 0.5rem;
-  min-width: 5rem;
-  min-height: 2rem;
-  box-shadow: $shadow;
-  border: none;
+	padding: 0.5rem;
+	min-width: 5rem;
+	min-height: 2rem;
+	box-shadow: $shadow;
+	border: none;
 
-  &.button--primary {
-    color: $color-white;
-    background-color: $color-blue;
-  }
+	&.button--primary {
+		color: $color-white;
+		background-color: $color-blue;
+	}
 
-  &.button--secondary {
-    color: $color-black;
-    border: $black-border;
-    background-color: white;
-  }
+	&.button--secondary {
+		color: $color-black;
+		border: $black-border;
+		background-color: white;
+	}
 }
 
 small {
-  @include type-level-small;
+	@include type-level-small;
 }
 span {
 	@include type-level-content;
 }
 ul {
-  list-style-type: none;
+	list-style-type: none;
 }
 
 // change <li> bullets to en dashes
 ul > li::before {
-  content: '–';
-  position: absolute;
-  margin-left: -1.1em;
+	content: "–";
+	position: absolute;
+	margin-left: -1.1em;
 }
 
 th {
-  text-align: left;
+	text-align: left;
 }
 
 a {
-  color: $color-white;
-  text-decoration: $link-underline;
-  // Insert an SVG icon after external links
-  // &[target='_blank']:after {
-  //   display: inline-block;
-  //   margin-left: 0.25rem;
-  //   bottom: 0.5rem;
-  //   content: ' ';
-  //   // background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288.824 288.824"><path d="M3.501 285.323c4.668 4.668 12.235 4.668 16.891 0L264.763 40.951v91.382c0 6.641 5.39 12.03 12.03 12.03 6.641 0 12.03-5.39 12.03-12.03V12.03c0-3.188-1.239-6.268-3.501-8.529S279.981 0 276.793 0H156.49c-6.641 0-12.03 5.39-12.03 12.03s5.39 12.03 12.03 12.03h91.382L3.501 268.432c-4.668 4.668-4.668 12.235 0 16.891z"/></svg>');
-  //   background-size: cover;
-  //   position: relative;
-  //   width: 12pt;
-  //   height: 12pt;
-  // }
+	color: $color-white;
+	text-decoration: $link-underline;
+	// Insert an SVG icon after external links
+	// &[target='_blank']:after {
+	//   display: inline-block;
+	//   margin-left: 0.25rem;
+	//   bottom: 0.5rem;
+	//   content: ' ';
+	//   // background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288.824 288.824"><path d="M3.501 285.323c4.668 4.668 12.235 4.668 16.891 0L264.763 40.951v91.382c0 6.641 5.39 12.03 12.03 12.03 6.641 0 12.03-5.39 12.03-12.03V12.03c0-3.188-1.239-6.268-3.501-8.529S279.981 0 276.793 0H156.49c-6.641 0-12.03 5.39-12.03 12.03s5.39 12.03 12.03 12.03h91.382L3.501 268.432c-4.668 4.668-4.668 12.235 0 16.891z"/></svg>');
+	//   background-size: cover;
+	//   position: relative;
+	//   width: 12pt;
+	//   height: 12pt;
+	// }
 }
 
 nav,
 footer {
-  a {
-//    background-color: inherit;
-  }
+	a {
+		//    background-color: inherit;
+	}
 }
 
 blockquote {
-  white-space: pre-wrap;
-  border-left: 2px solid $color-white;
-  padding-left: 2rem;
+	white-space: pre-wrap;
+	border-left: 2px solid $color-white;
+	padding-left: 2rem;
 }
 
 cite {
-  display: block;
-  margin-top: 1rem;
-  text-align: right;
+	display: block;
+	margin-top: 1rem;
+	text-align: right;
 }
-
+code {
+	font-family: $font-stack-mono;
+}
 img {
-  display: block;
-  max-width: 100%;
+	display: block;
+	max-width: 100%;
 }
 
 img,
 video {
-  border: $black-border;
+	border: $black-border;
 }
 
 label {
-  display: block;
+	display: block;
 
-  @include type-level-content;
+	@include type-level-content;
 
-  margin-bottom: 0.2rem;
+	margin-bottom: 0.2rem;
 }
 
 input,
 textarea {
-  display: block;
-  width: 100%;
-  min-height: 3em;
-  padding: 0.25em;
-  line-height: 2em;
-  border: 1px solid grey;
-  border-radius: 2px;
-  margin-bottom: 1em;
+	display: block;
+	width: 100%;
+	min-height: 3em;
+	padding: 0.25em;
+	line-height: 2em;
+	border: 1px solid grey;
+	border-radius: 2px;
+	margin-bottom: 1em;
 
-  &:focus {
-    border: 1px solid blue;
-  }
+	&:focus {
+		border: 1px solid blue;
+	}
 }

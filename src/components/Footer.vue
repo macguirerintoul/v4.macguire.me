@@ -1,6 +1,6 @@
 <template>
 	<footer>
-		<div class="footer-content container">
+		<div class="featured-block-container container">
 			<FeaturedBlock type="randomStar" />
 			<FeaturedBlock type="lastCommit" />
 			<FeaturedBlock type="pick" />

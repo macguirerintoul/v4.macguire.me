@@ -1,28 +1,18 @@
 <template>
 	<div class="featured-block">
-		<div class="featured-block__header">
-			<span class="featured-block__name">{{ blockName }}</span>
-			<MagicLink class="featured-block__see-all" :url="seeAll">
-				<small>See all</small>
-			</MagicLink>
-		</div>
-		<MagicLink class="hvr-float featured-block__content" :url="url">
-			<span class="featured-block__item-title">
-				{{ itemTitle }}
-			</span>
+		<MagicLink class="featured-block__name" :url="seeAll">
+			{{ blockName }}
 		</MagicLink>
+		<MagicLink class="featured-block__content" :url="url">
+			<h4 class="featured-block__item-title">
+				<code v-if="sha.length > 0">{{ sha }}</code>
+				{{ itemTitle }}
+			</h4>
 
-		<small class="featured-block__context">
-			{{ computeContext(contextOne) }}
-		</small>
-
-		<p class="featured-block__text">
-			{{ text }}
-		</p>
-
-		<small class="featured-block__context">
-			{{ computeContext(contextTwo) }}
-		</small>
+			<p class="featured-block__text">
+				{{ text }}
+			</p>
+		</MagicLink>
 	</div>
 </template>
 
@@ -45,10 +35,9 @@ export default {
 			blockName: "",
 			itemTitle: "",
 			text: "",
+			sha: "",
 			url: "",
 			seeAll: "",
-			contextOne: {},
-			contextTwo: {},
 			picks
 		};
 	},
@@ -77,22 +66,18 @@ export default {
 				.then(response => response.json())
 				.then(data => {
 					const pushEvents = data.filter(event => {
+						// Filter for events where I pushed commits
 						return event.type === "PushEvent";
 					});
-					const latestPush = pushEvents[0];
-					const latestCommit = latestPush.payload.commits[0];
-					this.blockName = "Last commit";
-					this.contextOne = {
-						type: "hash",
-						url: `https://github.com/${latestPush.repo.name}/commit/${latestCommit.sha}`,
-						value: latestCommit.sha.substr(0, 6)
-					};
+					const latestPush = pushEvents[0]; // Pick the latest push event
+					const latestCommit = latestPush.payload.commits[0]; // Pick the latest commit in the push
+					this.blockName = "Commits";
 					this.seeAll = "https://gitstalk.netlify.com/macguirerintoul";
-					this.contextTwo = { type: "timestamp", value: latestPush.created_at };
 					// Prevents long commit messages from breaking the block
 					let cm = latestCommit.message;
 					this.text = cm.length > 100 ? truncateOnWord(cm, 100) : cm;
-					this.itemTitle = latestPush.repo.name;
+					this.sha = latestCommit.sha.substr(0, 6);
+					this.itemTitle = " in " + latestPush.repo.name;
 					this.url = `https://github.com/${latestPush.repo.name}`;
 					this.commitURL = `https://github.com/${latestPush.repo.name}/${latestCommit.sha}`;
 				});
@@ -104,23 +89,14 @@ export default {
 					const chosenStar = data[Math.floor(Math.random() * data.length)];
 					this.blockName = "Stars";
 					this.seeAll = "https://github.com/macguirerintoul?tab=stars";
-					this.itemTitle = chosenStar.full_name;
-					this.contextOne = {
-						type: "starCount",
-						value: chosenStar.stargazers_count.toString()
-					};
+					this.itemTitle =
+						chosenStar.full_name +
+						" ｜ ＊" +
+						chosenStar.stargazers_count.toString();
+
 					this.text = chosenStar.description;
 					this.url = chosenStar.html_url;
 				});
-		},
-		computeContext(context) {
-			if (context.type === "starCount") {
-				return `★${context.value}`;
-			} else if (context.type === "timestamp") {
-				return moment(context.value).fromNow();
-			} else {
-				return context.value;
-			}
 		}
 	}
 };
