@@ -1,66 +1,66 @@
 @mixin type-level-1 {
-//  color: red;
+	//  color: red;
 	font-size: 6rem;
-  line-height: 6rem;
-  font-weight: 300;
-  letter-spacing: -4px;
+	line-height: 6rem;
+	font-weight: 300;
+	letter-spacing: -4px;
 }
 
 @mixin type-level-2 {
- // color: orange;
+	// color: orange;
 	font-size: 32pt;
-  line-height: 36pt;
-  font-weight: 600;
-  letter-spacing: -1px;
+	line-height: 36pt;
+	font-weight: 600;
+	letter-spacing: -1px;
 }
 
 @mixin type-level-3 {
-  // color: yellow;
+	// color: yellow;
 	font-size: 24pt;
-  line-height: 28pt;
-  font-weight: 500;
-  letter-spacing: -1px;
+	line-height: 28pt;
+	font-weight: 500;
+	letter-spacing: -1px;
 }
 
 @mixin type-level-4 {
-  // color: green;
+	// color: green;
 	font-size: 1.2rem;
-  line-height: 24pt;
-  font-weight: 600;
+	line-height: 24pt;
+	font-weight: 500;
 }
 
 @mixin type-level-content {
-  // color: violet;
+	// color: violet;
 	font-size: 1.5rem;
-  line-height: 2rem;
+	line-height: 2rem;
 	font-weight: 300;
 	letter-spacing: -1.1px;
 }
 
 @mixin type-level-small {
-  font-size: 1rem;
-  font-weight: 500;
+	font-size: 1rem;
+	font-weight: 500;
 }
 
 nav,
 button {
-  font-weight: 500;
+	font-weight: 500;
 }
 
 h1 {
-  @include type-level-1;
+	@include type-level-1;
 
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 h2 {
-  @include type-level-2;
+	@include type-level-2;
 
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 h3 {
-  @include type-level-3;
+	@include type-level-3;
 }
 
 h4 {
@@ -73,14 +73,14 @@ p,
 blockquote,
 li,
 table {
-  @include type-level-content;
+	@include type-level-content;
 }
 
 article,
 .content {
-  p,
-  blockquote {
-    color: $color-white;
-    line-height: 2.25rem;
-  }
+	p,
+	blockquote {
+		color: $color-white;
+		line-height: 2.25rem;
+	}
 }

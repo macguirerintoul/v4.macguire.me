@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import moment from "moment";
 import { truncateOnWord } from "~/utilities.js";
 
 import MagicLink from "~/components/MagicLink.vue";
@@ -91,7 +90,7 @@ export default {
 					this.seeAll = "https://github.com/macguirerintoul?tab=stars";
 					this.itemTitle =
 						chosenStar.full_name +
-						" ｜ ＊" +
+						" — ＊" +
 						chosenStar.stargazers_count.toString();
 
 					this.text = chosenStar.description;

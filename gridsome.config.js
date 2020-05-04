@@ -5,11 +5,13 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-	chainWebpack(config) {
-		config.mode("development");
-	},
+	// not sure what this was for, commenting it out to see what happens
+	// chainWebpack(config) {
+	// 	config.mode("development");
+	// },
 	siteName: "Macguire Rintoul",
-	siteDescription: "Experience designer & developer from Vancouver, BC",
+	siteDescription:
+		"I'm Macguire, an experience designer & software developer from Vancouver, BC.",
 	port: 3000,
 	permalinks: {
 		slugify: {
@@ -20,6 +22,7 @@ module.exports = {
 		}
 	},
 	plugins: [
+		// Add Projects collection
 		{
 			use: "@gridsome/vue-remark",
 			options: {
@@ -30,7 +33,7 @@ module.exports = {
 			}
 		},
 		{
-			// Add Articles collection
+			// Add Posts collection
 			use: "@gridsome/vue-remark",
 			options: {
 				typeName: "Post", // Required
@@ -43,8 +46,7 @@ module.exports = {
 	transformers: {
 		remark: {
 			externalLinksTarget: "_blank",
-			externalLinksRel: ["nofollow", "noopener", "noreferrer"],
-			anchorClassName: "icon icon-link"
+			externalLinksRel: ["noopener"]
 		}
 	}
 };
