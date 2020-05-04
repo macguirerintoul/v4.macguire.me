@@ -11,6 +11,7 @@
 				<MagicLink url="http://clab.iat.sfu.ca/">Connections Lab</MagicLink>.
 			</p>
 		</section>
+		<hr />
 		<section class="work">
 			<h1>Selected work</h1>
 			<div class="project-flex-container">

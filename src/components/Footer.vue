@@ -1,25 +1,46 @@
 <template>
-	<footer>
-		<div class="featured-block-container container">
-			<FeaturedBlock type="randomStar" />
-			<FeaturedBlock type="lastCommit" />
-			<FeaturedBlock type="pick" />
-		</div>
+	<footer class="container">
+		<section>
+			<div class="featured-block-container">
+				<FeaturedBlock type="randomStar" />
+				<FeaturedBlock type="lastCommit" />
+				<FeaturedBlock type="pick" />
+			</div>
+			<hr />
+			<div>
+				<h3>Links</h3>
+				<MagicLink
+					class="footer__link"
+					url="https://github.com/macguirerintoul/"
+				>
+					GitHub
+				</MagicLink>
+				<MagicLink
+					class="footer__link"
+					url="https://linkedin.com/in/macguirerintoul/"
+				>
+					LinkedIn
+				</MagicLink>
+			</div>
+		</section>
+
+		<section class="footer__footnotes">
+			<small>© {{ currentYear }} Macguire Rintoul. All rights reserved.</small>
+		</section>
 	</footer>
 </template>
 
 <script>
 import FeaturedBlock from "~/components/FeaturedBlock";
+import MagicLink from "~/components/MagicLink";
 
 export default {
 	components: {
-		FeaturedBlock
+		FeaturedBlock,
+		MagicLink
 	},
 	data() {
-		return {
-			email: "",
-			subscriptionStatus: ""
-		};
+		return { currentYear: new Date().getFullYear() };
 	},
 	computed: {
 		infoBlockStatus: function() {

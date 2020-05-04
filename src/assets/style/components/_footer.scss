@@ -1,21 +1,13 @@
 footer {
-	margin-top: 4rem;
-	img {
-		border: none;
+	padding: 3rem 0;
+	.footer__link {
+		display: block;
+		margin: 0.4rem 0;
 	}
-
-	h1,
-	h2,
-	h3 {
-		margin-bottom: 0.6rem;
-	}
-
-	h2 {
-		margin-top: 0;
-	}
-
-	.footer-content {
-		display: flex;
-		flex-direction: column;
+	.footer__footnotes {
+		margin-top: 3rem;
+		small {
+			display: block;
+		}
 	}
 }

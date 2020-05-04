@@ -11,12 +11,16 @@ article {
 		max-width: 60rem;
 	}
 }
-
+hr {
+	border: 1px solid $color-dark-grey;
+	width: $max-container-width;
+}
 body {
 	margin-top: 10rem;
 	background-color: $color-black;
 	font-family: $font-stack;
 	height: 100%;
+	font-weight: 300;
 	color: $color-white;
 }
 
