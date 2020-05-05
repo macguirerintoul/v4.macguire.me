@@ -1,6 +1,10 @@
 # macguire.me
 
 > Macguire Rintoul's personal site.
+## Development
+
+### Notes
+`current-script-polyfill` is only needed because `cloudinary-vue` breaks without it
 
 ## Deployment
 

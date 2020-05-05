@@ -9,7 +9,14 @@
 			></iframe>
 		</div>
 		<div v-if="source == 'cloudinary'">
-			<CldVideo muted loop="true" autoplay="autoplay" lazy :public-id="path">
+			<CldVideo
+				cloud-name="macguire"
+				muted
+				loop="true"
+				autoplay="autoplay"
+				lazy
+				:public-id="path"
+			>
 				<CldTransformation quality="auto:eco" fetch-format="auto" />
 			</CldVideo>
 		</div>
