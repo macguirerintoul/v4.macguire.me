@@ -11,6 +11,7 @@
 		"@gridsome/transformer-remark": "^0.3.0",
 		"@gridsome/vue-remark": "^0.1.10",
 		"cloudinary-vue": "1.0.1",
+		"current-script-polyfill": "^1.0.0",
 		"gridsome": "^0.7.14",
 		"normalize.css": "^8.0.1"
 	},
