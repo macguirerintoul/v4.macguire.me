@@ -26,6 +26,14 @@ import MagicVideo from '~/components/MagicVideo'
 import MagicImage from '~/components/MagicImage'
 import Blockquote from '~/components/Blockquote'
 
+## Highlights
+
+- won an [honourable mention](https://www.rgd.ca/2018/09/04/congratulations-to-our-2019-national-awards-of-excellence.php#docs-internal-guid-8b12db13-7fff-fd20-57be-3578a89ef87b) for strategic design in the 2019 RGD National Awards of Excellence
+- selected for presentation at the [2019 FCAT Undergraduate Conference](https://www.sfu.ca/fcat/events/ugc/2019-fcat-undergraduate-conference.html)
+- invited to share the project with Vancity's Digital Strategy team
+
+<Blockquote source="Aaron Walker, Manager, User Experience at Vancity">Financial literacy is an important component of all of our products and services at Vancity. The app demonstrated the unique financial needs of our members and community, with excellent design and a modern take on Vancity branding, this project inspired our Digital team to push for new user experiences. It is clear that the product was well researched and would produce the results that the team wanted.</Blockquote>
+
 ## Contribution
 
 As the project manager, I ensured that the project's individual parts were being completed and were cohesive, and decided when to stop iterating and start polishing. As the content strategist, I wrote copy that was consistent with our three design principles: personal, clear, and hopeful. I also ensured that the credit-related content in MyCredit was beneficial and easy to understand, which I validated by conducting interviews and think-aloud testing with 9 participants.
@@ -36,11 +44,7 @@ As the project manager, I ensured that the project's individual parts were being
 
 Despite the importance of credit scores in personal finance, an estimated 56% of Canadians have never checked their credit score and 31% don't know how to improve their score.
 
-<Blockquote
-  quote="With 250,000 of them – close to half of our members – interacting with us almost entirely online or via our mobile app, we’re under pressure to deliver even more mobile and digital functionality."
-  url="https://www.vancity.com/AboutVancity/GovernanceAndLeadership/OurReports/2017/"
-  source="Vancity 2017 Annual Report"
-/>
+<Blockquote url="https://www.vancity.com/AboutVancity/GovernanceAndLeadership/OurReports/2017/" source="Vancity 2017 Annual Report">With 250,000 of them – close to half of our members – interacting with us almost entirely online or via our mobile app, we’re under pressure to deliver even more mobile and digital functionality.</Blockquote>
 
 Vancity's current website offers some credit help, but it lies 4 levels deep in navigation. Furthermore, their existing banking app has yet to provide resources for credit management.
 

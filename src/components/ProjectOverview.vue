@@ -1,18 +1,19 @@
 <template>
-	<div>
-		<section class="project-overview">
-			<h1 class="project-overview__title">{{ project.title }}</h1>
-			<small class="project-overview__subtitle">
-				{{ project.year }} — {{ project.tags.join(", ") }}
-			</small>
-			<p class="project-overview__summary" v-html="project.summary" />
-
+	<section class="project-overview">
+		<div class="project-overview__main">
+			<div>
+				<h1 class="project-overview__title">{{ project.title }}</h1>
+				<p class="project-overview__summary" v-html="project.summary" />
+			</div>
 			<div class="project-overview__image">
 				<MagicImage
 					:path="project.imagePath"
 					:alt="'Screenshot of ' + project.title"
 				/>
 			</div>
+		</div>
+
+		<div class="project-overview__context">
 			<div>
 				<h4>For</h4>
 				<span>{{ project.for }}</span>
@@ -29,8 +30,8 @@
 				<h4>Interested?</h4>
 				<span v-html="project.interested"></span>
 			</div>
-		</section>
-	</div>
+		</div>
+	</section>
 </template>
 
 <script>
