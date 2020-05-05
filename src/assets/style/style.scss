@@ -2,20 +2,20 @@
 @import "../../../node_modules/normalize.css/normalize.css";
 
 // Foundations
-@import "./_variables.scss";
-@import "./_type.scss";
+@import "./variables";
+@import "./type";
 
 // Components
-@import "./components/_header.scss";
-@import "./components/_featured-block.scss";
-@import "./components/_info-block.scss";
+@import "./components/header";
+@import "./components/featured-block";
+@import "./components/info-block";
 
 // Pages
-@import "./pages/_about.scss";
-@import "./pages/_contact.scss";
-@import "./pages/_index.scss";
-@import "./pages/_project.scss";
-@import "./pages/_articles.scss";
+@import "./pages/about";
+@import "./pages/contact";
+@import "./pages/index";
+@import "./pages/project";
+@import "./pages/articles";
 
 // Responsive styles are imported at the bottom
 
@@ -38,10 +38,10 @@ article {
 }
 
 blockquote {
-	white-space: pre-wrap;
 	border-left: 2px solid $color-yellow;
-	padding-left: 2rem;
 	margin: 3rem 0;
+	padding-left: 2rem;
+	white-space: pre-wrap;
 }
 
 body {
