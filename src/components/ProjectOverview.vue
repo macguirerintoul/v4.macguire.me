@@ -3,14 +3,15 @@
 		<div class="project-overview__main">
 			<div>
 				<h1 class="project-overview__title">{{ project.title }}</h1>
+				<!-- HTML here is coming directly from markdown files I write myself -->
+				<!-- eslint-disable-next-line vue/no-v-html -->
 				<p class="project-overview__summary" v-html="project.summary" />
 			</div>
-			<div class="project-overview__image">
-				<MagicImage
-					:path="project.imagePath"
-					:alt="'Screenshot of ' + project.title"
-				/>
-			</div>
+			<MagicImage
+				class="project-overview__image"
+				:path="project.imagePath"
+				:alt="'Screenshot of ' + project.title"
+			/>
 		</div>
 
 		<div class="project-overview__context">
@@ -28,6 +29,8 @@
 			</div>
 			<div>
 				<h4>Interested?</h4>
+				<!-- HTML here is coming directly from markdown files I write myself -->
+				<!-- eslint-disable-next-line vue/no-v-html -->
 				<span v-html="project.interested"></span>
 			</div>
 		</div>

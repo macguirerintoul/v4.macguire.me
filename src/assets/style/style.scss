@@ -34,7 +34,8 @@ a {
 article {
 	h1 {
 		// Center-align blog post titles
-		margin: auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
@@ -205,7 +206,7 @@ textarea {
 		margin-right: auto;
 	}
 
-	.magic-image {
+	img {
 		margin: 4rem auto;
 	}
 

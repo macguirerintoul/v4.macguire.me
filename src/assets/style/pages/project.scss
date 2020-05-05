@@ -1,31 +1,33 @@
 .project-overview {
 	margin-bottom: 5rem;
-	.project-overview__main {
-		display: flex;
-		div {
-			flex: 0 1 50%;
-		}
-	}
+
 	.project-overview__title {
-		margin: 0 0 1rem 0;
+		margin: 0 0 1rem;
 	}
 
 	.project-overview__image {
-		img {
-			max-width: 100%;
-			margin: 0;
-		}
+		margin: 0;
+		max-width: 100%;
 	}
 
 	.project-overview__summary {
-		padding-right: 2rem;
 		max-width: $content-width;
+		padding-right: 2rem;
+	}
+}
+
+.project-overview__main {
+	display: flex;
+
+	> * {
+		flex: 0 1 50%;
 	}
 }
 
 .project-overview__context {
 	display: flex;
 	flex-wrap: nowrap;
+
 	div {
 		flex: 0 1 25%;
 		padding-right: 2rem;

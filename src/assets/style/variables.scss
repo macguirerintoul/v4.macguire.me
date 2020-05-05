@@ -18,8 +18,9 @@ $color-blue: #33f;
 $color-yellow: #ff0;
 
 // Type
-$font-stack: "Inter", -apple-system, system-ui, blinkmacsystemfont, sans-serif;
-$font-stack-mono: sfmono-regular, menlo, inconsolata, consolas, liberation mono,
-	monospace;
+$font-stack: "Inter", "-apple-system", "system-ui", "BlinkMacSystemFont",
+	sans-serif;
+$font-stack-mono: "SFMono-Regular", "Menlo", "Inconsolata", "Consolas",
+	"Liberation Mono", monospace;
 $underline-link: underline 2px $color-blue;
 $underline-h1: underline 2px $color-yellow;
