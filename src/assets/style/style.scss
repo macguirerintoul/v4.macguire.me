@@ -4,7 +4,6 @@
 // Foundations
 @import "./_variables.scss";
 @import "./_type.scss";
-@import "./_elements.scss";
 
 // Components
 @import "./components/_header.scss";
@@ -20,6 +19,137 @@
 
 // Responsive styles are imported at the bottom
 
+* {
+	// Padding is included in element size
+	box-sizing: border-box;
+}
+
+a {
+	// Style links to match the site
+	color: $color-light;
+	text-decoration: $underline-link;
+}
+
+article {
+	h1 {
+		// Center-align blog post titles
+		margin: auto;
+	}
+}
+
+blockquote {
+	white-space: pre-wrap;
+	border-left: 2px solid $color-yellow;
+	padding-left: 2rem;
+	margin: 3rem 0;
+}
+
+body {
+	margin-top: 10rem; // Push all content down, give the navigation some space
+	background-color: $color-dark;
+	font-family: $font-stack;
+	height: 100%;
+	font-weight: 300; // Default font weight (things are getting bolded/italic for some reason)
+	color: $color-light;
+}
+
+button {
+	// Nicer button styles
+	padding: 0.5rem;
+	min-width: 5rem;
+	min-height: 2rem;
+	border: none;
+
+	&.button--primary {
+		color: $color-light;
+		background-color: $color-blue;
+	}
+
+	&.button--secondary {
+		color: $color-dark;
+		background-color: $color-light;
+	}
+}
+hr {
+	// Style horizontal dividers to match the site
+	margin: 0 auto;
+	border: 1px solid $color-dark-grey;
+	width: $max-container-width;
+}
+
+small {
+	@include type-level-small;
+}
+
+span {
+	// Use content type style as default
+	@include type-level-content;
+}
+
+ul {
+	list-style-type: none;
+	li::before {
+		// change <li> bullets to en dashes
+		content: "–";
+		position: absolute;
+		margin-left: -1.5rem;
+	}
+}
+
+cite {
+	display: block;
+	margin-top: 1rem;
+	text-align: right;
+}
+code {
+	font-family: $font-stack-mono;
+}
+img {
+	display: block;
+	max-width: 100%;
+}
+main.container {
+	margin-bottom: 3rem;
+}
+footer {
+	&.container {
+		margin: 3rem auto;
+	}
+	.footer__link {
+		display: block;
+		margin: 0.4rem 0;
+	}
+	.footer__footnotes {
+		margin-top: 3rem;
+		small {
+			display: block;
+		}
+	}
+}
+label {
+	display: block;
+
+	@include type-level-content;
+
+	margin-bottom: 0.2rem;
+}
+
+input,
+textarea {
+	display: block;
+	width: 100%;
+	min-height: 3em;
+	padding: 0.25em;
+	line-height: 2em;
+	border: 1px solid grey;
+	border-radius: 2px;
+	margin-bottom: 1em;
+
+	&:focus {
+		border: 1px solid blue;
+	}
+}
+
 .container {
 	max-width: $max-container-width;
 	padding: auto 0;
@@ -34,8 +164,6 @@
 
 .table-row {
 	display: block;
-	border: 2px solid transparent;
-	border-bottom-color: $color-grey;
 }
 
 .video-embed {

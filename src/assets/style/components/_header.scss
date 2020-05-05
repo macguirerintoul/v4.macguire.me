@@ -4,12 +4,8 @@
 	left: 0;
 	right: 0;
 	margin: auto;
-	max-width: $max-container-width;
-
-	color: $color-white;
 	z-index: 20;
-	background: rgb(0, 0, 0);
-	border-bottom: $black-border;
+	background: $color-dark;
 }
 
 .navbar,
@@ -28,16 +24,6 @@
 
 	a {
 		text-decoration: none;
-	}
-
-	#logo-icon {
-		margin-right: 0.5em;
-	}
-
-	#logo-text {
-		color: #000;
-		font-size: 2em;
-		font-weight: 700;
 	}
 }
 

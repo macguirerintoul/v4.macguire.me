@@ -16,7 +16,6 @@ summary: "One of the most common problems casual wine collectors face is keeping
 ---
 
 import Showcase from '~/components/Showcase'
-import Blockquote from '~/components/Blockquote'
 
 ## Contribution
 
@@ -28,21 +27,15 @@ The initial ideas for the product began from the observation that casual wine co
 
 ### Is there anything that frustrates you about collecting wine?
 
-<Blockquote
-  quote='"Forgetting the wines I love the best."
-"I can never remember the cost, where it came from or how long it will last."
-"The price! lol but I find its difficult to store and categorize."'
-  source="Wine collector research survey"
-/>
+> "Forgetting the wines I love the best."
+> "I can never remember the cost, where it came from or how long it will last."
+> "The price! lol but I find its difficult to store and categorize."
 
 ### Please describe methods you currently use to organize and manage your collection. Do any of these methods incorporate technology?
 
-<Blockquote
-  quote='"None, but I could see that being useful."
-"I don’t use any. Masking tape and permanent marker to mark the ones my wife can’t open"
-"Nothing organized."'
-  source="Wine collector research survey"
-/>
+> "None, but I could see that being useful."
+> "I don’t use any. Masking tape and permanent marker to mark the ones my wife can’t open"
+> "Nothing organized."
 
 ## Solution
 

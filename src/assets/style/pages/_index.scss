@@ -7,7 +7,7 @@
 	}
 
 	max-width: $content-width;
-	padding: 1em 0;
+	margin: 3rem 0;
 }
 
 .project-flex-container {
@@ -20,6 +20,7 @@
 
 	.project-block {
 		margin-bottom: 3rem;
+		max-width: $content-width;
 		&:last-of-type {
 			// <main> already has margin
 			margin-bottom: 0;
