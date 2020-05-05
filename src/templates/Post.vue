@@ -2,20 +2,18 @@
 	<article>
 		<div class="content">
 			<h1>{{ $page.post.title }}</h1>
-			<p>by Macguire Rintoul — {{ updated }}</p>
+			<p>by Macguire Rintoul — {{ toDateString($page.post.date) }}</p>
 			<VueRemarkContent />
 		</div>
 	</article>
 </template>
 
 <script>
-import moment from "moment";
+import { toDateString } from "../utilities";
 
 export default {
-	computed: {
-		updated: function() {
-			return moment(this.$page.post.date).fromNow();
-		}
+	methods: {
+		toDateString
 	},
 	metaInfo() {
 		return {
