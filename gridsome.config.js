@@ -11,7 +11,7 @@ module.exports = {
 	// },
 	siteName: "Macguire Rintoul",
 	siteDescription:
-		"I'm Macguire, an experience designer & software developer from Vancouver, BC.",
+		"I'm Macguire, an experience designer & software developer from Vancouver, BC. Currently, I'm working at Visier as a User Experience Design Intern. Previously, I've worked at Vancouver Coastal Health and the Connections Lab.",
 	port: 3000,
 	permalinks: {
 		slugify: {

@@ -15,58 +15,16 @@
 }
 
 .resume {
-	.resume__responsibilities {
-		margin-bottom: 4rem;
+	h3,
+	h4 {
+		margin: 0;
 	}
 
-	.resume__context {
+	.resume__item {
+		margin: 2rem 0 3rem;
+	}
+
+	.resume__subtitle {
 		@include type-level-4;
-
-		align-items: center;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		min-height: 4rem;
-
-		.resume__date {
-			text-align: right;
-		}
-
-		& > * {
-			align-self: flex-end;
-			flex: 1 0 50%;
-		}
-
-		h3 {
-			margin: 0;
-		}
-	}
-}
-
-@media all and (max-width: $mobile-breakpoint) {
-	.about-container {
-		flex-direction: column;
-	}
-
-	.about__photo {
-		display: none;
-	}
-
-	.resume {
-		.resume__context {
-			flex-direction: column;
-			height: auto;
-			justify-content: auto;
-
-			& > * {
-				width: 100%;
-			}
-
-			.resume__date {
-				order: 3;
-				// move the date underneath the title and company
-				text-align: left;
-			}
-		}
 	}
 }

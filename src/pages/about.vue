@@ -17,14 +17,14 @@
 				/>
 			</div>
 		</div>
-		<div class="content resume">
+
+		<section class="content resume">
 			<h2>Work Experience</h2>
-			<div class="resume__context">
-				<h3>User Experience Design Intern at Visier</h3>
-				<span class="resume__date">May 2019 – present</span>
-			</div>
-			<div class="resume__responsibilities">
-				<ul>
+
+			<div class="resume__item">
+				<h3>User Experience Design Intern</h3>
+				<h4 class="resume__subtitle">Visier — May 2019 to present</h4>
+				<ul class="resume__responsibilities">
 					<li>
 						create and improve data visualizations allowing Visier's 50,000
 						users to analyze over 6 million employee records
@@ -43,13 +43,13 @@
 					</li>
 				</ul>
 			</div>
-			<div class="resume__context">
+
+			<div class="resume__item">
 				<h3>Systems Analyst</h3>
-				<span class="resume__date">January 2019 – present</span>
-				<span class="resume__company">Connections Lab</span>
-			</div>
-			<div class="resume__responsibilities">
-				<ul>
+				<h4 class="resume__subtitle">
+					Connections Lab — January 2019 to present
+				</h4>
+				<ul class="resume__responsibilities">
 					<li>
 						maintain the lab's RHEL server and software (Apache, phpMyAdmin,
 						MySQL)
@@ -58,13 +58,13 @@
 					<li>modify plugins and themes to fit various requirements</li>
 				</ul>
 			</div>
-			<div class="resume__context">
+
+			<div class="resume__item">
 				<h3>Systems Analyst</h3>
-				<span class="resume__date">September 2017 – March 2019</span>
-				<span class="resume__company">Vancouver Coastal Health</span>
-			</div>
-			<div class="resume__responsibilities">
-				<ul>
+				<h4 class="resume__company">
+					Vancouver Coastal Health — September 2017 to March 2019
+				</h4>
+				<ul class="resume__responsibilities">
 					<li>
 						designed & developed web apps to support process improvement
 					</li>
@@ -77,7 +77,7 @@
 					</li>
 				</ul>
 			</div>
-		</div>
+		</section>
 	</div>
 </template>
 <script>

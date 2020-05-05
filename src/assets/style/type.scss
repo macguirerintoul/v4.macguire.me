@@ -5,7 +5,6 @@
 	font-size: 6rem;
 	font-weight: 300;
 	letter-spacing: -0.022em;
-	line-height: 112px;
 	text-decoration: $underline-h1;
 }
 
@@ -14,15 +13,15 @@
 	font-size: 40px;
 	font-weight: 600;
 	letter-spacing: -0.022em;
-	line-height: 56px;
+	line-height: 40px;
 }
 
 @mixin type-level-3 {
 	// color: yellow;
-	font-size: 24pt;
+	font-size: 32px;
 	font-weight: 500;
-	letter-spacing: -1px;
-	line-height: 28pt;
+	letter-spacing: -0.021em;
+	line-height: 42px;
 }
 
 @mixin type-level-4 {
@@ -30,6 +29,13 @@
 	font-size: 1.2rem;
 	font-weight: 500;
 	line-height: 24pt;
+}
+
+@mixin type-level-big-content {
+	// color: violet;
+	font-size: 2rem;
+	letter-spacing: -0.021em;
+	line-height: 42px;
 }
 
 @mixin type-level-content {

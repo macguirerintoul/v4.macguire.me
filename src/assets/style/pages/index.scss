@@ -3,10 +3,7 @@
 	max-width: $content-width;
 
 	p {
-		font-size: 2rem;
-		// TODO replace with a type variable
-		font-weight: 300;
-		line-height: 2.5rem;
+		@include type-level-big-content;
 	}
 }
 
