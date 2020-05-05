@@ -1,22 +1,26 @@
 <template>
 	<div>
-		<h1>About</h1>
-		<div class="about-container">
-			<p>
-				I'm Macguire — an experience designer, software developer, hackathon
-				participant, and music producer. I'm currently completing a Bachelor of
-				Science in Interactive Arts & Technology at Simon Fraser University.
-				When I'm not studying or learning a new web framework, you can catch me
-				DJing, making my own beats, or hiking the Swiss Alps with my mom.
-			</p>
-			<div class="about__photo">
+		<section class="overview">
+			<div class="overview__main">
+				<div>
+					<h1 class="overview__title">About</h1>
+					<p class="overview__summary">
+						I'm Macguire — an experience designer, software developer, hackathon
+						participant, and music producer. I'm currently completing a Bachelor
+						of Science in Interactive Arts & Technology at Simon Fraser
+						University. When I'm not studying or learning a new web framework,
+						you can catch me DJing, making my own beats, or hiking the Swiss
+						Alps with my mom.
+					</p>
+				</div>
 				<g-image
+					class="overview__image"
 					src="~/assets/images/portrait.jpg"
 					alt="A photo of me."
 					height="500"
 				/>
 			</div>
-		</div>
+		</section>
 
 		<section class="content resume">
 			<h2>Work Experience</h2>

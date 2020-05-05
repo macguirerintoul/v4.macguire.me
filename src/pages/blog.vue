@@ -2,34 +2,32 @@
 	<section>
 		<h1>Blog</h1>
 		<!-- List posts -->
-		<table class="articles">
+		<table class="posts-table">
 			<tr
-				class="articles__row"
 				v-for="edge in $page.posts.edges"
 				:key="edge.node.id"
+				class="posts-table__row"
 			>
-				<td class="articles__title">
+				<td class="posts-table__title">
 					<g-link :to="edge.node.path">
 						{{ edge.node.title }}
 					</g-link>
 				</td>
-				<td class="articles__updated">{{ updated(edge.node.date) }}</td>
+				<td class="posts-table__updated">{{ toDateString(edge.node.date) }}</td>
 			</tr>
 		</table>
 	</section>
 </template>
 
 <script>
-import moment from "moment";
+import { toDateString } from "../utilities";
 
 export default {
 	metaInfo: {
 		title: "Blog"
 	},
 	methods: {
-		updated: function(string) {
-			return moment(string).fromNow();
-		}
+		toDateString
 	}
 };
 </script>

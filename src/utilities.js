@@ -13,3 +13,12 @@ export function truncateOnWord(str, len) {
 		.join("")
 		.concat("...");
 }
+
+// turns a timestamp into a nicely readable date string
+export function toDateString(timestamp) {
+	return new Date(timestamp).toLocaleDateString(undefined, {
+		year: "numeric",
+		month: "long",
+		day: "numeric"
+	});
+}

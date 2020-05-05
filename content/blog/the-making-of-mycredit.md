@@ -1,6 +1,6 @@
 ---
 title: The making of MyCredit
-date: 2018-12-12
+date: 2018-12-29
 ---
 
 import Showcase from '~/components/Showcase'

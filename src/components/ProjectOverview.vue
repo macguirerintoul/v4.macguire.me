@@ -1,20 +1,20 @@
 <template>
-	<section class="project-overview">
-		<div class="project-overview__main">
+	<section class="overview">
+		<div class="overview__main">
 			<div>
-				<h1 class="project-overview__title">{{ project.title }}</h1>
+				<h1 class="overview__title">{{ project.title }}</h1>
 				<!-- HTML here is coming directly from markdown files I write myself -->
 				<!-- eslint-disable-next-line vue/no-v-html -->
-				<p class="project-overview__summary" v-html="project.summary" />
+				<p class="overview__summary" v-html="project.summary" />
 			</div>
 			<MagicImage
-				class="project-overview__image"
+				class="overview__image"
 				:path="project.imagePath"
 				:alt="'Screenshot of ' + project.title"
 			/>
 		</div>
 
-		<div class="project-overview__context">
+		<div class="overview__context">
 			<div>
 				<h4>For</h4>
 				<span>{{ project.for }}</span>
