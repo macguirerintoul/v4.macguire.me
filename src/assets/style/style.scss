@@ -119,19 +119,19 @@ main {
 }
 
 footer {
-	margin: 3rem inherit;
+	margin: 3rem auto;
+}
 
-	.footer__link {
+.footer__link {
+	display: block;
+	margin: 0.4rem 0;
+}
+
+.footer__footnotes {
+	margin-top: 3rem;
+
+	small {
 		display: block;
-		margin: 0.4rem 0;
-	}
-
-	.footer__footnotes {
-		margin-top: 3rem;
-
-		small {
-			display: block;
-		}
 	}
 }
 
@@ -161,16 +161,6 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: $max-container-width;
-}
-
-.social-buttons {
-	& > * {
-		margin-right: 1rem;
-	}
-}
-
-.table-row {
-	display: block;
 }
 
 .video-embed {
@@ -207,7 +197,6 @@ textarea {
 	h5,
 	h6,
 	.video-embed,
-	.showcase,
 	img,
 	.project-context,
 	.resume__context,
@@ -235,26 +224,16 @@ textarea {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	margin: 4rem 0;
+	margin: 4rem auto;
 
 	.magic-image {
 		margin: auto;
 	}
 
-	& > div,
-	& > p {
+	> div,
+	> p {
 		// Select divs and paragraphs that are direct children of a Showcase (i.e. the media and content)
 		max-width: 48%;
-	}
-
-	&.vertical {
-		p {
-			max-width: 50rem;
-		}
-
-		div {
-			max-width: 100%;
-		}
 	}
 
 	video,
@@ -262,21 +241,31 @@ textarea {
 		max-height: 80vh;
 		max-width: 100%;
 	}
+}
 
-	&.media-left {
-		flex-direction: row;
-
-		p {
-			margin-right: 0;
-		}
+.showcase--vertical {
+	p {
+		max-width: $content-width;
 	}
 
-	&.media-right {
-		flex-direction: row-reverse;
+	div {
+		max-width: 100%;
+	}
+}
 
-		p {
-			margin-left: 0;
-		}
+.showcase--media-left {
+	flex-direction: row;
+
+	p {
+		margin-right: 0;
+	}
+}
+
+.showcase--media-right {
+	flex-direction: row-reverse;
+
+	p {
+		margin-left: 0;
 	}
 }
 
