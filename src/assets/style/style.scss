@@ -17,7 +17,8 @@
 @import "./pages/project";
 @import "./pages/articles";
 
-// Responsive styles are imported at the bottom
+// Responsive
+@import "./responsive";
 
 * {
 	// Padding is included in element size
@@ -45,35 +46,36 @@ blockquote {
 }
 
 body {
-	margin-top: 10rem; // Push all content down, give the navigation some space
 	background-color: $color-dark;
-	font-family: $font-stack;
-	height: 100%;
-	font-weight: 300; // Default font weight (things are getting bolded/italic for some reason)
 	color: $color-light;
+	font-family: $font-stack;
+	font-weight: 300; // Default font weight (things are getting bolded/italic for some reason)
+	height: 100%;
+	margin-top: 10rem; // Push all content down, give the navigation some space
 }
 
 button {
+	border: 0;
+	min-height: 2rem;
+	min-width: 5rem;
 	// Nicer button styles
 	padding: 0.5rem;
-	min-width: 5rem;
-	min-height: 2rem;
-	border: none;
-
-	&.button--primary {
-		color: $color-light;
-		background-color: $color-blue;
-	}
-
-	&.button--secondary {
-		color: $color-dark;
-		background-color: $color-light;
-	}
 }
+
+.button--primary {
+	background-color: $color-blue;
+	color: $color-light;
+}
+
+.button--secondary {
+	background-color: $color-light;
+	color: $color-dark;
+}
+
 hr {
+	border: 1px solid $color-dark-grey;
 	// Style horizontal dividers to match the site
 	margin: 0 auto;
-	border: 1px solid $color-dark-grey;
 	width: $max-container-width;
 }
 
@@ -88,11 +90,12 @@ span {
 
 ul {
 	list-style-type: none;
+
 	li::before {
 		// change <li> bullets to en dashes
 		content: "–";
-		position: absolute;
 		margin-left: -1.5rem;
+		position: absolute;
 	}
 }
 
@@ -101,59 +104,63 @@ cite {
 	margin-top: 1rem;
 	text-align: right;
 }
+
 code {
 	font-family: $font-stack-mono;
 }
+
 img {
 	display: block;
 	max-width: 100%;
 }
-main.container {
+
+main {
 	margin-bottom: 3rem;
 }
+
 footer {
-	&.container {
-		margin: 3rem auto;
-	}
+	margin: 3rem inherit;
+
 	.footer__link {
 		display: block;
 		margin: 0.4rem 0;
 	}
+
 	.footer__footnotes {
 		margin-top: 3rem;
+
 		small {
 			display: block;
 		}
 	}
 }
-label {
-	display: block;
 
+label {
 	@include type-level-content;
 
+	display: block;
 	margin-bottom: 0.2rem;
 }
 
 input,
 textarea {
+	border: 2px solid $color-dark-grey;
 	display: block;
-	width: 100%;
+	line-height: 2em;
+	margin-bottom: 1em;
 	min-height: 3em;
 	padding: 0.25em;
-	line-height: 2em;
-	border: 1px solid grey;
-	border-radius: 2px;
-	margin-bottom: 1em;
+	width: 100%;
 
 	&:focus {
-		border: 1px solid blue;
+		border: 2px solid $color-blue;
 	}
 }
 
 .container {
+	margin-left: auto;
+	margin-right: auto;
 	max-width: $max-container-width;
-	padding: auto 0;
-	margin: auto;
 }
 
 .social-buttons {
@@ -167,9 +174,9 @@ textarea {
 }
 
 .video-embed {
-	position: relative;
-	padding-bottom: 38.25%;
 	height: 0;
+	padding-bottom: 38.25%;
+	position: relative;
 }
 
 // Defines max-width for showcases and magic images.
@@ -214,20 +221,20 @@ textarea {
 	}
 
 	iframe {
+		height: 100%;
+		left: 0;
+		max-width: 100%;
 		position: absolute;
 		top: 0;
-		left: 0;
 		width: 100%;
-		height: 100%;
-		max-width: 100%;
 	}
 }
 
 .showcase {
-	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	margin: 4rem 0;
 
 	.magic-image {
@@ -278,5 +285,3 @@ textarea {
 // 	outline: 1px red solid !important;
 // 	visibility: visible !important;
 // }
-
-@import "./_responsive.scss";
