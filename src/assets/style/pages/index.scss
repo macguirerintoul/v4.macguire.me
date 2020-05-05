@@ -1,40 +1,44 @@
 .hero {
+	margin: 3rem 0;
+	max-width: $content-width;
+
 	p {
+		font-size: 2rem;
 		// TODO replace with a type variable
 		font-weight: 300;
-		font-size: 2rem;
 		line-height: 2.5rem;
 	}
-
-	max-width: $content-width;
-	margin: 3rem 0;
 }
 
 .project-flex-container {
 	display: flex;
 	flex-direction: column;
 	margin-top: 2rem;
+
 	a {
 		text-decoration: none;
 	}
+}
 
-	.project-block {
-		margin-bottom: 3rem;
+.project-block {
+	margin-bottom: 3rem;
+	max-width: $content-width;
+
+	:last-of-type {
+		// <main> already has margin
+		margin-bottom: 0;
+	}
+
+	.project-block__title {
+		margin: 0;
+	}
+
+	.project-block__description {
+		margin: 0.2rem 0;
 		max-width: $content-width;
-		&:last-of-type {
-			// <main> already has margin
-			margin-bottom: 0;
-		}
-		.project-block--title {
-			margin: 0;
-		}
-
-		.project-block__description {
-			max-width: $content-width;
-			margin: 0.2rem 0;
-		}
 	}
 }
+
 .work {
 	margin-top: 3rem;
 }
