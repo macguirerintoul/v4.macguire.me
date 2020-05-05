@@ -4,6 +4,7 @@
 	line-height: 6rem;
 	font-weight: 300;
 	letter-spacing: -4px;
+	text-decoration: $underline-h1;
 }
 
 @mixin type-level-2 {
@@ -49,7 +50,7 @@ button {
 
 h1 {
 	@include type-level-1;
-
+	margin-top: 0;
 	margin-bottom: 1rem;
 }
 

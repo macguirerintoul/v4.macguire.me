@@ -8,10 +8,11 @@ article {
 	}
 
 	p {
-		max-width: 60rem;
+		max-width: $content-width;
 	}
 }
 hr {
+	margin: 0 auto;
 	border: 1px solid $color-dark-grey;
 	width: $max-container-width;
 }
@@ -66,7 +67,7 @@ th {
 
 a {
 	color: $color-white;
-	text-decoration: $link-underline;
+	text-decoration: $underline-link;
 	// Insert an SVG icon after external links
 	// &[target='_blank']:after {
 	//   display: inline-block;
@@ -79,13 +80,6 @@ a {
 	//   width: 12pt;
 	//   height: 12pt;
 	// }
-}
-
-nav,
-footer {
-	a {
-		//    background-color: inherit;
-	}
 }
 
 blockquote {
@@ -107,12 +101,28 @@ img {
 	display: block;
 	max-width: 100%;
 }
-
+main.container {
+	margin-bottom: 3rem;
+}
 img,
 video {
 	border: $black-border;
 }
-
+footer {
+	&.container {
+		margin: 3rem auto;
+	}
+	.footer__link {
+		display: block;
+		margin: 0.4rem 0;
+	}
+	.footer__footnotes {
+		margin-top: 3rem;
+		small {
+			display: block;
+		}
+	}
+}
 label {
 	display: block;
 

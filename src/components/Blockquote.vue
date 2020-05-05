@@ -9,7 +9,10 @@
 </template>
 
 <script>
+import MagicLink from "./MagicLink";
+
 export default {
+	components: { MagicLink },
 	props: {
 		quote: {
 			type: String,

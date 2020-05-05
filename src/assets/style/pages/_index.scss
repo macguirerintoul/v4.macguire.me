@@ -20,7 +20,10 @@
 
 	.project-block {
 		margin-bottom: 3rem;
-
+		&:last-of-type {
+			// <main> already has margin
+			margin-bottom: 0;
+		}
 		.project-block--title {
 			margin: 0;
 		}
@@ -30,4 +33,7 @@
 			margin: 0.2rem 0;
 		}
 	}
+}
+.work {
+	margin-top: 3rem;
 }

@@ -28,7 +28,7 @@ module.exports = {
 			options: {
 				typeName: "Project", // Required
 				baseDir: "./content/projects", // Where .md files are located
-				route: "/projects/:title",
+				route: "/work/:title",
 				template: "./src/templates/Project.vue" // Optional
 			}
 		},
@@ -46,7 +46,7 @@ module.exports = {
 	transformers: {
 		remark: {
 			externalLinksTarget: "_blank",
-			externalLinksRel: ["noopener"]
+			externalLinksRel: "noopener"
 		}
 	}
 };

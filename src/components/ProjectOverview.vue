@@ -36,12 +36,10 @@
 
 <script>
 import MagicImage from "./MagicImage";
-import MagicLink from "./MagicLink";
 
 export default {
 	components: {
-		MagicImage,
-		MagicLink
+		MagicImage
 	},
 	props: {
 		project: {
