@@ -8,7 +8,6 @@
 	},
 	"dependencies": {
 		"@gridsome/source-filesystem": "0.6.2",
-		"@gridsome/transformer-remark": "0.3.4",
 		"@gridsome/vue-remark": "0.1.10",
 		"cloudinary-vue": "1.0.1",
 		"current-script-polyfill": "1.0.0",
