@@ -5,46 +5,48 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  chainWebpack(config) {
-    config.mode('development')
-  },
-  siteName: 'Macguire Rintoul',
-  siteDescription: 'Experience designer & developer from Vancouver, BC',
-  port: 3000,
-  permalinks: {
-    slugify: {
-      use: '@sindresorhus/slugify',
-      options: {
-        decamelize: false, // Prevents 'MyCredit' from becoming 'my-credit'
-      },
-    },
-  },
-  plugins: [
-    {
-      use: '@gridsome/vue-remark',
-      options: {
-        typeName: 'Project', // Required
-        baseDir: './content/projects', // Where .md files are located
-        route: '/projects/:title',
-        template: './src/templates/Project.vue', // Optional
-      },
-    },
-    {
-      // Add Articles collection
-      use: '@gridsome/vue-remark',
-      options: {
-        typeName: 'Article', // Required
-        baseDir: './content/articles', // Where .md files are located
-        route: '/articles/:title',
-        template: './src/templates/Article.vue', // Optional
-      },
-    },
-  ],
-  transformers: {
-    remark: {
-      externalLinksTarget: '_blank',
-      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-      anchorClassName: 'icon icon-link',
-    },
-  },
-}
+	// not sure what this was for, commenting it out to see what happens
+	// chainWebpack(config) {
+	// 	config.mode("development");
+	// },
+	siteName: "Macguire Rintoul",
+	siteDescription:
+		"I'm Macguire, an experience designer & software developer from Vancouver, BC. Currently, I'm working at Visier as a User Experience Design Intern. Previously, I've worked at Vancouver Coastal Health and the Connections Lab.",
+	port: 3000,
+	permalinks: {
+		slugify: {
+			use: "@sindresorhus/slugify",
+			options: {
+				decamelize: false // Prevents 'MyCredit' from becoming 'my-credit'
+			}
+		}
+	},
+	plugins: [
+		// Add Projects collection
+		{
+			use: "@gridsome/vue-remark",
+			options: {
+				typeName: "Project", // Required
+				baseDir: "./content/projects", // Where .md files are located
+				route: "/work/:title",
+				template: "./src/templates/Project.vue" // Optional
+			}
+		},
+		{
+			// Add Posts collection
+			use: "@gridsome/vue-remark",
+			options: {
+				typeName: "Post", // Required
+				baseDir: "./content/blog", // Where .md files are located
+				route: "/blog/:title",
+				template: "./src/templates/Post.vue" // Optional
+			}
+		}
+	],
+	transformers: {
+		remark: {
+			externalLinksTarget: "_blank",
+			externalLinksRel: "noopener"
+		}
+	}
+};

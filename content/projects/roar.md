@@ -1,25 +1,37 @@
 ---
 title: ROAR
 for: Vancouver Coastal Health
-shortDescription: "Streamlines the process of registering new employees in training sessions"
+shortDescription: "ROAR is a web app that streamlines the process of registering newly-hired employees into training sessions."
 year: 2019
 published: true
 order: 2
 imagePath: ROAR/images/featured
 featured: true
-tags: ['Product Design','Web Development']
-roles: ['Interaction Design','Interface Design', 'Project Management', 'Full-Stack Web Development']
-tools: ['Sketch', 'React', 'Laravel']
+tags: ["Design", "Development"]
+roles:
+  [
+    "Interaction Design",
+    "Interface Design",
+    "Project Management",
+    "Full-Stack Web Development",
+  ]
+tools: ["Sketch", "React", "Laravel"]
+interested: "<a href='/contact'>Contact me</a>"
 summary: "<a href='http://vch.ca' target='_blank'>Vancouver Coastal Health</a> trains around 1000 new staff per year, but was processing all new hires with manual document editing and data entry. To modernize the workflow, I worked alongside the Clinical Education and Recruitment Services teams to design and develop a web app to automate each employee’s schedule and manage education sessions. The new process saves over 750 hours of labour each year."
-contribution: "As the sole member of my team working on the project, I was responsible for user experience design, interface design, project management, and full-stack development. I regularly met with users and stakeholders to ensure the project was usable and fulfilled requirements, and balanced business needs and user experience."
 ---
 
 import Showcase from '~/components/Showcase'
 
+## Contribution
+
+As the sole member of my team working on the project, I was responsible for user experience design, interface design, project management, and full-stack development. I regularly met with users and stakeholders to ensure the project was usable and fulfilled requirements, and balanced business needs and user experience.
+
 ## Problem
+
 Vancouver Coastal Health is responsible for the training of over 15 thousand healthcare staff and volunteers. The process of registering a newly-hired employees into their mandatory training sessions involved numerous emails, PDF forms, manual data entry into multiple spreadsheets, and hand-editing a Word template to create each employee’s training schedule.
 
 ## Solution
+
 In order to modernize the workflow, I worked alongside the Clinical Education and Recruitment Services teams to design and develop a web app to generate each employee’s schedule and manage education sessions.
 
 <Showcase
@@ -46,6 +58,7 @@ In order to modernize the workflow, I worked alongside the Clinical Education an
 ## Process
 
 ### Design
+
 Clinical Education staff initially approached our team asking how the amount of manual labour involved in the registration process could be reduced. After evaluating the workflow from end to end, I confirmed that much of the work that people were doing could be accomplished using relatively simple technologies. This led me to my initial problem frame:
 
 > How might we leverage technology to reduce the time spent on new hire registration?
@@ -61,6 +74,7 @@ There was also an opportunity to improve the process for the staff that were sub
 Due to the complexity of the project, CEAs and Recruitment Associates provided input every step of the way. This made sure that we were designing something that was similar enough to their existing workflow to be understandable, but also made things more efficient where possible.
 
 ### Development
+
 Laravel and React were used to create a system that was available over the Internet to anyone that needed to submit a registration, and to CEAs no matter the location. The Ant Design UI library was used to create a product that was visually similar to the mockups without spending too much time creating custom components.
 
 ## Results

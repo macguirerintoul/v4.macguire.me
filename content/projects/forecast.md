@@ -9,7 +9,7 @@ year: 2019
 order: 1
 published: false
 url: https://forecast.macguire.me
-tags: ['Product Design', 'Web Development']
+tags: ['Design', 'Development']
 roles: ['Interaction Design', 'Visual Design', 'Web Development']
 tools: ['Sketch', 'Electron', 'Vue']
 summary: "Forecast is a simple app that helps people stay organized by counting down to due dates and events. The items that need to be done soonest are shown first, and users can make decisions about what to work on based on how much time they have left."

@@ -1,0 +1,26 @@
+// Layout
+$header-width: 1280px; // Maximum width of the top nav bar
+$max-container-width: 1280px; // Maximum width of content
+$content-width: 50rem; // Preferred content width
+
+// Responsive
+$mobile-breakpoint: 850px;
+$responsive-padding: 1rem;
+
+// Visual design
+$border-radius: 0.5rem; // A consistent border radius to be used throughout the site
+
+// Colours
+$color-dark: #000;
+$color-light: #fff;
+$color-dark-grey: rgb(30, 30, 30);
+$color-blue: #33f;
+$color-yellow: #ff0;
+
+// Type
+$font-stack: "Inter", "-apple-system", "system-ui", "BlinkMacSystemFont",
+	sans-serif;
+$font-stack-mono: "SFMono-Regular", "Menlo", "Inconsolata", "Consolas",
+	"Liberation Mono", monospace;
+$underline-link: underline 2px $color-blue;
+$underline-h1: underline 2px $color-yellow;

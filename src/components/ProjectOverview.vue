@@ -1,58 +1,56 @@
 <template>
-  <div>
-  <section class="project-overview">
-    <h1 class="project-overview__title">{{ project.title }}</h1>
-    <p class="project-overview__summary" v-html="project.summary" />
+	<section class="overview">
+		<div class="overview__main">
+			<div>
+				<h1 class="overview__title">{{ project.title }}</h1>
+				<!-- HTML here is coming directly from markdown files I write myself -->
+				<!-- eslint-disable-next-line vue/no-v-html -->
+				<p class="overview__summary" v-html="project.summary" />
+			</div>
+			<MagicImage
+				class="overview__image"
+				:path="project.imagePath"
+				:alt="'Screenshot of ' + project.title"
+			/>
+		</div>
 
-    <div class="project-overview__image">
-      <MagicImage
-        :path="project.imagePath"
-        :alt="'Screenshot of ' + project.title"
-      />
-    </div>
-  </section>
-  <section>
-    <h2>Introduction</h2>
-    <div class="project-overview__context">
-      <p v-html="project.contribution"></p>
-      <div>
-        <h4>For</h4>
-        <span>{{ project.for }}</span>
-      </div>
-      <div>
-        <h4>Year</h4>
-        <span>{{ project.year }}</span>
-      </div>
-      <div>
-        <h4>Roles</h4>
-        <span class="commas" v-for="role in project.roles" :key="role">{{ role }}</span>
-      </div>
-      <div>
-        <h4>Tools</h4>
-        <span class="commas" v-for="tool in project.tools" :key="tool">{{ tool }}</span>
-      </div>
-
-    </div>
-  </section>
-    </div>
+		<div class="overview__context">
+			<div>
+				<h4>For</h4>
+				<span>{{ project.for }}</span>
+			</div>
+			<div>
+				<h4>Roles</h4>
+				<span>{{ project.roles.join(", ") }}</span>
+			</div>
+			<div>
+				<h4>Tools</h4>
+				<span>{{ project.tools.join(", ") }}</span>
+			</div>
+			<div>
+				<h4>Interested?</h4>
+				<!-- HTML here is coming directly from markdown files I write myself -->
+				<!-- eslint-disable-next-line vue/no-v-html -->
+				<span v-html="project.interested"></span>
+			</div>
+		</div>
+	</section>
 </template>
 
 <script>
-import MagicImage from './MagicImage'
-import MagicLink from './MagicLink'
+import MagicImage from "./MagicImage";
 
 export default {
-  components: {
-    MagicImage,
-    MagicLink,
-  },
-  props: {
-    project: {
-      type: Object,
-      default() {
-        return {}
-      },
-    },
-  },
-}
+	components: {
+		MagicImage
+	},
+	props: {
+		project: {
+			type: Object,
+			default() {
+				return {};
+			}
+		}
+	}
+};
 </script>

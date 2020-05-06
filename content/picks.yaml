@@ -1,3 +1,6 @@
+- title: Design System Checklist
+  description: An open-source checklist to help you plan, build and grow your design system
+  url: https://designsystemchecklist.com/
 - title: Times Newer Roman
   description: Like Times New Roman, but more
   url: https://timesnewerroman.com/
@@ -5,7 +8,7 @@
   description: Repository of interface and interaction designs
   url: https://uimovement.com/
 - title: Really Good Emails
-  description: Showcase of the hidden art of HTML email
+  description: Showcase of fancy HTML emails
   url: https://reallygoodemails.com/
 - title: Inside Intercom
   description: Blog full of wisdom from Intercom
@@ -46,3 +49,6 @@
 - title: Laws of UX
   description: A collection of principles designers can consider when creating user interfaces
   url: https://lawsofux.com/
+- title: The Tarot Cards of Tech
+  description: Provocations designed to help creators more fully consider the impact of technology
+  url: http://tarotcardsoftech.artefactgroup.com/
