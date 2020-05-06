@@ -28,6 +28,6 @@
 		"stylelint-config-sass-guidelines": "7.0.0",
 		"stylelint-config-standard": "20.0.0",
 		"stylelint-order": "4.0.0",
-		"stylelint-scss": "3.17.1"
+		"stylelint-scss": "3.17.2"
 	}
 }
