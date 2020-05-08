@@ -1,14 +1,7 @@
 <template>
 	<div>
 		<h1>Contact</h1>
-		<div
-			v-if="submissionState === 'error'"
-			class="info-block info-block--error"
-		>
-			<p class="info-block__title">
-				An error occurred 😳
-			</p>
-		</div>
+
 		<!-- netlify attribute connects the form to Netlify Forms -->
 		<form
 			v-if="submissionState === 'default'"
@@ -49,9 +42,16 @@
 		<div v-if="submissionState === 'submitted'">
 			<h2>Message sent.</h2>
 			<p>Thanks for reaching out. I will be in touch with you shortly.</p>
-			<g-link to="/blog">
-				How about a blog post?
-			</g-link>
+			<p><g-link to="/blog">How about a blog post?</g-link></p>
+		</div>
+
+		<div
+			v-if="submissionState === 'error'"
+			class="info-block info-block--error"
+		>
+			<p class="info-block__title">
+				An error occurred 😳
+			</p>
 		</div>
 	</div>
 </template>

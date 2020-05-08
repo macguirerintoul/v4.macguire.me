@@ -78,7 +78,6 @@ h4 {
 p,
 blockquote,
 li,
-table,
-a {
+table {
 	@include type-level-content;
 }

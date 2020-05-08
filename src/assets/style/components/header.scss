@@ -1,11 +1,11 @@
 .navbar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-	z-index: 20;
 	background: $color-dark;
+	left: 0;
+	margin: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 20;
 }
 
 .navbar,
@@ -37,9 +37,9 @@
 }
 
 .navbar-item {
+	align-items: center;
 	cursor: pointer;
 	display: flex;
-	align-items: center;
 	flex-grow: 0;
 	flex-shrink: 0;
 	line-height: 1.5rem;
@@ -56,21 +56,20 @@
 	}
 
 	.navbar-item:last-of-type {
-		padding-right: 0;
 		margin-right: 0;
+		padding-right: 0;
 	}
 }
 
 .mobile-menu {
 	cursor: pointer;
 	display: none;
-	// height: 3.25rem;
-	position: relative;
+	font-weight: bold;
+	height: fit-content;
 	// width: 3.25rem;
 	margin-left: auto;
-	top: 0.5em;
-	height: fit-content;
 	padding: 0.5em;
-	border: 1px solid black;
-	font-weight: bold;
+	// height: 3.25rem;
+	position: relative;
+	top: 0.5em;
 }
