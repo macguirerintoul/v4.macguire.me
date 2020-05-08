@@ -1,17 +1,18 @@
+<!-- 
+  This file overrides Gridsome's default index.html. 
+  I'm using it because I need to add Netlify Forms to the site. 
+  See https://gridsome.org/docs/overriding-index/#overriding-indexhtml 
+-->
 <!DOCTYPE html>
 <html ${htmlAttrs}>
-  <head>
-    ${head}
-  </head>
-  <body ${bodyAttrs}>
-    
-    ${app}
-    ${scripts}
+	<head>
+		${head}
+	</head>
+	<body ${bodyAttrs}>
+		${app} ${scripts}
 
-    <!-- Skeleton form because Netlify can't parse JS-rendered forms -->
-    <!-- See https://www.netlify.com/blog/2018/09/07/how-to-integrate-netlify-forms-in-a-vue-app/ -->
-    <form name="contact" netlify hidden>
-    </form>
-
-  </body>
+		<!-- Skeleton form because Netlify can't parse JS-rendered forms -->
+		<!-- See https://www.netlify.com/blog/2018/09/07/how-to-integrate-netlify-forms-in-a-vue-app/ -->
+		<form name="Contact" netlify hidden></form>
+	</body>
 </html>
