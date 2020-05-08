@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import { truncateOnWord } from "~/utilities.js";
+import { truncateOnWord } from "~/utilities";
 
-import MagicLink from "~/components/MagicLink.vue";
+import MagicLink from "~/components/MagicLink";
 import picks from "../../content/picks.yaml";
 
 export default {

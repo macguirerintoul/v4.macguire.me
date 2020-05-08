@@ -33,6 +33,15 @@ body {
 	margin-top: 10rem; // Push all content down, give the navigation some space
 }
 
+nav,
+button {
+	font-weight: 500;
+}
+
+p {
+	margin-top: 0;
+}
+
 button {
 	border: 0;
 	min-height: 2rem;
@@ -166,7 +175,9 @@ textarea {
 	margin-bottom: 5rem;
 }
 
-.content .overview__image {
+// need both selectors because cloudinary-vue wraps images in a div with the classes
+.content .overview__image,
+.content .overview__image img {
 	margin: 0;
 	max-width: 100%;
 }
@@ -207,7 +218,6 @@ textarea {
 	h4,
 	h5,
 	h6,
-	.resume__context,
 	ul {
 		max-width: 50rem;
 	}
@@ -219,10 +229,9 @@ textarea {
 	h4,
 	h5,
 	h6,
-	.video-embed,
+	.video-embed, // TODO is this used?
 	img,
 	.project-context,
-	.resume__context,
 	ul {
 		margin-left: auto;
 		margin-right: auto;

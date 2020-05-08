@@ -50,11 +50,6 @@
 	font-weight: 500;
 }
 
-nav,
-button {
-	font-weight: 500;
-}
-
 h1 {
 	@include type-level-1;
 
@@ -78,10 +73,6 @@ h4 {
 	@include type-level-4;
 
 	margin-bottom: 0.2rem;
-}
-
-p {
-	margin-top: 0;
 }
 
 p,
