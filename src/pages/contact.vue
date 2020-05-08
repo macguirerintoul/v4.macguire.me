@@ -28,6 +28,8 @@
 				>.
 			</p>
 
+			<input type="hidden" form-name="Contact" />
+
 			<label for="name">Name</label>
 			<input v-model="formData.name" type="text" name="name" />
 
@@ -80,6 +82,17 @@ export default {
 		},
 		handleSubmit(event) {
 			// Post the form data to '/' where Netlify Forms will pick it up
+			console.log(
+				"event.target.getAttribute('name')",
+				event.target.getAttribute("name")
+			);
+			console.log(
+				"encoded form data: ",
+				this.encode({
+					"form-name": event.target.getAttribute("name"),
+					...this.formData
+				})
+			);
 			fetch("/", {
 				method: "POST",
 				headers: { "Content-Type": "application/x-www-form-urlencoded" },
