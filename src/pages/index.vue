@@ -21,19 +21,6 @@
 					:project="edge.node"
 				/>
 			</div>
-			<!--
-      <h2>Other projects</h2>
-      <div class="other-projects__flex-container">
-        <g-link
-          class="table-row"
-          v-for="edge in $page.otherProjects.edges"
-          :to="edge.node.path"
-          :key="edge.node.id"
-        >
-          <p>{{edge.node.title}} — {{edge.node.shortDescription}}</p>
-        </g-link>
-      </div>
-			-->
 		</section>
 	</div>
 </template>
@@ -54,19 +41,6 @@ query AllProjects {
 				year
         imagePath
         path
-      }
-    }
-  }
-  otherProjects: allProject(filter: {
-    featured: { eq: false },
-    published: { eq: true }
-  }) {
-    edges {
-      node {
-        id
-        title
-        path
-        shortDescription
       }
     }
   }
