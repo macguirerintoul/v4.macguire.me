@@ -491,13 +491,17 @@ textarea {
 	margin-bottom: 3rem;
 }
 
-/*              
-  ###### #####  ####  
-  #        #   #    # 
-  #####    #   #      
-  #        #   #      
-  #        #   #    # 
-  ######   #    ####  
+/*
+ 
+                        
+  #    # ##### # #      
+  #    #   #   # #      
+  #    #   #   # #      
+  #    #   #   # #      
+  #    #   #   # #      
+   ####    #   # ###### 
+                        
+ 
 */
 
 // CSS debugging
@@ -505,3 +509,8 @@ textarea {
 // 	outline: 1px red solid !important;
 // 	visibility: visible !important;
 // }
+
+.util-has-home-bar {
+	// Add padding to the bottom of the navigation so it doesn't clash with iPhone home bar
+	padding-bottom: 2rem;
+}
