@@ -7,6 +7,11 @@
 	font-size: 6rem;
 	font-weight: 300;
 	letter-spacing: -0.022em;
+
+	@include breakpoint(375px) {
+		font-size: 40px;
+		letter-spacing: -0.05em;
+	}
 }
 
 @mixin type-level-2 {
@@ -15,6 +20,11 @@
 	font-weight: 600;
 	letter-spacing: -0.022em;
 	line-height: 40px;
+
+	@include breakpoint(375px) {
+		font-size: 21px;
+		line-height: normal;
+	}
 }
 
 @mixin type-level-3 {
@@ -37,6 +47,11 @@
 	font-size: 2rem;
 	letter-spacing: -0.021em;
 	line-height: 42px;
+
+	@include breakpoint(375px) {
+		font-size: 1.2rem;
+		line-height: normal;
+	}
 }
 
 @mixin type-level-content {
@@ -46,7 +61,8 @@
 	line-height: 34px;
 
 	@include breakpoint(375px) {
-		font-size: 1rem;
+		font-size: 1.2rem;
+		line-height: normal;
 	}
 }
 

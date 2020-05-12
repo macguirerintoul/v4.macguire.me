@@ -28,6 +28,10 @@ $font-stack-mono: "SFMono-Regular", "Menlo", "Inconsolata", "Consolas",
 	text-decoration-line: underline;
 	text-decoration-thickness: 2px;
 	text-underline-offset: 0.4rem;
+
+	@include breakpoint(375px) {
+		text-underline-offset: auto;
+	}
 }
 
 @mixin underline-h1 {
@@ -35,6 +39,10 @@ $font-stack-mono: "SFMono-Regular", "Menlo", "Inconsolata", "Consolas",
 	text-decoration-line: underline;
 	text-decoration-thickness: 2px;
 	text-underline-offset: 0.6rem;
+
+	@include breakpoint(375px) {
+		text-underline-offset: auto;
+	}
 }
 
 @mixin breakpoint($point) {

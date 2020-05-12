@@ -45,7 +45,7 @@ body {
 	margin-top: 10rem; // Push all content down, give the navigation some space
 
 	@include breakpoint(375px) {
-		margin-top: 1rem;
+		margin-top: 4rem;
 	}
 }
 
@@ -129,6 +129,10 @@ main {
 
 footer {
 	margin: 3rem auto;
+
+	small {
+		display: block;
+	}
 }
 
 .footer__link {
@@ -136,12 +140,9 @@ footer {
 	margin: 0.4rem 0;
 }
 
-.footer__footnotes {
-	margin-top: 3rem;
-
-	small {
-		display: block;
-	}
+.footer__links,
+.footer__copyright {
+	margin-top: 2rem;
 }
 
 label {
@@ -170,6 +171,11 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: $max-container-width;
+
+	@include breakpoint(375px) {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 }
 
 .video-embed {
@@ -216,7 +222,11 @@ textarea {
 	margin-bottom: 3rem;
 	max-width: $content-width;
 
-	:last-of-type {
+	@include breakpoint(375px) {
+		margin-bottom: 2rem;
+	}
+
+	&:last-of-type {
 		// <main> already has margin
 		margin-bottom: 0;
 	}
