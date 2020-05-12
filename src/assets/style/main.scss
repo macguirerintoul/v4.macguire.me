@@ -84,7 +84,7 @@ hr {
 	border: 1px solid $color-dark-grey;
 	// Style horizontal dividers to match the site
 	margin: 0 auto;
-	max-width: $max-container-width;
+	max-width: 100%;
 }
 
 small {
@@ -199,6 +199,168 @@ textarea {
 	max-width: 60rem;
 }
 
+.content {
+	p,
+	blockquote,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	ul {
+		max-width: 50rem;
+	}
+
+	p,
+	blockquote,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.video-embed,
+	img,
+	.project-context,
+	ul {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	img,
+	.magic-image {
+		// Need both selectors because cloudinary-vue wraps images in a div
+		margin: 4rem auto;
+	}
+
+	iframe {
+		height: 100%;
+		left: 0;
+		max-width: 100%;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}
+
+/*
+ 
+                                                   
+   ####  #        ##    ####   ####  ######  ####  
+  #    # #       #  #  #      #      #      #      
+  #      #      #    #  ####   ####  #####   ####  
+  #      #      ######      #      # #           # 
+  #    # #      #    # #    # #    # #      #    # 
+   ####  ###### #    #  ####   ####  ######  ####  
+                                                   
+ 
+*/
+
+.showcase {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 4rem auto;
+
+	.magic-image {
+		margin: auto;
+	}
+
+	> div,
+	> p {
+		// Select divs and paragraphs that are direct children of a Showcase (i.e. the media and content)
+		max-width: 48%;
+	}
+
+	video,
+	img {
+		max-height: 80vh;
+		max-width: 100%;
+	}
+}
+
+// need both selectors because cloudinary-vue wraps images in a div with the classes
+.content .overview__image,
+.content .overview__image img {
+	margin: 0;
+	max-width: 100%;
+
+	@include breakpoint(375px) {
+		// Hide the featured image on mobile
+		display: none;
+	}
+}
+
+.showcase--vertical {
+	p {
+		max-width: $content-width;
+	}
+
+	div {
+		max-width: 100%;
+	}
+}
+
+.showcase--media-left {
+	flex-direction: row;
+
+	p {
+		margin-right: 0;
+	}
+}
+
+.showcase--media-right {
+	flex-direction: row-reverse;
+
+	p {
+		margin-left: 0;
+	}
+}
+
+.overview {
+	margin-bottom: 5rem;
+}
+
+.overview__title {
+	margin: 0 0 1rem;
+}
+
+.overview__summary {
+	max-width: $content-width;
+	padding-right: 2rem;
+
+	@include breakpoint(375px) {
+		padding-right: 0;
+	}
+}
+
+.overview__main {
+	display: flex;
+
+	> * {
+		flex: 0 1 50%;
+	}
+
+	@include breakpoint(375px) {
+		flex-direction: column;
+	}
+}
+
+.overview__context {
+	display: flex;
+	flex-wrap: nowrap;
+
+	div {
+		flex: 0 1 25%;
+		padding-right: 2rem;
+	}
+
+	@include breakpoint(375px) {
+		flex-direction: column;
+	}
+}
+
 /*
   # #    # #####  ###### #    #
   # ##   # #    # #       #  #
@@ -304,160 +466,9 @@ textarea {
 	max-width: 40rem;
 }
 
-.overview {
-	margin-bottom: 5rem;
+.form__button-container {
+	text-align: right;
 }
-
-.overview__title {
-	margin: 0 0 1rem;
-}
-
-.overview__summary {
-	max-width: $content-width;
-	padding-right: 2rem;
-
-	@include breakpoint(375px) {
-		padding-right: 0;
-	}
-}
-
-.overview__main {
-	display: flex;
-
-	> * {
-		flex: 0 1 50%;
-	}
-
-	@include breakpoint(375px) {
-		flex-direction: column;
-	}
-}
-
-.overview__context {
-	display: flex;
-	flex-wrap: nowrap;
-
-	div {
-		flex: 0 1 25%;
-		padding-right: 2rem;
-	}
-
-	@include breakpoint(375px) {
-		flex-direction: column;
-	}
-}
-
-.content {
-	p,
-	blockquote,
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	ul {
-		max-width: 50rem;
-	}
-
-	p,
-	blockquote,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	.video-embed,
-	img,
-	.project-context,
-	ul {
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	img,
-	.magic-image {
-		// Need both selectors because cloudinary-vue wraps images in a div
-		margin: 4rem auto;
-	}
-
-	iframe {
-		height: 100%;
-		left: 0;
-		max-width: 100%;
-		position: absolute;
-		top: 0;
-		width: 100%;
-	}
-}
-
-.showcase {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	margin: 4rem auto;
-
-	.magic-image {
-		margin: auto;
-	}
-
-	> div,
-	> p {
-		// Select divs and paragraphs that are direct children of a Showcase (i.e. the media and content)
-		max-width: 48%;
-	}
-
-	video,
-	img {
-		max-height: 80vh;
-		max-width: 100%;
-	}
-}
-
-// need both selectors because cloudinary-vue wraps images in a div with the classes
-.content .overview__image,
-.content .overview__image img {
-	margin: 0;
-	max-width: 100%;
-
-	@include breakpoint(375px) {
-		// Hide the featured image on mobile
-		display: none;
-	}
-}
-
-.showcase--vertical {
-	p {
-		max-width: $content-width;
-	}
-
-	div {
-		max-width: 100%;
-	}
-}
-
-.showcase--media-left {
-	flex-direction: row;
-
-	p {
-		margin-right: 0;
-	}
-}
-
-.showcase--media-right {
-	flex-direction: row-reverse;
-
-	p {
-		margin-left: 0;
-	}
-}
-
-// CSS debugging
-// * {
-// 	outline: 1px red solid !important;
-// 	visibility: visible !important;
-// }
 
 /*
  
@@ -474,5 +485,20 @@ textarea {
 
 .blog-posts__post {
 	height: 10rem;
-	border-bottom: 2px solid $color-dark-grey;
+	margin-bottom: 3rem;
 }
+
+/*              
+  ###### #####  ####  
+  #        #   #    # 
+  #####    #   #      
+  #        #   #      
+  #        #   #    # 
+  ######   #    ####  
+*/
+
+// CSS debugging
+// * {
+// 	outline: 1px red solid !important;
+// 	visibility: visible !important;
+// }
