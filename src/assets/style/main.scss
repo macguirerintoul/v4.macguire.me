@@ -1,12 +1,24 @@
+/*
+
+  ###### #      ###### #    # ###### #    # #####  ####
+  #      #      #      ##  ## #      ##   #   #   #
+  #####  #      #####  # ## # #####  # #  #   #    ####
+  #      #      #      #    # #      #  # #   #        #
+  #      #      #      #    # #      #   ##   #   #    #
+  ###### ###### ###### #    # ###### #    #   #    ####
+
+*/
+
 * {
 	// Padding is included in element size
 	box-sizing: border-box;
 }
 
 a {
+	@include underline-link;
+
 	// Style links to match the site
 	color: $color-light;
-	text-decoration: $underline-link;
 }
 
 article {
@@ -22,6 +34,10 @@ blockquote {
 	margin: 3rem 0;
 	padding-left: 2rem;
 	white-space: pre-wrap;
+
+	@include breakpoint(small) {
+		padding-left: 1rem;
+	}
 }
 
 body {
@@ -31,6 +47,10 @@ body {
 	font-weight: 300; // Default font weight (things are getting bolded/italic for some reason)
 	height: 100%;
 	margin-top: 10rem; // Push all content down, give the navigation some space
+
+	@include breakpoint(small) {
+		margin-top: 4rem;
+	}
 }
 
 nav,
@@ -42,12 +62,15 @@ p {
 	margin-top: 0;
 }
 
-button {
+.button--primary,
+.button--secondary {
+	// Nicer button styles
 	border: 0;
 	min-height: 2rem;
 	min-width: 5rem;
-	// Nicer button styles
 	padding: 0.5rem;
+	text-align: center;
+	justify-content: center;
 }
 
 .button--primary {
@@ -64,7 +87,7 @@ hr {
 	border: 1px solid $color-dark-grey;
 	// Style horizontal dividers to match the site
 	margin: 0 auto;
-	width: $max-container-width;
+	max-width: 100%;
 }
 
 small {
@@ -74,6 +97,11 @@ small {
 span {
 	// Use content type style as default
 	@include type-level-content;
+}
+
+tr {
+	// Acts as a margin for table rows
+	border-spacing: 0 1rem;
 }
 
 ul {
@@ -108,6 +136,10 @@ main {
 
 footer {
 	margin: 3rem auto;
+
+	small {
+		display: block;
+	}
 }
 
 .footer__link {
@@ -115,12 +147,9 @@ footer {
 	margin: 0.4rem 0;
 }
 
-.footer__footnotes {
-	margin-top: 3rem;
-
-	small {
-		display: block;
-	}
+.footer__links,
+.footer__copyright {
+	margin-top: 2rem;
 }
 
 label {
@@ -149,64 +178,28 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: $max-container-width;
+
+	@include breakpoint(small) {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 }
 
 .video-embed {
 	height: 0;
 	padding-bottom: 38.25%;
 	position: relative;
+
+	@include breakpoint(mobile) {
+		// Makes the video take up the full width of the container
+		padding-bottom: 55%;
+	}
 }
 
 // Defines max-width for showcases and magic images.
 .showcase,
 .magic-image {
 	max-width: 60rem;
-}
-
-.posts-table {
-	width: 100%;
-
-	.posts-table__updated {
-		text-align: right;
-	}
-}
-
-.overview {
-	margin-bottom: 5rem;
-}
-
-// need both selectors because cloudinary-vue wraps images in a div with the classes
-.content .overview__image,
-.content .overview__image img {
-	margin: 0;
-	max-width: 100%;
-}
-
-.overview__title {
-	margin: 0 0 1rem;
-}
-
-.overview__summary {
-	max-width: $content-width;
-	padding-right: 2rem;
-}
-
-.overview__main {
-	display: flex;
-
-	> * {
-		flex: 0 1 50%;
-	}
-}
-
-.overview__context {
-	display: flex;
-	flex-wrap: nowrap;
-
-	div {
-		flex: 0 1 25%;
-		padding-right: 2rem;
-	}
 }
 
 .content {
@@ -229,7 +222,7 @@ textarea {
 	h4,
 	h5,
 	h6,
-	.video-embed, // TODO is this used?
+	.video-embed,
 	img,
 	.project-context,
 	ul {
@@ -237,7 +230,9 @@ textarea {
 		margin-right: auto;
 	}
 
-	img {
+	img,
+	.magic-image {
+		// Need both selectors because cloudinary-vue wraps images in a div
 		margin: 4rem auto;
 	}
 
@@ -250,6 +245,19 @@ textarea {
 		width: 100%;
 	}
 }
+
+/*
+ 
+                                                   
+   ####  #        ##    ####   ####  ######  ####  
+  #    # #       #  #  #      #      #      #      
+  #      #      #    #  ####   ####  #####   ####  
+  #      #      ######      #      # #           # 
+  #    # #      #    # #    # #    # #      #    # 
+   ####  ###### #    #  ####   ####  ######  ####  
+                                                   
+ 
+*/
 
 .showcase {
 	align-items: center;
@@ -272,6 +280,18 @@ textarea {
 	img {
 		max-height: 80vh;
 		max-width: 100%;
+	}
+}
+
+// need both selectors because cloudinary-vue wraps images in a div with the classes
+.content .overview__image,
+.content .overview__image img {
+	margin: 0;
+	max-width: 100%;
+
+	@include breakpoint(small) {
+		// Hide the featured image on mobile
+		display: none;
 	}
 }
 
@@ -301,8 +321,194 @@ textarea {
 	}
 }
 
+.overview {
+	margin-bottom: 5rem;
+}
+
+.overview__title {
+	margin: 0 0 1rem;
+}
+
+.overview__summary {
+	max-width: $content-width;
+	padding-right: 2rem;
+
+	@include breakpoint(small) {
+		padding-right: 0;
+	}
+}
+
+.overview__main {
+	display: flex;
+
+	> * {
+		flex: 0 1 50%;
+	}
+
+	@include breakpoint(small) {
+		flex-direction: column;
+	}
+}
+
+.overview__context {
+	display: flex;
+	flex-wrap: nowrap;
+
+	div {
+		flex: 0 1 25%;
+		padding-right: 2rem;
+	}
+
+	@include breakpoint(small) {
+		flex-direction: column;
+	}
+}
+
+/*
+  # #    # #####  ###### #    #
+  # ##   # #    # #       #  #
+  # # #  # #    # #####    ##
+  # #  # # #    # #        ##
+  # #   ## #    # #       #  #
+  # #    # #####  ###### #    #
+*/
+
+.hero {
+	margin: 3rem 0;
+	max-width: $content-width;
+
+	@include type-level-big-content;
+}
+
+.project-flex-container {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+}
+
+.project-block {
+	margin-bottom: 3rem;
+	max-width: $content-width;
+
+	@include breakpoint(small) {
+		margin-bottom: 2rem;
+	}
+
+	&:last-of-type {
+		// <main> already has margin
+		margin-bottom: 0;
+	}
+
+	.project-block__title {
+		margin: 0;
+	}
+
+	.project-block__description {
+		margin: 0.2rem 0;
+		max-width: $content-width;
+	}
+}
+
+.work {
+	margin-top: 3rem;
+}
+
+/*
+    ##   #####   ####  #    # #####
+   #  #  #    # #    # #    #   #
+  #    # #####  #    # #    #   #
+  ###### #    # #    # #    #   #
+  #    # #    # #    # #    #   #
+  #    # #####   ####   ####    #
+*/
+
+.about-container {
+	display: flex;
+
+	> * {
+		flex: 1 0 50%;
+	}
+
+	p {
+		margin-right: 3rem;
+	}
+
+	img {
+		margin: auto;
+	}
+}
+
+.resume {
+	h3,
+	h4 {
+		margin: 0 auto;
+	}
+
+	.resume__item {
+		margin: 2rem 0 3rem;
+	}
+
+	.resume__subtitle {
+		@include type-level-4;
+	}
+}
+
+/*
+   ####   ####  #    # #####   ##    ####  #####
+  #    # #    # ##   #   #    #  #  #    #   #
+  #      #    # # #  #   #   #    # #        #
+  #      #    # #  # #   #   ###### #        #
+  #    # #    # #   ##   #   #    # #    #   #
+   ####   ####  #    #   #   #    #  ####    #
+*/
+
+.contact-form {
+	margin: auto;
+	max-width: 40rem;
+}
+
+.form__button-container {
+	text-align: right;
+}
+
+/*
+ 
+                              
+  #####  #       ####   ####  
+  #    # #      #    # #    # 
+  #####  #      #    # #      
+  #    # #      #    # #  ### 
+  #    # #      #    # #    # 
+  #####  ######  ####   ####  
+                              
+ 
+*/
+
+.blog-posts__post {
+	height: 10rem;
+	margin-bottom: 3rem;
+}
+
+/*
+ 
+                        
+  #    # ##### # #      
+  #    #   #   # #      
+  #    #   #   # #      
+  #    #   #   # #      
+  #    #   #   # #      
+   ####    #   # ###### 
+                        
+ 
+*/
+
 // CSS debugging
 // * {
 // 	outline: 1px red solid !important;
 // 	visibility: visible !important;
 // }
+
+.util-has-home-bar {
+	// Add padding to the bottom of the navigation so it doesn't clash with iPhone home bar
+	padding-bottom: 2rem;
+}

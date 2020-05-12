@@ -5,14 +5,9 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-	// not sure what this was for, commenting it out to see what happens
-	// chainWebpack(config) {
-	// 	config.mode("development");
-	// },
 	siteName: "Macguire Rintoul",
 	siteDescription:
 		"I'm Macguire, an experience designer & software developer from Vancouver, BC. Currently, I'm working at Visier as a User Experience Design Intern. Previously, I've worked at Vancouver Coastal Health and the Connections Lab.",
-	port: 3000,
 	permalinks: {
 		slugify: {
 			use: "@sindresorhus/slugify",

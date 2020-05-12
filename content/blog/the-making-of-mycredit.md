@@ -1,17 +1,10 @@
 ---
 title: The making of MyCredit
 date: 2018-12-29
+description: This post explores the process of creating MyCredit.
 ---
 
-import Showcase from '~/components/Showcase'
-import MagicLink from '~/components/MagicLink'
-import MagicVideo from '~/components/MagicVideo'
-import MagicImage from '~/components/MagicImage'
-import Blockquote from '~/components/Blockquote'
-
-This post explores the process of creating MyCredit.
-
-_Looking for an overview? [See the project page](/work/mycredit)._
+This post explores the process of creating MyCredit. Looking for an overview? [See the project page](/work/mycredit).
 
 ## Problem
 
@@ -22,44 +15,6 @@ Despite the importance of credit scores in personal finance, an estimated 56% of
 <Blockquote url="https://www.vancity.com/AboutVancity/GovernanceAndLeadership/OurReports/2017/" source="Vancity 2017 Annual Report">With 250,000 of them – close to half of our members – interacting with us almost entirely online or via our mobile app, we’re under pressure to deliver even more mobile and digital functionality.</Blockquote>
 
 Vancity's current website offers some credit help, but it lies 4 levels deep in navigation. Furthermore, their existing banking app has yet to provide resources for credit management.
-
-## Solution
-
-MyCredit is a companion app for Vancity members to manage their credit and set goals that encourage credit building, to better support their financial well-being.
-
-<MagicVideo source="vimeo" path="305425815" />
-
-<Showcase
-  path="MyCredit/videos/onboarding"
-  type="video"
-  source="cloudinary"
-  orientation="media-left"
-  content="Since credit is unfamiliar for so many people, the onboarding helps members learn a bit about credit while setting up the app."
-/>
-
-<Showcase
-  path="MyCredit/videos/score_details"
-  type="video"
-  source="cloudinary"
-  orientation="media-right"
-  content="The Score Details screen provides members with an overview of their score, as well as a breakdown of what is influencing their score."
-/>
-
-<Showcase
-  path="MyCredit/videos/learn"
-  type="video"
-  source="cloudinary"
-  orientation="media-left"
-  content="The Learn tab provides resources for members to better understand the five factors that influence their score, and how their financial activity is influencing their score."
-/>
-
-<Showcase
-  path="MyCredit/videos/goals"
-  type="video"
-  source="cloudinary"
-  orientation="media-right"
-  content="The Goals tab allows members to track their progress, see the steps they need to take to improve their score, and set new goals."
-/>
 
 ## Process
 
@@ -103,7 +58,43 @@ A teammate and I conducted user research with nine participants over the course 
 
 We then got to work making iterations and finalizing MyCredit.
 
-## Product
+## Solution
+
+MyCredit is a companion app for Vancity members to manage their credit and set goals that encourage credit building, to better support their financial well-being.
+
+<MagicVideo source="vimeo" path="305425815" />
+
+<Showcase
+  path="MyCredit/videos/onboarding"
+  type="video"
+  source="cloudinary"
+  orientation="media-left"
+  content="Since credit is unfamiliar for so many people, the onboarding helps members learn a bit about credit while setting up the app."
+/>
+
+<Showcase
+  path="MyCredit/videos/score_details"
+  type="video"
+  source="cloudinary"
+  orientation="media-right"
+  content="The Score Details screen provides members with an overview of their score, as well as a breakdown of what is influencing their score."
+/>
+
+<Showcase
+  path="MyCredit/videos/learn"
+  type="video"
+  source="cloudinary"
+  orientation="media-left"
+  content="The Learn tab provides resources for members to better understand the five factors that influence their score, and how their financial activity is influencing their score."
+/>
+
+<Showcase
+  path="MyCredit/videos/goals"
+  type="video"
+  source="cloudinary"
+  orientation="media-right"
+  content="The Goals tab allows members to track their progress, see the steps they need to take to improve their score, and set new goals."
+/>
 
 <Showcase
   path="MyCredit/videos/other_accounts"
@@ -181,8 +172,6 @@ The following explains the details of our design decisions and highlights where 
   alt="Diagram of the app architecture."
 />
 
-## Wrap-Up
-
 ### Key Performance Indicators
 
 <MagicImage
@@ -210,7 +199,7 @@ As a service provider to Vancity and other credit unions, Central 1 will need to
 
 Vancity or their digital partners will require additional managers, designers, and developers to maintain a second mobile app.
 
-## Appendix
+### Questions
 
 <MagicImage
   path="MyCredit/images/why_vancity"
@@ -229,3 +218,9 @@ Vancity or their digital partners will require additional managers, designers, a
   source="cloudinary"
   alt="Explanation of how we would encourage people to download MyCredit."
 />
+
+import Showcase from '~/components/Showcase'
+import MagicLink from '~/components/MagicLink'
+import MagicVideo from '~/components/MagicVideo'
+import MagicImage from '~/components/MagicImage'
+import Blockquote from '~/components/Blockquote'

@@ -2,7 +2,7 @@
 	<article>
 		<div class="content">
 			<h1>{{ $page.post.title }}</h1>
-			<p>by Macguire Rintoul — {{ toDateString($page.post.date) }}</p>
+			<p>{{ toDateString($page.post.date) }}</p>
 			<VueRemarkContent />
 		</div>
 	</article>

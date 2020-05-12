@@ -1,16 +1,13 @@
 <template>
 	<div>
-		<section class="hero">
-			<p>
-				I'm Macguire, an experience designer & software developer from
-				Vancouver, BC. Currently, I'm working at
-				<MagicLink url="http://www.visier.com/">Visier</MagicLink> as a User
-				Experience Design Intern. Previously, I've worked at
-				<MagicLink url="http://vch.ca/">Vancouver Coastal Health</MagicLink> and
-				the
-				<MagicLink url="http://clab.iat.sfu.ca/">Connections Lab</MagicLink>.
-			</p>
-		</section>
+		<p class="hero">
+			I'm Macguire, an experience designer & software developer from Vancouver,
+			BC. Currently, I'm working at
+			<MagicLink url="http://www.visier.com/">Visier</MagicLink> as a User
+			Experience Design Intern. Previously, I've worked at
+			<MagicLink url="http://vch.ca/">Vancouver Coastal Health</MagicLink> and
+			the <MagicLink url="http://clab.iat.sfu.ca/">Connections Lab</MagicLink>.
+		</p>
 		<hr />
 		<section class="work">
 			<h1>Selected work</h1>
@@ -21,19 +18,6 @@
 					:project="edge.node"
 				/>
 			</div>
-			<!--
-      <h2>Other projects</h2>
-      <div class="other-projects__flex-container">
-        <g-link
-          class="table-row"
-          v-for="edge in $page.otherProjects.edges"
-          :to="edge.node.path"
-          :key="edge.node.id"
-        >
-          <p>{{edge.node.title}} — {{edge.node.shortDescription}}</p>
-        </g-link>
-      </div>
-			-->
 		</section>
 	</div>
 </template>
@@ -54,19 +38,6 @@ query AllProjects {
 				year
         imagePath
         path
-      }
-    }
-  }
-  otherProjects: allProject(filter: {
-    featured: { eq: false },
-    published: { eq: true }
-  }) {
-    edges {
-      node {
-        id
-        title
-        path
-        shortDescription
       }
     }
   }

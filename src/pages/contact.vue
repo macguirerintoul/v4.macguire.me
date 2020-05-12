@@ -14,11 +14,7 @@
 		>
 			<p>
 				Here's a contact form that goes straight to my inbox. Or, feel free to
-				email me at firstname.lastname@gmail.com if you believe
-				<MagicLink
-					url="https://twitter.com/zhayitong/status/1257844300206927872"
-					>forms are for customer support that never get back to you</MagicLink
-				>.
+				email me at firstname.lastname@gmail.com.
 			</p>
 
 			<input type="hidden" form-name="Contact" />

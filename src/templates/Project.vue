@@ -32,8 +32,8 @@ export default {
 	},
 	metaInfo() {
 		return {
-			title: this.$page.project.title,
-			script: [{ src: "https://player.vimeo.com/api/player.js" }]
+			title: this.$page.project.title, // Set the <title> to that of the project
+			script: [{ src: "https://player.vimeo.com/api/player.js" }] // Load the Vimeo embedded player code
 		};
 	}
 };

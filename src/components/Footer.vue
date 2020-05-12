@@ -1,32 +1,26 @@
 <template>
 	<footer class="container">
-		<section>
-			<div class="featured-block-container">
-				<FeaturedBlock type="randomStar" />
-				<FeaturedBlock type="lastCommit" />
-				<FeaturedBlock type="pick" />
-			</div>
-			<hr />
-			<div>
-				<h3>Links</h3>
-				<MagicLink
-					class="footer__link"
-					url="https://github.com/macguirerintoul/"
-				>
-					GitHub
-				</MagicLink>
-				<MagicLink
-					class="footer__link"
-					url="https://linkedin.com/in/macguirerintoul/"
-				>
-					LinkedIn
-				</MagicLink>
-			</div>
-		</section>
+		<div class="featured-block-container">
+			<FeaturedBlock type="randomStar" />
+			<FeaturedBlock type="lastCommit" />
+			<FeaturedBlock type="pick" />
+		</div>
+		<hr />
+		<div class="footer__links">
+			<MagicLink class="footer__link" url="https://github.com/macguirerintoul/">
+				GitHub
+			</MagicLink>
+			<MagicLink
+				class="footer__link"
+				url="https://linkedin.com/in/macguirerintoul/"
+			>
+				LinkedIn
+			</MagicLink>
+		</div>
 
-		<section class="footer__footnotes">
-			<small>© {{ currentYear }} Macguire Rintoul. All rights reserved.</small>
-		</section>
+		<small class="footer__copyright">
+			© {{ currentYear }} Macguire Rintoul. All rights reserved.
+		</small>
 	</footer>
 </template>
 
