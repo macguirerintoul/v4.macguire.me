@@ -1,11 +1,12 @@
 @import url("https://rsms.me/inter/inter.css");
 
 @mixin type-level-1 {
+	@include underline-h1;
+
 	//  color: red;
 	font-size: 6rem;
 	font-weight: 300;
 	letter-spacing: -0.022em;
-	text-decoration: $underline-h1;
 }
 
 @mixin type-level-2 {

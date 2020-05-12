@@ -15,9 +15,10 @@
 }
 
 a {
+	@include underline-link;
+
 	// Style links to match the site
 	color: $color-light;
-	text-decoration: $underline-link;
 }
 
 article {

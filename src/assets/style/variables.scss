@@ -22,8 +22,20 @@ $font-stack: "Inter", "-apple-system", "system-ui", "BlinkMacSystemFont",
 	sans-serif;
 $font-stack-mono: "SFMono-Regular", "Menlo", "Inconsolata", "Consolas",
 	"Liberation Mono", monospace;
-$underline-link: underline 2px $color-blue;
-$underline-h1: underline 2px $color-yellow;
+
+@mixin underline-link {
+	text-decoration-color: $color-blue;
+	text-decoration-line: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.4rem;
+}
+
+@mixin underline-h1 {
+	text-decoration-color: $color-yellow;
+	text-decoration-line: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.6rem;
+}
 
 @mixin breakpoint($point) {
 	@if $point == 375px {
