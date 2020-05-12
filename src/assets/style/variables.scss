@@ -31,6 +31,7 @@ $font-stack-mono: "SFMono-Regular", "Menlo", "Inconsolata", "Consolas",
 
 	@include breakpoint(375px) {
 		text-underline-offset: auto;
+		text-decoration-thickness: 1px;
 	}
 }
 
@@ -42,6 +43,7 @@ $font-stack-mono: "SFMono-Regular", "Menlo", "Inconsolata", "Consolas",
 
 	@include breakpoint(375px) {
 		text-underline-offset: auto;
+		text-decoration-thickness: 1px;
 	}
 }
 

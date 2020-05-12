@@ -3,12 +3,6 @@ title: The making of MyCredit
 date: 2018-12-29
 ---
 
-import Showcase from '~/components/Showcase'
-import MagicLink from '~/components/MagicLink'
-import MagicVideo from '~/components/MagicVideo'
-import MagicImage from '~/components/MagicImage'
-import Blockquote from '~/components/Blockquote'
-
 This post explores the process of creating MyCredit. Looking for an overview? [See the project page](/work/mycredit).
 
 ## Problem
@@ -223,3 +217,9 @@ Vancity or their digital partners will require additional managers, designers, a
   source="cloudinary"
   alt="Explanation of how we would encourage people to download MyCredit."
 />
+
+import Showcase from '~/components/Showcase'
+import MagicLink from '~/components/MagicLink'
+import MagicVideo from '~/components/MagicVideo'
+import MagicImage from '~/components/MagicImage'
+import Blockquote from '~/components/Blockquote'

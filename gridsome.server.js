@@ -5,8 +5,22 @@
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const removeMd = require("remove-markdown");
+const { truncateOnWord } = require("./src/utilities");
+
 module.exports = function(api) {
-	api.loadSource(() => {
-		// Use the Data store API here: https://gridsome.org/docs/data-store-api/
+	api.loadSource(({ addSchemaResolvers }) => {
+		addSchemaResolvers({
+			Post: {
+				// Adds a front-matter field 'excerpt' to all Post objects
+				excerpt: {
+					type: "String", // Type of the field
+					resolve: function(obj) {
+						// What to populate the field with
+						return truncateOnWord(removeMd(obj.content));
+					}
+				}
+			}
+		});
 	});
 };

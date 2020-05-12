@@ -28,7 +28,7 @@
 				<span>{{ project.tools.join(", ") }}</span>
 			</div>
 			<div>
-				<h4>Interested?</h4>
+				<h4>More details?</h4>
 				<!-- HTML here is coming directly from markdown files I write myself -->
 				<!-- eslint-disable-next-line vue/no-v-html -->
 				<span v-html="project.interested"></span>

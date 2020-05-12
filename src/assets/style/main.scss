@@ -34,6 +34,10 @@ blockquote {
 	margin: 3rem 0;
 	padding-left: 2rem;
 	white-space: pre-wrap;
+
+	@include breakpoint(375px) {
+		padding-left: 1rem;
+	}
 }
 
 body {
@@ -182,6 +186,11 @@ textarea {
 	height: 0;
 	padding-bottom: 38.25%;
 	position: relative;
+
+	@include breakpoint(375px) {
+		// Makes the video take up the full width of the container
+		padding-bottom: 55%;
+	}
 }
 
 // Defines max-width for showcases and magic images.
@@ -318,6 +327,10 @@ textarea {
 .overview__summary {
 	max-width: $content-width;
 	padding-right: 2rem;
+
+	@include breakpoint(375px) {
+		padding-right: 0;
+	}
 }
 
 .overview__main {
@@ -325,6 +338,10 @@ textarea {
 
 	> * {
 		flex: 0 1 50%;
+	}
+
+	@include breakpoint(375px) {
+		flex-direction: column;
 	}
 }
 
@@ -335,6 +352,10 @@ textarea {
 	div {
 		flex: 0 1 25%;
 		padding-right: 2rem;
+	}
+
+	@include breakpoint(375px) {
+		flex-direction: column;
 	}
 }
 
@@ -411,6 +432,11 @@ textarea {
 .content .overview__image img {
 	margin: 0;
 	max-width: 100%;
+
+	@include breakpoint(375px) {
+		// Hide the featured image on mobile
+		display: none;
+	}
 }
 
 .showcase--vertical {

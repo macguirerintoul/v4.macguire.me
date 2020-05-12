@@ -12,7 +12,8 @@
 		"cloudinary-vue": "1.0.1",
 		"current-script-polyfill": "1.0.0",
 		"gridsome": "0.7.14",
-		"normalize.css": "8.0.1"
+		"normalize.css": "8.0.1",
+		"remove-markdown": "^0.3.0"
 	},
 	"devDependencies": {
 		"babel-eslint": "10.1.0",
