@@ -24,3 +24,11 @@ $font-stack-mono: "SFMono-Regular", "Menlo", "Inconsolata", "Consolas",
 	"Liberation Mono", monospace;
 $underline-link: underline 2px $color-blue;
 $underline-h1: underline 2px $color-yellow;
+
+@mixin breakpoint($point) {
+	@if $point == 375px {
+		@media (min-width: 375px) {
+			@content;
+		}
+	}
+}

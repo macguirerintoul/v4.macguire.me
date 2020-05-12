@@ -34,7 +34,7 @@
 					</g-link>
 					<g-link class="navbar-item contact-button" to="/contact">
 						<button class="button--primary">
-							Start your project
+							Contact
 						</button>
 					</g-link>
 				</div>

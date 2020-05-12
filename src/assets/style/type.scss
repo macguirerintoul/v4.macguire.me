@@ -43,6 +43,10 @@
 	font-size: 24px;
 	letter-spacing: -0.019em;
 	line-height: 34px;
+
+	@include breakpoint(375px) {
+		font-size: 1rem;
+	}
 }
 
 @mixin type-level-small {

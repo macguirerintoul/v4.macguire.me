@@ -1,3 +1,14 @@
+/*
+
+  ###### #      ###### #    # ###### #    # #####  ####
+  #      #      #      ##  ## #      ##   #   #   #
+  #####  #      #####  # ## # #####  # #  #   #    ####
+  #      #      #      #    # #      #  # #   #        #
+  #      #      #      #    # #      #   ##   #   #    #
+  ###### ###### ###### #    # ###### #    #   #    ####
+
+*/
+
 * {
 	// Padding is included in element size
 	box-sizing: border-box;
@@ -7,94 +18,6 @@ a {
 	// Style links to match the site
 	color: $color-light;
 	text-decoration: $underline-link;
-}
-
-.form__button-container {
-	display: flex;
-	justify-content: flex-end;
-	margin-top: 1rem;
-
-	button {
-		margin-left: 1rem;
-	}
-}
-
-.about-container {
-	display: flex;
-
-	> * {
-		flex: 1 0 50%;
-	}
-
-	p {
-		margin-right: 3rem;
-	}
-
-	img {
-		margin: auto;
-	}
-}
-
-.hero {
-	margin: 3rem 0;
-	max-width: $content-width;
-
-	p {
-		@include type-level-big-content;
-	}
-}
-
-.project-flex-container {
-	display: flex;
-	flex-direction: column;
-	margin-top: 2rem;
-
-	a {
-		text-decoration: none;
-	}
-}
-
-.project-block {
-	margin-bottom: 3rem;
-	max-width: $content-width;
-
-	:last-of-type {
-		// <main> already has margin
-		margin-bottom: 0;
-	}
-
-	.project-block__title {
-		margin: 0;
-	}
-
-	.project-block__description {
-		margin: 0.2rem 0;
-		max-width: $content-width;
-	}
-}
-
-.work {
-	margin-top: 3rem;
-}
-
-.resume {
-	h3,
-	h4 {
-		margin: 0 auto;
-	}
-
-	.resume__item {
-		margin: 2rem 0 3rem;
-	}
-
-	.resume__subtitle {
-		@include type-level-4;
-	}
-}
-
-.contact-form {
-	margin: auto;
-	max-width: 40rem;
 }
 
 article {
@@ -119,6 +42,10 @@ body {
 	font-weight: 300; // Default font weight (things are getting bolded/italic for some reason)
 	height: 100%;
 	margin-top: 10rem; // Push all content down, give the navigation some space
+
+	@include breakpoint(375px) {
+		margin-top: 1rem;
+	}
 }
 
 nav,
@@ -162,6 +89,11 @@ small {
 span {
 	// Use content type style as default
 	@include type-level-content;
+}
+
+tr {
+	// Acts as a margin for table rows
+	border-spacing: 0 1rem;
 }
 
 ul {
@@ -251,6 +183,111 @@ textarea {
 	max-width: 60rem;
 }
 
+/*
+  # #    # #####  ###### #    #
+  # ##   # #    # #       #  #
+  # # #  # #    # #####    ##
+  # #  # # #    # #        ##
+  # #   ## #    # #       #  #
+  # #    # #####  ###### #    #
+*/
+
+.hero {
+	margin: 3rem 0;
+	max-width: $content-width;
+
+	p {
+		@include type-level-big-content;
+	}
+}
+
+.project-flex-container {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.project-block {
+	margin-bottom: 3rem;
+	max-width: $content-width;
+
+	:last-of-type {
+		// <main> already has margin
+		margin-bottom: 0;
+	}
+
+	.project-block__title {
+		margin: 0;
+	}
+
+	.project-block__description {
+		margin: 0.2rem 0;
+		max-width: $content-width;
+	}
+}
+
+.work {
+	margin-top: 3rem;
+}
+
+/*
+    ##   #####   ####  #    # #####
+   #  #  #    # #    # #    #   #
+  #    # #####  #    # #    #   #
+  ###### #    # #    # #    #   #
+  #    # #    # #    # #    #   #
+  #    # #####   ####   ####    #
+*/
+
+.about-container {
+	display: flex;
+
+	> * {
+		flex: 1 0 50%;
+	}
+
+	p {
+		margin-right: 3rem;
+	}
+
+	img {
+		margin: auto;
+	}
+}
+
+.resume {
+	h3,
+	h4 {
+		margin: 0 auto;
+	}
+
+	.resume__item {
+		margin: 2rem 0 3rem;
+	}
+
+	.resume__subtitle {
+		@include type-level-4;
+	}
+}
+
+/*
+   ####   ####  #    # #####   ##    ####  #####
+  #    # #    # ##   #   #    #  #  #    #   #
+  #      #    # # #  #   #   #    # #        #
+  #      #    # #  # #   #   ###### #        #
+  #    # #    # #   ##   #   #    # #    #   #
+   ####   ####  #    #   #   #    #  ####    #
+*/
+
+.contact-form {
+	margin: auto;
+	max-width: 40rem;
+}
+
 .posts-table {
 	width: 100%;
 
@@ -261,13 +298,6 @@ textarea {
 
 .overview {
 	margin-bottom: 5rem;
-}
-
-// need both selectors because cloudinary-vue wraps images in a div with the classes
-.content .overview__image,
-.content .overview__image img {
-	margin: 0;
-	max-width: 100%;
 }
 
 .overview__title {
@@ -317,7 +347,7 @@ textarea {
 	h4,
 	h5,
 	h6,
-	.video-embed, // TODO is this used?
+	.video-embed,
 	img,
 	.project-context,
 	ul {
@@ -325,7 +355,9 @@ textarea {
 		margin-right: auto;
 	}
 
-	img {
+	img,
+	.magic-image {
+		// Need both selectors because cloudinary-vue wraps images in a div
 		margin: 4rem auto;
 	}
 
@@ -361,6 +393,13 @@ textarea {
 		max-height: 80vh;
 		max-width: 100%;
 	}
+}
+
+// need both selectors because cloudinary-vue wraps images in a div with the classes
+.content .overview__image,
+.content .overview__image img {
+	margin: 0;
+	max-width: 100%;
 }
 
 .showcase--vertical {
