@@ -9,6 +9,94 @@ a {
 	text-decoration: $underline-link;
 }
 
+.form__button-container {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 1rem;
+
+	button {
+		margin-left: 1rem;
+	}
+}
+
+.about-container {
+	display: flex;
+
+	> * {
+		flex: 1 0 50%;
+	}
+
+	p {
+		margin-right: 3rem;
+	}
+
+	img {
+		margin: auto;
+	}
+}
+
+.hero {
+	margin: 3rem 0;
+	max-width: $content-width;
+
+	p {
+		@include type-level-big-content;
+	}
+}
+
+.project-flex-container {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.project-block {
+	margin-bottom: 3rem;
+	max-width: $content-width;
+
+	:last-of-type {
+		// <main> already has margin
+		margin-bottom: 0;
+	}
+
+	.project-block__title {
+		margin: 0;
+	}
+
+	.project-block__description {
+		margin: 0.2rem 0;
+		max-width: $content-width;
+	}
+}
+
+.work {
+	margin-top: 3rem;
+}
+
+.resume {
+	h3,
+	h4 {
+		margin: 0 auto;
+	}
+
+	.resume__item {
+		margin: 2rem 0 3rem;
+	}
+
+	.resume__subtitle {
+		@include type-level-4;
+	}
+}
+
+.contact-form {
+	margin: auto;
+	max-width: 40rem;
+}
+
 article {
 	h1 {
 		// Center-align blog post titles
@@ -64,7 +152,7 @@ hr {
 	border: 1px solid $color-dark-grey;
 	// Style horizontal dividers to match the site
 	margin: 0 auto;
-	width: $max-container-width;
+	max-width: $max-container-width;
 }
 
 small {

@@ -30,16 +30,16 @@
 				<h4 class="resume__subtitle">Visier — May 2019 to present</h4>
 				<ul class="resume__responsibilities">
 					<li>
-						create and improve data visualizations allowing Visier's 50,000
-						users to analyze over 6 million employee records
+						create and improve data visualizations allowing Visier's 4,000
+						business customers to analyze over 10 million employee records
 					</li>
 					<li>
 						improve usability by designing interfaces and interactions that
 						follow conventions and best practices
 					</li>
 					<li>
-						collaborate with product and solution managers to understand use
-						cases and user needs
+						collaborate with product and solution managers to design analytic
+						workflows
 					</li>
 					<li>
 						communicate design decisions and solve problems with developers to
@@ -84,6 +84,7 @@
 		</section>
 	</div>
 </template>
+
 <script>
 export default {
 	metaInfo: {
