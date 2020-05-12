@@ -1,6 +1,7 @@
 ---
 title: The making of MyCredit
 date: 2018-12-29
+description: This post explores the process of creating MyCredit.
 ---
 
 This post explores the process of creating MyCredit. Looking for an overview? [See the project page](/work/mycredit).

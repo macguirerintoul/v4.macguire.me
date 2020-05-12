@@ -1,18 +1,20 @@
 <template>
-	<section>
+	<div>
 		<h1>Blog</h1>
-
-		<div
-			v-for="edge in $page.posts.edges"
-			:key="edge.node.id"
-			class="posts-table__row"
-		>
-			<g-link :to="edge.node.path">
-				{{ edge.node.title }}
-			</g-link>
-			<p>{{ edge.node.excerpt }}</p>
-		</div>
-	</section>
+		<section class="blog-posts">
+			<div
+				v-for="edge in $page.posts.edges"
+				:key="edge.node.id"
+				class="blog-posts__post"
+			>
+				<g-link :to="edge.node.path">
+					<h2>{{ edge.node.title }}</h2>
+				</g-link>
+				<p>{{ edge.node.description }}</p>
+				<small>{{ toDateString(edge.node.date) }}</small>
+			</div>
+		</section>
+	</div>
 </template>
 
 <script>
@@ -36,7 +38,7 @@ query AllPosts {
         title
         path
         date
-				excerpt
+				description
       }
     }
   }

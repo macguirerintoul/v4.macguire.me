@@ -1,11 +1,8 @@
 ---
-title: Redesigning the menstrual cup experience
+title: Making menstrual cups more approachable
 date: 2018-12-18
+description: This post explores the process of creating The Switch.
 ---
-
-import Showcase from '~/components/Showcase'
-import MagicImage from '~/components/MagicImage'
-import MagicVideo from '~/components/MagicVideo'
 
 This post explores the process of creating The Switch. Looking for an overview? [See the project page](/work/the-switch).
 
@@ -136,3 +133,7 @@ The Switch by Lena directly addresses false assumptions, apprehensions, and conc
   source="cloudinary"
   content="Each step of the onboarding has secondary information associated with it to answer follow-up questions."
 />
+
+import Showcase from '~/components/Showcase'
+import MagicImage from '~/components/MagicImage'
+import MagicVideo from '~/components/MagicVideo'

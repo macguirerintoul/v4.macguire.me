@@ -9,6 +9,7 @@ const removeMd = require("remove-markdown");
 const { truncateOnWord } = require("./src/utilities");
 
 module.exports = function(api) {
+	/*
 	api.loadSource(({ addSchemaResolvers }) => {
 		addSchemaResolvers({
 			Post: {
@@ -23,4 +24,5 @@ module.exports = function(api) {
 			}
 		});
 	});
+	*/
 };

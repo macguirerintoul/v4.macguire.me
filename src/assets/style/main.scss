@@ -221,10 +221,6 @@ textarea {
 	display: flex;
 	flex-direction: column;
 	margin-top: 2rem;
-
-	a {
-		text-decoration: none;
-	}
 }
 
 .project-block {
@@ -306,14 +302,6 @@ textarea {
 .contact-form {
 	margin: auto;
 	max-width: 40rem;
-}
-
-.posts-table {
-	width: 100%;
-
-	.posts-table__updated {
-		text-align: right;
-	}
 }
 
 .overview {
@@ -470,3 +458,21 @@ textarea {
 // 	outline: 1px red solid !important;
 // 	visibility: visible !important;
 // }
+
+/*
+ 
+                              
+  #####  #       ####   ####  
+  #    # #      #    # #    # 
+  #####  #      #    # #      
+  #    # #      #    # #  ### 
+  #    # #      #    # #    # 
+  #####  ######  ####   ####  
+                              
+ 
+*/
+
+.blog-posts__post {
+	height: 10rem;
+	border-bottom: 2px solid $color-dark-grey;
+}

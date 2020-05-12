@@ -1,9 +1,8 @@
 ---
 title: Designing the Winebox app
 date: 2017-12-29
+description: This post explores the process of creating Winebox.
 ---
-
-import Showcase from '~/components/Showcase'
 
 This post explores the process of creating Winebox. Looking for an overview? [See the project page](/work/winebox).
 
@@ -87,3 +86,5 @@ Winebox allows people to more easily understand and manage their wine collection
   orientation="media-left"
   content="History items can be shared with friends to recommend a great bottle"
 />
+
+import Showcase from '~/components/Showcase'
