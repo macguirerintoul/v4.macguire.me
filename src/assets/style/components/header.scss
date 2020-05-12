@@ -57,7 +57,6 @@
 
 .navbar-item {
 	align-items: center;
-	cursor: pointer;
 	display: flex;
 	flex-grow: 0;
 	flex-shrink: 0;
@@ -71,10 +70,12 @@
 	margin-left: auto;
 
 	.navbar-item {
+		// Space out the navigation items
 		margin: 0.5em;
 	}
 
 	.navbar-item:last-of-type {
+		// Align the last navigation item to the right edge of the container
 		margin-right: 0;
 	}
 }

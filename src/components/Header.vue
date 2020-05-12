@@ -4,12 +4,12 @@
 			:class="{ 'is-active': showMobileMenu, 'util-has-home-bar': hasHomeBar }"
 			class="navbar container"
 		>
-			<div class="navbar-brand">
-				<g-link class="navbar-item" to="/">
-					<span class="header-name">Macguire Rintoul</span>
+			<div class="navbar-brand" @click="toggleMobileMenu">
+				<g-link class="navbar-item navbar__title" to="/">
+					<span>Macguire Rintoul</span>
 				</g-link>
 
-				<button class="mobile-menu button--secondary" @click="toggleMobileMenu">
+				<button class="mobile-menu button--secondary">
 					Menu
 				</button>
 			</div>
@@ -40,9 +40,10 @@
 <script>
 export default {
 	mounted() {
-		let iPhone = /iPhone/.test(navigator.userAgent) && !window.MSStream;
+		// Detect if the device is an iPhone with a home bar (i.e. X, XS, 11, etc.)
+		let isiPhone = /iPhone/.test(navigator.userAgent) && !window.MSStream;
 		let aspect = window.screen.width / window.screen.height;
-		if (iPhone && aspect.toFixed(3) === "0.462") {
+		if (isiPhone && aspect.toFixed(3) === "0.462") {
 			this.hasHomeBar = true;
 		}
 	},
