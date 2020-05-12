@@ -15,6 +15,8 @@ export default function(Vue, { head }) {
 		content: config.siteDescription
 	});
 
+	head.htmlAttrs = { lang: "en" };
+
 	// Cloudinary configuration
 	Vue.use(Cloudinary, {
 		configuration: { cloudName: "macguire" }
