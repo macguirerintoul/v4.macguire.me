@@ -1,22 +1,12 @@
 <template>
 	<header>
-		<nav
-			:class="{ 'is-active': showMobileMenu }"
-			class="navbar container"
-			role="navigation"
-			aria-label="main navigation"
-		>
+		<nav :class="{ 'is-active': showMobileMenu }" class="navbar container">
 			<div class="navbar-brand">
 				<g-link class="navbar-item" to="/">
 					<span class="header-name">Macguire Rintoul</span>
 				</g-link>
 
-				<button
-					class="mobile-menu button--secondary"
-					aria-label="menu"
-					aria-expanded="false"
-					@click="toggleMobileMenu"
-				>
+				<button class="mobile-menu button--secondary" @click="toggleMobileMenu">
 					<span>Menu</span>
 				</button>
 			</div>
@@ -32,10 +22,11 @@
 					<g-link to="/about" class="navbar-item hvr-underline-reveal">
 						About
 					</g-link>
-					<g-link class="navbar-item contact-button" to="/contact">
-						<button class="button--primary">
-							Contact
-						</button>
+					<g-link
+						class="navbar-item contact-button button--primary"
+						to="/contact"
+					>
+						Contact
 					</g-link>
 				</div>
 			</div>
