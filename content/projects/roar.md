@@ -22,6 +22,11 @@ summary: "<a href='http://vch.ca' target='_blank'>Vancouver Coastal Health</a> t
 
 import Showcase from '~/components/Showcase'
 
+## Highlights
+
+- reduced 750 hours of labour per year, freeing up staff to work on more meaningful projects
+- learned Laravel and brushed up on my React skills
+
 ## Contribution
 
 As the sole member of my team working on the project, I was responsible for user experience design, interface design, project management, and full-stack development. I regularly met with users and stakeholders to ensure the project was usable and fulfilled requirements, and balanced business needs and user experience.
@@ -77,6 +82,6 @@ Due to the complexity of the project, CEAs and Recruitment Associates provided i
 
 Laravel and React were used to create a system that was available over the Internet to anyone that needed to submit a registration, and to CEAs no matter the location. The Ant Design UI library was used to create a product that was visually similar to the mockups without spending too much time creating custom components.
 
-## Results
+## Details
 
 According to Clinical Education, CEAs process roughly 1500 new hires per year at a conservative estimate of half an hour each. That means 750 hours are spent every year creating schedules. Since ROAR automates schedule creation and data management to be practically instantaneous, we eliminate the majority of that time.

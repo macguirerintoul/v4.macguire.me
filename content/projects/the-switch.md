@@ -1,6 +1,6 @@
 ---
 title: The Switch
-for: IAT 438
+for: "IAT 438: Interactive Objects & Environments"
 shortDescription: "The Switch is a redesign of a menstrual cup webstore that addresses the apprehensions of potential customers."
 featured: true
 order: 3
@@ -23,6 +23,11 @@ summary: "Despite having physical, environmental, and financial benefits, lack o
 import Showcase from '~/components/Showcase'
 import MagicImage from '~/components/MagicImage'
 import MagicVideo from '~/components/MagicVideo'
+
+## Highlights
+
+- conducted thorough user research with a survey of over 450 respondents
+- designed an end-to-end customer experience that made switching to a menstrual cup easier
 
 ## Contribution
 
