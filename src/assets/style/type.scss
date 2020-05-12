@@ -8,7 +8,7 @@
 	font-weight: 300;
 	letter-spacing: -0.022em;
 
-	@include breakpoint(375px) {
+	@include breakpoint(small) {
 		font-size: 40px;
 		letter-spacing: -0.05em;
 	}
@@ -21,7 +21,7 @@
 	letter-spacing: -0.022em;
 	line-height: 40px;
 
-	@include breakpoint(375px) {
+	@include breakpoint(small) {
 		font-size: 21px;
 		line-height: normal;
 	}
@@ -48,7 +48,7 @@
 	letter-spacing: -0.021em;
 	line-height: 42px;
 
-	@include breakpoint(375px) {
+	@include breakpoint(small) {
 		font-size: 1.2rem;
 		line-height: normal;
 	}
@@ -60,7 +60,7 @@
 	letter-spacing: -0.019em;
 	line-height: 34px;
 
-	@include breakpoint(375px) {
+	@include breakpoint(small) {
 		font-size: 1.2rem;
 		line-height: normal;
 	}

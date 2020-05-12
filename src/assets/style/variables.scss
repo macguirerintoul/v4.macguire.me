@@ -29,7 +29,7 @@ $font-stack-mono: "SFMono-Regular", "Menlo", "Inconsolata", "Consolas",
 	text-decoration-thickness: 2px;
 	text-underline-offset: 0.4rem;
 
-	@include breakpoint(375px) {
+	@include breakpoint(small) {
 		text-underline-offset: auto;
 		text-decoration-thickness: 1px;
 	}
@@ -41,15 +41,15 @@ $font-stack-mono: "SFMono-Regular", "Menlo", "Inconsolata", "Consolas",
 	text-decoration-thickness: 2px;
 	text-underline-offset: 0.6rem;
 
-	@include breakpoint(375px) {
+	@include breakpoint(small) {
 		text-underline-offset: auto;
 		text-decoration-thickness: 1px;
 	}
 }
 
 @mixin breakpoint($point) {
-	@if $point == 375px {
-		@media (max-width: 375px) {
+	@if $point == small {
+		@media (max-width: 480px) {
 			@content;
 		}
 	}

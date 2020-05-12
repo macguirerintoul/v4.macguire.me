@@ -35,7 +35,7 @@ blockquote {
 	padding-left: 2rem;
 	white-space: pre-wrap;
 
-	@include breakpoint(375px) {
+	@include breakpoint(small) {
 		padding-left: 1rem;
 	}
 }
@@ -48,7 +48,7 @@ body {
 	height: 100%;
 	margin-top: 10rem; // Push all content down, give the navigation some space
 
-	@include breakpoint(375px) {
+	@include breakpoint(small) {
 		margin-top: 4rem;
 	}
 }
@@ -176,7 +176,7 @@ textarea {
 	margin-right: auto;
 	max-width: $max-container-width;
 
-	@include breakpoint(375px) {
+	@include breakpoint(small) {
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
@@ -187,7 +187,7 @@ textarea {
 	padding-bottom: 38.25%;
 	position: relative;
 
-	@include breakpoint(375px) {
+	@include breakpoint(mobile) {
 		// Makes the video take up the full width of the container
 		padding-bottom: 55%;
 	}
@@ -286,7 +286,7 @@ textarea {
 	margin: 0;
 	max-width: 100%;
 
-	@include breakpoint(375px) {
+	@include breakpoint(small) {
 		// Hide the featured image on mobile
 		display: none;
 	}
@@ -330,7 +330,7 @@ textarea {
 	max-width: $content-width;
 	padding-right: 2rem;
 
-	@include breakpoint(375px) {
+	@include breakpoint(small) {
 		padding-right: 0;
 	}
 }
@@ -342,7 +342,7 @@ textarea {
 		flex: 0 1 50%;
 	}
 
-	@include breakpoint(375px) {
+	@include breakpoint(small) {
 		flex-direction: column;
 	}
 }
@@ -356,7 +356,7 @@ textarea {
 		padding-right: 2rem;
 	}
 
-	@include breakpoint(375px) {
+	@include breakpoint(small) {
 		flex-direction: column;
 	}
 }
@@ -389,7 +389,7 @@ textarea {
 	margin-bottom: 3rem;
 	max-width: $content-width;
 
-	@include breakpoint(375px) {
+	@include breakpoint(small) {
 		margin-bottom: 2rem;
 	}
 
