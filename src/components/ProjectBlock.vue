@@ -1,5 +1,5 @@
 <template>
-	<div class="project-block" :to="project.path">
+	<div class="project-block">
 		<h2 class="project-block__title">
 			<g-link :to="project.path"> {{ project.title }}</g-link>
 		</h2>

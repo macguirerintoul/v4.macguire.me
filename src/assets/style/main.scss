@@ -377,9 +377,7 @@ textarea {
 	margin: 3rem 0;
 	max-width: $content-width;
 
-	p {
-		@include type-level-big-content;
-	}
+	@include type-level-big-content;
 }
 
 .project-flex-container {
