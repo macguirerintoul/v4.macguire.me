@@ -6,6 +6,12 @@
 	right: 0;
 	top: 0;
 	z-index: 20;
+
+	@include breakpoint(small) {
+		// Move the navigation to the bottom on small screens
+		top: auto;
+		bottom: 0;
+	}
 }
 
 .navbar,
@@ -31,7 +37,8 @@
 	flex-grow: 1;
 	flex-shrink: 0;
 
-	.navbar-item.active--exact:not(.contact-button) {
+	.navbar-item.active--exact:not(.button--primary) {
+		// Add an underline to the current page in the navigation
 		border-bottom: 2px solid $color-blue;
 	}
 }
@@ -57,19 +64,85 @@
 
 	.navbar-item:last-of-type {
 		margin-right: 0;
-		padding-right: 0;
 	}
 }
 
 .mobile-menu {
 	cursor: pointer;
 	display: none;
-	font-weight: bold;
 	height: fit-content;
-	// width: 3.25rem;
 	margin-left: auto;
 	padding: 0.5em;
-	// height: 3.25rem;
 	position: relative;
 	top: 0.5em;
+}
+
+/*
+ 
+                                     
+  #####  #####  ######   ##   #    # 
+  #    # #    # #       #  #  #   #  
+  #####  #    # #####  #    # ####   
+  #    # #####  #      ###### #  #   
+  #    # #   #  #      #    # #   #  
+  #####  #    # ###### #    # #    # 
+                                     
+ 
+*/
+
+@media all and (max-width: 792px) {
+	.navbar {
+		// Move the navigation to the bottom on small screens
+		top: auto;
+		bottom: 0;
+
+		.navbar-brand {
+			width: 100%;
+		}
+
+		.nav__link {
+			margin: 0.2rem 1rem;
+		}
+
+		.button--primary {
+			width: 100%;
+		}
+	}
+
+	.util-has-home-bar {
+		// Add padding to the bottom of the navigation so it doesn't clash with iPhone home bar
+		padding-bottom: 2rem;
+	}
+
+	.navbar-menu {
+		display: none;
+	}
+
+	.navbar.is-active {
+		.navbar-end,
+		.navbar-menu,
+		.navbar-start {
+			display: flex;
+			width: 100%;
+			flex-direction: column;
+			align-items: baseline;
+
+			.navbar-item {
+				margin-left: 0;
+			}
+		}
+
+		.navbar-dropdown {
+			position: inherit;
+			display: flex;
+			box-shadow: none;
+			border-top: none;
+		}
+
+		display: block;
+	}
+
+	.mobile-menu {
+		display: inherit;
+	}
 }

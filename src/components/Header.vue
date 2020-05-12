@@ -1,13 +1,16 @@
 <template>
 	<header>
-		<nav :class="{ 'is-active': showMobileMenu }" class="navbar container">
+		<nav
+			:class="{ 'is-active': showMobileMenu, 'util-has-home-bar': hasHomeBar }"
+			class="navbar container"
+		>
 			<div class="navbar-brand">
 				<g-link class="navbar-item" to="/">
 					<span class="header-name">Macguire Rintoul</span>
 				</g-link>
 
 				<button class="mobile-menu button--secondary" @click="toggleMobileMenu">
-					<span>Menu</span>
+					Menu
 				</button>
 			</div>
 
@@ -36,8 +39,15 @@
 
 <script>
 export default {
+	mounted() {
+		let iPhone = /iPhone/.test(navigator.userAgent) && !window.MSStream;
+		let aspect = window.screen.width / window.screen.height;
+		if (iPhone && aspect.toFixed(3) === "0.462") {
+			this.hasHomeBar = true;
+		}
+	},
 	data() {
-		return { showMobileMenu: false };
+		return { showMobileMenu: false, hasHomeBar: false };
 	},
 	methods: {
 		toggleMobileMenu() {
