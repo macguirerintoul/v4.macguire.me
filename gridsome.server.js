@@ -5,10 +5,8 @@
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-const removeMd = require("remove-markdown");
-const { truncateOnWord } = require("./src/utilities");
-
 module.exports = function(api) {
+	/* Keeping as an example of how to add a schema resolver */
 	/*
 	api.loadSource(({ addSchemaResolvers }) => {
 		addSchemaResolvers({
