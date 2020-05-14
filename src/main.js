@@ -9,11 +9,13 @@ const config = require("../gridsome.config.js");
 
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function(Vue, { head }) {
+	// Make it UTF-8
 	head.meta.push({
 		name: "charset",
 		content: "utf-8"
 	});
 
+	// Make it work on mobile
 	head.meta.push({
 		name: "viewport",
 		content: "width=device-width, initial-scale=1.0"
@@ -25,9 +27,10 @@ export default function(Vue, { head }) {
 		content: config.siteDescription
 	});
 
+	// Make it English
 	head.htmlAttrs = { lang: "en" };
 
-	// Cloudinary configuration
+	// Set up Cloudinary
 	Vue.use(Cloudinary, {
 		configuration: { cloudName: "macguire" }
 	});
