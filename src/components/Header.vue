@@ -4,12 +4,12 @@
 			:class="{ 'is-active': showMobileMenu, 'util-has-home-bar': hasHomeBar }"
 			class="navbar container"
 		>
-			<div class="navbar-brand" @click="toggleMobileMenu">
+			<div class="navbar-brand">
 				<g-link class="navbar-item navbar__title" to="/">
-					<span>Macguire Rintoul</span>
+					<span @click="closeMobileMenu">Macguire Rintoul</span>
 				</g-link>
 
-				<button class="mobile-menu button--secondary">
+				<button class="mobile-menu button--secondary" @click="toggleMobileMenu">
 					Menu
 				</button>
 			</div>
