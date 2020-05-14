@@ -8,9 +8,13 @@
 						I'm Macguire — an experience designer, software developer, hackathon
 						participant, and music producer. I'm currently completing a Bachelor
 						of Science in Interactive Arts & Technology at Simon Fraser
-						University. When I'm not studying or learning a new web framework,
-						you can catch me DJing, making my own beats, or hiking the Swiss
-						Alps with my mom.
+						University and doing design at Visier. When I'm not doing that, I
+						might be
+						<MagicLink url="https://www.mixcloud.com/weirdnite/">
+							DJing
+						</MagicLink>
+						or
+						<MagicLink url="https://weirdnite.com/">making beats</MagicLink>.
 					</p>
 				</div>
 				<g-image
@@ -86,9 +90,14 @@
 </template>
 
 <script>
+import MagicLink from "~/components/MagicLink";
+
 export default {
 	metaInfo: {
 		title: "About"
+	},
+	components: {
+		MagicLink
 	}
 };
 </script>
