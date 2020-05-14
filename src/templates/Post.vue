@@ -5,27 +5,18 @@
 			<p>{{ toDateString($page.post.date) }}</p>
 			<VueRemarkContent />
 		</article>
-		<div class="previous-next">
-			<div class="previous-next__previous">
-				<label v-if="previous !== null">← Previous post</label>
-				<g-link :to="previous.path" v-if="previous !== null">
-					{{ previous.title }}
-				</g-link>
-			</div>
-			<div class="previous-next__next">
-				<label v-if="next !== null">Next post →</label>
-				<g-link v-if="next !== null" :to="next.path">
-					{{ next.title }}
-				</g-link>
-			</div>
-		</div>
+		<PreviousNext type="post" :previous="previous" :next="next" />
 	</div>
 </template>
 
 <script>
 import { toDateString, attachMediumZoom } from "../utilities";
+import PreviousNext from "~/components/PreviousNext";
 
 export default {
+	components: {
+		PreviousNext
+	},
 	methods: {
 		toDateString
 	},
@@ -34,7 +25,6 @@ export default {
 	},
 	updated() {
 		console.log("Post updated");
-		// TODO handle null cases
 		this.previous = this.$page.allPosts.edges.filter(
 			item => item.node.title === this.$page.post.title
 		)[0].previous;
