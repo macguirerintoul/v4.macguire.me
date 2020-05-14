@@ -17,9 +17,6 @@ export default {
 	components: {
 		PreviousNext
 	},
-	methods: {
-		toDateString
-	},
 	data() {
 		return { next: { title: "", path: "" }, previous: { title: "", path: "" } };
 	},
@@ -32,6 +29,9 @@ export default {
 			item => item.node.title === this.$page.post.title
 		)[0].next;
 		attachMediumZoom();
+	},
+	methods: {
+		toDateString
 	},
 	metaInfo() {
 		return {

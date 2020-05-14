@@ -53,12 +53,7 @@
 </template>
 
 <script>
-import MagicLink from "~/components/MagicLink";
-
 export default {
-	components: {
-		MagicLink
-	},
 	metaInfo: {
 		title: "Contact"
 	},

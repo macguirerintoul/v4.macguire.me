@@ -2,7 +2,7 @@
 	<div class="previous-next">
 		<div class="previous-next__previous">
 			<label v-if="previous !== null">← Previous {{ type }}</label>
-			<g-link :to="previous.path" v-if="previous !== null">
+			<g-link v-if="previous !== null" :to="previous.path">
 				{{ previous.title }}
 			</g-link>
 		</div>

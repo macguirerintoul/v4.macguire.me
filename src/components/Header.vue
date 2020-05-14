@@ -39,6 +39,9 @@
 
 <script>
 export default {
+	data() {
+		return { showMobileMenu: false, hasHomeBar: false };
+	},
 	mounted() {
 		// Detect if the device is an iPhone with a home bar (i.e. X, XS, 11, etc.)
 		let isiPhone = /iPhone/.test(navigator.userAgent) && !window.MSStream;
@@ -46,9 +49,6 @@ export default {
 		if (isiPhone && aspect.toFixed(3) === "0.462") {
 			this.hasHomeBar = true;
 		}
-	},
-	data() {
-		return { showMobileMenu: false, hasHomeBar: false };
 	},
 	methods: {
 		toggleMobileMenu() {
