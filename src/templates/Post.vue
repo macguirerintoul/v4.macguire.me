@@ -15,6 +15,17 @@ export default {
 	methods: {
 		toDateString
 	},
+	data() {
+		return { next: {}, previous: {} };
+	},
+	mounted() {
+		this.previous = this.$page.allPosts.edges.filter(
+			item => item.node.title === this.$page.post.title
+		)[0].previous;
+		this.next = this.$page.allPosts.edges.filter(
+			item => item.node.title === this.$page.post.title
+		)[0].next;
+	},
 	updated() {
 		console.log("Post updated");
 		attachMediumZoom();
@@ -29,11 +40,26 @@ export default {
 </script>
 
 <page-query>
-query Post($id: ID!) {
+query ($id: ID!) {
   post: post(id: $id) {
     title
     content
     date
+  }
+	allPosts: allPost {
+    edges {
+			previous {
+				path
+				title
+			}
+			node {
+				title
+			}
+			next {
+				path
+				title
+			}
+		}
   }
 }
 </page-query>
