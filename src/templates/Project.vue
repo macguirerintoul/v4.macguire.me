@@ -25,20 +25,14 @@ query Project($id: ID!) {
 
 <script>
 import ProjectOverview from "~/components/ProjectOverview";
-import mediumZoom from "medium-zoom";
+import { attachMediumZoom } from "../utilities";
 
 export default {
 	components: {
 		ProjectOverview
 	},
 	methods: {
-		attachMediumZoom() {
-			const images = [
-				...document.querySelectorAll(".g-image"),
-				...document.querySelectorAll(".magic-image img")
-			];
-			mediumZoom(images, { background: "#000" });
-		}
+		attachMediumZoom
 	},
 	updated() {
 		console.log("Project updated");

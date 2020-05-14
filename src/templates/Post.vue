@@ -9,23 +9,15 @@
 </template>
 
 <script>
-import { toDateString } from "../utilities";
-import mediumZoom from "medium-zoom";
+import { toDateString, attachMediumZoom } from "../utilities";
 
 export default {
 	methods: {
-		toDateString,
-		attachMediumZoom() {
-			const images = [
-				...document.querySelectorAll(".g-image"),
-				...document.querySelectorAll(".magic-image img")
-			];
-			mediumZoom(images, { background: "#000" });
-		}
+		toDateString
 	},
 	updated() {
 		console.log("Post updated");
-		this.attachMediumZoom();
+		attachMediumZoom();
 	},
 	metaInfo() {
 		return {
