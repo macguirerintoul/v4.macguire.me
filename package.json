@@ -12,7 +12,7 @@
 		"cloudinary-vue": "1.0.1",
 		"current-script-polyfill": "1.0.0",
 		"gridsome": "0.7.14",
-		"medium-zoom": "^1.0.5",
+		"medium-zoom": "1.0.5",
 		"normalize.css": "8.0.1",
 		"remove-markdown": "0.3.0"
 	},
