@@ -212,7 +212,7 @@ textarea {
 	h5,
 	h6,
 	ul {
-		max-width: 50rem;
+		max-width: $content-width;
 	}
 
 	p,
@@ -258,12 +258,30 @@ textarea {
                                                    
  
 */
+
 .previous-next {
 	display: flex;
+	max-width: $content-width;
+	margin-left: auto;
+	margin-right: auto;
+	justify-content: space-between;
+	margin-top: 3rem;
+
+	label {
+		@include type-level-4;
+	}
+
 	a {
+		@include type-level-content;
+
 		flex: 0 1 50%;
 	}
 }
+
+.previous-next__next {
+	text-align: right;
+}
+
 .showcase {
 	align-items: center;
 	display: flex;
@@ -271,8 +289,13 @@ textarea {
 	justify-content: space-between;
 	margin: 4rem auto;
 
-	.magic-image {
-		margin: auto;
+	.magic-image,
+	.magic-video {
+		margin: 0 auto 2rem;
+	}
+
+	.magic-image img {
+		margin: 0;
 	}
 
 	> div,
@@ -302,7 +325,9 @@ textarea {
 
 .showcase--vertical {
 	p {
+		text-align: center;
 		max-width: $content-width;
+		font-style: italic;
 	}
 
 	div {

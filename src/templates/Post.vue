@@ -7,12 +7,14 @@
 		</article>
 		<div class="previous-next">
 			<div class="previous-next__previous">
+				<label v-if="previous !== null">← Previous post</label>
 				<g-link :to="previous.path" v-if="previous !== null">
 					{{ previous.title }}
 				</g-link>
 			</div>
 			<div class="previous-next__next">
-				<g-link :to="next.path" v-if="next !== null">
+				<label v-if="next !== null">Next post →</label>
+				<g-link v-if="next !== null" :to="next.path">
 					{{ next.title }}
 				</g-link>
 			</div>

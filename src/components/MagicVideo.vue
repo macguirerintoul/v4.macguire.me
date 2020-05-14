@@ -10,6 +10,7 @@
 		</div>
 		<div v-if="source == 'cloudinary'">
 			<CldVideo
+				class="magic-video"
 				cloud-name="macguire"
 				muted
 				loop="true"
