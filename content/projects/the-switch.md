@@ -16,7 +16,7 @@ roles:
     "User Research",
   ]
 tools: ["Sketch", "Keynote", "G Suite"]
-interested: Read <a href="/blog/redesigning-the-menstrual-cup-experience">Redesigning the menstrual cup experience</a>
+interested: Read <a href="/blog/making-menstrual-cups-more-approachable">Making menstrual cups more approachable</a>
 summary: "Despite having physical, environmental, and financial benefits, lack of exposure in mainstream media and markets has prevented the widespread use of menstrual cups. The Switch is a digital experience designed for <a href='https://lenacup.com/' rel='noopener' target='_blank'>Lena's website</a> that aims to help guide potential customers through making 'the switch' from traditional menstrual products to the Lena cup."
 ---
 
@@ -77,4 +77,4 @@ Our survey of over 450 respondents suggested that most customers were convinced 
 
 ## Process
 
-Want more details? See [Redesigning the menstrual cup experience](/blog/redesigning-the-menstrual-cup-experience).
+Want more details? See [Making menstrual cups more approachable](/blog/making-menstrual-cups-more-approachable).
