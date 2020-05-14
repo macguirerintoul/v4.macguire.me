@@ -19,6 +19,7 @@ export default {
 		return { next: {}, previous: {} };
 	},
 	mounted() {
+		// TODO handle null cases
 		this.previous = this.$page.allPosts.edges.filter(
 			item => item.node.title === this.$page.post.title
 		)[0].previous;
