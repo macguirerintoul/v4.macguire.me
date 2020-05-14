@@ -258,7 +258,12 @@ textarea {
                                                    
  
 */
-
+.previous-next {
+	display: flex;
+	a {
+		flex: 0 1 50%;
+	}
+}
 .showcase {
 	align-items: center;
 	display: flex;

@@ -1,11 +1,23 @@
 <template>
-	<article>
-		<div class="content">
+	<div>
+		<article class="content">
 			<h1>{{ $page.post.title }}</h1>
 			<p>{{ toDateString($page.post.date) }}</p>
 			<VueRemarkContent />
+		</article>
+		<div class="previous-next">
+			<div class="previous-next__previous">
+				<g-link :to="previous.path" v-if="previous !== null">
+					{{ previous.title }}
+				</g-link>
+			</div>
+			<div class="previous-next__next">
+				<g-link :to="next.path" v-if="next !== null">
+					{{ next.title }}
+				</g-link>
+			</div>
 		</div>
-	</article>
+	</div>
 </template>
 
 <script>
@@ -16,9 +28,10 @@ export default {
 		toDateString
 	},
 	data() {
-		return { next: {}, previous: {} };
+		return { next: { title: "", path: "" }, previous: { title: "", path: "" } };
 	},
-	mounted() {
+	updated() {
+		console.log("Post updated");
 		// TODO handle null cases
 		this.previous = this.$page.allPosts.edges.filter(
 			item => item.node.title === this.$page.post.title
@@ -26,9 +39,6 @@ export default {
 		this.next = this.$page.allPosts.edges.filter(
 			item => item.node.title === this.$page.post.title
 		)[0].next;
-	},
-	updated() {
-		console.log("Post updated");
 		attachMediumZoom();
 	},
 	metaInfo() {
