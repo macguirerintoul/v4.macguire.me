@@ -1,7 +1,7 @@
 <template>
 	<cld-image
 		cloud-name="macguire"
-		class="magic-image img-zooming"
+		class="magic-image"
 		lazy
 		dpr="auto"
 		width="auto"

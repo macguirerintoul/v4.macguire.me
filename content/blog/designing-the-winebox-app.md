@@ -80,7 +80,7 @@ Winebox allows people to more easily understand and manage their wine collection
 />
 
 <Showcase
-  path="Winebox/videos/history"
+  path="Winebox/videos/share"
   type="video"
   source="cloudinary"
   orientation="media-left"
