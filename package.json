@@ -12,7 +12,6 @@
 		"@gridsome/source-filesystem": "0.6.2",
 		"@gridsome/vue-remark": "0.2.1",
 		"cloudinary-vue": "1.1.0",
-		"current-script-polyfill": "1.0.0",
 		"gridsome": "0.7.17",
 		"medium-zoom": "1.0.5",
 		"normalize.css": "8.0.1"

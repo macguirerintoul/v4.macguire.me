@@ -2,7 +2,7 @@
 	<cld-image
 		cloud-name="macguire"
 		class="magic-image"
-		lazy
+		loading=lazy
 		dpr="auto"
 		width="auto"
 		crop="scale"
