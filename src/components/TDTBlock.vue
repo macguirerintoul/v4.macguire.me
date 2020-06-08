@@ -1,9 +1,9 @@
 <template>
-	<div>
-		<MagicLink :url="node.path">
+	<div class="tdt-block">
+		<MagicLink class="tdt-block__title" :url="node.path">
 			<h2>{{ node.title }}</h2>
 		</MagicLink>
-		<p>{{ node.description }}</p>
+		<p class="tdt-block__description">{{ node.description }}</p>
 		<small>{{ context }}</small>
 	</div>
 </template>

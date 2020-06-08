@@ -415,7 +415,7 @@ textarea {
 	margin-top: 2rem;
 }
 
-.project-block {
+.tdt-block {
 	margin-bottom: 3rem;
 	max-width: $content-width;
 
@@ -428,11 +428,11 @@ textarea {
 		margin-bottom: 0;
 	}
 
-	.project-block__title {
+	.tdt-block__title {
 		margin: 0;
 	}
 
-	.project-block__description {
+	.tdt-block__description {
 		margin: 0.2rem 0;
 		max-width: $content-width;
 	}
@@ -498,24 +498,6 @@ textarea {
 
 .form__button-container {
 	text-align: right;
-}
-
-/*
- 
-                              
-  #####  #       ####   ####  
-  #    # #      #    # #    # 
-  #####  #      #    # #      
-  #    # #      #    # #  ### 
-  #    # #      #    # #    # 
-  #####  ######  ####   ####  
-                              
- 
-*/
-
-.blog-posts__post {
-	height: 10rem;
-	margin-bottom: 3rem;
 }
 
 /*

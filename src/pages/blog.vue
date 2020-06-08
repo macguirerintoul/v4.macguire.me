@@ -6,7 +6,6 @@
 				v-for="edge in $page.posts.edges"
 				:key="edge.node.id"
 				:node="edge.node"
-				class="blog-posts__post"
 			/>
 		</section>
 	</div>
