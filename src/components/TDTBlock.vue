@@ -17,13 +17,18 @@ export default {
 		MagicLink
 	},
 	props: {
-		node: Object,
+		node: {
+			type: Object,
+			default() {
+				return {};
+			}
+		}
 	},
 	computed: {
 		context() {
 			let context = "";
 			if (this.node.year) {
-				context += this.node.year
+				context += this.node.year;
 			} else {
 				context += toDateString(new Date(this.node.date).toISOString());
 			}

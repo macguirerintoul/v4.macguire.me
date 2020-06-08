@@ -78,7 +78,9 @@ export default {
 					this.sha = latestCommit.sha.substr(0, 6);
 					this.itemTitle = " in " + latestPush.repo.name;
 					this.url = `https://github.com/${latestPush.repo.name}`;
-					this.commitURL = `https://github.com/${latestPush.repo.name}/${latestCommit.sha}`;
+					this.commitURL = `https://github.com/${latestPush.repo.name}/${
+						latestCommit.sha
+					}`;
 				});
 		},
 		getRandomStar() {
