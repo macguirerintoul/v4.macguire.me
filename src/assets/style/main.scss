@@ -256,22 +256,6 @@ textarea {
   #    # #####   ####   ####    #
 */
 
-.about-container {
-	display: flex;
-
-	> * {
-		flex: 1 0 50%;
-	}
-
-	p {
-		margin-right: 3rem;
-	}
-
-	img {
-		margin: auto;
-	}
-}
-
 .resume {
 	h3,
 	h4 {
