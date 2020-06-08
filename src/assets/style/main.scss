@@ -86,7 +86,7 @@ hr {
 	border: 1px solid $color-dark-grey;
 	// Style horizontal dividers to match the site
 	margin: 0 auto;
-	max-width: 100%;
+	max-width: $max-container-width;
 }
 
 small {

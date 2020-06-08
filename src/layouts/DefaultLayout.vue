@@ -4,7 +4,9 @@
 		<main class="container">
 			<slot />
 		</main>
-		<hr />
+		<div class="container">
+			<hr />
+		</div>
 		<Footer />
 	</div>
 </template>
@@ -14,7 +16,7 @@ import Header from "~/components/Header.vue";
 import Footer from "~/components/Footer.vue";
 
 export default {
-	components: {
+	components: { 
 		Header,
 		Footer
 	}
