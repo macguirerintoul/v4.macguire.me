@@ -5,8 +5,8 @@
 		"build": "gridsome build",
 		"dev": "gridsome develop",
 		"explore": "gridsome explore",
-		"lint": "eslint --ext .js,.vue src",
-		"fix": "eslint --ext .js,.vue src --fix"
+		"lint": "eslint --ext .js,.vue src & stylelint 'src/**/*.{css,scss}'",
+		"fix": "eslint --ext .js,.vue src --fix & stylelint 'src/**/*.{css,scss}' --fix"
 	},
 	"dependencies": {
 		"@gridsome/source-filesystem": "0.6.2",

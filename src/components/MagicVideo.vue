@@ -15,7 +15,7 @@
 			muted
 			loop="true"
 			autoplay="autoplay"
-			loading=lazy
+			loading="lazy"
 			:public-id="path"
 		>
 			<CldTransformation quality="auto:eco" fetch-format="auto" />

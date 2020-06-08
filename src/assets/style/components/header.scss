@@ -8,9 +8,9 @@
 	z-index: 2; // Embeds cover navbar unless this is set
 
 	@include breakpoint(small) {
+		bottom: 0;
 		// Move the navigation to the bottom on small screens
 		top: auto;
-		bottom: 0;
 
 		.button--primary {
 			width: 100%;
@@ -32,12 +32,12 @@
 	flex-shrink: 0;
 	min-height: 3.25rem;
 
-	a {
-		text-decoration: none;
-	}
-
 	@include breakpoint(small) {
 		width: 100%;
+	}
+
+	a {
+		text-decoration: none;
 	}
 }
 
@@ -45,13 +45,13 @@
 	flex-grow: 1;
 	flex-shrink: 0;
 
+	@include breakpoint(small) {
+		display: none;
+	}
+
 	.navbar-item.active--exact:not(.button--primary) {
 		// Add an underline to the current page in the navigation
 		border-bottom: 2px solid $color-blue;
-	}
-
-	@include breakpoint(small) {
-		display: none;
 	}
 }
 
@@ -86,14 +86,14 @@
 	.navbar-end,
 	.navbar-menu,
 	.navbar-start {
-		display: flex;
-		width: 100%;
-		flex-direction: column;
 		align-items: baseline;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
 
-		.navbar-item {
-			margin-left: 0;
-		}
+	.navbar-item {
+		margin-left: 0;
 	}
 }
 
