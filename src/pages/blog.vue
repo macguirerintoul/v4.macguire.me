@@ -5,10 +5,7 @@
 			<TDTBlock
 				v-for="edge in $page.posts.edges"
 				:key="edge.node.id"
-				:title="edge.node.title"
-				:url="edge.node.path"
-				:date="edge.node.date"
-				:description="edge.node.description"
+				:node="edge.node"
 				class="blog-posts__post"
 			/>
 		</section>
@@ -16,7 +13,6 @@
 </template>
 
 <script>
-import { toDateString } from "../utilities";
 import TDTBlock from "~/components/TDTBlock.vue";
 
 export default {
@@ -26,9 +22,6 @@ export default {
 	metaInfo: {
 		title: "Blog"
 	},
-	methods: {
-		toDateString
-	}
 };
 </script>
 

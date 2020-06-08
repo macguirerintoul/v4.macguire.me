@@ -12,10 +12,10 @@
 		<section class="work">
 			<h1>Selected work</h1>
 			<div class="project-flex-container">
-				<ProjectBlock
+				<TDTBlock
 					v-for="edge in $page.featuredProjects.edges"
 					:key="edge.node.id"
-					:project="edge.node"
+					:node="edge.node"
 				/>
 			</div>
 		</section>
@@ -34,7 +34,7 @@
 					id
 					for
 					title
-					shortDescription
+					description
 					tags
 					year
 					imagePath
@@ -46,12 +46,12 @@
 </page-query>
 
 <script>
-import ProjectBlock from "~/components/ProjectBlock.vue";
+import TDTBlock from "~/components/TDTBlock.vue";
 import MagicLink from "~/components/MagicLink.vue";
 
 export default {
 	components: {
-		ProjectBlock,
+		TDTBlock,
 		MagicLink
 	},
 	metaInfo() {
