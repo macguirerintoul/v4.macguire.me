@@ -4,7 +4,7 @@
 			<h2>{{ node.title }}</h2>
 		</MagicLink>
 		<p>{{ node.description }}</p>
-		<small>{{ date }}</small>
+		<small>{{ context }}</small>
 	</div>
 </template>
 
@@ -20,12 +20,15 @@ export default {
 		node: Object,
 	},
 	computed: {
-		date() {
+		context() {
+			let context = "";
 			if (this.node.year) {
-				return this.node.year
+				context += this.node.year
 			} else {
-				return toDateString(new Date(this.node.date).toISOString());
+				context += toDateString(new Date(this.node.date).toISOString());
 			}
+			if (this.node.tags) context += " — " + this.node.tags.join(", ");
+			return context;
 		}
 	}
 };
