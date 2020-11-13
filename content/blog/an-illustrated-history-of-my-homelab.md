@@ -1,7 +1,7 @@
 ---
 title: An illustrated history of my homelab
 date: 2020-11-01
-description: Homelab
+tags: ["pfsense", "homelab", "unifi", "proxmox", "docker"]
 ---
 
 ## November 2020

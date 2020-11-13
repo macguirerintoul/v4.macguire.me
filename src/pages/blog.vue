@@ -2,7 +2,7 @@
 	<div>
 		<h1>Blog</h1>
 		<section class="blog-posts">
-			<TDTBlock
+			<BlogPost
 				v-for="edge in $page.posts.edges"
 				:key="edge.node.id"
 				:node="edge.node"
@@ -12,11 +12,11 @@
 </template>
 
 <script>
-import TDTBlock from "~/components/TDTBlock.vue";
+import BlogPost from "~/components/BlogPost.vue";
 
 export default {
 	components: {
-		TDTBlock
+		BlogPost
 	},
 	metaInfo: {
 		title: "Blog"
@@ -32,7 +32,7 @@ export default {
 					title
 					path
 					date
-					description
+					tags
 				}
 			}
 		}

@@ -413,14 +413,14 @@ textarea {
 
 .overview__context {
 	display: flex;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 
 	@include breakpoint(small) {
 		flex-direction: column;
 	}
 
 	div {
-		flex: 0 1 25%;
+		flex: 0 1 50%;
 		padding-right: 2rem;
 	}
 }
@@ -497,6 +497,18 @@ textarea {
 .form__button-container {
 	text-align: right;
 }
+
+.blog-post {
+	display: grid;
+	grid-template-columns: 8fr 2fr 2fr;
+	column-gap: 2rem;
+	margin-bottom: 6rem;
+
+	.blog-post__title h2 {
+		margin: 0;
+	}
+}
+	
 
 /*
 
