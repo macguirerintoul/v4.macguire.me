@@ -4,17 +4,22 @@
 			<h2>{{ node.title }}</h2>
 		</MagicLink>
 		<p class="tdt-block__description">{{ node.description }}</p>
-		<small>{{ context }}</small>
+		<div>
+			<small class="tdt-block__date">{{ date }}</small>
+			<Tag v-for="tag in this.node.tags">{{ tag }}</Tag>
+		</div>
 	</div>
 </template>
 
 <script>
 import { toDateString } from "../utilities.js";
 import MagicLink from "~/components/MagicLink";
+import Tag from "~/components/Tag";
 
 export default {
 	components: {
-		MagicLink
+		MagicLink,
+		Tag
 	},
 	props: {
 		node: {
@@ -25,14 +30,13 @@ export default {
 		}
 	},
 	computed: {
-		context() {
+		date() {
 			let context = "";
 			if (this.node.year) {
 				context += this.node.year;
 			} else {
 				context += toDateString(new Date(this.node.date).toISOString());
 			}
-			if (this.node.tags) context += " — " + this.node.tags.join(", ");
 			return context;
 		}
 	}
