@@ -1,5 +1,3 @@
 <template>
-	<small class="tag">
-		#<slot />
-	</small>
+	<small class="tag">#<slot /></small>
 </template>

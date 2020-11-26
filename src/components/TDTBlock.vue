@@ -6,7 +6,9 @@
 		<p class="tdt-block__description">{{ node.description }}</p>
 		<div>
 			<small class="tdt-block__date">{{ date }}</small>
-			<Tag v-for="tag in this.node.tags">{{ tag }}</Tag>
+			<div class="tdt-block__tags">
+				<Tag v-for="tag in this.node.tags">{{ tag }}</Tag>
+			</div>
 		</div>
 	</div>
 </template>
