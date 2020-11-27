@@ -7,7 +7,7 @@ order: 3
 imagePath: The_Switch/images/featured
 year: 2018
 published: true
-tags: ["Design"]
+tags: ["design"]
 roles:
   [
     "Content Strategy",

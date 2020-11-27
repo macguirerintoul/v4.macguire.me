@@ -1,7 +1,7 @@
 ---
 title: Making menstrual cups more approachable
 date: 2018-12-18
-description: This post explores the process of creating The Switch.
+tags: ["design"]
 ---
 
 This post explores the process of creating The Switch. Looking for an overview? [See the project page](/work/the-switch).

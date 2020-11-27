@@ -6,17 +6,21 @@
 			<FeaturedBlock type="pick" />
 		</div>
 		<hr />
-		<div class="footer__links">
+		<ul class="util-unstyled-list footer__links">
+			<li>
 			<MagicLink class="footer__link" url="https://github.com/macguirerintoul/">
 				GitHub
 			</MagicLink>
+			</li>
+			<li>
 			<MagicLink
 				class="footer__link"
 				url="https://linkedin.com/in/macguirerintoul/"
 			>
 				LinkedIn
 			</MagicLink>
-		</div>
+			</li>
+		</ul>
 
 		<small class="footer__copyright">
 			© {{ currentYear }} Macguire Rintoul. All rights reserved.

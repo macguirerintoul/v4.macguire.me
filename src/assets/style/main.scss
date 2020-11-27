@@ -53,6 +53,10 @@ body {
 	}
 }
 
+span {
+	@include type-level-content;
+}
+
 nav,
 button {
 	font-weight: 500;
@@ -90,13 +94,9 @@ hr {
 	max-width: $max-container-width;
 }
 
-small {
+small,
+small span {
 	@include type-level-small;
-}
-
-span {
-	// Use content type style as default
-	@include type-level-content;
 }
 
 tr {
@@ -142,11 +142,6 @@ footer {
 	}
 }
 
-.footer__link {
-	display: block;
-	margin: 0.4rem 0;
-}
-
 .footer__links,
 .footer__copyright {
 	margin-top: 2rem;
@@ -175,12 +170,20 @@ textarea {
 }
 
 .tag {
-	background: $color-dark-grey;
-	padding: 0.2rem;
+	border: 1px solid $color-blue;
 	margin: 0.2rem 0.2rem 0 0;
-	border-radius: 0.2rem;
 }
 
+.tag__text {
+	margin: 0.2rem 0.2rem 0 0;
+	padding: 0.4rem 0.3rem 0.3rem;
+}
+ 
+.tag__hash {
+	display: inline-block;
+	background: $color-blue;
+	padding: 0.3rem 0.2rem 0.2rem;
+}
 
 .container {
 	margin-left: auto;
@@ -465,20 +468,20 @@ textarea {
 		margin: 0;
 	}
 
-	.tdt-block__date {
-		display: block;
-		margin-bottom: 0.4rem;
-	}
-
 	.tdt-block__description {
-		margin: 0.2rem 0;
-		max-width: $content-width;
+		margin: 0;
 	}
 
-	.tdt-block__tags {
-		display: flex;
-		flex-wrap: wrap;
-	}
+}
+
+.tdt-block__date,
+.blog-post__date {
+	font-weight: 600;
+}
+
+.tdt-block__tags {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .work {
@@ -505,7 +508,7 @@ textarea {
 
 .blog-post {
 	display: grid;
-	grid-template-columns: 8fr 2fr 2fr;
+	grid-template-columns: 9fr 3fr;
 	column-gap: 2rem;
 	margin-bottom: 6rem;
 
@@ -535,4 +538,11 @@ textarea {
 .util-has-home-bar {
 	// Add padding to the bottom of the navigation so it doesn't clash with iPhone home bar
 	padding-bottom: 2rem;
+}
+
+.util-unstyled-list {
+	padding-left: 0;
+	li::before {
+		content:none;
+	}
 }

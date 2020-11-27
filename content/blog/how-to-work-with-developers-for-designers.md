@@ -2,6 +2,7 @@
 title: How to work with developers (for designers)
 date: 2019-12-12
 description: Some tips for designers on how to work effectively with developers.
+tags: ["design", "development", "work"]
 ---
 
 The following advice might seem elementary, but even the simplest things get missed when we’re working at speed. We all want our work to go smoothly, and nothing disrupts that like realizing something has gone wrong simply because we weren’t talking to each other enough. The following are some tips I’ve picked up while working at [Visier](https://www.visier.com/), an analytics platform used by organizations like Adobe, Genentech, PayPal, and locals like EA and Coast Capital.

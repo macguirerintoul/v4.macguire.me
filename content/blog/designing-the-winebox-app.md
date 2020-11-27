@@ -1,7 +1,7 @@
 ---
 title: Designing the Winebox app
 date: 2017-12-29
-description: This post explores the process of creating Winebox.
+tags: ["design"]
 ---
 
 This post explores the process of creating Winebox. Looking for an overview? [See the project page](/work/winebox).

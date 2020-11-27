@@ -5,7 +5,9 @@
 		</MagicLink>
 		<div>
 			<small class="blog-post__date">{{ date }}</small>
-			<Tag v-for="tag in this.node.tags">{{ tag }}</Tag>
+			<div class="tdt-block__tags">
+				<Tag v-for="tag in this.node.tags">{{ tag }}</Tag>
+			</div>
 		</div>
 	</div>
 </template>

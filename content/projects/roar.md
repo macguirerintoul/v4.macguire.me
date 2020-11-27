@@ -7,7 +7,7 @@ published: true
 order: 2
 imagePath: ROAR/images/featured
 featured: true
-tags: ["Design", "Development"]
+tags: ["design", "development"]
 roles:
   [
     "Interaction Design",

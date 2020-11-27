@@ -7,7 +7,7 @@ order: 1
 imagePath: MyCredit/images/featured
 year: 2018
 published: true
-tags: ["Design"]
+tags: ["design"]
 roles:
   [
     "Content Strategy",
