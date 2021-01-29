@@ -17,8 +17,12 @@
 a {
 	@include underline-link;
 
-	// Style links to match the site
-	color: $color-light;
+	@include dark() {
+    color: $color-light;
+  }
+  @include light() {
+    color: $color-dark;
+  }
 }
 
 article {
@@ -41,8 +45,14 @@ blockquote {
 }
 
 body {
-	background-color: $color-dark;
-	color: $color-light;
+  @include dark() {
+    color: $color-light;
+    background-color: $color-dark;
+  }
+  @include light() {
+    color: $color-dark;
+    background-color: $color-light;
+  }
 	font-family: $font-stack;
 	font-weight: 300; // Default font weight (things are getting bolded/italic for some reason)
 	height: 100%;

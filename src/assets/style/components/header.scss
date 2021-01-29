@@ -1,5 +1,13 @@
 .navbar {
-	background: $color-dark;
+  @include dark() {
+    background: $color-dark;
+    color: $color-light;
+  }
+  @include light() {
+    background: $color-light;
+    color: $color-dark;
+  }
+	
 	left: 0;
 	margin: auto;
 	position: fixed;

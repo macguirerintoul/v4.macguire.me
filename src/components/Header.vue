@@ -16,6 +16,7 @@
 
 			<div class="navbar-menu" @click="closeMobileMenu">
 				<div class="navbar-end">
+          <span @click="toggleTheme">👀</span>
 					<g-link to="/" class="navbar-item hvr-underline-reveal">
 						Work
 					</g-link>
@@ -51,6 +52,9 @@ export default {
 		}
 	},
 	methods: {
+    toggleTheme(){
+      document.querySelector(':root').classList.toggle("theme-light");
+    },
 		toggleMobileMenu() {
 			this.showMobileMenu = !this.showMobileMenu;
 		},

@@ -11,7 +11,8 @@ $responsive-padding: 1rem;
 $border-radius: 0.5rem; // A consistent border radius to be used throughout the site
 
 // Colours
-$color-dark: #000;
+$color-dark: rgb(6,6,6);
+$color-text-dark: rgb(27, 27, 27);
 $color-light: #fff;
 $color-dark-grey: rgb(30, 30, 30);
 $color-light-grey: rgb(60, 60, 60);
@@ -20,7 +21,7 @@ $color-yellow: #ff0;
 $color-red: #f00;
 
 // Type
-$font-stack: "Editorial New", "-apple-system", "system-ui", "BlinkMacSystemFont",
+$font-stack: "Migra", "-apple-system", "system-ui", "BlinkMacSystemFont",
 	sans-serif;
 $font-stack-mono: "SFMono-Regular", "Iosevka", "Inconsolata", "Consolas",
 	"Liberation Mono", monospace;
