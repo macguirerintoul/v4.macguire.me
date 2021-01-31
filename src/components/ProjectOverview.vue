@@ -1,17 +1,13 @@
 <template>
 	<section class="overview">
 		<div class="overview__main">
-			<div>
-				<h1 class="overview__title">{{ project.title }}</h1>
-				<!-- HTML here is coming directly from markdown files I write myself -->
-				<!-- eslint-disable-next-line vue/no-v-html -->
-				<p class="overview__summary" v-html="project.summary" />
-			</div>
-			<MagicImage
+			<p class="hero overview__summary" v-html="project.summary" />
+      <MagicImage
 				class="overview__image"
 				:path="project.imagePath"
 				:alt="'Screenshot of ' + project.title"
 			/>
+			<h1 class="overview__title">{{ project.title }}</h1>
 		</div>
 
 		<div class="overview__context">

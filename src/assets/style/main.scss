@@ -34,9 +34,14 @@ article {
 }
 
 blockquote {
+  @include dark() {
 	border-left: 2px solid $color-yellow;
-	margin: 3rem 0;
-	padding-left: 2rem;
+  }
+  @include light() {
+    border-left: 2px solid #E0E722;
+  }
+	margin: 6rem 0;
+  padding-left: 2rem;
 	white-space: pre-wrap;
 
 	@include breakpoint(small) {
@@ -63,6 +68,10 @@ body {
 	}
 }
 
+body, nav {
+  transition: all 300ms;
+}
+
 span {
 	@include type-level-content;
 }
@@ -73,7 +82,7 @@ button {
 }
 
 p {
-	margin-top: 0;
+  margin-top: 0;
 }
 
 .button--primary,
@@ -98,10 +107,15 @@ p {
 }
 
 hr {
-	border: 1px solid $color-dark-grey;
 	// Style horizontal dividers to match the site
 	margin: 0 auto;
 	max-width: $max-container-width;
+  @include dark() {
+    border: 1px solid $color-dark-grey;
+  }
+  @include light() {
+	  border: 1px solid $color-light-grey;
+  }
 }
 
 small,
@@ -141,11 +155,11 @@ img {
 }
 
 main {
-	margin-bottom: 3rem;
+	margin-bottom: 6rem;
 }
 
 footer {
-	margin: 3rem auto;
+	margin: 6rem auto;
 
 	small {
 		display: block;
@@ -225,6 +239,19 @@ textarea {
 }
 
 .content {
+  h1 {
+    margin-bottom: 4rem;
+  }
+
+  h2 {
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    margin-bottom: 3rem;
+  }
+
 	p,
 	blockquote,
 	h1,
@@ -234,8 +261,16 @@ textarea {
 	h5,
 	h6,
 	ul {
-		max-width: $content-width;
-	}
+    max-width: $content-width;
+  }
+
+  .overview__summary {
+    max-width: unset;
+  }
+
+  p, blockquote {
+    text-align: justify;
+  }
 
 	p,
 	blockquote,
@@ -356,15 +391,10 @@ textarea {
 }
 
 // need both selectors because cloudinary-vue wraps images in a div with the classes
-.content .overview__image,
-.content .overview__image img {
+.overview__image,
+.overview__image img {
 	margin: 0;
 	max-width: 100%;
-
-	@include breakpoint(small) {
-		// Hide the featured image on mobile
-		display: none;
-	}
 }
 
 .showcase--vertical {
@@ -400,27 +430,18 @@ textarea {
 }
 
 .overview__title {
-	margin: 0 0 1rem;
+  margin-top: 6rem;
+  margin-bottom: 1rem;
 }
 
 .overview__summary {
-	max-width: $content-width;
-	padding-right: 2rem;
+  @include type-level-big-content;
+	//max-width: $content-width;
+  //padding-right: 2rem;
+  text-align: justify;
 
 	@include breakpoint(small) {
 		padding-right: 0;
-	}
-}
-
-.overview__main {
-	display: flex;
-
-	@include breakpoint(small) {
-		flex-direction: column;
-	}
-
-	> * {
-		flex: 0 1 50%;
 	}
 }
 
@@ -434,7 +455,8 @@ textarea {
 
 	div {
 		flex: 0 1 50%;
-		padding-right: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
 	}
 }
 
@@ -447,10 +469,10 @@ textarea {
   # #    # #####  ###### #    #
 */
 
-.hero {
+.hero, .content .hero {
 	@include type-level-big-content;
 
-	margin: 3rem 0;
+	margin: 8rem 0;
 }
 
 .project-flex-container {
@@ -460,7 +482,7 @@ textarea {
 }
 
 .tdt-block {
-	margin-bottom: 3rem;
+	margin-bottom: 5rem;
 	display: grid;
 	grid-template-columns: 4fr 6fr 2fr;
 	column-gap: 4rem;
@@ -479,6 +501,7 @@ textarea {
 	}
 
 	.tdt-block__description {
+    line-height: 2.1rem;
 		margin: 0;
 	}
 
@@ -495,7 +518,7 @@ textarea {
 }
 
 .work {
-	margin-top: 3rem;
+	margin-top: 6rem;
 }
 
 /*

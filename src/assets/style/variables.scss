@@ -1,6 +1,5 @@
 // Layout
-$header-width: 1280px; // Maximum width of the top nav bar
-$max-container-width: 1280px; // Maximum width of content
+$max-container-width: 1400px; // Maximum width of content
 $content-width: 50rem; // Preferred content width
 
 // Responsive
@@ -11,17 +10,19 @@ $responsive-padding: 1rem;
 $border-radius: 0.5rem; // A consistent border radius to be used throughout the site
 
 // Colours
-$color-dark: rgb(6,6,6);
-$color-text-dark: rgb(27, 27, 27);
-$color-light: #fff;
+$color-dark: #0b0b0b;
+$color-text-dark: rgb(26, 26, 26);
+$color-light: #f4f4f4;
 $color-dark-grey: rgb(30, 30, 30);
-$color-light-grey: rgb(60, 60, 60);
+$color-mid-grey: rgb(60, 60, 60);
+$color-mid-grey-text: rgb(111, 111, 111);
+$color-light-grey: rgb(225, 225, 225);
 $color-blue: #33f;
 $color-yellow: #ff0;
 $color-red: #f00;
 
 // Type
-$font-stack: "Migra", "-apple-system", "system-ui", "BlinkMacSystemFont",
+$font-stack: "Editorial New", "-apple-system", "system-ui", "BlinkMacSystemFont",
 	sans-serif;
 $font-stack-mono: "SFMono-Regular", "Iosevka", "Inconsolata", "Consolas",
 	"Liberation Mono", monospace;

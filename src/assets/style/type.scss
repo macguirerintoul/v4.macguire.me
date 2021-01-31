@@ -35,15 +35,16 @@
 
 @mixin type-level-4 {
 	// color: green;
-	font-size: 1.6rem;
-	font-weight: 600;
+	font-size: 1.4rem;
+	font-weight: 300;
 	line-height: 24pt;
 }
 
 @mixin type-level-big-content {
 	// color: violet;
 	font-size: 3rem;
-	line-height: 4rem;
+  line-height: 5rem;
+  font-weight: 200;
 
 	@include breakpoint(small) {
 		font-size: 1.2rem;
@@ -54,8 +55,8 @@
 @mixin type-level-content {
 	// color: violet;
 	font-size: 1.8rem;
-	line-height: 2.2rem;
-	font-weight: 400;
+	line-height: 3rem;
+	font-weight: 300;
 
 	@include breakpoint(small) {
 		font-size: 1.2rem;
@@ -72,7 +73,7 @@
 h1 {
 	@include type-level-1;
 
-	margin-bottom: 1rem;
+	margin-bottom: 4rem;
 	margin-top: 0;
 }
 
@@ -91,7 +92,8 @@ h3 {
 h4 {
 	@include type-level-4;
 
-	margin-bottom: 0.2rem;
+  margin-bottom: 0.2rem;
+  color: $color-mid-grey-text;
 }
 
 p,

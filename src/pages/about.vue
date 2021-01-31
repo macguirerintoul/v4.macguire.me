@@ -2,7 +2,6 @@
 	<div>
 		<section class="overview">
 			<div class="overview__main">
-				<div>
 					<h1 class="overview__title">About</h1>
 					<p class="overview__summary">
 						I'm Macguire — an experience designer, software developer, hackathon
@@ -16,13 +15,7 @@
 						or
 						<MagicLink url="https://weirdnite.com/">making beats</MagicLink>.
 					</p>
-				</div>
-				<g-image
-					class="overview__image"
-					src="~/assets/images/portrait.jpg"
-					alt="A photo of me."
-					height="500"
-				/>
+			
 			</div>
 		</section>
 

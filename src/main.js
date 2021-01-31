@@ -28,7 +28,7 @@ export default function(Vue, { head }) {
 	});
 
 	// Make it English
-	head.htmlAttrs = { lang: "en", class: "theme-dark" };
+	head.htmlAttrs = { lang: "en" };
 
 	// Set up Cloudinary
 	Vue.use(Cloudinary, {

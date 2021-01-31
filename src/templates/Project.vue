@@ -1,7 +1,8 @@
 <template>
 	<div>
-		<div class="content">
+
 			<ProjectOverview :project="$page.project" />
+		<div class="content">
 			<VueRemarkContent />
 		</div>
 		<PreviousNext type="project" :previous="previous" :next="next" />

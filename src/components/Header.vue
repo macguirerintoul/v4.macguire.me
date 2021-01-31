@@ -53,7 +53,7 @@ export default {
 	},
 	methods: {
     toggleTheme(){
-      document.querySelector(':root').classList.toggle("theme-light");
+      window.__setPreferredTheme(window.__theme === 'dark' ? 'light' : 'dark')
     },
 		toggleMobileMenu() {
 			this.showMobileMenu = !this.showMobileMenu;
