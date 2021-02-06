@@ -34,7 +34,7 @@ article {
 }
 
 summary {
-  @include type-level-2;
+  @include type-level-4;
   padding: 1rem;
 
   &:hover, &:focus {
@@ -48,10 +48,10 @@ summary {
 
 blockquote {
   @include dark() {
-	border-left: 2px solid $color-yellow;
+	  border-left: 2px solid $color-red;
   }
   @include light() {
-    border-left: 2px solid #E0E722;
+    border-left: 2px solid $color-red;
   }
 	margin: 6rem 0;
   padding-left: 2rem;
@@ -163,7 +163,14 @@ code {
 
 img {
 	display: block;
-	max-width: 100%;
+  max-width: 100%;
+  
+  @include light() {
+    border: 1px solid $color-dark-grey;
+  }
+  @include dark() {
+    border: 1px solid $color-light-grey;
+  }
 }
 
 main {

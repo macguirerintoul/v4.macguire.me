@@ -16,6 +16,8 @@ summary: "One of the most common problems casual wine collectors face is keeping
 ---
 
 import Showcase from '~/components/Showcase'
+import Expander from '~/components/Expander'
+import WineboxProcess from '../../content/process/winebox.md'
 
 ## Highlights
 
@@ -26,7 +28,7 @@ import Showcase from '~/components/Showcase'
 
 As one of the interface designers, I was responsible for designing the collection tab of Winebox, as well as features in other tabs. As the primary researcher, I developed a survey of 18 respondents, and conducted interviews and think-aloud user tests with various wine collectors to inform and validate the project. At the end of the course, I revised the visual design of the interface.
 
-## Problem
+## Opportunity
 
 The initial ideas for the product began from the observation that casual wine collectors were often forgetting the details of their wines. We investigated the various stages of wine enthusiasm through interviews and a survey, and found that current options for keeping track of a wine collection aren't quite ideal.
 
@@ -42,7 +44,7 @@ The initial ideas for the product began from the observation that casual wine co
 > "I don’t use any. Masking tape and permanent marker to mark the ones my wife can’t open"
 > "Nothing organized."
 
-## Solution
+## Outcome
 
 Winebox allows people to more easily understand and manage their wine collection, no matter how serious of a collector they are. Winebox accommodates Sunday sippers and seasoned sommeliers, and tells you everything you would like to know about your wines before you have to ask.
 
@@ -70,6 +72,8 @@ Winebox allows people to more easily understand and manage their wine collection
   content="History items can be shared with friends to recommend a great bottle"
 />
 
-## Process
+## Process & more
 
-Want more details? See [Designing the Winebox app](/blog/designing-the-winebox-app).
+<Expander>
+  <WineboxProcess />
+</Expander>

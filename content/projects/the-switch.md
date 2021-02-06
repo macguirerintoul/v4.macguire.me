@@ -23,6 +23,8 @@ summary: "Despite having physical, environmental, and financial benefits, lack o
 import Showcase from '~/components/Showcase'
 import MagicImage from '~/components/MagicImage'
 import MagicVideo from '~/components/MagicVideo'
+import Expander from '~/components/Expander'
+import TheSwitchProcess from '../../content/process/the-switch.md'
 
 ## Highlights
 
@@ -40,15 +42,17 @@ As the project manager, I ensured the various parts of the project were being co
   content="The Switch is comprised of five steps which answer major questions about menstrual cups, to reduce frictions within the customer journey. Content above the fold is concise to ease visitors in, with further details provided below."
 />
 
-## Problem
+## Opportunity
 
 Despite having physical, environmental, and financial benefits, lack of exposure in mainstream media and markets has prevented widespread use of menstrual cups. The majority of menstruators already use tampons, pads, and/or liners, and are not convinced to undertake the physical and emotional risk of switching menstrual hygiene products. While the Lena Cup is recognized as the #1 cup for beginners, Lena's existing site does not effectively communicate the product's value and benefits to potential customers.
 
 <MagicVideo source="vimeo" path="301757528" />
 
-## Solution
+## Outcome
 
 The Switch by Lena directly addresses false assumptions, apprehensions, and concerns consumers may have about menstrual cups.
+
+<MagicVideo source="vimeo" path="301758677" />
 
 <Showcase
   path="The_Switch/videos/landing"
@@ -71,10 +75,8 @@ The Switch by Lena directly addresses false assumptions, apprehensions, and conc
   content="Each step of the onboarding has secondary information associated with it to answer follow-up questions."
 />
 
-Our survey of over 450 respondents suggested that most customers were convinced to try a menstrual cup by a close friend or sibling. To create a meaningful experience, the team decided to strategize content from the perspective of a supportive, older sister. As the content strategist, I ensured that all content followed this principle and had a consistent tone and attitude.
+## Process & more
 
-<MagicVideo source="vimeo" path="301758677" />
-
-## Process
-
-Want more details? See [Making menstrual cups more approachable](/blog/making-menstrual-cups-more-approachable).
+<Expander>
+  <TheSwitchProcess />
+</Expander>

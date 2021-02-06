@@ -24,7 +24,8 @@ module.exports = {
 				typeName: "Project", // Required
 				baseDir: "./content/projects", // Where .md files are located
 				route: "/work/:title",
-				template: "./src/templates/Project.vue" // Optional
+        template: "./src/templates/Project.vue", // Optional
+        includePaths: ['./content/process']
 			}
 		},
 		{

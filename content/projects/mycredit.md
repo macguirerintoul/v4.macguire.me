@@ -25,7 +25,8 @@ import MagicLink from '~/components/MagicLink'
 import MagicVideo from '~/components/MagicVideo'
 import MagicImage from '~/components/MagicImage'
 import Blockquote from '~/components/Blockquote'
-import MyCreditProcess from '~/assets/mycreditprocess.md'
+import Expander from '~/components/Expander'
+import MyCreditProcess from '../../content/process/mycredit.md'
 
 ## Highlights
 
@@ -39,7 +40,7 @@ import MyCreditProcess from '~/assets/mycreditprocess.md'
 
 As the project manager, I ensured that the project's individual parts were being completed and were cohesive, and decided when to stop iterating and start polishing. As the content strategist, I wrote copy that was consistent with our three design principles: personal, clear, and hopeful. I also ensured that the credit-related content in MyCredit was beneficial and easy to understand, which I validated by conducting interviews and think-aloud testing with 9 participants.
 
-## Problem
+## Opportunity
 
 Despite the importance of credit scores in personal finance, an estimated 56% of Canadians have never checked their credit score and 31% don't know how to improve their score.
 
@@ -49,7 +50,7 @@ Despite the importance of credit scores in personal finance, an estimated 56% of
 
 Vancity's current website offers some credit help, but it lies 4 levels deep in navigation. Furthermore, their existing banking app has yet to provide resources for credit management.
 
-## Solution
+## Outcome
 
 MyCredit is a companion app for Vancity members to manage their credit and set goals that encourage credit building, to better support their financial well-being.
 
@@ -87,10 +88,8 @@ MyCredit is a companion app for Vancity members to manage their credit and set g
   content="The Goals tab allows members to track their progress, see the steps they need to take to improve their score, and set new goals."
 />
 
-<details>
-  <summary>Process</summary>
-  
- 
-</details>
+## Process & more
 
- <MyCreditProcess/>
+<Expander>
+  <MyCreditProcess />
+</Expander>
