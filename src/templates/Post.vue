@@ -1,5 +1,6 @@
 <template>
 	<div>
+      <TOC :headings="this.$page.post.headings" />
 		<article class="content">
 			<h1>{{ $page.post.title }}</h1>
 			<p>{{ toDateString($page.post.date) }}</p>
@@ -13,9 +14,10 @@
 import { toDateString, attachMediumZoom } from "../utilities";
 import PreviousNext from "~/components/PreviousNext";
 
+import TOC from "~/components/TOC";
 export default {
 	components: {
-		PreviousNext
+		PreviousNext, TOC
 	},
 	data() {
 		return { next: { title: "", path: "" }, previous: { title: "", path: "" } };
@@ -48,6 +50,11 @@ export default {
 			title
 			content
 			date
+       headings {
+          depth
+          value
+          anchor
+        }
 		}
 		allPosts: allPost {
 			edges {

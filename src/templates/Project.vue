@@ -1,5 +1,6 @@
 <template>
-	<div>
+<div>
+    <TOC :headings="headings" />
 		<ProjectOverview :project="$page.project" />
 		<div class="content">
 			<VueRemarkContent />
@@ -12,15 +13,17 @@
 import { attachMediumZoom } from "../utilities";
 import ProjectOverview from "~/components/ProjectOverview";
 import PreviousNext from "~/components/PreviousNext";
+import TOC from "~/components/TOC";
 
 export default {
 	components: {
 		ProjectOverview,
-		PreviousNext
+    PreviousNext, 
+    TOC
 	},
 	data() {
-		return { next: { title: "", path: "" }, previous: { title: "", path: "" } };
-	},
+		return { next: { title: "", path: "" }, previous: { title: "", path: "" }, headings: [] };
+  },
 	updated() {
 		console.log("Project template updated");
 		this.previous = this.$page.allProject.edges.filter(
@@ -29,7 +32,15 @@ export default {
 		this.next = this.$page.allProject.edges.filter(
 			item => item.node.title === this.$page.project.title
 		)[0].next;
-		attachMediumZoom();
+    attachMediumZoom();
+    if (this.headings.length == 0) {
+      console.log('headings empty')
+      let headings = document.querySelectorAll('h2,h3')
+      console.log(headings)
+      this.headings = Array.from(headings)
+    }
+   
+    
 	},
 	metaInfo() {
 		return {
@@ -54,6 +65,11 @@ export default {
 			summary
 			content
 			imagePath
+      headings {
+          depth
+          value
+          anchor
+        }
 		}
 		allProject(
 			sortBy: "order"
