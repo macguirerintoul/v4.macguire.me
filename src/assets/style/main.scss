@@ -458,13 +458,14 @@ textarea {
 	display: flex;
 	flex-wrap: wrap;
 
+  justify-content: space-between;
 	@include breakpoint(small) {
 		flex-direction: column;
 	}
 
 	div {
-		flex: 0 1 50%;
-    padding-right: 2rem;
+    flex: 0 1 30%;
+    // padding-right: 2rem;
     margin-bottom: 2rem;
 	}
 }
