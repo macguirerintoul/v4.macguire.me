@@ -56,7 +56,7 @@ export default {
 	},
 	metaInfo() {
 		return {
-			title: "Work"
+			title: "Home"
 		};
 	}
 };

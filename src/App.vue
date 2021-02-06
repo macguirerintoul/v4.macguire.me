@@ -13,7 +13,7 @@ export default {
 	},
 	metaInfo: {
 		// This is where the template for page titles is defined.
-		titleTemplate: "%s | Macguire Rintoul"
+		titleTemplate: "%s • Macguire Rintoul"
 	}
 };
 </script>

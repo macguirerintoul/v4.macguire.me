@@ -110,8 +110,14 @@ p {
 }
 
 .button--primary {
-	background-color: $color-blue;
-	color: $color-light;
+  @include light() {
+    background-color: $color-blue;
+    color: $color-light;
+  }
+  @include dark() {
+    background-color: $color-blue;
+    color: $color-light;
+  }
 }
 
 .button--secondary {
@@ -369,7 +375,12 @@ textarea {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	margin: 4rem auto;
+  margin: 4rem auto;
+  
+  p {
+    // Justified text doesn't look good in showcases
+    text-align: left;
+  }
 
 	video,
 	img {
