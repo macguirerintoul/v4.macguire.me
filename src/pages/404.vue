@@ -1,6 +1,6 @@
 <template>
 	<div>
 		<h1>Page not found (404)</h1>
-		<p><g-link to="/blog">How about a blog post?</g-link></p>
+		<p><g-link to="/">Country roads, take me home...</g-link></p>
 	</div>
 </template>

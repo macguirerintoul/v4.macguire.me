@@ -1,7 +1,6 @@
 <template>
 	<div>
-
-			<ProjectOverview :project="$page.project" />
+		<ProjectOverview :project="$page.project" />
 		<div class="content">
 			<VueRemarkContent />
 		</div>

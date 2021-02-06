@@ -1,6 +1,7 @@
 <template>
 	<section class="overview">
 		<div class="overview__main">
+      <span class="overview__header">{{ project.title }} • {{ project.year }} • <Tag v-bind:key="tag" v-for="(tag, index) in project.tags"><span v-if="index != 0">, </span>{{ tag }}</Tag></span>
 			<p class="hero overview__summary" v-html="project.summary" />
       <MagicImage
 				class="overview__image"
@@ -35,10 +36,11 @@
 
 <script>
 import MagicImage from "./MagicImage";
+import Tag from './Tag';
 
 export default {
 	components: {
-		MagicImage
+		MagicImage, Tag
 	},
 	props: {
 		project: {

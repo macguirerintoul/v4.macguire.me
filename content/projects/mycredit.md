@@ -25,6 +25,7 @@ import MagicLink from '~/components/MagicLink'
 import MagicVideo from '~/components/MagicVideo'
 import MagicImage from '~/components/MagicImage'
 import Blockquote from '~/components/Blockquote'
+import MyCreditProcess from '~/assets/mycreditprocess.md'
 
 ## Highlights
 
@@ -86,6 +87,10 @@ MyCredit is a companion app for Vancity members to manage their credit and set g
   content="The Goals tab allows members to track their progress, see the steps they need to take to improve their score, and set new goals."
 />
 
-## Process
+<details>
+  <summary>Process</summary>
+  
+ 
+</details>
 
-Want more details? See [the making of MyCredit](/blog/the-making-of-mycredit).
+ <MyCreditProcess/>

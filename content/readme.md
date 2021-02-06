@@ -1,6 +1,6 @@
 # Content
 
-The `content` directory contains all site content that is stored as Markdown files. Gridsome uses these files to create pages. Each type of content requires certain front-matter fields to work properly. [`vue-remark`](https://github.com/gridsome/gridsome/tree/master/packages/vue-remark) is used to transform the Markdown, meaning we can import Vue components and use them in the files. However, they should be imported at the bottom since an excerpt is generated using the first _n_ characters of the Markdown content.
+The `content` directory contains all site content that is stored as Markdown files. Gridsome uses these files to create pages. Each type of content requires certain front-matter fields to work properly. [`vue-remark`](https://github.com/gridsome/gridsome/tree/master/packages/vue-remark) is used to transform the Markdown, meaning we can import Vue components and use them in the files.
 
 ## `./projects`
 

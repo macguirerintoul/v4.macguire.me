@@ -33,6 +33,19 @@ article {
 	}
 }
 
+summary {
+  @include type-level-2;
+  padding: 1rem;
+
+  &:hover, &:focus {
+    cursor: pointer;
+
+    @include dark() {
+      background: $color-dark-grey;
+    }
+  }
+}
+
 blockquote {
   @include dark() {
 	border-left: 2px solid $color-yellow;
@@ -130,7 +143,6 @@ tr {
 
 ul {
 	list-style-type: none;
-
 	li::before {
 		// change <li> bullets to en dashes
 		content: "–";
@@ -193,22 +205,6 @@ textarea {
 	}
 }
 
-.tag {
-	border: 1px solid $color-blue;
-	margin: 0.2rem 0.2rem 0 0;
-}
-
-.tag__text {
-	margin: 0.2rem 0.2rem 0 0;
-	padding: 0.4rem 0.3rem 0.3rem;
-}
- 
-.tag__hash {
-	display: inline-block;
-	background: $color-blue;
-	padding: 0.3rem 0.2rem 0.2rem;
-}
-
 .container {
 	margin-left: auto;
 	margin-right: auto;
@@ -260,7 +256,7 @@ textarea {
 	h4,
 	h5,
 	h6,
-	ul {
+	ul, summary {
     max-width: $content-width;
   }
 
@@ -282,7 +278,7 @@ textarea {
 	.video-embed,
 	img,
 	.project-context,
-	ul {
+	ul, summary {
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -434,6 +430,12 @@ textarea {
   margin-bottom: 1rem;
 }
 
+.overview__header{
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
 .overview__summary {
   @include type-level-big-content;
 	//max-width: $content-width;
@@ -484,7 +486,7 @@ textarea {
 .tdt-block {
 	margin-bottom: 5rem;
 	display: grid;
-	grid-template-columns: 4fr 6fr 2fr;
+  grid-template-columns: 1fr 2fr;
 	column-gap: 4rem;
 
 	@include breakpoint(small) {
@@ -498,7 +500,9 @@ textarea {
 
 	.tdt-block__title h2 {
 		margin: 0;
-	}
+  }
+  
+	
 
 	.tdt-block__description {
     line-height: 2.1rem;
@@ -507,13 +511,18 @@ textarea {
 
 }
 
-.tdt-block__date,
-.blog-post__date {
-	font-weight: 600;
+.tdt-block__subtitle, .overview__header {
+  @include type-level-4;
+  color: $color-mid-grey-text;
 }
 
+// .tdt-block__date,
+// .blog-post__date {
+// 	font-weight: 600;
+// }
+
 .tdt-block__tags {
-	display: flex;
+	display: inline-flex;
 	flex-wrap: wrap;
 }
 

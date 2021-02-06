@@ -1,15 +1,17 @@
 <template>
 	<div class="tdt-block">
-		<MagicLink class="tdt-block__title" :url="node.path">
-			<h2>{{ node.title }}</h2>
-		</MagicLink>
-		<p class="tdt-block__description">{{ node.description }}</p>
-		<div>
-			<small class="tdt-block__date">{{ date }}</small>
-			<div class="tdt-block__tags">
-				<Tag v-for="tag in this.node.tags">{{ tag }}</Tag>
-			</div>
+    	<div>
+        <MagicLink class="tdt-block__title" :url="node.path">
+          <h2>{{ node.title }}</h2>
+        </MagicLink>
+        <div class="tdt-block__subtitle"> 
+          <small class="tdt-block__date">{{ date }}  • </small>
+          <span class="tdt-block__tags">
+            <Tag v-bind:key="tag" v-for="(tag, index) in this.node.tags"><span v-if="index != 0">, </span>{{ tag }}</Tag>
+          </span>
+        </div>
 		</div>
+		<p class="tdt-block__description">{{ node.description }}</p>
 	</div>
 </template>
 
