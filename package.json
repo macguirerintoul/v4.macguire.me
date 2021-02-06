@@ -10,9 +10,9 @@
 	},
 	"dependencies": {
 		"@gridsome/source-filesystem": "0.6.2",
-		"@gridsome/vue-remark": "0.2.1",
+		"@gridsome/vue-remark": "0.2.6",
 		"cloudinary-vue": "1.1.0",
-		"gridsome": "0.7.22",
+		"gridsome": "0.7.23",
 		"medium-zoom": "1.0.5",
 		"normalize.css": "8.0.1"
 	},
