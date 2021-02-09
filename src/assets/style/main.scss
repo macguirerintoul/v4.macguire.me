@@ -248,6 +248,13 @@ textarea {
 }
 
 .content {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+
+  .content__main {
+    grid-column: 2;
+  }
+
   h1 {
     margin-bottom: 4rem;
   }
@@ -255,6 +262,10 @@ textarea {
   h2 {
     margin-top: 8rem;
     margin-bottom: 2rem;
+  }
+
+  h2:first-of-type {
+    margin-top: 0;
   }
 
   p {
@@ -479,6 +490,58 @@ textarea {
     // padding-right: 2rem;
     margin-bottom: 2rem;
 	}
+}
+
+.toc {
+  position: sticky;
+  top: 6rem;
+  align-self: start;
+
+  ul, li {
+    @include type-level-extra-small;
+
+	  line-height: 1.8rem;
+
+    a {
+      text-decoration: none;
+      @include light {
+        color: $color-mid-grey-text;
+      }
+      @include dark {
+        color: $color-mid-grey-text;
+      }
+    }
+
+    li.active > a {
+      transition: all 100ms;
+      font-weight: 400;
+      @include light {
+        color: $color-dark;
+      }
+      @include dark {
+        color: $color-light;
+      }
+    }
+  }
+
+  ul {
+    // @include light {
+    //   border-left: 1px solid $color-light-grey;
+    // }
+    // @include dark {
+    //   border-left: 1px solid $color-dark-grey;
+    // }
+    
+    padding: 0 1rem 0 0;
+    li::before {
+      // Get rid of custom list styles
+      content: none;
+      margin-left: 0;
+    }
+  }
+}
+.toc__item-h3 {
+  margin-left: 1rem;
 }
 
 /*

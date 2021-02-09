@@ -1,9 +1,9 @@
 <template>
-<div>
-    <TOC :headings="headings" />
+  <div>
 		<ProjectOverview :project="$page.project" />
 		<div class="content">
-			<VueRemarkContent />
+      <TOC :headings="headings" />
+			<VueRemarkContent class="content__main" />
 		</div>
 		<PreviousNext type="project" :previous="previous" :next="next" />
 	</div>
@@ -22,26 +22,36 @@ export default {
     TOC
 	},
 	data() {
-		return { next: { title: "", path: "" }, previous: { title: "", path: "" }, headings: [] };
+		return { next: { title: "", path: "" }, previous: { title: "", path: "" }, headings: []};
   },
-	updated() {
-		console.log("Project template updated");
-		this.previous = this.$page.allProject.edges.filter(
-			item => item.node.title === this.$page.project.title
-		)[0].previous;
-		this.next = this.$page.allProject.edges.filter(
-			item => item.node.title === this.$page.project.title
-		)[0].next;
-    attachMediumZoom();
-    if (this.headings.length == 0) {
-      console.log('headings empty')
-      let headings = document.querySelectorAll('h2,h3')
-      console.log(headings)
-      this.headings = Array.from(headings)
+  methods: {
+    getHeadings() {
+      if (this.headings.length === 0) {
+        let headings = document.querySelectorAll('h2,h3')
+        console.log(headings)
+        this.headings = Array.from(headings)
+      }
+    },
+    createPreviousNext() {
+      this.previous = this.$page.allProject.edges.filter(
+        item => item.node.title === this.$page.project.title
+      )[0].previous;
+      this.next = this.$page.allProject.edges.filter(
+        item => item.node.title === this.$page.project.title
+      )[0].next;
+    },
+    preparePage() {
+      this.getHeadings()
+      attachMediumZoom()
+      this.createPreviousNext()
     }
-   
-    
-	},
+  },
+  mounted() {
+    this.preparePage()
+  },
+  updated() {
+   this.preparePage()
+  },
 	metaInfo() {
 		return {
 			title: this.$page.project.title, // Set the <title> to that of the project
