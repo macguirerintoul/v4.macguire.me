@@ -47,9 +47,11 @@ export default {
     }
   },
   mounted() {
+    console.info("Project template mounted")
     this.preparePage()
   },
   updated() {
+    console.info("Project template updated")
    this.preparePage()
   },
 	metaInfo() {

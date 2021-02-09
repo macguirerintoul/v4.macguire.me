@@ -670,3 +670,12 @@ textarea {
 		content:none;
 	}
 }
+
+[id]::before {
+  // Give elements with an ID some space when navigating to them via anchor links
+  content: '';
+  display: block;
+  height:      75px;
+  margin-top: -75px;
+  visibility: hidden;
+}
