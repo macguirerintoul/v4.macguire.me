@@ -22,14 +22,15 @@ export default {
     TOC
 	},
 	data() {
-		return { next: { title: "", path: "" }, previous: { title: "", path: "" }, headings: []};
+		return { next: { title: "", path: "" }, previous: { title: "", path: "" }, headingsProject: "", currentProject: "", headings: []};
   },
   methods: {
     getHeadings() {
-      if (this.headings.length === 0) {
+			// Because this runs in updated, we need conditions or else this method will trigger another update which will call this method again, etc.
+      if (this.headings.length === 0 || this.headingsProject != this.currentProject) {
         let headings = document.querySelectorAll('h2,h3')
-        console.log(headings)
         this.headings = Array.from(headings)
+				this.headingsProject = this.$page.project.title
       }
     },
     createPreviousNext() {
@@ -41,6 +42,7 @@ export default {
       )[0].next;
     },
     preparePage() {
+			this.currentProject = this.$page.project.title
       this.getHeadings()
       attachMediumZoom()
       this.createPreviousNext()
