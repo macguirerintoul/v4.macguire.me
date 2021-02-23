@@ -8,7 +8,7 @@
 				v-for="heading in headings"
 				:key="heading.textContent"
 			>
-				<a :href="'#' + heading.id">
+				<a @click="openDetails" :href="'#' + heading.id">
 					{{ heading.textContent }}
 				</a>
 			</li>
@@ -24,9 +24,17 @@ export default {
 			default: []
 		}
 	},
+	methods: {
+		openDetails() {
+			// We need to expand the 'details' element that contains 'Process & more' when TOC links are clicked so that we can see the content inside it
+			document.querySelector("details").setAttribute("open", true);
+		}
+	},
 	updated() {
 		this.$nextTick(function() {
 			console.log("TOC ready for action");
+
+			// Create IntersectionObserver to set the last viewed heading as 'active' in the TOC
 			const observer = new IntersectionObserver(entries => {
 				entries.forEach(entry => {
 					const id = entry.target.getAttribute("id");
@@ -44,6 +52,7 @@ export default {
 				});
 			});
 			
+			// Start observing 😎
       document.querySelectorAll('h2,h3').forEach((h) => {
         observer.observe(h);
       });

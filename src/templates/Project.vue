@@ -54,7 +54,7 @@ export default {
   },
   updated() {
     console.info("Project template updated")
-   this.preparePage()
+		this.preparePage()
   },
 	metaInfo() {
 		return {

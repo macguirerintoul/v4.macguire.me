@@ -19,8 +19,17 @@ export default {
 	components: {
 		PreviousNext, TOC
 	},
+	methods: {
+    getHeadings() {
+			// Because this runs in updated, we need conditions or else this method will trigger another update which will call this method again, etc.
+      if (this.headings.length === 0) {
+        let headings = document.querySelectorAll('h2,h3')
+        this.headings = Array.from(headings)
+      }
+    },
+	},
 	data() {
-		return { next: { title: "", path: "" }, previous: { title: "", path: "" } };
+		return { next: { title: "", path: "" }, previous: { title: "", path: "" }, headings: []};
 	},
 	updated() {
 		console.log("Post updated");
@@ -50,11 +59,11 @@ export default {
 			title
 			content
 			date
-       headings {
-          depth
-          value
-          anchor
-        }
+      headings {
+				depth
+				value
+				anchor
+      }
 		}
 		allPosts: allPost {
 			edges {
