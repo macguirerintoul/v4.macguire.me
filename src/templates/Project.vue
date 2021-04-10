@@ -13,7 +13,7 @@
 import { attachMediumZoom } from "../utilities";
 import ProjectOverview from "~/components/ProjectOverview";
 import PreviousNext from "~/components/PreviousNext";
-import TOC from "~/components/TOC";
+import TOC from "~/components/TOC"; 
 
 export default {
 	components: {
@@ -22,7 +22,7 @@ export default {
     TOC
 	},
 	data() {
-		return { next: { title: "", path: "" }, previous: { title: "", path: "" }, headingsProject: "", currentProject: "", headings: []};
+		return { mediumZoom: null,  next: { title: "", path: "" }, previous: { title: "", path: "" }, headingsProject: "", currentProject: "", headings: []};
   },
   methods: {
     getHeadings() {
@@ -44,7 +44,12 @@ export default {
     preparePage() {
 			this.currentProject = this.$page.project.title
       this.getHeadings()
-      attachMediumZoom()
+      try {
+        this.mediumZoom.detach() // We need to detach all images here, otherwise they'll have several instances added to them and they'll all pop up
+      } catch {
+        console.log("no mz exists")
+      }
+      this.mediumZoom = attachMediumZoom()
       this.createPreviousNext()
     }
   },

@@ -23,7 +23,10 @@ export function attachMediumZoom() {
 		...document.querySelectorAll(".g-image"),
 		...document.querySelectorAll(".magic-image img")
 	];
-	mediumZoom(images);
+  // Return the mediumZoom instance so it can be acted on by the component
+	return mediumZoom(images, {
+      background: window.getComputedStyle(document.body, null).getPropertyValue('background-color')
+    });
 }
 
 // turns a timestamp into a nicely readable date string

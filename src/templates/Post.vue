@@ -29,7 +29,7 @@ export default {
     },
 	},
 	data() {
-		return { next: { title: "", path: "" }, previous: { title: "", path: "" }, headings: []};
+		return { mediumZoom: null, next: { title: "", path: "" }, previous: { title: "", path: "" }, headings: []};
 	},
 	updated() {
 		console.log("Post updated");
@@ -39,7 +39,12 @@ export default {
 		this.next = this.$page.allPosts.edges.filter(
 			item => item.node.title === this.$page.post.title
 		)[0].next;
-		attachMediumZoom();
+    try {
+        this.mediumZoom.detach() // We need to detach all images here, otherwise they'll have several instances added to them and they'll all pop up
+      } catch {
+        console.log("no mz exists")
+      }
+		this.mediumZoom = attachMediumZoom();
 	},
 	methods: {
 		toDateString
