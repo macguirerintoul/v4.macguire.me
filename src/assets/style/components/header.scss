@@ -13,7 +13,7 @@
 	position: fixed;
 	right: 0;
 	top: 0;
-	z-index: 2; // Embeds cover navbar unless this is set
+	z-index: 1; // This is required because iframes overlap fixed elements (haven't figured out why yet)
 
 	@include breakpoint(small) {
 		bottom: 0;

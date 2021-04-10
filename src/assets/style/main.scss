@@ -679,3 +679,11 @@ textarea {
   margin-top: -75px;
   visibility: hidden;
 }
+
+.medium-zoom-overlay {
+  z-index: 2; // above nav
+}
+
+.medium-zoom-image {
+  z-index: 3; // above .medium-zoom-overlay
+}
