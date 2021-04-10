@@ -52,7 +52,7 @@ export default {
       this.mediumZoom = attachMediumZoom()
       this.createPreviousNext()
     }
-  },
+  }, 
   mounted() {
     console.info("Project template mounted")
     this.preparePage()
@@ -62,11 +62,10 @@ export default {
 		this.preparePage()
   },
 	metaInfo() {
-		return {
+    return {
 			title: this.$page.project.title, // Set the <title> to that of the project
 			script: [{ src: "https://player.vimeo.com/api/player.js" }] // Load the Vimeo embedded player code
-		};
-	}
+  }}
 };
 </script>
 
