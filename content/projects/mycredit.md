@@ -1,7 +1,7 @@
 ---
 title: MyCredit
 for: "IAT 438: Interactive Objects & Environments"
-description: "MyCredit is a mobile app that helps people learn about personal credit."
+description: "Mobile app that helps people learn about personal credit"
 featured: true
 order: 1
 imagePath: MyCredit/images/featured

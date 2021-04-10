@@ -20,6 +20,9 @@
 		</section>
 
 		<section class="content resume">
+			<div>
+			</div>
+			<div>
 			<h2>Work Experience</h2>
 
 			<div class="resume__item">
@@ -77,6 +80,7 @@
 						prototyped VR projects for Cardboard and Oculus Go
 					</li>
 				</ul>
+			</div>
 			</div>
 		</section>
 	</div>

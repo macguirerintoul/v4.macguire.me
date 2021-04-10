@@ -13,8 +13,8 @@
 			@submit.prevent="handleSubmit"
 		>
 			<p>
-				Here's a contact form that goes straight to my inbox. Or, feel free to
-				email me at firstname.lastname@gmail.com.
+				Here's a contact form that goes straight to my inbox. Or, you can
+				email me at firstname.lastname@protonmail.ch.
 			</p>
 
 			<input type="hidden" form-name="Contact" />

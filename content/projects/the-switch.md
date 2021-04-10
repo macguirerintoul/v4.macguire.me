@@ -1,7 +1,7 @@
 ---
 title: The Switch
 for: "IAT 438: Interactive Objects & Environments"
-description: "The Switch is a redesign of a menstrual cup webstore that addresses the apprehensions of potential customers."
+description: "Redesign of a menstrual cup webstore that addresses the apprehensions of potential customers"
 featured: true
 order: 3
 imagePath: The_Switch/images/featured

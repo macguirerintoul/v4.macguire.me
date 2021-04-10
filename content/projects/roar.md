@@ -1,7 +1,7 @@
 ---
 title: ROAR
 for: Vancouver Coastal Health
-description: "ROAR is a web app that streamlines the process of registering newly-hired employees into training sessions."
+description: "Web app that streamlines the process of registering newly-hired employees into training sessions"
 year: 2019
 published: true
 order: 2
@@ -13,7 +13,7 @@ roles:
     "Interaction Design",
     "Interface Design",
     "Project Management",
-    "Full-Stack Web Development",
+    "Software Development",
   ]
 tools: ["Sketch", "React", "Laravel"]
 interested: "<a href='/contact'>Contact me</a>"

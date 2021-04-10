@@ -23,7 +23,7 @@ export function attachMediumZoom() {
 		...document.querySelectorAll(".g-image"),
 		...document.querySelectorAll(".magic-image img")
 	];
-	mediumZoom(images, { background: "#000" });
+	mediumZoom(images);
 }
 
 // turns a timestamp into a nicely readable date string
