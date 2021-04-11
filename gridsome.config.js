@@ -6,6 +6,7 @@
 
 module.exports = {
 	siteName: "Macguire Rintoul",
+  titleTemplate: "%s ✦ Macguire Rintoul",
 	siteDescription:
 		"I'm Macguire, an experience designer & software developer from Vancouver, BC. Currently, I'm working at Visier as a User Experience Design Intern. Previously, I've worked at Vancouver Coastal Health and the Connections Lab.",
 	permalinks: {

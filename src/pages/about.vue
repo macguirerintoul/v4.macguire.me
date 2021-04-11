@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<DefaultLayout>
 		<section class="overview">
 			<div class="overview__main">
 					<h1 class="overview__title">About</h1>
@@ -83,7 +83,7 @@
 			</div>
 			</div>
 		</section>
-	</div>
+	</DefaultLayout>
 </template>
 
 <script>

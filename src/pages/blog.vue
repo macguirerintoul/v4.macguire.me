@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<DefaultLayout>
 		<h1>Blog</h1>
 		<section class="blog-posts">
 			<BlogPost
@@ -8,7 +8,7 @@
 				:node="edge.node"
 			/>
 		</section>
-	</div>
+	</DefaultLayout>
 </template>
 
 <script>

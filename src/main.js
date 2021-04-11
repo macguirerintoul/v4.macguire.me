@@ -6,7 +6,8 @@ import Cloudinary from "cloudinary-vue";
 
 // Import Gridsome config to use the siteDescription
 const config = require("../gridsome.config.js");
-
+import DefaultLayout from '~/layouts/DefaultLayout.vue'
+ 
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function(Vue, { head }) {
 	// Make it UTF-8
@@ -35,4 +36,6 @@ export default function(Vue, { head }) {
 	Vue.use(Cloudinary, {
 		configuration: { cloudName: "macguire" }
 	});
+
+  Vue.component('DefaultLayout', DefaultLayout)
 }

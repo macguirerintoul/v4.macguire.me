@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<DefaultLayout>
       <TOC :headings="this.$page.post.headings" />
 		<article class="content">
 			<h1>{{ $page.post.title }}</h1>
@@ -7,7 +7,7 @@
 			<VueRemarkContent />
 		</article>
 		<PreviousNext type="post" :previous="previous" :next="next" />
-	</div>
+	</DefaultLayout>
 </template>
 
 <script>

@@ -1,71 +1,103 @@
 <template>
-  <div>
+	<DefaultLayout>
 		<ProjectOverview :project="$page.project" />
 		<div class="content">
-      <TOC :headings="headings" />
+			<TOC :headings="headings" />
 			<VueRemarkContent class="content__main" />
 		</div>
 		<PreviousNext type="project" :previous="previous" :next="next" />
-	</div>
+	</DefaultLayout>
 </template>
 
 <script>
 import { attachMediumZoom } from "../utilities";
 import ProjectOverview from "~/components/ProjectOverview";
 import PreviousNext from "~/components/PreviousNext";
-import TOC from "~/components/TOC"; 
-
+import TOC from "~/components/TOC";
+  
 export default {
 	components: {
 		ProjectOverview,
-    PreviousNext, 
-    TOC
+		PreviousNext,
+		TOC
 	},
 	data() {
-		return { mediumZoom: null,  next: { title: "", path: "" }, previous: { title: "", path: "" }, headingsProject: "", currentProject: "", headings: []};
-  },
-  methods: {
-    getHeadings() {
-			// Because this runs in updated, we need conditions or else this method will trigger another update which will call this method again, etc.
-      if (this.headings.length === 0 || this.headingsProject != this.currentProject) {
-        let headings = document.querySelectorAll('h2,h3')
-        this.headings = Array.from(headings)
-				this.headingsProject = this.$page.project.title
-      }
-    },
-    createPreviousNext() {
-      this.previous = this.$page.allProject.edges.filter(
-        item => item.node.title === this.$page.project.title
-      )[0].previous;
-      this.next = this.$page.allProject.edges.filter(
-        item => item.node.title === this.$page.project.title
-      )[0].next;
-    },
-    preparePage() {
-			this.currentProject = this.$page.project.title
-      this.getHeadings()
-      try {
-        this.mediumZoom.detach() // We need to detach all images here, otherwise they'll have several instances added to them and they'll all pop up
-      } catch {
-        console.log("no mz exists")
-      }
-      this.mediumZoom = attachMediumZoom()
-      this.createPreviousNext()
+		return {
+			mediumZoom: null,
+			next: { title: "", path: "" },
+			previous: { title: "", path: "" },
+			headingsProject: "",
+			currentProject: "",
+			headings: []
+		};
+	},
+	computed: {
+		thumbnailData() {
+			return {
+				title: this.$page.project.title,
+				description: this.$page.project.summary
+			};
+		},
+		thumbnailQuery() {
+			return new URLSearchParams(
+				Object.fromEntries(
+					Object.entries(this.thumbnailData).filter(
+						([key, val]) => val !== undefined
+					)
+				)
+			).toString();
+		},
+    ogImage() {
+      return `localhost:3850/.netlify/functions/image?${this.thumbnailQuery}`
     }
-  }, 
-  mounted() {
-    console.info("Project template mounted")
-    this.preparePage()
-  },
-  updated() {
-    console.info("Project template updated")
-		this.preparePage()
-  },
+	},
+	methods: {
+		getHeadings() {
+			// Because this runs in updated, we need conditions or else this method will trigger another update which will call this method again, etc.
+			if (
+				this.headings.length === 0 ||
+				this.headingsProject != this.currentProject
+			) {
+				let headings = document.querySelectorAll("h2,h3");
+				this.headings = Array.from(headings);
+				this.headingsProject = this.$page.project.title;
+			}
+		},
+		createPreviousNext() {
+			this.previous = this.$page.allProject.edges.filter(
+				item => item.node.title === this.$page.project.title
+			)[0].previous;
+			this.next = this.$page.allProject.edges.filter(
+				item => item.node.title === this.$page.project.title
+			)[0].next;
+		},
+		preparePage() {
+			this.currentProject = this.$page.project.title;
+			this.getHeadings();
+			try {
+				this.mediumZoom.detach(); // We need to detach all images here, otherwise they'll have several instances added to them and they'll all pop up
+			} catch {
+				console.log("no mz exists");
+			}
+			this.mediumZoom = attachMediumZoom();
+			this.createPreviousNext();
+		}
+	},
+	mounted() {
+		console.info("Project template mounted");
+		this.preparePage();
+	},
+	updated() {
+		console.info("Project template updated");
+		this.preparePage();
+	},
 	metaInfo() {
-    return {
+		return {
 			title: this.$page.project.title, // Set the <title> to that of the project
-			script: [{ src: "https://player.vimeo.com/api/player.js" }] // Load the Vimeo embedded player code
-  }}
+			script: [{ src: "https://player.vimeo.com/api/player.js" }], // Load the Vimeo embedded player code
+			meta: [{ property: "og:image", content: this.ogImage }]
+		};
+	}
 };
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<DefaultLayout>
 		<h1>Contact</h1>
 
 		<!-- netlify attribute connects the form to Netlify Forms -->
@@ -49,7 +49,7 @@
 				An error occurred 😳
 			</p>
 		</div>
-	</div>
+	</DefaultLayout>
 </template>
 
 <script>

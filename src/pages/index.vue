@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<DefaultLayout>
 		<p class="hero">
 			I'm Macguire, an experience designer & software developer from Vancouver,
 			BC. Currently, I'm working at
@@ -19,7 +19,7 @@
 				/>
 			</div>
 		</section>
-	</div>
+	</DefaultLayout>
 </template>
 
 <page-query>
@@ -47,12 +47,12 @@
 
 <script>
 import TDTBlock from "~/components/TDTBlock.vue";
-import MagicLink from "~/components/MagicLink.vue";
+import MagicLink from "~/components/MagicLink.vue"; 
 
 export default {
 	components: {
 		TDTBlock,
-		MagicLink
+		MagicLink 
 	},
 	metaInfo() {
 		return {
