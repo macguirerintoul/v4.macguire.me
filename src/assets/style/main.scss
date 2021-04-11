@@ -562,6 +562,10 @@ textarea {
 .hero,
 .content .hero { 
 	margin: 4rem 0 8rem;
+
+}
+
+.hero-links {
   a {
     margin-right: 1rem;
   }
@@ -576,11 +580,11 @@ textarea {
 .project-flex-container {
 	display: flex;
 	flex-direction: column;
-	margin-top: 2rem;
+	margin-top: 6rem;
 }
 
 .tdt-block {
-	margin-bottom: 5rem;
+	margin-bottom: 7rem;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	column-gap: 4rem;
@@ -599,7 +603,8 @@ textarea {
 	}
 
 	.tdt-block__description {
-		line-height: 2.1rem;
+    @include type-level-2;
+    font-weight: 300; // Override the font weight for this special case
 		margin: 0;
 	}
 }

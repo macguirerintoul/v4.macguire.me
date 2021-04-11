@@ -1,18 +1,18 @@
 ---
 title: Forecast
-for: Fun!
-description: "To-do app with 'smart' prioritization"
+for: Fun
+description: "Find to-do list tranquility; Forecast helps you decide what to work on."
 featured: true
 imagePath: Forecast/images/featured
 date: 2021-02-22
 year: 2021
-order: 1
+order: 2
 published: true
 url: https://forecast.macguire.me
 tags: ['Design', 'Development']
 roles: ['Interaction Design', 'Visual Design', 'Software Development']
 tools: ['Sketch', 'Electron', 'Vue']
-summary: "Forecast is a simple app that helps people stay organized by counting down to due dates and events. The items that need to be done soonest are shown first, and users can make decisions about what to work on based on how much time they have left."
+summary: "Forecast is a simple app that helps people stay organized by counting down to due dates and events. Showing the available time for each task helps users decide what to work on right now."
 ---
 
 import Showcase from '~/components/Showcase'
@@ -38,7 +38,7 @@ Around the same time, a friend of mine was creating an Electron app for a school
 
 ## Outcome
 
-[Forecast](https://forecast.macguire.me) is a cross-platform desktop app to help manage tasks.
+[Forecast](https://forecast.macguire.me) is a cross-platform desktop app that helps manage tasks. That's really all there is to it.
 
 <Showcase
   path="Forecast/videos/demo2"
@@ -47,8 +47,6 @@ Around the same time, a friend of mine was creating an Electron app for a school
   orientation="media-right"
   content="Add tasks to your to-do list, and Forecast shows you the time remaining until each one is due."
 />
-
-That's really all there is to it.
 
 ## Process & more
 

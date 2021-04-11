@@ -2,7 +2,7 @@
 	<DefaultLayout>
 		<div class="hero">
 			<p class="hero-paragraph">What are you looking for today?</p>
-			<p>
+			<p class="hero-links">
 				<magic-link>Experience Design</magic-link> ✦
 				<magic-link>Software Development</magic-link> ✦
 				<magic-link>System Administration</magic-link>

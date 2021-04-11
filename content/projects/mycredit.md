@@ -1,7 +1,7 @@
 ---
 title: MyCredit
 for: "IAT 438: Interactive Objects & Environments"
-description: "Mobile app that helps people learn about personal credit"
+description: "Demystify personal credit without learning accounting."
 featured: true
 order: 1
 imagePath: MyCredit/images/featured
