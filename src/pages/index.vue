@@ -1,8 +1,14 @@
 <template>
 	<DefaultLayout>
-		<p class="hero">
-			{{hero}}
-		</p>
+		<div class="hero">
+			<p class="hero-paragraph">What are you looking for today?</p>
+			<p>
+				<magic-link>Experience Design</magic-link> ✦
+				<magic-link>Software Development</magic-link> ✦
+				<magic-link>System Administration</magic-link>
+			</p>
+		</div>
+
 		<hr />
 		<section class="work">
 			<h1>Selected work</h1>
@@ -42,34 +48,38 @@
 
 <script>
 import TDTBlock from "~/components/TDTBlock.vue";
-import MagicLink from "~/components/MagicLink.vue"; 
-import { getOGImage, makeThumbnailQuery } from '../utilities';
+import MagicLink from "~/components/MagicLink.vue";
+import { getOGImage, makeThumbnailQuery } from "../utilities";
 
 export default {
 	components: {
 		TDTBlock,
-		MagicLink 
-	}, 
+		MagicLink
+	},
 	metaInfo() {
 		return {
 			title: "Home",
-      meta: [
-				{ property: "og:image", content: getOGImage(makeThumbnailQuery(this.thumbnailData)) },
+			meta: [
+				{
+					property: "og:image",
+					content: getOGImage(makeThumbnailQuery(this.thumbnailData))
+				}
 			]
 		};
 	},
-  data() {
-    return {
-      hero: "I'm Macguire — an experience designer, software developer, music producer, and IT consultant."
-    }
-  },
-  computed: {
+	data() {
+		return {
+			hero:
+				"I'm Macguire — an experience designer, software developer, music producer, and IT consultant."
+		};
+	},
+	computed: {
 		thumbnailData() {
 			return {
 				title: "Macguire Rintoul",
 				description: this.hero
 			};
-		},
-  }
+		}
+	}
 };
 </script>

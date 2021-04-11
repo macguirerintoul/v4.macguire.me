@@ -560,12 +560,19 @@ textarea {
 */
 
 .hero,
-.content .hero {
-	@include type-level-big-content;
-
-	margin: 8rem 0;
+.content .hero { 
+	margin: 4rem 0 8rem;
+  a {
+    margin-right: 1rem;
+  }
+  a:not(:first-of-type) {
+    margin-left: 1rem;
+  }
 }
-
+.hero-paragraph {
+  @include type-level-big-content;
+  margin-bottom: 1rem;
+}
 .project-flex-container {
 	display: flex;
 	flex-direction: column;
