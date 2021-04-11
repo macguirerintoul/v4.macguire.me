@@ -38,6 +38,15 @@ module.exports = {
 				route: "/blog/:title",
 				template: "./src/templates/Post.vue" // Optional
 			}
+		},
+    {
+			// Add Services collection
+			use: "@gridsome/vue-remark",
+			options: {
+				typeName: "Service", // Required
+				baseDir: "./content/services", // Where .md files are located
+				route: "/services/:title"
+			}
 		}
 	],
 	transformers: {

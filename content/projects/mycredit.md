@@ -1,7 +1,7 @@
 ---
 title: MyCredit
 for: "IAT 438: Interactive Objects & Environments"
-description: "Demystify personal credit without learning accounting."
+description: "What the FICO? Demystify personal credit without breaking your brain."
 featured: true
 order: 1
 imagePath: MyCredit/images/featured

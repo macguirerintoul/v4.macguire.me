@@ -35,7 +35,7 @@ export default {
 		thumbnailData() {
 			return {
 				title: this.$page.project.title,
-				description: this.$page.project.summary.replace(/<[^>]+>/g, ''),
+				description: this.$page.project.description,
 				imagePath: this.$page.project.imagePath,
 			};
 		},

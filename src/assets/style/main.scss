@@ -338,12 +338,14 @@ textarea {
 */
 
 .resume {
+margin-top: 4rem;
 	h3,
 	h4 {
 		margin: 0 auto;
 	}
 
 	.resume__item {
+  display: block;
 		margin: 2rem 0 3rem;
 	}
 
@@ -385,7 +387,9 @@ textarea {
 .previous-next__next {
 	text-align: right;
 }
-
+.spacer {
+  margin: 0 1rem;
+}
 .showcase {
 	align-items: center;
 	display: flex;
@@ -565,14 +569,6 @@ textarea {
 
 }
 
-.hero-links {
-  a {
-    margin-right: 1rem;
-  }
-  a:not(:first-of-type) {
-    margin-left: 1rem;
-  }
-}
 .hero-paragraph {
   @include type-level-big-content;
   margin-bottom: 1rem;
@@ -715,6 +711,7 @@ textarea {
     gap: 2rem;
     max-height: 500px;
     p {
+      @include type-level-big-content;
       max-height: 280px;
       overflow: hidden;
     }
@@ -723,13 +720,16 @@ textarea {
     bottom: 13rem; 
     width: 100%; 
     height: 12rem;
-    
+    /**
+    Gradient effect for fading out text
+    Not used anymore since I switched to using `description` instead of longer `summary`
     @include dark() {
       background-image: linear-gradient(to bottom, transparent, $color-dark);
     }
     @include light() {
       background-image: linear-gradient(to bottom, transparent, $color-light);
     }
+    **/
    }
 	}
 	h1 {
