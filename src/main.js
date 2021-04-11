@@ -26,16 +26,16 @@ export default function(Vue, { head }) {
 	head.meta.push({
 		name: "description",
 		content: config.siteDescription
-	});
-
+	}); 
+  
 	// Make it English
 	head.htmlAttrs = { lang: "en" };
-
 
 	// Set up Cloudinary
 	Vue.use(Cloudinary, {
 		configuration: { cloudName: "macguire" }
 	});
 
+  // Make DefaultLayout available to all pages & templates without having to import it
   Vue.component('DefaultLayout', DefaultLayout)
 }

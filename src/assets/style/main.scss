@@ -18,11 +18,11 @@ a {
 	@include underline-link;
 
 	@include dark() {
-    color: $color-light;
-  }
-  @include light() {
-    color: $color-dark;
-  }
+		color: $color-light;
+	}
+	@include light() {
+		color: $color-dark;
+	}
 }
 
 article {
@@ -34,27 +34,28 @@ article {
 }
 
 summary {
-  @include type-level-4;
-  padding: 1rem;
+	@include type-level-4;
+	padding: 1rem;
 
-  &:hover, &:focus {
-    cursor: pointer;
+	&:hover,
+	&:focus {
+		cursor: pointer;
 
-    @include dark() {
-      background: $color-dark-grey;
-    }
-  }
+		@include dark() {
+			background: $color-dark-grey;
+		}
+	}
 }
 
 blockquote {
-  @include dark() {
-	  border-left: 2px solid $color-red;
-  }
-  @include light() {
-    border-left: 2px solid $color-red;
-  }
+	@include dark() {
+		border-left: 2px solid $color-red;
+	}
+	@include light() {
+		border-left: 2px solid $color-red;
+	}
 	margin: 6rem 0;
-  padding-left: 2rem;
+	padding-left: 2rem;
 	white-space: pre-wrap;
 
 	@include breakpoint(small) {
@@ -63,14 +64,14 @@ blockquote {
 }
 
 body {
-  @include dark() {
-    color: $color-light;
-    background-color: $color-dark;
-  }
-  @include light() {
-    color: $color-dark;
-    background-color: $color-light;
-  }
+	@include dark() {
+		color: $color-light;
+		background-color: $color-dark;
+	}
+	@include light() {
+		color: $color-dark;
+		background-color: $color-light;
+	}
 	font-family: $font-stack;
 	font-weight: 300; // Default font weight (things are getting bolded/italic for some reason)
 	height: 100%;
@@ -81,8 +82,9 @@ body {
 	}
 }
 
-body, nav {
-  transition: all 300ms;
+body,
+nav {
+	transition: all 300ms;
 }
 
 span {
@@ -95,7 +97,7 @@ button {
 }
 
 p {
-  margin-top: 0;
+	margin-top: 0;
 }
 
 .button--primary,
@@ -110,14 +112,14 @@ p {
 }
 
 .button--primary {
-  @include light() {
-    background-color: $color-blue;
-    color: $color-light;
-  }
-  @include dark() {
-    background-color: $color-blue;
-    color: $color-light;
-  }
+	@include light() {
+		background-color: $color-blue;
+		color: $color-light;
+	}
+	@include dark() {
+		background-color: $color-blue;
+		color: $color-light;
+	}
 }
 
 .button--secondary {
@@ -129,12 +131,12 @@ hr {
 	// Style horizontal dividers to match the site
 	margin: 0 auto;
 	max-width: $max-container-width;
-  @include dark() {
-    border: 1px solid $color-dark-grey;
-  }
-  @include light() {
-	  border: 1px solid $color-light-grey;
-  }
+	@include dark() {
+		border: 1px solid $color-dark-grey;
+	}
+	@include light() {
+		border: 1px solid $color-light-grey;
+	}
 }
 
 small,
@@ -169,14 +171,14 @@ code {
 
 img {
 	display: block;
-  max-width: 100%;
-  
-  @include light() {
-    border: 1px solid $color-dark-grey;
-  }
-  @include dark() {
-    border: 1px solid $color-light-grey;
-  }
+	max-width: 100%;
+
+	@include light() {
+		border: 1px solid $color-dark-grey;
+	}
+	@include dark() {
+		border: 1px solid $color-light-grey;
+	}
 }
 
 main {
@@ -248,29 +250,29 @@ textarea {
 }
 
 .content {
-  display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+	display: grid;
+	grid-template-columns: 1fr 4fr 1fr;
 
-  .content__main {
-    grid-column: 2;
-  }
+	.content__main {
+		grid-column: 2;
+	}
 
-  h1 {
-    margin-bottom: 4rem;
-  }
+	h1 {
+		margin-bottom: 4rem;
+	}
 
-  h2 {
-    margin-top: 8rem;
-    margin-bottom: 2rem;
-  }
+	h2 {
+		margin-top: 8rem;
+		margin-bottom: 2rem;
+	}
 
-  h2:first-of-type {
-    margin-top: 0;
-  }
+	h2:first-of-type {
+		margin-top: 0;
+	}
 
-  p {
-    margin-bottom: 3rem;
-  }
+	p {
+		margin-bottom: 3rem;
+	}
 
 	p,
 	blockquote,
@@ -280,17 +282,19 @@ textarea {
 	h4,
 	h5,
 	h6,
-	ul, summary {
-    max-width: $content-width;
-  }
+	ul,
+	summary {
+		max-width: $content-width;
+	}
 
-  .overview__summary {
-    max-width: unset;
-  }
+	.overview__summary {
+		max-width: unset;
+	}
 
-  p, blockquote {
-    text-align: justify;
-  }
+	p,
+	blockquote {
+		text-align: justify;
+	}
 
 	p,
 	blockquote,
@@ -302,7 +306,8 @@ textarea {
 	.video-embed,
 	img,
 	.project-context,
-	ul, summary {
+	ul,
+	summary {
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -386,12 +391,12 @@ textarea {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-  margin: 4rem auto;
-  
-  p {
-    // Justified text doesn't look good in showcases
-    text-align: left;
-  }
+	margin: 4rem auto;
+
+	p {
+		// Justified text doesn't look good in showcases
+		text-align: left;
+	}
 
 	video,
 	img {
@@ -455,21 +460,21 @@ textarea {
 }
 
 .overview__title {
-  margin-top: 6rem;
-  margin-bottom: 1rem;
+	margin-top: 6rem;
+	margin-bottom: 1rem;
 }
 
-.overview__header{
-  display: block;
-  text-align: center;
-  margin: auto;
+.overview__header {
+	display: block;
+	text-align: center;
+	margin: auto;
 }
 
 .overview__summary {
-  @include type-level-big-content;
+	@include type-level-big-content;
 	//max-width: $content-width;
-  //padding-right: 2rem;
-  text-align: justify;
+	//padding-right: 2rem;
+	text-align: justify;
 
 	@include breakpoint(small) {
 		padding-right: 0;
@@ -480,68 +485,69 @@ textarea {
 	display: flex;
 	flex-wrap: wrap;
 
-  justify-content: space-between;
+	justify-content: space-between;
 	@include breakpoint(small) {
 		flex-direction: column;
 	}
 
 	div {
-    flex: 0 1 30%;
-    // padding-right: 2rem;
-    margin-bottom: 2rem;
+		flex: 0 1 30%;
+		// padding-right: 2rem;
+		margin-bottom: 2rem;
 	}
 }
 
 .toc {
-  position: sticky;
-  top: 6rem;
-  align-self: start;
+	position: sticky;
+	top: 6rem;
+	align-self: start;
 
-  ul, li {
-    @include type-level-extra-small;
+	ul,
+	li {
+		@include type-level-extra-small;
 
-	  line-height: 1.8rem;
+		line-height: 1.8rem;
 
-    a {
-      text-decoration: none;
-      @include light {
-        color: $color-mid-grey-text;
-      }
-      @include dark {
-        color: $color-mid-grey-text;
-      }
-    }
+		a {
+			text-decoration: none;
+			@include light {
+				color: $color-mid-grey-text;
+			}
+			@include dark {
+				color: $color-mid-grey-text;
+			}
+		}
 
-    li.active > a {
-      transition: all 100ms;
-      font-weight: 400;
-      @include light {
-        color: $color-dark;
-      }
-      @include dark {
-        color: $color-light;
-      }
-    }
-  }
+		li.active > a {
+			transition: all 100ms;
+			font-weight: 400;
+			@include light {
+				color: $color-dark;
+			}
+			@include dark {
+				color: $color-light;
+			}
+		}
+	}
 
-  ul {
-    // @include light {
-    //   border-left: 1px solid $color-light-grey;
-    // }
-    // @include dark {
-    //   border-left: 1px solid $color-dark-grey;
-    // }
-    
-    padding: 0 1rem 0 0;
-    li::before {
-      // Get rid of custom list styles
-      content: none;
-      margin-left: 0;
-    }
-  }
+	ul {
+		// @include light {
+		//   border-left: 1px solid $color-light-grey;
+		// }
+		// @include dark {
+		//   border-left: 1px solid $color-dark-grey;
+		// }
+
+		padding: 0 1rem 0 0;
+		li::before {
+			// Get rid of custom list styles
+			content: none;
+			margin-left: 0;
+		}
+	}
 }
 .toc__item-h3 {
-  margin-left: 1rem;
+	margin-left: 1rem;
 }
 
 /*
@@ -553,7 +559,8 @@ textarea {
   # #    # #####  ###### #    #
 */
 
-.hero, .content .hero {
+.hero,
+.content .hero {
 	@include type-level-big-content;
 
 	margin: 8rem 0;
@@ -568,7 +575,7 @@ textarea {
 .tdt-block {
 	margin-bottom: 5rem;
 	display: grid;
-  grid-template-columns: 1fr 2fr;
+	grid-template-columns: 1fr 2fr;
 	column-gap: 4rem;
 
 	@include breakpoint(small) {
@@ -582,20 +589,18 @@ textarea {
 
 	.tdt-block__title h2 {
 		margin: 0;
-  }
-  
-	
-
-	.tdt-block__description {
-    line-height: 2.1rem;
-		margin: 0;
 	}
 
+	.tdt-block__description {
+		line-height: 2.1rem;
+		margin: 0;
+	}
 }
 
-.tdt-block__subtitle, .overview__header {
-  @include type-level-4;
-  color: $color-mid-grey-text;
+.tdt-block__subtitle,
+.overview__header {
+	@include type-level-4;
+	color: $color-mid-grey-text;
 }
 
 // .tdt-block__date,
@@ -640,7 +645,6 @@ textarea {
 		margin: 0;
 	}
 }
-	
 
 /*
 
@@ -667,23 +671,59 @@ textarea {
 .util-unstyled-list {
 	padding-left: 0;
 	li::before {
-		content:none;
+		content: none;
 	}
 }
 
 [id]::before {
-  // Give elements with an ID some space when navigating to them via anchor links
-  content: '';
-  display: block;
-  height:      75px;
-  margin-top: -75px;
-  visibility: hidden;
+	// Give elements with an ID some space when navigating to them via anchor links
+	content: "";
+	display: block;
+	height: 75px;
+	margin-top: -75px;
+	visibility: hidden;
 }
 
 .medium-zoom-overlay {
-  z-index: 2; // above nav
+	z-index: 2; // above nav
 }
 
 .medium-zoom-image {
-  z-index: 3; // above .medium-zoom-overlay
+	z-index: 3; // above .medium-zoom-overlay
+}
+
+.image-layout {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	.image-layout-flex {
+		display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-height: 500px;
+    p {
+      max-height: 280px;
+      overflow: hidden;
+    }
+   .gradient {
+    position: relative; 
+    bottom: 13rem; 
+    width: 100%; 
+    height: 12rem;
+    
+    @include dark() {
+      background-image: linear-gradient(to bottom, transparent, $color-dark);
+    }
+    @include light() {
+      background-image: linear-gradient(to bottom, transparent, $color-light);
+    }
+   }
+	}
+	h1 {
+		margin-bottom: 2rem;
+	}
+  h3 {
+    text-align: center;
+  }
 }

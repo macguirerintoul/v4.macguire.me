@@ -91,7 +91,8 @@ import MagicLink from "~/components/MagicLink";
 
 export default {
 	metaInfo: {
-		title: "About"
+		title: "About",
+    meta: [{property: "og:title", content: document.title}]
 	},
 	components: {
 		MagicLink

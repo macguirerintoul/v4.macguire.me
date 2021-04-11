@@ -10,11 +10,11 @@
 </template>
 
 <script>
-import { attachMediumZoom } from "../utilities";
+import { attachMediumZoom, makeThumbnailQuery, getOGImage } from "../utilities";
 import ProjectOverview from "~/components/ProjectOverview";
 import PreviousNext from "~/components/PreviousNext";
 import TOC from "~/components/TOC";
-  
+
 export default {
 	components: {
 		ProjectOverview,
@@ -35,21 +35,10 @@ export default {
 		thumbnailData() {
 			return {
 				title: this.$page.project.title,
-				description: this.$page.project.summary
+				description: this.$page.project.summary.replace(/<[^>]+>/g, ''),
+				imagePath: this.$page.project.imagePath,
 			};
 		},
-		thumbnailQuery() {
-			return new URLSearchParams(
-				Object.fromEntries(
-					Object.entries(this.thumbnailData).filter(
-						([key, val]) => val !== undefined
-					)
-				)
-			).toString();
-		},
-    ogImage() {
-      return `localhost:3850/.netlify/functions/image?${this.thumbnailQuery}`
-    }
 	},
 	methods: {
 		getHeadings() {
@@ -95,7 +84,11 @@ export default {
 		return {
 			title: this.$page.project.title, // Set the <title> to that of the project
 			script: [{ src: "https://player.vimeo.com/api/player.js" }], // Load the Vimeo embedded player code
-			meta: [{ property: "og:image", content: this.ogImage }]
+			meta: [
+				{ property: "og:image", content: getOGImage(makeThumbnailQuery(this.thumbnailData)) },
+				{ property: "og:title", content: this.$page.project.title },
+				{ property: "og:description", content: this.$page.project.description }
+			]
 		};
 	}
 };
@@ -108,6 +101,7 @@ export default {
 			roles
 			tools
 			interested
+      description
 			tags
 			for
 			url

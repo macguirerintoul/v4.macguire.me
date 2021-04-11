@@ -1,12 +1,7 @@
 <template>
 	<DefaultLayout>
 		<p class="hero">
-			I'm Macguire, an experience designer & software developer from Vancouver,
-			BC. Currently, I'm working at
-			<MagicLink url="http://www.visier.com/">Visier</MagicLink> as a User
-			Experience Designer. Previously, I've worked at
-			<MagicLink url="http://vch.ca/">Vancouver Coastal Health</MagicLink> and
-			the <MagicLink url="http://clab.iat.sfu.ca/">Connections Lab</MagicLink>.
+			{{hero}}
 		</p>
 		<hr />
 		<section class="work">
@@ -48,16 +43,33 @@
 <script>
 import TDTBlock from "~/components/TDTBlock.vue";
 import MagicLink from "~/components/MagicLink.vue"; 
+import { getOGImage, makeThumbnailQuery } from '../utilities';
 
 export default {
 	components: {
 		TDTBlock,
 		MagicLink 
-	},
+	}, 
 	metaInfo() {
 		return {
-			title: "Home"
+			title: "Home",
+      meta: [
+				{ property: "og:image", content: getOGImage(makeThumbnailQuery(this.thumbnailData)) },
+			]
 		};
-	}
+	},
+  data() {
+    return {
+      hero: "I'm Macguire — an experience designer, software developer, music producer, and IT consultant."
+    }
+  },
+  computed: {
+		thumbnailData() {
+			return {
+				title: "Macguire Rintoul",
+				description: this.hero
+			};
+		},
+  }
 };
 </script>

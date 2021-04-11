@@ -1,10 +1,6 @@
-<template>
-	<div id="app"> 
-		<main class="container">
+<template> 
+		<main class="container image-layout">
 			<slot />
-		</main>
-		 
-	 
-	</div>
+		</main> 
 </template>
  

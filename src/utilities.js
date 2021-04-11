@@ -17,6 +17,20 @@ export function truncateOnWord(str, len = 200) {
 		.concat("...");
 }
 
+export function makeThumbnailQuery(object) {
+  return new URLSearchParams(
+    Object.fromEntries(
+      Object.entries(object).filter(
+        ([key, val]) => val !== undefined
+      )
+    )
+  ).toString();
+}
+
+export function getOGImage(query) {
+  return `localhost:3850/.netlify/functions/image?${query}`;
+}
+
 // Attach the medium-zoom library to images on the page
 export function attachMediumZoom() {
 	const images = [

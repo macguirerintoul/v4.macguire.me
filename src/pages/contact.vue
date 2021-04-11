@@ -54,8 +54,12 @@
 
 <script>
 export default {
-	metaInfo: {
-		title: "Contact"
+	metaInfo() {
+		return {
+      title: "Contact",
+      meta: [{property: "og:title", content: document.title
+      }]
+    }
 	},
 	data() {
 		return {
