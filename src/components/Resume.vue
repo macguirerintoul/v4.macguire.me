@@ -2,7 +2,7 @@
 	<section class="content">
 		<div><!-- I set up content to be 3 column grid... this is weird --></div>
 		<div class="resume">
-			<h2>Work Experience</h2>
+			<h2>Experience</h2>
 			<div v-bind:key="job.title+job.organization" v-for="job in resume" class="resume__item">
 				<h3>{{ job.title }} <Spacer/> {{ job.organization }}</h3>
 				<h4 class="resume__subtitle">
@@ -19,10 +19,11 @@
 <script>
 import resume from "../../content/resume.yaml";
 import Spacer from "~/components/Spacer"
+import MagicLink from "~/components/MagicLink" 
 
 export default {
   components: {
-    Spacer
+    Spacer, MagicLink 
   },
 	data() {
 		return { resume };

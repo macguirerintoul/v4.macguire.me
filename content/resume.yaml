@@ -1,23 +1,35 @@
 - title: User Experience Designer 
   organization: Visier
+  url: https://visier.com
   time: September 2020 to present
   description:
-    - create and improve data visualizations allowing Visier's 4,000 business customers to analyze over 10 million employee records
-    - improve usability by designing interfaces and interactions that follow conventions and best practices
-    - collaborate with product and solution managers to design analytic workflows
-    - communicate design decisions and solve problems with developers to ship features and improvements 
+    - oversee experience design for Visier's interactive data visualizations
+    - define design patterns and standards for visualization
+    - collaborate with product managers and developers to define and ship new analytic workflows
+
 - title: User Experience Design Intern 
   organization: Visier
+  url: https://visier.com
   time: May 2019 to September 2020
+  description:
+    - designed improvements to data visualizations that are used to analyze over 10 million employee records
+    - developed concepts for new visualizations 
+    - implemented several process improvements to help the design team work more effectively with each other and with developers
+    - collaborated with solution and product managers to define and design new analytic workflows
+    - communicated design decisions and collaborated with developers to ship features and improvements 
+  
 - title: Systems Analyst
   organization: Simon Fraser University
+  url: https://clab.iat.sfu.ca
   time: January 2019 to present
   description:
-    - maintain the lab's RHEL server and software (Apache, phpMyAdmin, MySQL)
-    - maintain several WordPress and PMWiki instances
-    - modify plugins and themes to fit various requirements
+    - maintained the lab's RHEL server and software (Apache, phpMyAdmin, MySQL)
+    - maintained several WordPress and PMWiki instances
+    - modified plugins and themes to fit various requirements
+
 - title: Systems Analyst
   organization: Vancouver Coastal Health
+  url: https://vch.ca
   time: September 2017 to March 2019
   description:
     - designed & developed web apps to support process improvement

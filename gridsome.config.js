@@ -45,7 +45,8 @@ module.exports = {
 			options: {
 				typeName: "Service", // Required
 				baseDir: "./content/services", // Where .md files are located
-				route: "/services/:title"
+				route: "/services/:title",
+        template: "./src/templates/Page.vue" // Optional
 			}
 		}
 	],

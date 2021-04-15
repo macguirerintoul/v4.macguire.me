@@ -3,11 +3,17 @@
 		<div class="hero">
 			<p class="hero-paragraph">What are you looking for today?</p>
 			<p class="hero-links">
-				<magic-link url="/services/experience-design">Experience Design</magic-link>
-        <Spacer/>
-				<magic-link>Software Development</magic-link>
-        <Spacer/>
-				<magic-link>System Administration</magic-link>
+				<magic-link url="/services/experience-design"
+					>Experience Design</magic-link
+				>
+				<Spacer />
+				<magic-link url="/services/software-development"
+					>Software Development</magic-link
+				>
+				<Spacer />
+				<magic-link url="/services/system-administration"
+					>System Administration</magic-link
+				>
 			</p>
 		</div>
 
@@ -52,13 +58,14 @@
 import TDTBlock from "~/components/TDTBlock.vue";
 import MagicLink from "~/components/MagicLink.vue";
 
-import Spacer from "~/components/Spacer"
+import Spacer from "~/components/Spacer";
 import { getOGImage, makeThumbnailQuery } from "../utilities";
 
 export default {
 	components: {
 		TDTBlock,
-		MagicLink, Spacer
+		MagicLink,
+		Spacer
 	},
 	metaInfo() {
 		return {
