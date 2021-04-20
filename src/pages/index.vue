@@ -17,9 +17,10 @@
 			</p>
 		</div>
 
-		<hr />
 		<section class="work">
 			<h1>Selected work</h1>
+
+		<hr />
 			<div class="project-flex-container">
 				<TDTBlock
 					v-for="edge in $page.featuredProjects.edges"

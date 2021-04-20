@@ -861,7 +861,7 @@ margin-top: 4rem;
 	margin-top: 6rem;
 }
 
-.tdt-block {  
+.tdt-block { 
 	margin-bottom: 6rem;
 	display: grid;
   align-content: center;
@@ -886,9 +886,9 @@ margin-top: 4rem;
 	}
 
 	.tdt-block__description {  
+    margin: 0.2rem 0 0;
     font-size: 1.8rem;
     line-height: 2.1rem;
-		margin: 0;
 	}
 } 
 
@@ -898,8 +898,7 @@ margin-top: 4rem;
 	color: $color-mid-grey-text;
   
   small {
-    font-weight: 200;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
      line-height: 2.1rem;
   }
 
@@ -913,6 +912,7 @@ margin-top: 4rem;
 }
 
 .tdt-block__tags {
+  text-transform: uppercase;
 	display: inline-flex;
 	flex-wrap: wrap;
 }
