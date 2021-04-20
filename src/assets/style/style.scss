@@ -1,14 +1,1199 @@
 // Utilities
 @import "../../../node_modules/normalize.css/normalize.css";
-@import "./themes";
+
+@mixin light() {
+  :root[data-theme="light"] & {
+    @content;
+  }
+}
+
+@mixin dark() {
+  :root[data-theme="dark"] & {
+    @content;
+  }
+}
 
 // Foundations
-@import "./variables";
-@import "./font-variable";
-@import "./type";
-@import "./main";
+// Layout
+$max-container-width: 1400px; // Maximum width of content
+$content-width: 50rem; // Preferred content width
+
+// Responsive
+$mobile-breakpoint: 850px;
+$responsive-padding: 1rem;
+
+// Visual design
+$border-radius: 0.5rem; // A consistent border radius to be used throughout the site
+
+// Colours
+
+$color-white: #fff;
+$color-dark: #0b0b0b;
+$color-text-dark: rgb(26, 26, 26);
+$color-light: #f4f4f4;
+$color-dark-grey: rgb(30, 30, 30);
+$color-mid-grey: rgb(60, 60, 60);
+$color-mid-grey-text: rgb(111, 111, 111);
+$color-light-grey: rgb(225, 225, 225);
+$color-blue: #33f;
+$color-yellow: #ff0;
+$color-red: #f00;
+
+// Type
+$font-stack: "Editorial New", "-apple-system", "system-ui", "BlinkMacSystemFont",
+	sans-serif;
+$font-stack-mono: "SFMono-Regular", "Iosevka", "Inconsolata", "Consolas",
+	"Liberation Mono", monospace;
+
+@mixin underline-link {
+	text-decoration-color: $color-blue;
+	text-decoration-line: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.4rem;
+
+	@include breakpoint(small) {
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.2rem;
+	}
+}
+
+@mixin underline-h1 {
+	text-decoration: solid underline $color-red 2px;
+	text-decoration-color: $color-red;
+	text-decoration-line: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.6rem;
+
+	@include breakpoint(small) {
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.4rem;
+	}
+}
+
+@mixin breakpoint($point) {
+	@if $point == small {
+		@media (max-width: 480px) {
+			@content;
+		}
+	}
+}
+
+// Thin
+@font-face {
+	font-family: "Editorial New"; 
+  font-weight: 100;
+  font-variation-settings: 'wght' 100;
+	src: url("../type/EditorialNew-Variable.ttf") format("truetype");
+}
+
+// Ultralight
+@font-face {
+	font-family: "Editorial New"; 
+  font-weight: 200;
+  font-variation-settings: 'wght' 200;
+	src: url("../type/EditorialNew-Variable.ttf") format("truetype");
+}
+
+// Light
+@font-face {
+	font-family: "Editorial New"; 
+  font-weight: 300;
+  font-variation-settings: 'wght' 300;
+	src: url("../type/EditorialNew-Variable.ttf") format("truetype");
+}
+
+// Regular
+@font-face {
+	font-family: "Editorial New"; 
+  font-weight: normal;
+  font-variation-settings: 'wght' 400;
+	src: url("../type/EditorialNew-Variable.ttf") format("truetype");
+}
+
+
+// Medium
+@font-face {
+	font-family: "Editorial New"; 
+  font-weight: 500;
+  font-variation-settings: 'wght' 500;
+	src: url("../type/EditorialNew-Variable.ttf") format("truetype");
+}
+
+// Bold
+@font-face {
+	font-family: "Editorial New"; 
+  font-weight: 700;
+  font-variation-settings: 'wght' 700;
+	src: url("../type/EditorialNew-Variable.ttf") format("truetype");
+}
+
+
+// Ultrabold
+@font-face {
+	font-family: "Editorial New"; 
+  font-weight: 800;
+  font-variation-settings: 'wght' 800;
+	src: url("../type/EditorialNew-Variable.ttf") format("truetype");
+}
+
+// Heavy
+@font-face {
+	font-family: "Editorial New"; 
+  font-weight: 900;
+  font-variation-settings: 'wght' 900;
+	src: url("../type/EditorialNew-Variable.ttf") format("truetype");
+}
+
+@mixin type-level-1 {
+	// @include underline-h1;
+
+  // color: $color-red;
+  // color: $color-mid-grey;
+	font-size: 8rem;
+	font-weight: 100;
+	letter-spacing: -0.01em;
+
+	@include breakpoint(small) {
+		font-size: 40px;
+		letter-spacing: -0.05em;
+	}
+}
+
+@mixin type-level-2 {
+	// color: orange;
+	font-size: 4rem;
+	font-weight: 700;
+  line-height: 5rem;
+
+	@include breakpoint(small) {
+		font-size: 21px;
+		line-height: normal;
+	}
+}
+
+@mixin type-level-3 {
+	// color: yellow;
+	font-size: 32px;
+	font-weight: 500;
+	letter-spacing: -0.021em;
+	line-height: 42px;
+}
+
+@mixin type-level-4 {
+	// color: green;
+	font-size: 1.4rem;
+	font-weight: 300;
+	line-height: 24pt;
+}
+
+@mixin type-level-big-content {
+	// color: violet;
+	font-size: 3rem;
+  line-height: 5rem;
+  font-weight: 300;
+
+	@include breakpoint(small) {
+		font-size: 1.2rem;
+		line-height: normal;
+	}
+}
+
+@mixin type-level-content {
+	// color: violet;
+	font-size: 1.8rem;
+	line-height: 3rem;
+	font-weight: 300;
+
+	@include breakpoint(small) {
+		font-size: 1.2rem;
+		line-height: normal;
+	}
+}
+
+@mixin type-level-small {
+	font-size: 1.2rem;
+	line-height: normal;
+	font-weight: 300;
+}
+
+@mixin type-level-extra-small {
+	font-size: 1rem;
+	font-weight: 300;
+}
+
+h1 {
+	@include type-level-1;
+
+	margin-bottom: 4rem;
+	margin-top: 0;
+}
+
+h2 {
+	@include type-level-2;
+
+	margin-bottom: 0.2rem;
+}
+
+h3 {
+	@include type-level-3;
+
+	margin-bottom: 0.2rem;
+}
+
+h4 {
+	@include type-level-4;
+
+  margin-bottom: 0.2rem;
+  color: $color-mid-grey-text;
+}
+
+p,
+blockquote,
+li,
+table {
+	@include type-level-content;
+}
+
+
+/*
+
+  ###### #      ###### #    # ###### #    # #####  ####
+  #      #      #      ##  ## #      ##   #   #   #
+  #####  #      #####  # ## # #####  # #  #   #    ####
+  #      #      #      #    # #      #  # #   #        #
+  #      #      #      #    # #      #   ##   #   #    #
+  ###### ###### ###### #    # ###### #    #   #    ####
+
+*/
+
+* {
+	// Padding is included in element size
+	box-sizing: border-box;
+}
+
+video {
+  max-width: 100%;
+}
+a {
+	@include underline-link;
+
+	@include dark() {
+		color: $color-light;
+	}
+	@include light() {
+		color: $color-dark;
+	}
+}
+
+article {
+	h1 {
+		// Center-align blog post titles
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+summary {
+	@include type-level-4;
+	padding: 1rem;
+
+	&:hover,
+	&:focus {
+		cursor: pointer;
+
+		@include dark() {
+			background: $color-dark-grey;
+		}
+	}
+}
+
+blockquote {
+	@include dark() {
+		border-left: 2px solid $color-red;
+	}
+	@include light() {
+		border-left: 2px solid $color-red;
+	}
+	margin: 6rem 0;
+	padding-left: 2rem;
+	white-space: pre-wrap;
+
+	@include breakpoint(small) {
+		padding-left: 1rem;
+	}
+}
+
+body {
+	@include dark() {
+		color: $color-light;
+		background-color: $color-dark;
+	}
+	@include light() {
+		color: $color-dark;
+		background-color: $color-light;
+	}
+	font-family: $font-stack;
+	font-weight: 300; // Default font weight (things are getting bolded/italic for some reason)
+	height: 100%;
+	margin-top: 10rem; // Push all content down, give the navigation some space
+
+	@include breakpoint(small) {
+		margin-top: 4rem;
+	}
+}
+
+body,
+nav {
+	transition: all 300ms;
+}
+
+span {
+	@include type-level-content;
+}
+
+nav,
+button {
+	font-weight: 500;
+}
+
+p {
+	margin-top: 0;
+}
+
+.button--primary,
+.button--secondary {
+	// Nicer button styles
+	border: 0;
+	justify-content: center;
+	min-height: 2rem;
+	min-width: 5rem;
+	padding: 0.5rem;
+	text-align: center;
+}
+
+.button--primary {
+	@include light() {
+		background-color: $color-blue;
+		color: $color-light;
+	}
+	@include dark() {
+		background-color: $color-blue;
+		color: $color-light;
+	}
+}
+
+.button--secondary {
+	background-color: $color-light;
+	color: $color-dark;
+}
+
+hr {
+	// Style horizontal dividers to match the site
+	margin: 0 auto;
+	max-width: $max-container-width;
+	@include dark() {
+		border: 1px solid $color-dark-grey;
+	}
+	@include light() {
+		border: 1px solid $color-light-grey;
+	}
+}
+
+small,
+small span {
+	@include type-level-small;
+}
+
+tr {
+	// Acts as a margin for table rows
+	border-spacing: 0 1rem;
+}
+
+ul {
+	list-style-type: none;
+	li::before {
+		// change <li> bullets to en dashes
+		content: "–";
+		margin-left: -1.5rem;
+		position: absolute;
+	}
+}
+
+cite {
+	display: block;
+	margin-top: 1rem;
+	text-align: right;
+}
+
+pre {  background: $color-white;
+  border: 1px solid $color-dark-grey;
+  padding: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+code {
+  @include type-level-small;
+  line-height: 2rem;
+	font-family: $font-stack-mono;
+}
+
+p code {
+  // Inline code generated when text is wrapped in `backticks`
+  background: $color-white;
+  padding: 0 0.5rem;
+  @include type-level-content;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+
+	@include light() {
+		border: 1px solid $color-dark-grey;
+	}
+	@include dark() {
+		border: 1px solid $color-light-grey;
+	}
+}
+
+main {
+	margin-bottom: 6rem;
+}
+
+footer {
+	margin: 6rem auto;
+
+	small {
+		display: block;
+	}
+}
+
+.footer__links,
+.footer__copyright {
+	margin-top: 2rem;
+}
+
+label {
+	@include type-level-content;
+
+	display: block;
+	margin-bottom: 0.2rem;
+}
+
+input,
+textarea {
+	border: 2px solid $color-dark-grey;
+	display: block;
+	line-height: 2em;
+	margin-bottom: 1em;
+	min-height: 3em;
+	padding: 0.25em;
+	width: 100%;
+
+	&:focus {
+		border: 2px solid $color-blue;
+	}
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $max-container-width;
+	padding: 0 2rem;
+
+	@include breakpoint(small) {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
+
+.video-embed {
+	height: 0;
+	padding-bottom: 38.25%;
+	position: relative;
+
+	@include breakpoint(mobile) {
+		// Makes the video take up the full width of the container
+		padding-bottom: 55%;
+	}
+}
+
+// Defines max-width for showcases and magic images.
+.showcase,
+.magic-image {
+	max-width: 60rem;
+}
+
+.content {
+	display: grid;
+	grid-template-columns: 1fr 4fr 1fr;
+
+	.content__main {
+		grid-column: 2;
+	}
+
+	h1 {
+		margin-bottom: 4rem;
+	}
+
+	h2 {
+		margin-top: 6rem;
+		margin-bottom: 2rem;
+	}
+
+	h2:first-of-type {
+		margin-top: 0;
+	}
+
+	p {
+		margin-bottom: 3rem;
+	}
+
+	p,
+  pre,
+	blockquote,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	ul,
+  .magic-video,
+	summary {
+		max-width: $content-width;
+	}
+
+	.overview__summary {
+		max-width: unset;
+	}
+
+	p,
+	blockquote {
+		text-align: justify;
+	}
+
+	p,
+	blockquote,
+  pre,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.video-embed,
+	img,
+	.project-context,
+	ul,
+  .magic-video,
+	summary {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	img,
+	.magic-image {
+		// Need both selectors because cloudinary-vue wraps images in a div
+		margin: 4rem auto;
+	}
+
+	iframe {
+		height: 100%;
+		left: 0;
+		max-width: 100%;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}
+
+/*
+    ##   #####   ####  #    # #####
+   #  #  #    # #    # #    #   #
+  #    # #####  #    # #    #   #
+  ###### #    # #    # #    #   #
+  #    # #    # #    # #    #   #
+  #    # #####   ####   ####    #
+*/
+
+.resume {
+margin-top: 4rem;
+	h3,
+	h4 {
+		margin: 0 auto;
+	}
+
+	.resume__item {
+  display: block;
+		margin: 2rem 0 6rem;
+	}
+
+	.resume__subtitle {
+		@include type-level-4;
+	}
+}
+
+/*
+
+   ####  #        ##    ####   ####  ######  ####
+  #    # #       #  #  #      #      #      #
+  #      #      #    #  ####   ####  #####   ####
+  #      #      ######      #      # #           #
+  #    # #      #    # #    # #    # #      #    #
+   ####  ###### #    #  ####   ####  ######  ####
+
+*/
+
+.previous-next {
+	display: flex;
+	justify-content: space-between;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3rem;
+	max-width: $content-width;
+
+	label {
+		@include type-level-4;
+	}
+
+	a {
+		@include type-level-content;
+
+		flex: 0 1 50%;
+	}
+}
+
+.previous-next__next {
+	text-align: right;
+}
+.spacer {
+  margin: 0 1rem;
+}
+.showcase {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 4rem auto;
+
+	p {
+		// Justified text doesn't look good in showcases
+		text-align: left;
+	}
+
+	video,
+	img {
+		max-height: 80vh;
+		max-width: 100%;
+	}
+
+	.magic-image,
+	.magic-video {
+		margin: 0 auto 2rem;
+	}
+
+	.magic-image img {
+		margin: 0;
+	}
+
+	> div,
+	> p {
+		// Select divs and paragraphs that are direct children of a Showcase (i.e. the media and content)
+		max-width: 48%;
+	}
+}
+
+// need both selectors because cloudinary-vue wraps images in a div with the classes
+.overview__image,
+.overview__image img {
+	margin: 0;
+	max-width: 100%;
+}
+
+.showcase--vertical {
+	p {
+		font-style: italic;
+		max-width: $content-width;
+		text-align: center;
+	}
+
+	div {
+		max-width: 100%;
+	}
+}
+
+.showcase--media-left {
+	flex-direction: row;
+
+	p {
+		margin-right: 0;
+	}
+}
+
+.showcase--media-right {
+	flex-direction: row-reverse;
+
+	p {
+		margin-left: 0;
+	}
+}
+
+.overview {
+	margin-bottom: 5rem;
+}
+
+.overview__title {
+	margin-top: 6rem;
+	margin-bottom: 1rem;
+}
+
+.overview__header {
+	display: block;
+	text-align: center;
+	margin: auto;
+}
+
+.overview__summary, .overview__summary p {
+	@include type-level-big-content;
+	//max-width: $content-width;
+	//padding-right: 2rem;
+	text-align: justify;
+
+	@include breakpoint(small) {
+		padding-right: 0;
+	}
+}
+
+.overview__context {
+	display: flex;
+	flex-wrap: wrap;
+
+	justify-content: space-between;
+	@include breakpoint(small) {
+		flex-direction: column;
+	}
+
+	div {
+		flex: 0 1 30%;
+		// padding-right: 2rem;
+		margin-bottom: 2rem;
+	}
+}
+
+.toc {
+	position: sticky;
+	top: 6rem;
+	align-self: start;
+
+	ul,
+	li {
+		@include type-level-extra-small;
+
+		line-height: 1.8rem;
+
+		a {
+			text-decoration: none;
+			@include light {
+				color: $color-mid-grey-text;
+			}
+			@include dark {
+				color: $color-mid-grey-text;
+			}
+		}
+
+		li.active > a {
+			transition: all 100ms;
+			font-weight: 400;
+			@include light {
+				color: $color-dark;
+			}
+			@include dark {
+				color: $color-light;
+			}
+		}
+	}
+
+	ul {
+		// @include light {
+		//   border-left: 1px solid $color-light-grey;
+		// }
+		// @include dark {
+		//   border-left: 1px solid $color-dark-grey;
+		// }
+
+		padding: 0 1rem 0 0;
+		li::before {
+			// Get rid of custom list styles
+			content: none;
+			margin-left: 0;
+		}
+	}
+}
+.toc__item-h3 {
+	margin-left: 1rem;
+}
+
+/*
+  # #    # #####  ###### #    #
+  # ##   # #    # #       #  #
+  # # #  # #    # #####    ##
+  # #  # # #    # #        ##
+  # #   ## #    # #       #  #
+  # #    # #####  ###### #    #
+*/
+
+.hero,
+.content .hero { 
+	margin: 4rem 0 8rem;
+
+}
+
+.hero-paragraph {
+  @include type-level-big-content;
+  margin-bottom: 1rem;
+}
+.project-flex-container {
+	display: flex;
+	flex-direction: column;
+	margin-top: 6rem;
+}
+
+.tdt-block {
+	margin-bottom: 7rem;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	column-gap: 4rem;
+
+	@include breakpoint(small) {
+		margin-bottom: 2rem;
+	}
+
+	&:last-of-type {
+		// <main> already has margin
+		margin-bottom: 0;
+	}
+
+	.tdt-block__title h2 {
+		margin: 0;
+	}
+
+	.tdt-block__description {
+    @include type-level-2;
+    font-weight: 300; // Override the font weight for this special case
+		margin: 0;
+	}
+}
+
+.tdt-block__subtitle,
+.overview__header {
+	@include type-level-4;
+	color: $color-mid-grey-text;
+}
+
+// .tdt-block__date,
+// .blog-post__date {
+// 	font-weight: 600;
+// }
+
+.tdt-block__tags {
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+
+.work {
+	margin-top: 6rem;
+}
+
+/*
+   ####   ####  #    # #####   ##    ####  #####
+  #    # #    # ##   #   #    #  #  #    #   #
+  #      #    # # #  #   #   #    # #        #
+  #      #    # #  # #   #   ###### #        #
+  #    # #    # #   ##   #   #    # #    #   #
+   ####   ####  #    #   #   #    #  ####    #
+*/
+
+.contact-form {
+	margin: auto;
+	max-width: 40rem;
+}
+
+.form__button-container {
+	text-align: right;
+}
+
+.blog-post {
+	display: grid;
+	grid-template-columns: 9fr 3fr;
+	column-gap: 2rem;
+	margin-bottom: 6rem;
+
+	.blog-post__title h2 {
+		margin: 0;
+	}
+}
+
+/*
+
+  #    # ##### # #
+  #    #   #   # #
+  #    #   #   # #
+  #    #   #   # #
+  #    #   #   # #
+   ####    #   # ######
+
+*/
+
+// CSS debugging
+// * {
+// 	outline: 1px red solid !important;
+// 	visibility: visible !important;
+// }
+
+.util-has-home-bar {
+	// Add padding to the bottom of the navigation so it doesn't clash with iPhone home bar
+	padding-bottom: 2rem;
+}
+
+.util-unstyled-list {
+	padding-left: 0;
+	li::before {
+		content: none;
+	}
+}
+
+[id]::before {
+	// Give elements with an ID some space when navigating to them via anchor links
+	content: "";
+	display: block;
+	height: 75px;
+	margin-top: -75px;
+	visibility: hidden;
+}
+
+.medium-zoom-overlay {
+	z-index: 2; // above nav
+}
+
+.medium-zoom-image {
+	z-index: 3; // above .medium-zoom-overlay
+}
+
+.image-layout {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	.image-layout-flex {
+		display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-height: 500px;
+    p {
+      @include type-level-big-content;
+      max-height: 280px;
+      overflow: hidden;
+    }
+   .gradient {
+    position: relative; 
+    bottom: 13rem; 
+    width: 100%; 
+    height: 12rem;
+    /**
+    Gradient effect for fading out text
+    Not used anymore since I switched to using `description` instead of longer `summary`
+    @include dark() {
+      background-image: linear-gradient(to bottom, transparent, $color-dark);
+    }
+    @include light() {
+      background-image: linear-gradient(to bottom, transparent, $color-light);
+    }
+    **/
+   }
+	}
+	h1 {
+		margin-bottom: 2rem;
+	}
+  h3 {
+    text-align: center;
+  }
+}
+
 
 // Components
-@import "./components/featured-block";
-@import "./components/header";
-@import "./components/info-block";
+.featured-block-container {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 3rem;
+}
+
+.featured-block {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+	max-width: $content-width;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+	h4 {
+		margin-top: 0;
+	}
+}
+
+.featured-block__name {
+	@include type-level-3;
+}
+
+.featured-block__content {
+	border: 2px solid $color-blue;
+	margin-top: 1rem;
+	padding: 1rem;
+	text-decoration: none;
+}
+
+.featured-block__item-title {
+	@include type-level-4;
+}
+
+.featured-block__text {
+	@include type-level-content;
+
+	margin: 0;
+}
+
+.navbar {
+  @include dark() {
+    background: $color-dark;
+    color: $color-light;
+  }
+  @include light() {
+    background: $color-light;
+    color: $color-dark;
+  }
+	
+	left: 0;
+	margin: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+  padding-top: 1rem; 
+	z-index: 1; // This is required because iframes overlap fixed elements (haven't figured out why yet)
+
+	@include breakpoint(small) {
+		bottom: 0;
+		// Move the navigation to the bottom on small screens
+		top: auto;
+
+		.button--primary {
+			width: 100%;
+		}
+	}
+}
+
+.navbar,
+.navbar-end,
+.navbar-menu,
+.navbar-start {
+	align-items: baseline;
+	display: flex;
+}
+
+.navbar-brand {
+	align-items: stretch;
+	display: flex;
+	flex-shrink: 0;
+	min-height: 3.25rem;
+
+	@include breakpoint(small) {
+		width: 100%;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.navbar-menu {
+	flex-grow: 1;
+	flex-shrink: 0;
+
+	@include breakpoint(small) {
+		display: none;
+	}
+
+	.navbar-item.active--exact:not(.button--primary) {
+		// Add an underline to the current page in the navigation
+		border-bottom: 2px solid $color-blue;
+	}
+}
+
+.navbar-item {
+	align-items: center;
+	display: flex;
+	flex-grow: 0;
+	flex-shrink: 0;
+	line-height: 1.5rem;
+	position: relative;
+	text-decoration: none;
+}
+
+.navbar-end {
+	justify-content: flex-end;
+	margin-left: auto;
+
+	.navbar-item {
+		// Space out the navigation items
+		margin: 0.5em;
+	}
+
+	.navbar-item:last-of-type {
+		// Align the last navigation item to the right edge of the container
+		margin-right: 0;
+	}
+}
+
+.navbar.is-active {
+	display: block;
+
+	.navbar-end,
+	.navbar-menu,
+	.navbar-start {
+		align-items: baseline;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.navbar-item {
+		margin-left: 0;
+	}
+}
+
+.mobile-menu {
+	// The menu button on mobile
+	cursor: pointer;
+	display: none;
+	height: fit-content;
+	margin-left: auto;
+	padding: 0.5em;
+	position: relative;
+	top: 0.5em;
+
+	@include breakpoint(small) {
+		display: inherit;
+	}
+}
+
+.info-block {
+	margin-bottom: 1rem;
+	padding: 1rem;
+	width: 100%;
+
+	&.info-block--error {
+		background-color: #fff1f0;
+		border: 1px solid #ffa39e;
+	}
+}
+
