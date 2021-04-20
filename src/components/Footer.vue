@@ -1,11 +1,11 @@
 <template>
 	<footer class="container">
-		<div class="featured-block-container">
+		<!-- <div class="featured-block-container">
 			<FeaturedBlock type="randomStar" />
 			<FeaturedBlock type="lastCommit" />
 			<FeaturedBlock type="pick" />
 		</div>
-		<hr />
+		<hr /> -->
 		<ul class="util-unstyled-list footer__links">
 			<li>
 			<MagicLink class="footer__link" url="https://github.com/macguirerintoul/">

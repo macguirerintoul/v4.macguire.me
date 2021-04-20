@@ -3,11 +3,11 @@ title: MyCredit
 for: "IAT 438: Interactive Objects & Environments"
 description: "What the FICO? Demystify personal credit without breaking your brain."
 featured: true
-order: 1
+order: 2
 imagePath: MyCredit/images/featured
 year: 2018
 published: true
-tags: ["design"]
+tags: ["Design"]
 roles:
   [
     "Content Strategy",

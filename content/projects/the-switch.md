@@ -3,11 +3,11 @@ title: The Switch
 for: "IAT 438: Interactive Objects & Environments"
 description: "Redesign of a menstrual cup webstore that addresses the apprehensions of potential customers"
 featured: true
-order: 3
+order: 4
 imagePath: The_Switch/images/featured
 year: 2018
 published: true
-tags: ["design"]
+tags: ["Design"]
 roles:
   [
     "Content Strategy",

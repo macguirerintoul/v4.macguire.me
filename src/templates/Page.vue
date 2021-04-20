@@ -1,7 +1,11 @@
 <template>
 	<DefaultLayout>
 		<h1>{{ $page.service.title }}</h1>
-		<VueRemarkContent class="overview__summary" />
+    <hr/>
+    <div class="content">
+      <div></div>
+		<VueRemarkContent  /> 
+    </div>
 	</DefaultLayout>
 </template>
 

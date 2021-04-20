@@ -16,7 +16,7 @@
 
 			<div class="navbar-menu" @click="closeMobileMenu">
 				<div class="navbar-end">
-          <!--<span @click="toggleTheme">👀</span>-->
+          <!-- <span @click="toggleTheme">👀</span> -->
 					<g-link to="/" class="navbar-item hvr-underline-reveal">
 						Work
 					</g-link>

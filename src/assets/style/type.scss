@@ -1,11 +1,11 @@
 @mixin type-level-1 {
-	@include underline-h1;
+	// @include underline-h1;
 
   // color: $color-red;
   // color: $color-mid-grey;
 	font-size: 8rem;
-	font-weight: 200;
-	letter-spacing: -0.022em;
+	font-weight: 100;
+	letter-spacing: -0.01em;
 
 	@include breakpoint(small) {
 		font-size: 40px;
