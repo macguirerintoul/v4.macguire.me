@@ -7,7 +7,7 @@ imagePath: Winebox/images/featured
 year: 2017
 published: true
 order: 5
-tags: ["design"]
+tags: ["Design"]
 roles:
   ["Interaction Design", "Interface Design", "Prototyping", "User Research"]
 tools: ["Sketch", "Principle"]

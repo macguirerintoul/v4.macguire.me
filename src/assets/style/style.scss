@@ -22,11 +22,7 @@ $content-width: 50rem; // Preferred content width
 $mobile-breakpoint: 850px;
 $responsive-padding: 1rem;
 
-// Visual design
-$border-radius: 0.5rem; // A consistent border radius to be used throughout the site
-
 // Colours
-
 $color-white: #fff;
 $color-dark: #0b0b0b;
 $color-text-dark: rgb(26, 26, 26);
@@ -42,7 +38,7 @@ $color-red: #f00;
 // Type
 $font-stack: "Editorial New", "-apple-system", "system-ui", "BlinkMacSystemFont",
 	sans-serif;
-$font-stack-mono: "SFMono-Regular", "Iosevka", "Inconsolata", "Consolas",
+$font-stack-mono: SFMono-Regular, "Iosevka", "Inconsolata", "Consolas",
 	"Liberation Mono", monospace;
 
 @mixin underline-link {
@@ -71,6 +67,11 @@ $font-stack-mono: "SFMono-Regular", "Iosevka", "Inconsolata", "Consolas",
 }
 
 @mixin breakpoint($point) {
+  @if $point == medium {
+		@media (max-width: 1280px) {
+			@content;
+		}
+	}
 	@if $point == small {
 		@media (max-width: 480px) {
 			@content;
@@ -149,9 +150,10 @@ $font-stack-mono: "SFMono-Regular", "Iosevka", "Inconsolata", "Consolas",
 
   // color: $color-red;
   // color: $color-mid-grey;
-	font-size: 8rem;
-	font-weight: 100;
-	letter-spacing: -0.01em;
+	font-size: 9rem;
+  line-height: 8rem;
+	font-weight: 300;
+	letter-spacing: -0.05em;
 
 	@include breakpoint(small) {
 		font-size: 40px;
@@ -161,7 +163,7 @@ $font-stack-mono: "SFMono-Regular", "Iosevka", "Inconsolata", "Consolas",
 
 @mixin type-level-2 {
 	// color: orange;
-	font-size: 4rem;
+	font-size: 4.4rem;
 	font-weight: 700;
   line-height: 5rem;
 
@@ -188,9 +190,9 @@ $font-stack-mono: "SFMono-Regular", "Iosevka", "Inconsolata", "Consolas",
 
 @mixin type-level-big-content {
 	// color: violet;
-	font-size: 3rem;
-  line-height: 5rem;
-  font-weight: 300;
+	font-size: 3.6rem;
+  line-height: 4.9rem;
+  font-weight: 400;
 
 	@include breakpoint(small) {
 		font-size: 1.2rem;
@@ -200,9 +202,9 @@ $font-stack-mono: "SFMono-Regular", "Iosevka", "Inconsolata", "Consolas",
 
 @mixin type-level-content {
 	// color: violet;
-	font-size: 1.8rem;
-	line-height: 3rem;
-	font-weight: 300;
+	font-size: 2rem;
+line-height: 2.5rem;
+font-weight: 400;
 
 	@include breakpoint(small) {
 		font-size: 1.2rem;
@@ -757,7 +759,8 @@ margin-top: 4rem;
 	@include type-level-big-content;
 	//max-width: $content-width;
 	//padding-right: 2rem;
-	text-align: justify;
+	// text-align: justify;
+  margin-top: 4rem;
 
 	@include breakpoint(small) {
 		padding-right: 0;
@@ -844,7 +847,7 @@ margin-top: 4rem;
 
 .hero,
 .content .hero { 
-	margin: 4rem 0 8rem;
+	margin: 6rem 0 13rem;
 
 }
 
@@ -858,15 +861,20 @@ margin-top: 4rem;
 	margin-top: 6rem;
 }
 
-.tdt-block {
-	margin-bottom: 7rem;
+.tdt-block {  
+	margin-bottom: 6rem;
 	display: grid;
-	grid-template-columns: 1fr 2fr;
-	column-gap: 4rem;
+  align-content: center;
+	grid-template-columns: 2fr 3fr 1fr;
+	column-gap: 2rem;
 
-	@include breakpoint(small) {
-		margin-bottom: 2rem;
+	@include breakpoint(medium) {
+    grid-template-columns: 1fr 2fr;
 	}
+
+  @include breakpoint(small) {
+		margin-bottom: 2rem;
+  }
 
 	&:last-of-type {
 		// <main> already has margin
@@ -877,23 +885,32 @@ margin-top: 4rem;
 		margin: 0;
 	}
 
-	.tdt-block__description {
-    @include type-level-2;
-    font-weight: 300; // Override the font weight for this special case
+	.tdt-block__description {  
+    font-size: 1.8rem;
+    line-height: 2.1rem;
 		margin: 0;
 	}
-}
+} 
 
 .tdt-block__subtitle,
 .overview__header {
 	@include type-level-4;
 	color: $color-mid-grey-text;
+  
+  small {
+    font-weight: 200;
+    font-size: 1.6rem;
+     line-height: 2.1rem;
+  }
+
 }
 
-// .tdt-block__date,
-// .blog-post__date {
-// 	font-weight: 600;
-// }
+.tdt-block__date {
+	@include breakpoint(medium) {
+    display: inline;
+	}
+	display: block;
+}
 
 .tdt-block__tags {
 	display: inline-flex;
