@@ -8,4 +8,4 @@ Right now, I'm doing this at [Visier](https://visier.com) as a User Experience D
 
 In the past, I've done this at Vancouver Coastal Health, where [an app](/work/roar) I created is used to coordinate training sessions for new staff.
 
-Feel free to [contact me](/contact) if you're interested in work like this.
+Feel free to [contact me](/contact) if you need some work done.

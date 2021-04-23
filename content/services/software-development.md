@@ -8,4 +8,4 @@ In my current job, I occasionally [use code](https://jsfiddle.net/user/macguirer
 
 In a past job at [VCH](https://vch.ca), I developed a [web app](/work/roar) that helps coordinate training sessions for new employees. I also developed a [desktop to-do list](/work/forecast) (for fun) that helps people decide what to work on.
 
-Feel free to [contact me](/contact) if you're interested in work like this.
+Feel free to [contact me](/contact) if you need some work done.

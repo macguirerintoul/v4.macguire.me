@@ -34,7 +34,7 @@ import MyCreditProcess from '../../content/process/mycredit.md'
 - selected for presentation at the [2019 FCAT Undergraduate Conference](https://www.sfu.ca/fcat/events/ugc/2019-fcat-undergraduate-conference.html)
 - invited to share the project with Vancity's Digital Strategy team
 
-<Blockquote source="Aaron Walker, Manager, User Experience at Vancity">Financial literacy is an important component of all of our products and services at Vancity. The app demonstrated the unique financial needs of our members and community, with excellent design and a modern take on Vancity branding, this project inspired our Digital team to push for new user experiences. It is clear that the product was well researched and would produce the results that the team wanted.</Blockquote>
+<Blockquote source="Aaron Walker, Manager, User Experience at Vancity">Financial literacy is an important component of all of our products and services at Vancity. The app demonstrated the unique financial needs of our members and community, with excellent design and a modern take on Vancity branding. This project inspired our Digital team to push for new user experiences. It is clear that the product was well researched and would produce the results that the team wanted.</Blockquote>
 
 ## Contribution
 

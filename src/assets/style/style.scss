@@ -30,6 +30,9 @@ $color-dark-grey: #1e1e1e;
 $color-dark: #0b0b0b; 
 $color-black: #000000;
 
+$color-text-light: #222;
+$color-text-dark: #f4f4f4;
+
 $color-text-2-light: #707070;
 $color-text-2-dark: #7A7A7A;
 
@@ -164,9 +167,9 @@ $font-stack-mono: SFMono-Regular, "Iosevka", "Inconsolata", "Consolas",
 
 @mixin type-level-2 {
 	// color: orange;
-	font-size: 4.4rem;
+	font-size: 3.8rem;
 	font-weight: 700;
-  line-height: 5rem;
+  line-height: 1.2;
 
 	@include breakpoint(small) {
 		font-size: 21px;
@@ -203,9 +206,9 @@ $font-stack-mono: SFMono-Regular, "Iosevka", "Inconsolata", "Consolas",
 
 @mixin type-level-content {
 	// color: violet;
-	font-size: 2rem;
-line-height: 2.5rem;
-font-weight: 400;
+	font-size: 1.8rem;
+line-height: 1.5;
+font-weight: 400; 
 
 	@include breakpoint(small) {
 		font-size: 1.2rem;
@@ -284,16 +287,17 @@ video {
 }
 
 td {
+  vertical-align: top;
   padding:0;
 }
 a {
 	@include underline-link;
 
 	@include dark() {
-		color: $color-light;
+		color: $color-text-dark;
 	}
 	@include light() {
-		color: $color-dark;
+		color: $color-text-light;
 	}
 }
 
@@ -337,11 +341,11 @@ blockquote {
 
 body {
 	@include dark() {
-		color: $color-light;
+		color: $color-text-dark;
 		background-color: $color-dark;
 	}
 	@include light() {
-		color: $color-dark;
+		color: $color-text-light;
 		background-color: $color-light;
 	}
 	font-family: $font-stack;
@@ -392,7 +396,7 @@ p {
 
 .button--secondary {
 	background-color: $color-light;
-	color: $color-dark;
+	color: $color-text-light;
 }
 
 hr {
@@ -763,10 +767,11 @@ margin-top: 4rem;
   }
   .overview__context_item { 
     @include type-level-4; 
-    border-spacing: 1rem 1rem; 
   }
  
   .overview__context_label {
+
+    padding-right: 1rem;
     @include light() {
       color: $color-text-2-light;
     }
@@ -821,22 +826,15 @@ margin-top: 4rem;
 			transition: all 100ms;
 			font-weight: 400;
 			@include light {
-				color: $color-dark;
+				color: $color-text-light;
 			}
 			@include dark {
-				color: $color-light;
+				color: $color-text-dark;
 			}
 		}
 	}
 
 	ul {
-		// @include light {
-		//   border-left: 1px solid $color-light-grey;
-		// }
-		// @include dark {
-		//   border-left: 1px solid $color-dark-grey;
-		// }
-
 		padding: 0 1rem 0 0;
 		li::before {
 			// Get rid of custom list styles
@@ -1105,11 +1103,16 @@ margin-top: 4rem;
 .navbar {
   @include dark() {
     background: $color-dark;
-    color: $color-light;
+    color: $color-text-dark;
   }
   @include light() {
     background: $color-light;
-    color: $color-dark;
+    color: $color-text-light;
+  }
+
+  .navbar__title {
+    @include type-level-small;
+    font-weight: 400;
   }
 	
 	left: 0;
