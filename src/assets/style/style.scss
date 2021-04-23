@@ -23,14 +23,16 @@ $mobile-breakpoint: 850px;
 $responsive-padding: 1rem;
 
 // Colours
-$color-white: #fff;
-$color-dark: #0b0b0b;
-$color-text-dark: rgb(26, 26, 26);
-$color-light: #f4f4f4;
-$color-dark-grey: rgb(30, 30, 30);
-$color-mid-grey: rgb(60, 60, 60);
-$color-mid-grey-text: rgb(111, 111, 111);
-$color-light-grey: rgb(225, 225, 225);
+$color-white: #ffffff;
+$color-light: #f4f4f4; 
+$color-light-grey: #e1e1e1;
+$color-dark-grey: #1e1e1e; 
+$color-dark: #0b0b0b; 
+$color-black: #000000;
+
+$color-text-2-light: #707070;
+$color-text-2-dark: #7A7A7A;
+
 $color-blue: #33f;
 $color-yellow: #ff0;
 $color-red: #f00;
@@ -148,8 +150,7 @@ $font-stack-mono: SFMono-Regular, "Iosevka", "Inconsolata", "Consolas",
 @mixin type-level-1 {
 	// @include underline-h1;
 
-  // color: $color-red;
-  // color: $color-mid-grey;
+  // color: $color-red; 
 	font-size: 9rem;
   line-height: 8rem;
 	font-weight: 300;
@@ -246,7 +247,12 @@ h4 {
 	@include type-level-4;
 
   margin-bottom: 0.2rem;
-  color: $color-mid-grey-text;
+  @include dark() {
+    color: $color-text-2-dark;
+  }
+  @include light() {
+    color: $color-text-2-light;
+  }
 }
 
 p,
@@ -275,6 +281,10 @@ table {
 
 video {
   max-width: 100%;
+}
+
+td {
+  padding:0;
 }
 a {
 	@include underline-link;
@@ -349,10 +359,6 @@ nav {
 	transition: all 300ms;
 }
 
-span {
-	@include type-level-content;
-}
-
 nav,
 button {
 	font-weight: 500;
@@ -402,7 +408,7 @@ hr {
 }
 
 small,
-small span {
+small  {
 	@include type-level-small;
 }
 
@@ -705,6 +711,9 @@ margin-top: 4rem;
 	}
 }
 
+.overview__image {
+  margin-bottom: 4rem;
+}
 // need both selectors because cloudinary-vue wraps images in a div with the classes
 .overview__image,
 .overview__image img {
@@ -742,11 +751,34 @@ margin-top: 4rem;
 
 .overview {
 	margin-bottom: 5rem;
+
+  h1 {
+    margin: 0;
+  }
+
+  .overview__context {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 6rem 0;
+  }
+  .overview__context_item { 
+    @include type-level-4; 
+    border-spacing: 1rem 1rem; 
+  }
+ 
+  .overview__context_label {
+    @include light() {
+      color: $color-text-2-light;
+    }
+    @include dark() {
+      color: $color-text-2-dark;
+    }
+  }
 }
 
 .overview__title {
 	margin-top: 6rem;
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 }
 
 .overview__header {
@@ -756,32 +788,13 @@ margin-top: 4rem;
 }
 
 .overview__summary, .overview__summary p {
-	@include type-level-big-content;
-	//max-width: $content-width;
-	//padding-right: 2rem;
-	// text-align: justify;
-  margin-top: 4rem;
+	@include type-level-big-content; 
+  margin: 6rem 0;
 
 	@include breakpoint(small) {
 		padding-right: 0;
 	}
-}
-
-.overview__context {
-	display: flex;
-	flex-wrap: wrap;
-
-	justify-content: space-between;
-	@include breakpoint(small) {
-		flex-direction: column;
-	}
-
-	div {
-		flex: 0 1 30%;
-		// padding-right: 2rem;
-		margin-bottom: 2rem;
-	}
-}
+} 
 
 .toc {
 	position: sticky;
@@ -797,10 +810,10 @@ margin-top: 4rem;
 		a {
 			text-decoration: none;
 			@include light {
-				color: $color-mid-grey-text;
+				color: $color-text-2-light;
 			}
 			@include dark {
-				color: $color-mid-grey-text;
+				color: $color-text-2-dark;
 			}
 		}
 
@@ -894,8 +907,14 @@ margin-top: 4rem;
 
 .tdt-block__subtitle,
 .overview__header {
+  text-transform: uppercase;
 	@include type-level-4;
-	color: $color-mid-grey-text;
+  @include dark() {
+    color: $color-text-2-dark;
+  }
+  @include light() {
+    color: $color-text-2-light;
+  }
   
   small {
     font-size: 1.2rem;
@@ -912,9 +931,12 @@ margin-top: 4rem;
 }
 
 .tdt-block__tags {
-  text-transform: uppercase;
 	display: inline-flex;
 	flex-wrap: wrap;
+}
+
+.tag {
+  text-transform: uppercase;
 }
 
 .work {

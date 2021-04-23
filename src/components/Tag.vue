@@ -1,3 +1,3 @@
 <template>
-	<small class="tag"><slot /></small>
+	<span class="tag"><slot /></span>
 </template>
