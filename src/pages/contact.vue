@@ -57,9 +57,7 @@
 export default {
 	metaInfo() {
 		return {
-      title: "Contact",
-      meta: [{property: "og:title", content: document.title
-      }]
+      title: "Contact", 
     }
 	},
 	data() {

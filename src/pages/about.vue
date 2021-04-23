@@ -17,7 +17,7 @@ import Resume from "~/components/Resume";
 export default {
 	metaInfo: {
 		title: "About",
-		meta: [{ property: "og:title", content: document.title }]
+ 
 	},
 	components: {
 		MagicLink,

@@ -23,18 +23,22 @@ import ImageLayout from "~/layouts/ImageLayout.vue";
 import MagicImage from "~/components/MagicImage.vue";
 import Tag from "~/components/Tag.vue";
 
-const url = new URL(location.href);
 export default {
 	components: {
 		ImageLayout,
 		MagicImage,
 		Tag
-	},
+	}, 
+  mounted() {
+    this.url = new URL(location.href)
+    	this.title = this.url.searchParams.get("title")
+			this.description = this.url.searchParams.get("description")
+			this.imagePath = this.url.searchParams.get("imagePath")
+  }, 
 	data() {
 		return {
-			title: url.searchParams.get("title"),
-			description: url.searchParams.get("description"),
-			imagePath: url.searchParams.get("imagePath")
+ url: null,
+		title: null, description: null, imagePath: null
 		};
 	}
 };
