@@ -16,7 +16,7 @@
 		"gridsome": "0.7.23",
 		"medium-zoom": "1.0.6",
 		"normalize.css": "8.0.1",
-		"puppeteer-core": "8.0.0",
+		"puppeteer-core": "9.0.0",
 		"waait": "1.0.5"
 	},
 	"devDependencies": {
