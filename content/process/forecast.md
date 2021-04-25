@@ -1,4 +1,4 @@
-import MagicVideo from '~/components/MagicVideo'
+import Showcase from '~/components/Showcase'
 
 ### Getting started
 
@@ -22,11 +22,11 @@ At one point, I even replicated Clear's increasing-darkness UI with a fancy bit 
 
 From here, I fixed bugs and made small usability improvements, like making the default date 'tomorrow' to provide a starting point for tweaking. 
 
-This was cool, but there was still no way to remove a task when it was complete. To implement this (still inspired by Clear), I used [vue-swipe-actions](https://github.com/eCollect/vue-swipe-actions) which allows dragging list items to expose actions. A 'delete' button on the task would've been more straightforward, but I found it more fun to interact with the tasks in a physical way (right-clicking a task also reveals the 'Complete' button).
+This was cool, but there was still no way to remove a task when it was complete. To implement this (still inspired by Clear), I used [vue-swipe-actions](https://github.com/eCollect/vue-swipe-actions) which allows dragging list items to expose actions. 
  
-<MagicVideo source="cloudinary" path="Forecast/videos/clear-demo_re1rij" />
+<Showcase source="cloudinary" type="video" orientation="media-right" path="Forecast/videos/clear-demo_re1rij" content="A 'delete' button on the task would've been more straightforward, but I found it more fun to interact with the tasks in a physical way (right-clicking a task also reveals the 'Complete' button)."/>
 
-I had never been completely happy with the UI, as it felt (and was) a clone. Around this time, I saw an insightful talk from designer Sean Wolcott about the design of his app [Minimal Calendar](https://rationale-design.com/our-work/minimal-calendar/). What I got from Sean's presentation was that sometimes the best design is no design; Apple (and Windows) already have an established design language, so there's no need to create another. Using native styles would also help the app blend in to the system, so that's what I went with.
+I had never been completely happy with the UI, as it felt (and was) a clone. Around this time, I saw Sean Wolcott talk about the design of his app [Minimal Calendar](https://rationale-design.com/our-work/minimal-calendar/). What I got from Sean's presentation was that sometimes the best design is no design; Apple (and Windows) already have an established design language, so there's no need to create another. Using native styles would also help the app blend in to the system, so that's what I went with.
 
 Over time, I used and worked on the app here and there. I made several improvements, including:
 
@@ -46,7 +46,7 @@ if (difference === 15 || difference === 60) {
 
 #### Helpful empty state
 
-When someone first runs Forecast, they won't have any tasks, and likely won't know their way around. The empty state was an opportunity to show them the ropes.
+When someone first runs Forecast, they won't have any tasks and won't know their way around. The empty state was an opportunity to show them the ropes.
 
 ![The Forecast empty state.](~/assets/images/forecast/empty-state.png)
 
@@ -88,9 +88,8 @@ nativeTheme.on("updated", () => {
 });
 ```
 
-The result is an app that matches the system theme automatically (which I was pretty excited about).
 
-<MagicVideo source="cloudinary" path="Forecast/videos/dark" />
+<Showcase orientation="media-left" content="The result is an app that matches the system theme automatically (which I was pretty excited about)." type="video" source="cloudinary" path="Forecast/videos/dark" />
 
 #### Other improvements
 

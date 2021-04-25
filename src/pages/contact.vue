@@ -12,12 +12,7 @@
 			action="/"
 			netlify
 			@submit.prevent="handleSubmit"
-		>
-			<p>
-				Here's a contact form that goes straight to my inbox. Or, you can
-				email me at firstname.lastname@protonmail.ch.
-			</p>
-
+		> 
 			<input type="hidden" form-name="Contact" />
 
 			<label for="name">Name</label>

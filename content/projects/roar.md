@@ -1,7 +1,7 @@
 ---
 title: ROAR
 for: Vancouver Coastal Health
-description: "Web app that streamlines the process of registering newly-hired employees into training sessions"
+description: Generate employee training schedules in a snap without a single spreadsheet.
 year: 2019
 published: true
 order: 3

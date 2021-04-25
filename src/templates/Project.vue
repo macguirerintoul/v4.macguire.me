@@ -1,10 +1,12 @@
 <template>
 	<DefaultLayout>
 		<ProjectOverview :project="$page.project" />
-		<div class="content">
-			<TOC :headings="headings" />
-			<VueRemarkContent class="content__main" />
-		</div>
+    <div class="content"> 
+      <div class="toc-container">
+      <TOC :headings="headings" />  
+      </div>
+    <VueRemarkContent class="content__main" /> 
+    </div>
 		<PreviousNext type="project" :previous="previous" :next="next" />
 	</DefaultLayout>
 </template>

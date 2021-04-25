@@ -1,7 +1,7 @@
 ---
 title: The Switch
 for: "IAT 438: Interactive Objects & Environments"
-description: "Redesign of a menstrual cup webstore that addresses the apprehensions of potential customers"
+description: Addressing apprehensions towards menstrual cups using supportive & direct guidance.
 featured: true
 order: 4
 imagePath: The_Switch/images/featured

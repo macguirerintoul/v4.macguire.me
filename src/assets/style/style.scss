@@ -30,7 +30,7 @@ $color-dark-grey: #1e1e1e;
 $color-dark: #0b0b0b; 
 $color-black: #000000;
 
-$color-text-light: #222;
+$color-text-light: #1a1a1a;
 $color-text-dark: #f4f4f4;
 
 $color-text-2-light: #707070;
@@ -401,7 +401,7 @@ p {
 
 hr {
 	// Style horizontal dividers to match the site
-	margin: 0 auto;
+	margin: 4rem auto;
 	max-width: $max-container-width;
 	@include dark() {
 		border: 1px solid $color-dark-grey;
@@ -459,7 +459,10 @@ p code {
 img {
 	display: block;
 	max-width: 100%;
+}
 
+// Image and video border
+img, video {
 	@include light() {
 		border: 1px solid $color-dark-grey;
 	}
@@ -533,16 +536,11 @@ textarea {
 // Defines max-width for showcases and magic images.
 .showcase,
 .magic-image {
-	max-width: 60rem;
+	// max-width: 60rem;
 }
 
 .content {
-	display: grid;
-	grid-template-columns: 1fr 4fr 1fr;
-
-	.content__main {
-		grid-column: 2;
-	}
+  position: relative; // To support the .toc-container being position: absolute
 
 	h1 {
 		margin-bottom: 4rem;
@@ -618,6 +616,11 @@ textarea {
 		width: 100%;
 	}
 }
+
+// .content-with-toc {
+//   display: grid;
+//   grid-template-columns: 10rem 60rem 10rem;
+// }
 
 /*
     ##   #####   ####  #    # #####
@@ -800,7 +803,11 @@ margin-top: 4rem;
 		padding-right: 0;
 	}
 } 
-
+.toc-container {
+  position: absolute;
+  top: 5rem;
+  height: 100%;
+}
 .toc {
 	position: sticky;
 	top: 6rem;

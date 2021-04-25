@@ -17,10 +17,12 @@ export default {
 	},
 	props: {
 		content: {
+      // the text to show in the showcase
 			type: String,
 			default: ""
 		},
 		orientation: {
+      // vertical, media-left, media-right
 			type: String,
 			default: "vertical"
 		},
@@ -33,10 +35,12 @@ export default {
 			default: ""
 		},
 		type: {
+      // video, image
 			type: String,
 			default: ""
 		},
 		alt: {
+      // alt text
 			type: String,
 			default: ""
 		}

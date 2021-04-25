@@ -1,8 +1,8 @@
 ---
 title: Winebox
 for: "IAT 334: Interface Design"
-description: "Winebox is a mobile app that assists in keeping track of a personal wine collection."
-featured: true
+description: Keep track of your wines like an expert.
+featured: false
 imagePath: Winebox/images/featured
 year: 2017
 published: true
