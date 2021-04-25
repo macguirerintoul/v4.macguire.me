@@ -812,6 +812,9 @@ margin-top: 4rem;
 	position: sticky;
 	top: 6rem;
 	align-self: start;
+  padding-bottom: 2rem; // expands the area considered for overlap
+  z-index: -1;
+  transition: opacity 200ms;
 
 	ul,
 	li {

@@ -34,6 +34,33 @@ export default {
 		this.$nextTick(function() {
 			console.log("TOC ready for action");
 
+    window.addEventListener("scroll", function() {
+        const overlappers = document.querySelectorAll('.showcase *')
+        const toc = document.querySelector('.toc')
+        let anyOverlap = null;
+
+        overlappers.forEach(element => {
+          const elementRect = element.getBoundingClientRect();
+          const tocRect = toc.getBoundingClientRect();
+
+          let thisOverlap = !(elementRect.right < tocRect.left || 
+                elementRect.left > tocRect.right || 
+                elementRect.bottom < tocRect.top || 
+                elementRect.top > tocRect.bottom)
+
+          if (thisOverlap) {
+            anyOverlap = true
+          }
+        })
+
+        if (anyOverlap) {
+          toc.style.opacity = 0
+        } else {
+          toc.style.opacity = 1
+        }
+      }
+    , {passive: true}); 
+
 			// Create IntersectionObserver to set the last viewed heading as 'active' in the TOC
 			const observer = new IntersectionObserver(entries => {
 				entries.forEach(entry => {
