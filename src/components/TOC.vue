@@ -34,9 +34,9 @@ export default {
 		this.$nextTick(function() {
 			console.log("TOC ready for action");
 
-    window.addEventListener("scroll", function() {
-        const overlappers = document.querySelectorAll('.showcase *')
-        const toc = document.querySelector('.toc')
+      window.addEventListener("scroll", function() {
+        const overlappers = document.querySelectorAll('.showcase *, img') // What to check for overlap with
+        const toc = document.querySelector('.toc') // the toc
         let anyOverlap = null;
 
         overlappers.forEach(element => {

@@ -524,20 +524,14 @@ textarea {
 
 .video-embed {
 	height: 0;
-	padding-bottom: 38.25%;
+	padding-bottom: 57%;
 	position: relative;
 
 	@include breakpoint(mobile) {
 		// Makes the video take up the full width of the container
 		padding-bottom: 55%;
 	}
-}
-
-// Defines max-width for showcases and magic images.
-.showcase,
-.magic-image {
-	// max-width: 60rem;
-}
+} 
 
 .content {
   position: relative; // To support the .toc-container being position: absolute
@@ -687,14 +681,9 @@ margin-top: 4rem;
 .showcase {
 	align-items: center;
 	display: flex;
-	flex-direction: column;
+	flex-direction: column; // default orientation is vertical
 	justify-content: space-between;
-	margin: 4rem auto;
-
-	p {
-		// Justified text doesn't look good in showcases
-		text-align: left;
-	}
+	margin: 6rem auto;
 
 	video,
 	img {
@@ -704,7 +693,7 @@ margin-top: 4rem;
 
 	.magic-image,
 	.magic-video {
-		margin: 0 auto 2rem;
+		margin: 0 0 2rem;
 	}
 
 	.magic-image img {
@@ -810,10 +799,8 @@ margin-top: 4rem;
 }
 .toc {
 	position: sticky;
-	top: 6rem;
-	align-self: start;
-  padding-bottom: 2rem; // expands the area considered for overlap
-  z-index: -1;
+	top: 6rem; // amount to offset for sticky position
+  padding: 2rem 0; // expands the area considered for overlap
   transition: opacity 200ms;
 
 	ul,
