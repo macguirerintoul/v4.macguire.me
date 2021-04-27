@@ -33,6 +33,7 @@ export default function(Vue, { head }) {
 
 	// Set up Cloudinary
 	Vue.use(Cloudinary, {
+    // Doesn't work: see https://github.com/cloudinary/cloudinary-vue/issues/11
 		configuration: { cloudName: "macguire" }
 	});
 

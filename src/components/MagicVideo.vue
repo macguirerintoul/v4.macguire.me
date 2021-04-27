@@ -12,6 +12,7 @@
 		<CldVideo
 			v-if="source == 'cloudinary'"
 			cloud-name="macguire"
+      secure="true"
 			muted="muted"
 			loop="true"
 			autoplay="autoplay"

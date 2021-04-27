@@ -1,6 +1,7 @@
 <template>
 	<cld-image
 		cloud-name="macguire"
+    secure="true"
 		class="magic-image"
 		loading="lazy"
 		dpr="auto"
