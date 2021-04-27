@@ -33,7 +33,7 @@ export default function(Vue, { head }) {
 
 	// Set up Cloudinary
 	Vue.use(Cloudinary, {
-		configuration: { cloudName: "macguire" }
+		configuration: { cloudName: "macguire", secure: true, analytics: false }
 	});
 
   // Make DefaultLayout available to all pages & templates without having to import it
