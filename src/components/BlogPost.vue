@@ -6,7 +6,7 @@
 		<div>
 			<small class="blog-post__date">{{ date }}</small>
 			<div class="tdt-block__tags">
-				<Tag v-for="tag in this.node.tags">{{ tag }}</Tag>
+				<Tag v-for="tag in node.tags" :key="tag">{{ tag }}</Tag>
 			</div>
 		</div>
 	</div>

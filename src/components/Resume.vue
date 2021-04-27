@@ -23,12 +23,10 @@
 <script>
 import resume from "../../content/resume.yaml";
 import Spacer from "~/components/Spacer";
-import MagicLink from "~/components/MagicLink";
 
 export default {
 	components: {
-		Spacer,
-		MagicLink
+		Spacer
 	},
 	data() {
 		return { resume };

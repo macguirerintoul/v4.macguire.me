@@ -20,7 +20,7 @@ export function truncateOnWord(str, len = 200) {
 export function makeThumbnailQuery(object) {
 	return new URLSearchParams(
 		Object.fromEntries(
-			Object.entries(object).filter(([key, val]) => val !== undefined)
+			Object.entries(object).filter(([key, val]) => val !== undefined) // eslint-disable-line
 		)
 	).toString();
 }

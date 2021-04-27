@@ -380,6 +380,27 @@ body {
 	}
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+	body,
+	nav {
+		transition: none;
+	}
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	body,
+	nav {
+		transition: none;
+	}
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	body,
+	nav {
+		transition: none;
+	}
+}
+
 body,
 nav {
 	transition: all 300ms;
@@ -436,7 +457,6 @@ hr {
 	}
 }
 
-small,
 small {
 	@include type-level-small;
 }
@@ -574,10 +594,10 @@ textarea {
 	h2 {
 		margin-bottom: 2rem;
 		margin-top: 6rem;
-	}
 
-	h2:first-of-type {
-		margin-top: 0;
+		&:first-of-type {
+			margin-top: 0;
+		}
 	}
 
 	p {
@@ -597,10 +617,6 @@ textarea {
 	.magic-video,
 	summary {
 		max-width: $content-width;
-	}
-
-	.overview__summary {
-		max-width: unset;
 	}
 
 	p,
@@ -825,6 +841,7 @@ textarea {
 	@include type-level-big-content;
 
 	margin: 6rem 0;
+	max-width: unset;
 
 	@include breakpoint(small) {
 		padding-right: 0;

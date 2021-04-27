@@ -7,6 +7,7 @@
 					><span v-if="index != 0">, </span>{{ tag }}</Tag
 				></span
 			>
+			<!-- eslint-disable-next-line vue/no-v-html -->
 			<p class="overview__summary" v-html="project.summary" />
 			<MagicImage
 				class="overview__image"

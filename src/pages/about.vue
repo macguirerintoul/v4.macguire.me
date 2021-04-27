@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import MagicLink from "~/components/MagicLink";
 import Resume from "~/components/Resume";
 
 export default {
@@ -22,7 +21,6 @@ export default {
 		title: "About"
 	},
 	components: {
-		MagicLink,
 		Resume
 	}
 };

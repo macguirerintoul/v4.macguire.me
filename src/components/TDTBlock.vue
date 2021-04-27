@@ -8,7 +8,7 @@
 		<p class="tdt-block__description">{{ node.description }}</p>
 		<div class="tdt-block__subtitle">
 			<span class="tdt-block__tags">
-				<Tag v-for="(tag, index) in this.node.tags" :key="tag"
+				<Tag v-for="(tag, index) in node.tags" :key="tag"
 					><span v-if="index != 0">, </span>{{ tag }}</Tag
 				>
 			</span>

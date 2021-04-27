@@ -21,7 +21,7 @@ export default {
 	props: {
 		headings: {
 			type: Array,
-			default: []
+			default: () => []
 		}
 	},
 	updated() {

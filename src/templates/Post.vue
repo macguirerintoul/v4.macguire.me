@@ -44,6 +44,7 @@ export default {
 		this.mediumZoom = attachMediumZoom();
 	},
 	methods: {
+		toDateString,
 		getHeadings() {
 			// Because this runs in updated, we need conditions or else this method will trigger another update which will call this method again, etc.
 			if (this.headings.length === 0) {
@@ -51,9 +52,6 @@ export default {
 				this.headings = Array.from(headings);
 			}
 		}
-	},
-	methods: {
-		toDateString
 	},
 	metaInfo() {
 		return {

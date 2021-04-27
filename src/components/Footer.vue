@@ -32,12 +32,12 @@
 </template>
 
 <script>
-import FeaturedBlock from "~/components/FeaturedBlock";
+// import FeaturedBlock from "~/components/FeaturedBlock";
 import MagicLink from "~/components/MagicLink";
 
 export default {
 	components: {
-		FeaturedBlock,
+		// FeaturedBlock,
 		MagicLink
 	},
 	data() {

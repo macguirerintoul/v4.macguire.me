@@ -6,7 +6,7 @@
 				<p>{{ description }}</p>
 				<div class="gradient"></div>
 			</div>
-			<div v-if="this.imagePath">
+			<div v-if="imagePath">
 				<MagicImage
 					class="overview__image"
 					:path="imagePath"
@@ -21,13 +21,11 @@
 <script>
 import ImageLayout from "~/layouts/ImageLayout.vue";
 import MagicImage from "~/components/MagicImage.vue";
-import Tag from "~/components/Tag.vue";
 
 export default {
 	components: {
 		ImageLayout,
-		MagicImage,
-		Tag
+		MagicImage
 	},
 	data() {
 		return {
