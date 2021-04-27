@@ -28,20 +28,19 @@ export default {
 		openDetails() {
 			// We need to expand the 'details' element that contains 'Process & more' when TOC links are clicked so that we can see the content inside it
 			document.querySelector("details").setAttribute("open", true);
-		}
-	},
-	updated() {
-		this.$nextTick(function() {
-			console.log("TOC ready for action");
+		},
+    observeTocOverlap() {
+      const overlappers = document.querySelectorAll('.showcase *, img') // What to check for overlap with
+      const tocElement = document.querySelector('.toc') // the toc
+      console.log(tocElement)
 
+      // Listen to scroll events
       window.addEventListener("scroll", function() {
-        const overlappers = document.querySelectorAll('.showcase *, img') // What to check for overlap with
-        const toc = document.querySelector('.toc') // the toc
         let anyOverlap = null;
 
-        overlappers.forEach(element => {
+        overlappers.forEach(function(element) {
           const elementRect = element.getBoundingClientRect();
-          const tocRect = toc.getBoundingClientRect();
+          const tocRect = tocElement.getBoundingClientRect();
 
           let thisOverlap = !(elementRect.right < tocRect.left || 
                 elementRect.left > tocRect.right || 
@@ -54,14 +53,14 @@ export default {
         })
 
         if (anyOverlap) {
-          toc.style.opacity = 0
+          tocElement.style.opacity = 0
         } else {
-          toc.style.opacity = 1
+          tocElement.style.opacity = 1
         }
-      }
-    , {passive: true}); 
-
-			// Create IntersectionObserver to set the last viewed heading as 'active' in the TOC
+      }, {passive: true}); 
+    },
+    observeScrollPosition() {
+      // Create IntersectionObserver to set the last viewed heading as 'active' in the TOC
 			const observer = new IntersectionObserver(entries => {
 				entries.forEach(entry => {
 					const id = entry.target.getAttribute("id");
@@ -83,8 +82,14 @@ export default {
       document.querySelectorAll('h2,h3').forEach((h) => {
         observer.observe(h);
       });
-	
-		});
+    }
+	},
+	updated() { 
+    // If the TOC can be accessed, start the observers
+    if (this.$refs.toc) {
+      this.observeTocOverlap()
+      this.observeScrollPosition()
+    } 
 	}
 };
 </script>
