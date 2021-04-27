@@ -820,8 +820,7 @@ margin-top: 4rem;
 		}
 
 		li.active > a {
-			transition: all 100ms;
-			font-weight: 400;
+			transition: all 300ms;
 			@include light {
 				color: $color-text-light;
 			}
