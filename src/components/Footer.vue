@@ -8,17 +8,20 @@
 		<hr /> -->
 		<ul class="util-unstyled-list footer__links">
 			<li>
-			<MagicLink class="footer__link" url="https://github.com/macguirerintoul/">
-				GitHub
-			</MagicLink>
+				<MagicLink
+					class="footer__link"
+					url="https://github.com/macguirerintoul/"
+				>
+					GitHub
+				</MagicLink>
 			</li>
 			<li>
-			<MagicLink
-				class="footer__link"
-				url="https://linkedin.com/in/macguirerintoul/"
-			>
-				LinkedIn
-			</MagicLink>
+				<MagicLink
+					class="footer__link"
+					url="https://linkedin.com/in/macguirerintoul/"
+				>
+					LinkedIn
+				</MagicLink>
 			</li>
 		</ul>
 

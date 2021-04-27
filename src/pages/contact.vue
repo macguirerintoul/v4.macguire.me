@@ -1,8 +1,8 @@
 <template>
 	<DefaultLayout>
 		<h1>Contact</h1>
-    <hr>
- 
+		<hr />
+
 		<!-- netlify attribute connects the form to Netlify Forms -->
 		<form
 			v-if="submissionState === 'default'"
@@ -12,7 +12,7 @@
 			action="/"
 			netlify
 			@submit.prevent="handleSubmit"
-		> 
+		>
 			<input type="hidden" form-name="Contact" />
 
 			<label for="name">Name</label>
@@ -44,7 +44,7 @@
 			<p class="info-block__title">
 				An error occurred 😳
 			</p>
-		</div> 
+		</div>
 	</DefaultLayout>
 </template>
 
@@ -52,8 +52,8 @@
 export default {
 	metaInfo() {
 		return {
-      title: "Contact", 
-    }
+			title: "Contact"
+		};
 	},
 	data() {
 		return {

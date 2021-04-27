@@ -16,12 +16,12 @@
 
 			<div class="navbar-menu" @click="closeMobileMenu">
 				<div class="navbar-end">
-          <!-- <span @click="toggleTheme">👀</span> -->
+					<!-- <span @click="toggleTheme">👀</span> -->
 					<g-link to="/" class="navbar-item hvr-underline-reveal">
 						Work
 					</g-link>
 					<!--<g-link to="/blog" class="navbar-item hvr-underline-reveal">-->
-						<!--Blog-->
+					<!--Blog-->
 					<!--</g-link>-->
 					<g-link to="/about" class="navbar-item hvr-underline-reveal">
 						About
@@ -52,9 +52,9 @@ export default {
 		}
 	},
 	methods: {
-    toggleTheme(){
-      window.__setPreferredTheme(window.__theme === 'dark' ? 'light' : 'dark')
-    },
+		toggleTheme() {
+			window.__setPreferredTheme(window.__theme === "dark" ? "light" : "dark");
+		},
 		toggleMobileMenu() {
 			this.showMobileMenu = !this.showMobileMenu;
 		},

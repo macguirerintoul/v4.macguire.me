@@ -4,7 +4,7 @@
 			<div>
 				<h1>{{ title }}</h1>
 				<p>{{ description }}</p>
-        <div class="gradient"></div>
+				<div class="gradient"></div>
 			</div>
 			<div v-if="this.imagePath">
 				<MagicImage
@@ -28,18 +28,20 @@ export default {
 		ImageLayout,
 		MagicImage,
 		Tag
-	}, 
-  mounted() {
-    this.url = new URL(location.href)
-    	this.title = this.url.searchParams.get("title")
-			this.description = this.url.searchParams.get("description")
-			this.imagePath = this.url.searchParams.get("imagePath")
-  }, 
+	},
 	data() {
 		return {
- url: null,
-		title: null, description: null, imagePath: null
+			url: null,
+			title: null,
+			description: null,
+			imagePath: null
 		};
+	},
+	mounted() {
+		this.url = new URL(location.href);
+		this.title = this.url.searchParams.get("title");
+		this.description = this.url.searchParams.get("description");
+		this.imagePath = this.url.searchParams.get("imagePath");
 	}
 };
 </script>

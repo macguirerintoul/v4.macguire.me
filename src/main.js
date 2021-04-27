@@ -6,8 +6,8 @@ import Cloudinary from "cloudinary-vue";
 
 // Import Gridsome config to use the siteDescription
 const config = require("../gridsome.config.js");
-import DefaultLayout from '~/layouts/DefaultLayout.vue'
- 
+import DefaultLayout from "~/layouts/DefaultLayout.vue";
+
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function(Vue, { head }) {
 	// Make it UTF-8
@@ -26,17 +26,17 @@ export default function(Vue, { head }) {
 	head.meta.push({
 		name: "description",
 		content: config.siteDescription
-	}); 
-  
+	});
+
 	// Make it English
 	head.htmlAttrs = { lang: "en" };
 
 	// Set up Cloudinary
 	Vue.use(Cloudinary, {
-    // Doesn't work: see https://github.com/cloudinary/cloudinary-vue/issues/11
+		// Doesn't work: see https://github.com/cloudinary/cloudinary-vue/issues/11
 		configuration: { cloudName: "macguire" }
 	});
 
-  // Make DefaultLayout available to all pages & templates without having to import it
-  Vue.component('DefaultLayout', DefaultLayout)
+	// Make DefaultLayout available to all pages & templates without having to import it
+	Vue.component("DefaultLayout", DefaultLayout);
 }

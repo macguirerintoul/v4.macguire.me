@@ -2,15 +2,15 @@
 @import "../../../node_modules/normalize.css/normalize.css";
 
 @mixin light() {
-  :root[data-theme="light"] & {
-    @content;
-  }
+	:root[data-theme="light"] & {
+		@content;
+	}
 }
 
 @mixin dark() {
-  :root[data-theme="dark"] & {
-    @content;
-  }
+	:root[data-theme="dark"] & {
+		@content;
+	}
 }
 
 // Foundations
@@ -23,18 +23,18 @@ $mobile-breakpoint: 850px;
 $responsive-padding: 1rem;
 
 // Colours
-$color-white: #ffffff;
-$color-light: #f4f4f4; 
+$color-white: #fff;
+$color-light: #f4f4f4;
 $color-light-grey: #e1e1e1;
-$color-dark-grey: #1e1e1e; 
-$color-dark: #0b0b0b; 
-$color-black: #000000;
+$color-dark-grey: #1e1e1e;
+$color-dark: #0b0b0b;
+$color-black: #000;
 
 $color-text-light: #1a1a1a;
 $color-text-dark: #f4f4f4;
 
 $color-text-2-light: #707070;
-$color-text-2-dark: #7A7A7A;
+$color-text-2-dark: #7a7a7a;
 
 $color-blue: #33f;
 $color-yellow: #ff0;
@@ -43,7 +43,7 @@ $color-red: #f00;
 // Type
 $font-stack: "Editorial New", "-apple-system", "system-ui", "BlinkMacSystemFont",
 	sans-serif;
-$font-stack-mono: SFMono-Regular, "Iosevka", "Inconsolata", "Consolas",
+$font-stack-mono: sfmono-regular, "Iosevka", "Inconsolata", "Consolas",
 	"Liberation Mono", monospace;
 
 @mixin underline-link {
@@ -72,11 +72,12 @@ $font-stack-mono: SFMono-Regular, "Iosevka", "Inconsolata", "Consolas",
 }
 
 @mixin breakpoint($point) {
-  @if $point == medium {
+	@if $point == medium {
 		@media (max-width: 1280px) {
 			@content;
 		}
 	}
+
 	@if $point == small {
 		@media (max-width: 480px) {
 			@content;
@@ -86,78 +87,76 @@ $font-stack-mono: SFMono-Regular, "Iosevka", "Inconsolata", "Consolas",
 
 // Thin
 @font-face {
-	font-family: "Editorial New"; 
-  font-weight: 100;
-  font-variation-settings: 'wght' 100;
+	font-family: "Editorial New";
+	font-variation-settings: "wght" 100;
+	font-weight: 100;
 	src: url("../type/EditorialNew-Variable.ttf") format("truetype");
 }
 
 // Ultralight
 @font-face {
-	font-family: "Editorial New"; 
-  font-weight: 200;
-  font-variation-settings: 'wght' 200;
+	font-family: "Editorial New";
+	font-variation-settings: "wght" 200;
+	font-weight: 200;
 	src: url("../type/EditorialNew-Variable.ttf") format("truetype");
 }
 
 // Light
 @font-face {
-	font-family: "Editorial New"; 
-  font-weight: 300;
-  font-variation-settings: 'wght' 300;
+	font-family: "Editorial New";
+	font-variation-settings: "wght" 300;
+	font-weight: 300;
 	src: url("../type/EditorialNew-Variable.ttf") format("truetype");
 }
 
 // Regular
 @font-face {
-	font-family: "Editorial New"; 
-  font-weight: normal;
-  font-variation-settings: 'wght' 400;
+	font-family: "Editorial New";
+	font-variation-settings: "wght" 400;
+	font-weight: normal;
 	src: url("../type/EditorialNew-Variable.ttf") format("truetype");
 }
 
-
 // Medium
 @font-face {
-	font-family: "Editorial New"; 
-  font-weight: 500;
-  font-variation-settings: 'wght' 500;
+	font-family: "Editorial New";
+	font-variation-settings: "wght" 500;
+	font-weight: 500;
 	src: url("../type/EditorialNew-Variable.ttf") format("truetype");
 }
 
 // Bold
 @font-face {
-	font-family: "Editorial New"; 
-  font-weight: 700;
-  font-variation-settings: 'wght' 700;
+	font-family: "Editorial New";
+	font-variation-settings: "wght" 700;
+	font-weight: 700;
 	src: url("../type/EditorialNew-Variable.ttf") format("truetype");
 }
 
-
 // Ultrabold
 @font-face {
-	font-family: "Editorial New"; 
-  font-weight: 800;
-  font-variation-settings: 'wght' 800;
+	font-family: "Editorial New";
+	font-variation-settings: "wght" 800;
+	font-weight: 800;
 	src: url("../type/EditorialNew-Variable.ttf") format("truetype");
 }
 
 // Heavy
 @font-face {
-	font-family: "Editorial New"; 
-  font-weight: 900;
-  font-variation-settings: 'wght' 900;
+	font-family: "Editorial New";
+	font-variation-settings: "wght" 900;
+	font-weight: 900;
 	src: url("../type/EditorialNew-Variable.ttf") format("truetype");
 }
 
 @mixin type-level-1 {
 	// @include underline-h1;
 
-  // color: $color-red; 
+	// color: $color-red;
 	font-size: 9rem;
-  line-height: 8rem;
 	font-weight: 300;
 	letter-spacing: -0.05em;
+	line-height: 8rem;
 
 	@include breakpoint(small) {
 		font-size: 40px;
@@ -169,7 +168,7 @@ $font-stack-mono: SFMono-Regular, "Iosevka", "Inconsolata", "Consolas",
 	// color: orange;
 	font-size: 3.8rem;
 	font-weight: 700;
-  line-height: 1.2;
+	line-height: 1.2;
 
 	@include breakpoint(small) {
 		font-size: 21px;
@@ -195,8 +194,8 @@ $font-stack-mono: SFMono-Regular, "Iosevka", "Inconsolata", "Consolas",
 @mixin type-level-big-content {
 	// color: violet;
 	font-size: 3.6rem;
-  line-height: 4.9rem;
-  font-weight: 400;
+	font-weight: 400;
+	line-height: 4.9rem;
 
 	@include breakpoint(small) {
 		font-size: 1.2rem;
@@ -207,8 +206,8 @@ $font-stack-mono: SFMono-Regular, "Iosevka", "Inconsolata", "Consolas",
 @mixin type-level-content {
 	// color: violet;
 	font-size: 1.8rem;
-line-height: 1.5;
-font-weight: 400; 
+	font-weight: 400;
+	line-height: 1.5;
 
 	@include breakpoint(small) {
 		font-size: 1.2rem;
@@ -218,8 +217,8 @@ font-weight: 400;
 
 @mixin type-level-small {
 	font-size: 1.2rem;
-	line-height: normal;
 	font-weight: 300;
+	line-height: normal;
 }
 
 @mixin type-level-extra-small {
@@ -249,13 +248,15 @@ h3 {
 h4 {
 	@include type-level-4;
 
-  margin-bottom: 0.2rem;
-  @include dark() {
-    color: $color-text-2-dark;
-  }
-  @include light() {
-    color: $color-text-2-light;
-  }
+	margin-bottom: 0.2rem;
+
+	@include dark() {
+		color: $color-text-2-dark;
+	}
+
+	@include light() {
+		color: $color-text-2-light;
+	}
 }
 
 p,
@@ -283,19 +284,21 @@ table {
 }
 
 video {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 td {
-  vertical-align: top;
-  padding:0;
+	padding: 0;
+	vertical-align: top;
 }
+
 a {
 	@include underline-link;
 
 	@include dark() {
 		color: $color-text-dark;
 	}
+
 	@include light() {
 		color: $color-text-light;
 	}
@@ -311,6 +314,7 @@ article {
 
 summary {
 	@include type-level-4;
+
 	padding: 1rem;
 
 	&:hover,
@@ -324,15 +328,17 @@ summary {
 }
 
 blockquote {
-	@include dark() {
-		border-left: 2px solid $color-red;
-	}
-	@include light() {
-		border-left: 2px solid $color-red;
-	}
 	margin: 6rem 0;
 	padding-left: 2rem;
 	white-space: pre-wrap;
+
+	@include dark() {
+		border-left: 2px solid $color-red;
+	}
+
+	@include light() {
+		border-left: 2px solid $color-red;
+	}
 
 	@include breakpoint(small) {
 		padding-left: 1rem;
@@ -340,21 +346,37 @@ blockquote {
 }
 
 body {
-	@include dark() {
-		color: $color-text-dark;
-		background-color: $color-dark;
-	}
-	@include light() {
-		color: $color-text-light;
-		background-color: $color-light;
-	}
 	font-family: $font-stack;
 	font-weight: 300; // Default font weight (things are getting bolded/italic for some reason)
 	height: 100%;
 	margin-top: 10rem; // Push all content down, give the navigation some space
 
+	@include dark() {
+		background-color: $color-dark;
+		color: $color-text-dark;
+	}
+
+	@include light() {
+		background-color: $color-light;
+		color: $color-text-light;
+	}
+
 	@include breakpoint(small) {
 		margin-top: 4rem;
+	}
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	body,
+	nav {
+		transition: none;
+	}
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	body,
+	nav {
+		transition: none;
 	}
 }
 
@@ -388,6 +410,7 @@ p {
 		background-color: $color-blue;
 		color: $color-light;
 	}
+
 	@include dark() {
 		background-color: $color-blue;
 		color: $color-light;
@@ -403,16 +426,18 @@ hr {
 	// Style horizontal dividers to match the site
 	margin: 4rem auto;
 	max-width: $max-container-width;
+
 	@include dark() {
 		border: 1px solid $color-dark-grey;
 	}
+
 	@include light() {
 		border: 1px solid $color-light-grey;
 	}
 }
 
 small,
-small  {
+small {
 	@include type-level-small;
 }
 
@@ -423,6 +448,7 @@ tr {
 
 ul {
 	list-style-type: none;
+
 	li::before {
 		// change <li> bullets to en dashes
 		content: "–";
@@ -437,23 +463,26 @@ cite {
 	text-align: right;
 }
 
-pre {  background: $color-white;
-  border: 1px solid $color-dark-grey;
-  padding: 1rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
+pre {
+	background: $color-white;
+	border: 1px solid $color-dark-grey;
+	overflow: hidden;
+	padding: 1rem;
+	text-overflow: ellipsis;
 }
+
 code {
-  @include type-level-small;
-  line-height: 2rem;
+	@include type-level-small;
+
 	font-family: $font-stack-mono;
+	line-height: 2rem;
 }
 
 p code {
-  // Inline code generated when text is wrapped in `backticks`
-  background: $color-white;
-  padding: 0 0.5rem;
-  @include type-level-content;
+	@include type-level-content;
+	// Inline code generated when text is wrapped in `backticks`
+	background: $color-white;
+	padding: 0 0.5rem;
 }
 
 img {
@@ -462,10 +491,12 @@ img {
 }
 
 // Image and video border
-img, video {
+img,
+video {
 	@include light() {
 		border: 1px solid $color-dark-grey;
 	}
+
 	@include dark() {
 		border: 1px solid $color-light-grey;
 	}
@@ -531,18 +562,18 @@ textarea {
 		// Makes the video take up the full width of the container
 		padding-bottom: 55%;
 	}
-} 
+}
 
 .content {
-  position: relative; // To support the .toc-container being position: absolute
+	position: relative; // To support the .toc-container being position: absolute
 
 	h1 {
 		margin-bottom: 4rem;
 	}
 
 	h2 {
-		margin-top: 6rem;
 		margin-bottom: 2rem;
+		margin-top: 6rem;
 	}
 
 	h2:first-of-type {
@@ -554,7 +585,7 @@ textarea {
 	}
 
 	p,
-  pre,
+	pre,
 	blockquote,
 	h1,
 	h2,
@@ -563,7 +594,7 @@ textarea {
 	h5,
 	h6,
 	ul,
-  .magic-video,
+	.magic-video,
 	summary {
 		max-width: $content-width;
 	}
@@ -579,7 +610,7 @@ textarea {
 
 	p,
 	blockquote,
-  pre,
+	pre,
 	h2,
 	h3,
 	h4,
@@ -589,7 +620,7 @@ textarea {
 	img,
 	.project-context,
 	ul,
-  .magic-video,
+	.magic-video,
 	summary {
 		margin-left: auto;
 		margin-right: auto;
@@ -626,14 +657,15 @@ textarea {
 */
 
 .resume {
-margin-top: 4rem;
+	margin-top: 4rem;
+
 	h3,
 	h4 {
 		margin: 0 auto;
 	}
 
 	.resume__item {
-  display: block;
+		display: block;
 		margin: 2rem 0 6rem;
 	}
 
@@ -675,9 +707,11 @@ margin-top: 4rem;
 .previous-next__next {
 	text-align: right;
 }
+
 .spacer {
-  margin: 0 1rem;
+	margin: 0 1rem;
 }
+
 .showcase {
 	align-items: center;
 	display: flex;
@@ -708,7 +742,7 @@ margin-top: 4rem;
 }
 
 .overview__image {
-  margin-bottom: 4rem;
+	margin-bottom: 4rem;
 }
 // need both selectors because cloudinary-vue wraps images in a div with the classes
 .overview__image,
@@ -748,60 +782,130 @@ margin-top: 4rem;
 .overview {
 	margin-bottom: 5rem;
 
-  h1 {
-    margin: 0;
-  }
+	h1 {
+		margin: 0;
+	}
 
-  .overview__context {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 6rem 0;
-  }
-  .overview__context_item { 
-    @include type-level-4; 
-  }
- 
-  .overview__context_label {
+	.overview__context {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin: 6rem 0;
+	}
 
-    padding-right: 1rem;
-    @include light() {
-      color: $color-text-2-light;
-    }
-    @include dark() {
-      color: $color-text-2-dark;
-    }
-  }
+	.overview__context_item {
+		@include type-level-4;
+	}
+
+	.overview__context_label {
+		padding-right: 1rem;
+
+		@include light() {
+			color: $color-text-2-light;
+		}
+
+		@include dark() {
+			color: $color-text-2-dark;
+		}
+	}
 }
 
 .overview__title {
-	margin-top: 6rem;
 	margin-bottom: 2rem;
+	margin-top: 6rem;
 }
 
 .overview__header {
 	display: block;
-	text-align: center;
 	margin: auto;
+	text-align: center;
 }
 
-.overview__summary, .overview__summary p {
-	@include type-level-big-content; 
-  margin: 6rem 0;
+.overview__summary,
+.overview__summary p {
+	@include type-level-big-content;
+
+	margin: 6rem 0;
 
 	@include breakpoint(small) {
 		padding-right: 0;
 	}
-} 
-.toc-container {
-  position: absolute;
-  top: 5rem;
-  height: 100%;
 }
+
+.toc-container {
+	height: 100%;
+	position: absolute;
+	top: 5rem;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	.toc {
+		padding: 2rem 0; // expands the area considered for overlap
+		position: sticky;
+		top: 6rem; // amount to offset for sticky position
+		transition: none;
+
+		ul,
+		li {
+			@include type-level-extra-small;
+
+			line-height: 1.8rem;
+
+			a {
+				text-decoration: none;
+
+				@include light {
+					color: $color-text-2-light;
+				}
+
+				@include dark {
+					color: $color-text-2-dark;
+				}
+			}
+
+			@media screen and (prefers-reduced-motion: reduce) {
+				li.active > a {
+					transition: none;
+
+					@include light {
+						color: $color-text-light;
+					}
+
+					@include dark {
+						color: $color-text-dark;
+					}
+				}
+			}
+
+			li.active > a {
+				transition: all 300ms;
+
+				@include light {
+					color: $color-text-light;
+				}
+
+				@include dark {
+					color: $color-text-dark;
+				}
+			}
+		}
+
+		ul {
+			padding: 0 1rem 0 0;
+
+			li::before {
+				// Get rid of custom list styles
+				content: none;
+				margin-left: 0;
+			}
+		}
+	}
+}
+
 .toc {
+	padding: 2rem 0; // expands the area considered for overlap
 	position: sticky;
 	top: 6rem; // amount to offset for sticky position
-  padding: 2rem 0; // expands the area considered for overlap
-  transition: opacity 200ms;
+	transition: opacity 200ms;
 
 	ul,
 	li {
@@ -811,19 +915,37 @@ margin-top: 4rem;
 
 		a {
 			text-decoration: none;
+
 			@include light {
 				color: $color-text-2-light;
 			}
+
 			@include dark {
 				color: $color-text-2-dark;
 			}
 		}
 
+		@media screen and (prefers-reduced-motion: reduce) {
+			li.active > a {
+				transition: none;
+
+				@include light {
+					color: $color-text-light;
+				}
+
+				@include dark {
+					color: $color-text-dark;
+				}
+			}
+		}
+
 		li.active > a {
 			transition: all 300ms;
+
 			@include light {
 				color: $color-text-light;
 			}
+
 			@include dark {
 				color: $color-text-dark;
 			}
@@ -832,6 +954,7 @@ margin-top: 4rem;
 
 	ul {
 		padding: 0 1rem 0 0;
+
 		li::before {
 			// Get rid of custom list styles
 			content: none;
@@ -839,6 +962,7 @@ margin-top: 4rem;
 		}
 	}
 }
+
 .toc__item-h3 {
 	margin-left: 1rem;
 }
@@ -853,35 +977,36 @@ margin-top: 4rem;
 */
 
 .hero,
-.content .hero { 
+.content .hero {
 	margin: 6rem 0 13rem;
-
 }
 
 .hero-paragraph {
-  @include type-level-big-content;
-  margin-bottom: 1rem;
+	@include type-level-big-content;
+
+	margin-bottom: 1rem;
 }
+
 .project-flex-container {
 	display: flex;
 	flex-direction: column;
 	margin-top: 6rem;
 }
 
-.tdt-block { 
-	margin-bottom: 6rem;
-	display: grid;
-  align-content: center;
-	grid-template-columns: 2fr 3fr 1fr;
+.tdt-block {
+	align-content: center;
 	column-gap: 2rem;
+	display: grid;
+	grid-template-columns: 2fr 3fr 1fr;
+	margin-bottom: 6rem;
 
 	@include breakpoint(medium) {
-    grid-template-columns: 1fr 2fr;
+		grid-template-columns: 1fr 2fr;
 	}
 
-  @include breakpoint(small) {
+	@include breakpoint(small) {
 		margin-bottom: 2rem;
-  }
+	}
 
 	&:last-of-type {
 		// <main> already has margin
@@ -892,36 +1017,39 @@ margin-top: 4rem;
 		margin: 0;
 	}
 
-	.tdt-block__description {  
-    margin: 0.2rem 0 0;
-    font-size: 1.8rem;
-    line-height: 2.1rem;
+	.tdt-block__description {
+		font-size: 1.8rem;
+		line-height: 2.1rem;
+		margin: 0.2rem 0 0;
 	}
-} 
+}
 
 .tdt-block__subtitle,
 .overview__header {
-  text-transform: uppercase;
 	@include type-level-4;
-  @include dark() {
-    color: $color-text-2-dark;
-  }
-  @include light() {
-    color: $color-text-2-light;
-  }
-  
-  small {
-    font-size: 1.2rem;
-     line-height: 2.1rem;
-  }
 
+	text-transform: uppercase;
+
+	@include dark() {
+		color: $color-text-2-dark;
+	}
+
+	@include light() {
+		color: $color-text-2-light;
+	}
+
+	small {
+		font-size: 1.2rem;
+		line-height: 2.1rem;
+	}
 }
 
 .tdt-block__date {
-	@include breakpoint(medium) {
-    display: inline;
-	}
 	display: block;
+
+	@include breakpoint(medium) {
+		display: inline;
+	}
 }
 
 .tdt-block__tags {
@@ -930,7 +1058,7 @@ margin-top: 4rem;
 }
 
 .tag {
-  text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 .work {
@@ -956,9 +1084,9 @@ margin-top: 4rem;
 }
 
 .blog-post {
+	column-gap: 2rem;
 	display: grid;
 	grid-template-columns: 9fr 3fr;
-	column-gap: 2rem;
 	margin-bottom: 6rem;
 
 	.blog-post__title h2 {
@@ -990,6 +1118,7 @@ margin-top: 4rem;
 
 .util-unstyled-list {
 	padding-left: 0;
+
 	li::before {
 		content: none;
 	}
@@ -1017,22 +1146,27 @@ margin-top: 4rem;
 	right: 0;
 	top: 50%;
 	transform: translateY(-50%);
+
 	.image-layout-flex {
-		display: grid; 
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    max-height: 500px;
-    p {
-      @include type-level-big-content;
-      max-height: 280px;
-      overflow: hidden;
-    }
-   .gradient {
-    position: relative; 
-    bottom: 13rem; 
-    width: 100%; 
-    height: 12rem;
-    /**
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: repeat(2, 1fr);
+		max-height: 500px;
+
+		p {
+			@include type-level-big-content;
+
+			max-height: 280px;
+			overflow: hidden;
+		}
+
+		.gradient {
+			bottom: 13rem;
+			height: 12rem;
+			position: relative;
+			width: 100%;
+
+			/**
     Gradient effect for fading out text
     Not used anymore since I switched to using `description` instead of longer `summary`
     @include dark() {
@@ -1042,16 +1176,17 @@ margin-top: 4rem;
       background-image: linear-gradient(to bottom, transparent, $color-light);
     }
     **/
-   }
+		}
 	}
+
 	h1 {
 		margin-bottom: 2rem;
 	}
-  h3 {
-    text-align: center;
-  }
-}
 
+	h3 {
+		text-align: center;
+	}
+}
 
 // Components
 .featured-block-container {
@@ -1097,27 +1232,23 @@ margin-top: 4rem;
 }
 
 .navbar {
-  @include dark() {
-    background: $color-dark;
-    color: $color-text-dark;
-  }
-  @include light() {
-    background: $color-light;
-    color: $color-text-light;
-  }
-
-  .navbar__title {
-    @include type-level-small;
-    font-weight: 400;
-  }
-	
 	left: 0;
 	margin: auto;
+	padding-top: 1rem;
 	position: fixed;
 	right: 0;
 	top: 0;
-  padding-top: 1rem; 
 	z-index: 1; // This is required because iframes overlap fixed elements (haven't figured out why yet)
+
+	@include dark() {
+		background: $color-dark;
+		color: $color-text-dark;
+	}
+
+	@include light() {
+		background: $color-light;
+		color: $color-text-light;
+	}
 
 	@include breakpoint(small) {
 		bottom: 0;
@@ -1127,6 +1258,12 @@ margin-top: 4rem;
 		.button--primary {
 			width: 100%;
 		}
+	}
+
+	.navbar__title {
+		@include type-level-small;
+
+		font-weight: 400;
 	}
 }
 
@@ -1234,4 +1371,3 @@ margin-top: 4rem;
 		border: 1px solid #ffa39e;
 	}
 }
-

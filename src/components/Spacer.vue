@@ -1,5 +1,5 @@
 <template>
-<span class="spacer">
-  ✦
-  </span>
+	<span class="spacer">
+		✦
+	</span>
 </template>

@@ -1,6 +1,5 @@
-<template> 
-		<main class="container image-layout">
-			<slot />
-		</main> 
+<template>
+	<main class="container image-layout">
+		<slot />
+	</main>
 </template>
- 

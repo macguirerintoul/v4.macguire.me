@@ -1,12 +1,12 @@
 <template>
 	<DefaultLayout>
 		<ProjectOverview :project="$page.project" />
-    <div class="content"> 
-      <div class="toc-container">
-      <TOC :headings="headings" />  
-      </div>
-    <VueRemarkContent class="content__main" /> 
-    </div>
+		<div class="content">
+			<div class="toc-container">
+				<TOC :headings="headings" />
+			</div>
+			<VueRemarkContent class="content__main" />
+		</div>
 		<PreviousNext type="project" :previous="previous" :next="next" />
 	</DefaultLayout>
 </template>
@@ -38,9 +38,17 @@ export default {
 			return {
 				title: this.$page.project.title,
 				description: this.$page.project.description,
-				imagePath: this.$page.project.imagePath,
+				imagePath: this.$page.project.imagePath
 			};
-		},
+		}
+	},
+	mounted() {
+		console.info("Project template mounted");
+		this.preparePage();
+	},
+	updated() {
+		console.info("Project template updated");
+		this.preparePage();
 	},
 	methods: {
 		getHeadings() {
@@ -74,20 +82,15 @@ export default {
 			this.createPreviousNext();
 		}
 	},
-	mounted() {
-		console.info("Project template mounted");
-		this.preparePage();
-	},
-	updated() {
-		console.info("Project template updated");
-		this.preparePage();
-	},
 	metaInfo() {
 		return {
 			title: this.$page.project.title, // Set the <title> to that of the project
 			script: [{ src: "https://player.vimeo.com/api/player.js" }], // Load the Vimeo embedded player code
 			meta: [
-				{ property: "og:image", content: getOGImage(makeThumbnailQuery(this.thumbnailData)) },
+				{
+					property: "og:image",
+					content: getOGImage(makeThumbnailQuery(this.thumbnailData))
+				},
 				{ property: "og:title", content: this.$page.project.title },
 				{ property: "og:description", content: this.$page.project.description }
 			]
@@ -103,7 +106,7 @@ export default {
 			roles
 			tools
 			interested
-      description
+			description
 			tags
 			for
 			url
@@ -111,11 +114,11 @@ export default {
 			summary
 			content
 			imagePath
-      headings {
-          depth
-          value
-          anchor
-        }
+			headings {
+				depth
+				value
+				anchor
+			}
 		}
 		allProject(
 			sortBy: "order"

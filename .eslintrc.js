@@ -8,7 +8,6 @@ module.exports = {
 		"plugin:vue/recommended",
 		"eslint:recommended",
 		"plugin:prettier/recommended",
-		"prettier/vue",
 		"plugin:gridsome/recommended"
 	],
 	rules: {
