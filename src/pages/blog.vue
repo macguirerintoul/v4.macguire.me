@@ -25,16 +25,16 @@ export default {
 </script>
 
 <page-query>
-	query AllPosts {
-		posts: allPost {
-			edges {
-				node {
-					title
-					path
-					date
-					tags
-				}
+query AllPosts {
+	posts: allPost {
+		edges {
+			node {
+				title
+				path
+				date
+				tags
 			}
 		}
 	}
+}
 </page-query>

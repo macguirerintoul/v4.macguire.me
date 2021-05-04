@@ -1,7 +1,7 @@
 <template>
 	<div v-if="headings.length > 0" ref="toc" class="toc">
 		<small>Contents</small>
-		<ul v-if="headings.length">
+		<ul class="util-unstyled-list" v-if="headings.length">
 			<li
 				v-for="heading in headings"
 				:key="heading.textContent"
@@ -80,12 +80,12 @@ export default {
 					if (entry.intersectionRatio > 0) {
 						// Remove active from all links
 						document.querySelectorAll(`.toc li a`).forEach(e => {
-							e.parentElement.classList.remove("active");
+							e.parentElement.classList.remove("active-heading");
 						});
 						// Add active to the most recently hit heading
 						document
 							.querySelector(`.toc li a[href="#${id}"]`)
-							.parentElement.classList.add("active");
+							.parentElement.classList.add("active-heading");
 					}
 				});
 			});

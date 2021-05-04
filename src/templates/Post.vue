@@ -63,31 +63,31 @@ export default {
 </script>
 
 <page-query>
-	query($id: ID!) {
-		post: post(id: $id) {
-			title
-			content
-			date
-			headings {
-				depth
-				value
-				anchor
-			}
+query($id: ID!) {
+	post: post(id: $id) {
+		title
+		content
+		date
+		headings {
+			depth
+			value
+			anchor
 		}
-		allPosts: allPost {
-			edges {
-				previous {
-					path
-					title
-				}
-				node {
-					title
-				}
-				next {
-					path
-					title
-				}
+	}
+	allPosts: allPost {
+		edges {
+			previous {
+				path
+				title
+			}
+			node {
+				title
+			}
+			next {
+				path
+				title
 			}
 		}
 	}
+}
 </page-query>

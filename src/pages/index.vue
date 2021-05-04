@@ -33,26 +33,26 @@
 </template>
 
 <page-query>
-	query AllProjects {
-		featuredProjects: allProject(
-			sortBy: "order"
-			order: ASC
-			filter: { featured: { eq: true }, published: { eq: true } }
-		) {
-			edges {
-				node {
-					id
-					for
-					title
-					description
-					tags
-					year
-					imagePath
-					path
-				}
+query AllProjects {
+	featuredProjects: allProject(
+		sortBy: "order"
+		order: ASC
+		filter: { featured: { eq: true }, published: { eq: true } }
+	) {
+		edges {
+			node {
+				id
+				for
+				title
+				description
+				tags
+				year
+				imagePath
+				path
 			}
 		}
 	}
+}
 </page-query>
 
 <script>

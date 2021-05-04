@@ -18,10 +18,10 @@ export default {
 </script>
 
 <page-query>
-	query Service($id: ID!) {
-		service: service(id: $id) {
-			title
-			content
-		}
+query Service($id: ID!) {
+	service: service(id: $id) {
+		title
+		content
 	}
+}
 </page-query>

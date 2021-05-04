@@ -1,6 +1,9 @@
 // Utilities
 @import "../../../node_modules/normalize.css/normalize.css";
 
+/*
+The following mixins can be used to define styles for both light and dark themes, within a selector or otherwise.
+*/
 @mixin light() {
 	:root[data-theme="light"] & {
 		@content;
@@ -266,7 +269,6 @@ table {
 	@include type-level-content;
 }
 
-
 /*
 
   ###### #      ###### #    # ###### #    # #####  ####
@@ -401,9 +403,18 @@ body {
 	}
 }
 
-body,
-nav {
-	transition: all 300ms;
+@media screen and (prefers-reduced-motion: reduce) {
+	body,
+	nav {
+		transition: none;
+	}
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+	body,
+	nav {
+		transition: all 300ms;
+	}
 }
 
 nav,
@@ -591,15 +602,6 @@ textarea {
 		margin-bottom: 4rem;
 	}
 
-	h2 {
-		margin-bottom: 2rem;
-		margin-top: 6rem;
-
-		&:first-of-type {
-			margin-top: 0;
-		}
-	}
-
 	p {
 		margin-bottom: 3rem;
 	}
@@ -640,6 +642,15 @@ textarea {
 	summary {
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	h2 {
+		margin-bottom: 2rem;
+		margin-top: 6rem;
+	}
+
+	h2:first-of-type {
+		margin-top: 0;
 	}
 
 	img,
@@ -701,6 +712,136 @@ textarea {
 
 */
 
+.navbar {
+	left: 0;
+	margin: auto;
+	padding-top: 1rem;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1; // This is required because iframes overlap fixed elements (haven't figured out why yet)
+
+	@include dark() {
+		background: $color-dark;
+		color: $color-text-dark;
+	}
+
+	@include light() {
+		background: $color-light;
+		color: $color-text-light;
+	}
+
+	@include breakpoint(small) {
+		bottom: 0;
+		// Move the navigation to the bottom on small screens
+		top: auto;
+
+		.button--primary {
+			width: 100%;
+		}
+	}
+
+	.navbar__title {
+		@include type-level-small;
+
+		font-weight: 400;
+	}
+}
+
+.navbar,
+.navbar-end,
+.navbar-menu,
+.navbar-start {
+	align-items: baseline;
+	display: flex;
+}
+
+.navbar-brand {
+	align-items: stretch;
+	display: flex;
+	flex-shrink: 0;
+	min-height: 3.25rem;
+
+	@include breakpoint(small) {
+		width: 100%;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.navbar-menu {
+	flex-grow: 1;
+	flex-shrink: 0;
+
+	@include breakpoint(small) {
+		display: none;
+	}
+
+	.navbar-item.active--exact:not(.button--primary) {
+		// Add an underline to the current page in the navigation
+		border-bottom: 2px solid $color-blue;
+	}
+}
+
+.navbar-item {
+	align-items: center;
+	display: flex;
+	flex-grow: 0;
+	flex-shrink: 0;
+	line-height: 1.5rem;
+	position: relative;
+	text-decoration: none;
+}
+
+.navbar-end {
+	justify-content: flex-end;
+	margin-left: auto;
+
+	.navbar-item {
+		// Space out the navigation items
+		margin: 0.5em;
+	}
+
+	.navbar-item:last-of-type {
+		// Align the last navigation item to the right edge of the container
+		margin-right: 0;
+	}
+}
+
+.navbar.is-active {
+	display: block;
+
+	.navbar-end,
+	.navbar-menu,
+	.navbar-start {
+		align-items: baseline;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.navbar-item {
+		margin-left: 0;
+	}
+}
+
+.mobile-menu {
+	// The menu button on mobile
+	cursor: pointer;
+	display: none;
+	height: fit-content;
+	margin-left: auto;
+	padding: 0.5em;
+	position: relative;
+	top: 0.5em;
+
+	@include breakpoint(small) {
+		display: inherit;
+	}
+}
+
 .previous-next {
 	display: flex;
 	justify-content: space-between;
@@ -726,6 +867,17 @@ textarea {
 
 .spacer {
 	margin: 0 1rem;
+}
+
+.overview__image {
+	margin-bottom: 4rem;
+}
+
+// need both selectors because cloudinary-vue wraps images in a div with the classes
+.overview__image,
+.overview__image img {
+	margin: 0;
+	max-width: 100%;
 }
 
 .showcase {
@@ -755,16 +907,6 @@ textarea {
 		// Select divs and paragraphs that are direct children of a Showcase (i.e. the media and content)
 		max-width: 48%;
 	}
-}
-
-.overview__image {
-	margin-bottom: 4rem;
-}
-// need both selectors because cloudinary-vue wraps images in a div with the classes
-.overview__image,
-.overview__image img {
-	margin: 0;
-	max-width: 100%;
 }
 
 .showcase--vertical {
@@ -854,129 +996,51 @@ textarea {
 	top: 5rem;
 }
 
-@media screen and (prefers-reduced-motion: reduce) {
-	.toc {
-		padding: 2rem 0; // expands the area considered for overlap
-		position: sticky;
-		top: 6rem; // amount to offset for sticky position
-		transition: none;
-
-		ul,
-		li {
-			@include type-level-extra-small;
-
-			line-height: 1.8rem;
-
-			a {
-				text-decoration: none;
-
-				@include light {
-					color: $color-text-2-light;
-				}
-
-				@include dark {
-					color: $color-text-2-dark;
-				}
-			}
-
-			@media screen and (prefers-reduced-motion: reduce) {
-				li.active > a {
-					transition: none;
-
-					@include light {
-						color: $color-text-light;
-					}
-
-					@include dark {
-						color: $color-text-dark;
-					}
-				}
-			}
-
-			li.active > a {
-				transition: all 300ms;
-
-				@include light {
-					color: $color-text-light;
-				}
-
-				@include dark {
-					color: $color-text-dark;
-				}
-			}
-		}
-
-		ul {
-			padding: 0 1rem 0 0;
-
-			li::before {
-				// Get rid of custom list styles
-				content: none;
-				margin-left: 0;
-			}
-		}
-	}
-}
-
 .toc {
 	padding: 2rem 0; // expands the area considered for overlap
 	position: sticky;
 	top: 6rem; // amount to offset for sticky position
-	transition: opacity 200ms;
+
+	@media screen and (prefers-reduced-motion: no-preference) {
+		transition: opacity 200ms;
+	}
 
 	ul,
 	li {
 		@include type-level-extra-small;
 
 		line-height: 1.8rem;
+	}
 
-		a {
-			text-decoration: none;
+	ul a,
+	li a {
+		text-decoration: none;
 
-			@include light {
-				color: $color-text-2-light;
-			}
-
-			@include dark {
-				color: $color-text-2-dark;
-			}
+		@include light {
+			color: $color-text-2-light;
 		}
 
-		@media screen and (prefers-reduced-motion: reduce) {
-			li.active > a {
-				transition: none;
-
-				@include light {
-					color: $color-text-light;
-				}
-
-				@include dark {
-					color: $color-text-dark;
-				}
-			}
+		@include dark {
+			color: $color-text-2-dark;
 		}
+	}
 
-		li.active > a {
+	.active-heading > a {
+		@media screen and (prefers-reduced-motion: no-preference) {
 			transition: all 300ms;
+		}
 
-			@include light {
-				color: $color-text-light;
-			}
+		@include light {
+			color: $color-text-light;
+		}
 
-			@include dark {
-				color: $color-text-dark;
-			}
+		@include dark {
+			color: $color-text-dark;
 		}
 	}
 
 	ul {
 		padding: 0 1rem 0 0;
-
-		li::before {
-			// Get rid of custom list styles
-			content: none;
-			margin-left: 0;
-		}
 	}
 }
 
@@ -1169,31 +1233,31 @@ textarea {
 		gap: 2rem;
 		grid-template-columns: repeat(2, 1fr);
 		max-height: 500px;
+	}
 
-		p {
-			@include type-level-big-content;
+	.image-layout-flex p {
+		@include type-level-big-content;
 
-			max-height: 280px;
-			overflow: hidden;
-		}
+		max-height: 280px;
+		overflow: hidden;
+	}
 
-		.gradient {
-			bottom: 13rem;
-			height: 12rem;
-			position: relative;
-			width: 100%;
+	.image-layout-flex .gradient {
+		bottom: 13rem;
+		height: 12rem;
+		position: relative;
+		width: 100%;
 
-			/**
-    Gradient effect for fading out text
-    Not used anymore since I switched to using `description` instead of longer `summary`
-    @include dark() {
-      background-image: linear-gradient(to bottom, transparent, $color-dark);
-    }
-    @include light() {
-      background-image: linear-gradient(to bottom, transparent, $color-light);
-    }
-    **/
-		}
+		/**
+	Gradient effect for fading out text
+	Not used anymore since I switched to using `description` instead of longer `summary`
+	@include dark() {
+		background-image: linear-gradient(to bottom, transparent, $color-dark);
+	}
+	@include light() {
+		background-image: linear-gradient(to bottom, transparent, $color-light);
+	}
+	**/
 	}
 
 	h1 {
@@ -1246,136 +1310,6 @@ textarea {
 	@include type-level-content;
 
 	margin: 0;
-}
-
-.navbar {
-	left: 0;
-	margin: auto;
-	padding-top: 1rem;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 1; // This is required because iframes overlap fixed elements (haven't figured out why yet)
-
-	@include dark() {
-		background: $color-dark;
-		color: $color-text-dark;
-	}
-
-	@include light() {
-		background: $color-light;
-		color: $color-text-light;
-	}
-
-	@include breakpoint(small) {
-		bottom: 0;
-		// Move the navigation to the bottom on small screens
-		top: auto;
-
-		.button--primary {
-			width: 100%;
-		}
-	}
-
-	.navbar__title {
-		@include type-level-small;
-
-		font-weight: 400;
-	}
-}
-
-.navbar,
-.navbar-end,
-.navbar-menu,
-.navbar-start {
-	align-items: baseline;
-	display: flex;
-}
-
-.navbar-brand {
-	align-items: stretch;
-	display: flex;
-	flex-shrink: 0;
-	min-height: 3.25rem;
-
-	@include breakpoint(small) {
-		width: 100%;
-	}
-
-	a {
-		text-decoration: none;
-	}
-}
-
-.navbar-menu {
-	flex-grow: 1;
-	flex-shrink: 0;
-
-	@include breakpoint(small) {
-		display: none;
-	}
-
-	.navbar-item.active--exact:not(.button--primary) {
-		// Add an underline to the current page in the navigation
-		border-bottom: 2px solid $color-blue;
-	}
-}
-
-.navbar-item {
-	align-items: center;
-	display: flex;
-	flex-grow: 0;
-	flex-shrink: 0;
-	line-height: 1.5rem;
-	position: relative;
-	text-decoration: none;
-}
-
-.navbar-end {
-	justify-content: flex-end;
-	margin-left: auto;
-
-	.navbar-item {
-		// Space out the navigation items
-		margin: 0.5em;
-	}
-
-	.navbar-item:last-of-type {
-		// Align the last navigation item to the right edge of the container
-		margin-right: 0;
-	}
-}
-
-.navbar.is-active {
-	display: block;
-
-	.navbar-end,
-	.navbar-menu,
-	.navbar-start {
-		align-items: baseline;
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-	}
-
-	.navbar-item {
-		margin-left: 0;
-	}
-}
-
-.mobile-menu {
-	// The menu button on mobile
-	cursor: pointer;
-	display: none;
-	height: fit-content;
-	margin-left: auto;
-	padding: 0.5em;
-	position: relative;
-	top: 0.5em;
-
-	@include breakpoint(small) {
-		display: inherit;
-	}
 }
 
 .info-block {

@@ -100,44 +100,44 @@ export default {
 </script>
 
 <page-query>
-	query Project($id: ID!) {
-		project: project(id: $id) {
-			title
-			roles
-			tools
-			interested
-			description
-			tags
-			for
-			url
-			year
-			summary
-			content
-			imagePath
-			headings {
-				depth
-				value
-				anchor
-			}
+query Project($id: ID!) {
+	project: project(id: $id) {
+		title
+		roles
+		tools
+		interested
+		description
+		tags
+		for
+		url
+		year
+		summary
+		content
+		imagePath
+		headings {
+			depth
+			value
+			anchor
 		}
-		allProject(
-			sortBy: "order"
-			order: ASC
-			filter: { featured: { eq: true }, published: { eq: true } }
-		) {
-			edges {
-				previous {
-					path
-					title
-				}
-				node {
-					title
-				}
-				next {
-					path
-					title
-				}
+	}
+	allProject(
+		sortBy: "order"
+		order: ASC
+		filter: { featured: { eq: true }, published: { eq: true } }
+	) {
+		edges {
+			previous {
+				path
+				title
+			}
+			node {
+				title
+			}
+			next {
+				path
+				title
 			}
 		}
 	}
+}
 </page-query>
