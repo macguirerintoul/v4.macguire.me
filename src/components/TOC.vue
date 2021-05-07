@@ -37,7 +37,7 @@ export default {
 			document.querySelector("details").setAttribute("open", true);
 		},
 		observeTocOverlap() {
-			const overlappers = document.querySelectorAll(".showcase *, img"); // What to check for overlap with
+			const overlappers = document.querySelectorAll(".showcase *, img, pre"); // What to check for overlap with
 			const tocElement = document.querySelector(".toc"); // the toc
 			console.log(tocElement);
 

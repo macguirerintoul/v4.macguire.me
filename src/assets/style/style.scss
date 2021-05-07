@@ -44,9 +44,8 @@ $color-yellow: #ff0;
 $color-red: #f00;
 
 // Type
-$font-stack: "Editorial New", "-apple-system", "system-ui", "BlinkMacSystemFont",
-	sans-serif;
-$font-stack-mono: sfmono-regular, "Iosevka", "Inconsolata", "Consolas",
+$font-stack: "Editorial New", "Times New Roman", sans-serif;
+$font-stack-mono: "JetBrains Mono", "Menlo", "Inconsolata", "Consolas",
 	"Liberation Mono", monospace;
 
 @mixin underline-link {
@@ -498,7 +497,7 @@ pre {
 	background: $color-white;
 	border: 1px solid $color-dark-grey;
 	overflow: hidden;
-	padding: 1rem;
+	padding: 2rem;
 	text-overflow: ellipsis;
 }
 
@@ -607,7 +606,6 @@ textarea {
 	}
 
 	p,
-	pre,
 	blockquote,
 	h1,
 	h2,

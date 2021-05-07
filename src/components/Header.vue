@@ -16,7 +16,7 @@
 
 			<div class="navbar-menu" @click="closeMobileMenu">
 				<div class="navbar-end">
-					<!-- <span @click="toggleTheme">👀</span> -->
+					<span class="navbar-item" @click="toggleTheme">{{schemeEmoji}}</span>
 					<g-link to="/" class="navbar-item hvr-underline-reveal">
 						Work
 					</g-link>
@@ -41,7 +41,12 @@
 <script>
 export default {
 	data() {
-		return { showMobileMenu: false, hasHomeBar: false };
+		return { showMobileMenu: false, hasHomeBar: false, scheme: window.__theme };
+	},
+	computed: {
+		schemeEmoji: function() {
+			return this.scheme === "dark" ? "☀️" : "🌒"
+		}
 	},
 	mounted() {
 		// Detect if the device is an iPhone with a home bar (i.e. X, XS, 11, etc.)
@@ -53,7 +58,8 @@ export default {
 	},
 	methods: {
 		toggleTheme() {
-			window.__setPreferredTheme(window.__theme === "dark" ? "light" : "dark");
+			this.scheme = window.__theme === "dark" ? "light" : "dark"
+			window.__setPreferredTheme(this.scheme); 
 		},
 		toggleMobileMenu() {
 			this.showMobileMenu = !this.showMobileMenu;
