@@ -526,16 +526,14 @@ main {
 }
 
 footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	margin: 6rem auto;
 
-	small {
-		display: block;
+	li,
+	p {
+		@include type-level-4();
 	}
-}
-
-.footer__links,
-.footer__copyright {
-	margin-top: 2rem;
 }
 
 label {
@@ -1185,6 +1183,7 @@ textarea {
 }
 
 .util-unstyled-list {
+	list-style-type: none;
 	padding-left: 0;
 
 	li::before {

@@ -6,28 +6,40 @@
 			<FeaturedBlock type="pick" />
 		</div>
 		<hr /> -->
-		<ul class="util-unstyled-list footer__links">
-			<li>
-				<MagicLink
-					class="footer__link"
-					url="https://github.com/macguirerintoul/"
-				>
-					GitHub
-				</MagicLink>
-			</li>
-			<li>
-				<MagicLink
-					class="footer__link"
-					url="https://linkedin.com/in/macguirerintoul/"
-				>
-					LinkedIn
-				</MagicLink>
-			</li>
-		</ul>
-
-		<small class="footer__copyright">
+ 
+		<p class="footer__copyright">
 			© {{ currentYear }} Macguire Rintoul. All rights reserved.
-		</small>
+		</p> 
+		<div>
+			<h4>Services</h4>
+			<ul class="util-unstyled-list footer__links">
+				<li>Experience Design</li>
+				<li>Software Development</li>
+				<li>System Administration</li>
+			</ul>
+		</div>
+		<div>
+			<h4>Links</h4>
+			<ul class="util-unstyled-list footer__links">
+				<li>
+					<MagicLink
+						class="footer__link"
+						url="https://github.com/macguirerintoul/"
+					>
+						GitHub
+					</MagicLink>
+				</li>
+				<li>
+					<MagicLink
+						class="footer__link"
+						url="https://linkedin.com/in/macguirerintoul/"
+					>
+						LinkedIn
+					</MagicLink>
+				</li>
+			</ul>
+		</div>
+
 	</footer>
 </template>
 
@@ -37,7 +49,7 @@ import MagicLink from "~/components/MagicLink";
 
 export default {
 	components: {
-		// FeaturedBlock,
+		FeaturedBlock,
 		MagicLink
 	},
 	data() {
