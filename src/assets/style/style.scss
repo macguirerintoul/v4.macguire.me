@@ -476,17 +476,6 @@ tr {
 	border-spacing: 0 1rem;
 }
 
-ul {
-	list-style-type: none;
-
-	li::before {
-		// change <li> bullets to en dashes
-		content: "–";
-		margin-left: -1.5rem;
-		position: absolute;
-	}
-}
-
 cite {
 	display: block;
 	margin-top: 1rem;
