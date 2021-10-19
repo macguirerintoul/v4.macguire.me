@@ -11,7 +11,7 @@
 	"dependencies": {
 		"@gridsome/source-filesystem": "0.6.2",
 		"@gridsome/vue-remark": "0.2.6",
-		"chrome-aws-lambda": "8.0.2",
+		"chrome-aws-lambda": "10.1.0",
 		"cloudinary-vue": "1.1.2",
 		"gridsome": "0.7.23",
 		"medium-zoom": "1.0.6",
